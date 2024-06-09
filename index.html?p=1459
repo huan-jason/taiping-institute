@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html class="html" lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>李洛能  形意拳谱 &#8211; Taiping Institute</title>
+<meta name='robots' content='max-image-preview:large' />
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternate" type="application/rss+xml" title="Taiping Institute &raquo; Feed" href="http://taipinginstitute.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Taiping Institute &raquo; Comments Feed" href="http://taipinginstitute.com/comments/feed/" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/taipinginstitute.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.4"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='http://taipinginstitute.com/wp-includes/css/dist/block-library/style.min.css?ver=6.5.4' media='all' />
+<style id='wp-block-library-theme-inline-css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:#ffffffa6}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:#ffffffa6}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='simply-gallery-block-frontend-css' href='http://taipinginstitute.com/wp-content/plugins/simply-gallery-block/blocks/blocks.uni.css?ver=2.2.1' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='http://taipinginstitute.com/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=5.15.1' media='all' />
+<link rel='stylesheet' id='simple-line-icons-css' href='http://taipinginstitute.com/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' media='all' />
+<link rel='stylesheet' id='oceanwp-style-css' href='http://taipinginstitute.com/wp-content/themes/oceanwp/assets/css/style.min.css?ver=3.0.3' media='all' />
+<script src="http://taipinginstitute.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="http://taipinginstitute.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="http://taipinginstitute.com/wp-json/" /><link rel="alternate" type="application/json" href="http://taipinginstitute.com/wp-json/wp/v2/posts/1459" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://taipinginstitute.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.5.4" />
+<link rel="canonical" href="http://taipinginstitute.com/2022/02/15/1459/" />
+<link rel='shortlink' href='http://taipinginstitute.com/?p=1459' />
+<link rel="alternate" type="application/json+oembed" href="http://taipinginstitute.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftaipinginstitute.com%2F2022%2F02%2F15%2F1459%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://taipinginstitute.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftaipinginstitute.com%2F2022%2F02%2F15%2F1459%2F&#038;format=xml" />
+<style id="mystickymenu" type="text/css">#mysticky-nav { width:100%; position: static; }#mysticky-nav.wrapfixed { position:fixed; left: 0px; margin-top:0px;  z-index: 99990; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; filter: alpha(opacity=90); opacity:0.9; background-color: #e2e2e2;}#mysticky-nav.wrapfixed .myfixed{ background-color: #e2e2e2; position: relative;top: auto;left: auto;right: auto;}#mysticky-nav.wrapfixed ul li.menu-item a { color: #333333;}#mysticky-nav .myfixed { margin:0 auto; float:none; border:0px; background:none; max-width:100%; }</style>			<style type="text/css">
+																															</style>
+			<!-- OceanWP CSS -->
+<style type="text/css">
+.page-header{background-color:#afafaf}/* General CSS */.container{width:1367px}@media only screen and (min-width:960px){.content-area,.content-left-sidebar .content-area{width:100%}}@media only screen and (min-width:960px){.widget-area,.content-left-sidebar .widget-area{width:37%}}.page-header,.has-transparent-header .page-header{padding:13px 0 14px 0}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{color:#565656}.site-breadcrumbs,.background-image-page-header .site-breadcrumbs{color:#ffffff}.site-breadcrumbs ul li .breadcrumb-sep,.site-breadcrumbs ol li .breadcrumb-sep{color:#353535}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:113px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,.mobile-menu-close,.after-header-content-inner >a{line-height:113px}#site-header,.has-transparent-header .is-sticky #site-header,.has-vh-transparent .is-sticky #site-header.vertical-header,#searchform-header-replace{background-color:#0a0a0a}#site-header{border-color:#6b6b6b}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:403px}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:90px}#site-navigation-wrap .dropdown-menu >li >a{padding:0 14px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#f2f2f2}#site-navigation-wrap .dropdown-menu >li >a .owp-icon use,.oceanwp-mobile-menu-icon a .owp-icon use,#searchform-header-replace-close .owp-icon use{stroke:#f2f2f2}.dropdown-menu .sub-menu{min-width:295px}/* Footer Widgets CSS */#footer-widgets{background-color:#111111}#footer-widgets,#footer-widgets p,#footer-widgets li a:before,#footer-widgets .contact-info-widget span.oceanwp-contact-title,#footer-widgets .recent-posts-date,#footer-widgets .recent-posts-comments,#footer-widgets .widget-recent-posts-icons li .fa{color:#d8d8d8}/* Footer Bottom CSS */#footer-bottom{background-color:#0f0f0f}#footer-bottom,#footer-bottom p{color:#adadad}/* Typography CSS */#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a{font-family:Arial,Helvetica,sans-serif;text-transform:uppercase}.dropdown-menu ul li a.menu-link,#site-header.full_screen-header .fs-dropdown-menu ul.sub-menu li a{font-size:11px;line-height:1.1;letter-spacing:.2px;text-transform:uppercase}.sidebar-box,.footer-box{font-family:Arial,Helvetica,sans-serif}
+</style></head>
+
+<body class="post-template-default single single-post postid-1459 single-format-standard wp-custom-logo wp-embed-responsive oceanwp-theme dropdown-mobile default-breakpoint has-sidebar content-right-sidebar post-in-category-%e6%8b%b3%e8%b0%b1 has-topbar has-breadcrumbs has-blog-grid" itemscope="itemscope" itemtype="https://schema.org/Article">
+
+	
+	
+	<div id="outer-wrap" class="site clr">
+
+		<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+		
+		<div id="wrap" class="clr">
+
+			
+
+<div id="top-bar-wrap" class="clr">
+
+	<div id="top-bar" class="clr container has-no-content">
+
+		
+		<div id="top-bar-inner" class="clr">
+
+			
+
+		</div><!-- #top-bar-inner -->
+
+		
+	</div><!-- #top-bar -->
+
+</div><!-- #top-bar-wrap -->
+
+
+			
+<header id="site-header" class="minimal-header has-social clr" data-height="113" itemscope="itemscope" itemtype="https://schema.org/WPHeader" role="banner">
+
+	
+					
+			<div id="site-header-inner" class="clr container">
+
+				
+				
+
+<div id="site-logo" class="clr" itemscope itemtype="https://schema.org/Brand" >
+
+	
+	<div id="site-logo-inner" class="clr">
+
+		<a href="http://taipinginstitute.com/" class="custom-logo-link" rel="home"><img width="925" height="201" src="http://taipinginstitute.com/wp-content/uploads/2021/08/cropped-logisi12.png" class="custom-logo" alt="Taiping Institute" decoding="async" fetchpriority="high" srcset="http://taipinginstitute.com/wp-content/uploads/2021/08/cropped-logisi12.png 925w, http://taipinginstitute.com/wp-content/uploads/2021/08/cropped-logisi12-300x65.png 300w, http://taipinginstitute.com/wp-content/uploads/2021/08/cropped-logisi12-768x167.png 768w" sizes="(max-width: 925px) 100vw, 925px" /></a>
+	</div><!-- #site-logo-inner -->
+
+	
+	
+</div><!-- #site-logo -->
+
+
+
+
+<div class="oceanwp-social-menu clr simple-social">
+
+	<div class="social-menu-inner clr">
+
+		
+			<ul aria-label="Social links">
+
+				<li class="oceanwp-facebook"><a href="https://www.facebook.com/taipinginstitute" aria-label="Facebook (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-facebook" aria-hidden="true" role="img"></i></a></li><li class="oceanwp-youtube"><a href="https://www.youtube.com/user/SifuWu" aria-label="Youtube (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-youtube" aria-hidden="true" role="img"></i></a></li>
+			</ul>
+
+		
+	</div>
+
+</div>
+			<div id="site-navigation-wrap" class="clr">
+			
+			
+			
+			<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation" >
+
+				<ul id="menu-main-menu" class="main-menu dropdown-menu sf-menu"><li id="menu-item-1339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children dropdown menu-item-1339"><a href="http://taipinginstitute.com/" class="menu-link"><span class="text-wrap">ABOUT<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1332"><a href="http://taipinginstitute.com/founder/" class="menu-link"><span class="text-wrap">Founder</span></a></li>	<li id="menu-item-1331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1331"><a href="http://taipinginstitute.com/programs/" class="menu-link"><span class="text-wrap">Programs</span></a></li></ul>
+</li><li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-55"><a href="http://taipinginstitute.com/programs/" class="menu-link"><span class="text-wrap">Martial Arts Systems | 武学<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-178"><a href="http://taipinginstitute.com/baoding-martial-arts-%e4%bf%9d%e5%ae%9a%e6%ad%a6%e6%9c%af/" class="menu-link"><span class="text-wrap">Zhili Martial Arts | 直隶武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://taipinginstitute.com/chuojiao/" class="menu-link"><span class="text-wrap">Chuojiao | 戳脚门</span></a></li>		<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="http://taipinginstitute.com/bafan-men-%e5%85%ab%e7%bf%bb%e9%97%a8/" class="menu-link"><span class="text-wrap">Bafan Men | 八翻门</span></a></li>		<li id="menu-item-170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a href="http://taipinginstitute.com/duan-quan-%e7%9f%ad%e6%8b%b3%e9%97%a8/" class="menu-link"><span class="text-wrap">Duan Quan | 短拳门</span></a></li>		<li id="menu-item-169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="http://taipinginstitute.com/tongbei-quan-%e9%80%9a%e8%83%8c%e6%8b%b3/" class="menu-link"><span class="text-wrap">Tongbei Quan | 通背拳</span></a></li>		<li id="menu-item-809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-809"><a href="http://taipinginstitute.com/xingyi-quan-%e5%bd%a2%e6%84%8f%e6%8b%b3/" class="menu-link"><span class="text-wrap">Xingyi Quan | 形意拳</span></a></li>		<li id="menu-item-810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-810"><a href="http://taipinginstitute.com/baguazhang-%e5%85%ab%e5%8d%a6%e6%8e%8c/" class="menu-link"><span class="text-wrap">Baguazhang | 八卦掌</span></a></li>		<li id="menu-item-815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-815"><a href="http://taipinginstitute.com/wudangquan-%e6%ad%a6%e5%bd%93%e6%8b%b3/" class="menu-link"><span class="text-wrap">Wudangquan | 武当拳</span></a></li>		<li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="http://taipinginstitute.com/taijiquan-%e5%a4%aa%e6%9e%81%e6%8b%b3/" class="menu-link"><span class="text-wrap">Taijiquan | 太极拳</span></a></li>	</ul>
+</li>	<li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-131"><a href="http://taipinginstitute.com/cangzhou-martial-arts/" class="menu-link"><span class="text-wrap">Cangzhou Martial Arts | 沧州武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="http://taipinginstitute.com/da-liuhe-men-%e5%a4%a7%e5%85%ad%e5%90%88%e9%97%a8/" class="menu-link"><span class="text-wrap">Da Liuhe Men | 大六合门</span></a></li>		<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="http://taipinginstitute.com/yanqingmen-%e7%87%95%e9%9d%92%e9%97%a8/" class="menu-link"><span class="text-wrap">Yanqingmen | 燕青门</span></a></li>		<li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="http://taipinginstitute.com/bajiquan-%e5%85%ab%e6%9e%81%e6%8b%b3/" class="menu-link"><span class="text-wrap">Bajiquan | 八极拳</span></a></li>		<li id="menu-item-201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="http://taipinginstitute.com/piguaquan-%e5%8a%88%e6%8c%82%e9%97%a8/" class="menu-link"><span class="text-wrap">Piguaquan | 劈挂门</span></a></li>		<li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="http://taipinginstitute.com/chahua-men-%e6%9f%a5%e6%bb%91%e9%97%a8/" class="menu-link"><span class="text-wrap">Chahua Men | 查滑门</span></a></li>		<li id="menu-item-2022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2022"><a href="http://taipinginstitute.com/erlang-men-%e4%ba%8c%e9%83%8e%e9%97%a8/" class="menu-link"><span class="text-wrap">Erlang Men | 二郎门</span></a></li>		<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://taipinginstitute.com/praying-mantis-boxing-%e8%9e%b3%e8%9e%82%e6%8b%b3/" class="menu-link"><span class="text-wrap">Praying Mantis Boxing | 螳螂拳</span></a></li>		<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="http://taipinginstitute.com/qingping-sword-system-%e9%9d%92%e8%90%8d%e5%8a%8d/" class="menu-link"><span class="text-wrap">Qingping Sword System | 青萍劍</span></a></li>	</ul>
+</li>	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-163"><a href="http://taipinginstitute.com/fujian-martial-arts-%e7%a6%8f%e5%bb%ba%e6%ad%a6%e6%9c%af/" class="menu-link"><span class="text-wrap">Fujian Martial Arts | 福建武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="http://taipinginstitute.com/dishu-quan-%e5%9c%b0%e6%9c%af%e6%8b%b3/" class="menu-link"><span class="text-wrap">Dishu Quan | 地术拳</span></a></li>		<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="http://taipinginstitute.com/huzun-quan-%e6%b0%b8%e7%a6%8f%e8%99%8e%e5%b0%8a%e6%8b%b3/" class="menu-link"><span class="text-wrap">Huzun Quan | 永福虎尊拳</span></a></li>		<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="http://taipinginstitute.com/taizu-quan-%e9%97%bd%e5%8d%97%e5%a4%aa%e7%a5%96%e6%8b%b3/" class="menu-link"><span class="text-wrap">Taizu Quan | 闽南太祖拳</span></a></li>		<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="http://taipinginstitute.com/luohan-quan-%e7%bd%97%e6%b1%89%e6%8b%b3/" class="menu-link"><span class="text-wrap">Luohan Quan | 罗汉拳</span></a></li>	</ul>
+</li>	<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-183"><a href="http://taipinginstitute.com/jiangxi-martial-arts-%e6%b1%9f%e8%a5%bf%e6%ad%a6%e6%9c%af/" class="menu-link"><span class="text-wrap">Jiangxi Martial Arts | 江西武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a href="http://taipinginstitute.com/yuejia-quan-%e5%b2%b3%e5%ae%b6%e6%8b%b3/" class="menu-link"><span class="text-wrap">Yuejia Quan | 岳家拳</span></a></li>		<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="http://taipinginstitute.com/zimenquan-%e5%ad%97%e9%97%a8%e6%8b%b3/" class="menu-link"><span class="text-wrap">Zimenquan | 字门拳</span></a></li>	</ul>
+</li>	<li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-184"><a href="http://taipinginstitute.com/lingnan-martial-arts-%e5%b2%ad%e5%8d%97%e6%ad%a6%e6%9c%af/" class="menu-link"><span class="text-wrap">Lingnan Martial Arts | 岭南武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://taipinginstitute.com/hung-kuen-%e6%b4%aa%e6%8b%b3/" class="menu-link"><span class="text-wrap">Hung Kuen | 洪拳</span></a></li>		<li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a href="http://taipinginstitute.com/fut-gar-kuen-%e5%ba%86%e4%ba%91%e4%bd%9b%e5%ae%b6%e6%8b%b3/" class="menu-link"><span class="text-wrap">Fut Gar Kuen | 庆云佛家拳</span></a></li>		<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://taipinginstitute.com/pak-mei-kuen-%e7%99%bd%e7%9c%89%e6%8b%b3/" class="menu-link"><span class="text-wrap">Pak Mei Kuen | 白眉拳</span></a></li>	</ul>
+</li></ul>
+</li><li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-53"><a href="http://taipinginstitute.com/health-cultivation-%e5%85%bb%e7%94%9f/" class="menu-link"><span class="text-wrap">Health Cultivation | 养生<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="http://taipinginstitute.com/taiping-daoist-health-cultivation-system/" class="menu-link"><span class="text-wrap">Daoist Cultivation System | 太平全镇功</span></a></li>	<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http://taipinginstitute.com/wild-goose-qigong-%e5%a4%a7%e9%9b%81%e6%b0%94%e5%8a%9f/" class="menu-link"><span class="text-wrap">Wild Goose Qigong | 大雁气功</span></a></li>	<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="http://taipinginstitute.com/xuan-nv-gong-%e7%8e%84%e5%a5%b3%e5%8a%9f/" class="menu-link"><span class="text-wrap">Xuan Nv Gong | 玄女功</span></a></li>	<li id="menu-item-801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="http://taipinginstitute.com/shengzhen-gong-%e8%81%96%e7%9c%9f%e5%8d%9a%e6%84%9b%e9%a4%8a%e7%94%9f/" class="menu-link"><span class="text-wrap">Shengzhen Gong | 聖真博愛養生</span></a></li>	<li id="menu-item-802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-802"><a href="http://taipinginstitute.com/wu-qin-xi-%e4%ba%94%e7%a6%bd%e6%88%8f/" class="menu-link"><span class="text-wrap">Wu Qin Xi | 五禽戏</span></a></li>	<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="http://taipinginstitute.com/zhineng-qigong-%e6%99%ba%e8%83%bd%e6%b0%94%e5%8a%9f/" class="menu-link"><span class="text-wrap">Zhineng Qigong | 智能气功</span></a></li>	<li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"><a href="http://taipinginstitute.com/bagua-hunyuan-qigong-%e5%a4%aa%e4%b9%99%e5%85%ab%e5%8d%a6%e6%b7%b7%e5%85%83%e9%a4%8a%e7%94%9f%e5%8a%9f-2/" class="menu-link"><span class="text-wrap">Bagua Hunyuan Qigong | 太乙八卦混元養生功</span></a></li>	<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="http://taipinginstitute.com/taiping-fit-%e5%a4%aa%e5%b9%b3%e5%81%a5%e8%ba%ab%e4%bd%93%e6%93%8d/" class="menu-link"><span class="text-wrap">Taiping Fit | 太平健身体操</span></a></li></ul>
+</li><li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-54"><a href="http://taipinginstitute.com/combat/" class="menu-link"><span class="text-wrap">Combat | 技击<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://taipinginstitute.com/shuaijiao/" class="menu-link"><span class="text-wrap">Shuaijiao | 摔跤  – Wrestling &#038; Takedowns</span></a></li>	<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://taipinginstitute.com/qin-na-%e6%93%92%e6%8b%bf-grappling-and-locking/" class="menu-link"><span class="text-wrap">Qin-na | 擒拿 – Grappling and Locking</span></a></li>	<li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://taipinginstitute.com/dishu-%e5%9c%b0%e6%9c%af-ground-fighting/" class="menu-link"><span class="text-wrap">Dishu 地术 | Ground fighting</span></a></li>	<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://taipinginstitute.com/self-defense-%e9%98%b2%e8%ba%ab/" class="menu-link"><span class="text-wrap">Fangshen 防身 | Self Defense</span></a></li>	<li id="menu-item-787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-787"><a href="http://taipinginstitute.com/taiping-combatives-%e5%ae%9e%e6%88%98%e6%8a%80%e5%87%bb/" class="menu-link"><span class="text-wrap">Shizhan Jiji 实战技击 | Taiping Combatives</span></a></li></ul>
+</li><li id="menu-item-455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-455"><a href="http://taipinginstitute.com/taiping-blog-articles/" class="menu-link"><span class="text-wrap">Blog | 文章<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-777" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-777"><a href="http://taipinginstitute.com/category/martial-arts-articles-en/" class="menu-link"><span class="text-wrap">武学 | Martial Studies (EN)</span></a></li>	<li id="menu-item-779" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-779"><a href="http://taipinginstitute.com/category/martial-arts-articles-cn/" class="menu-link"><span class="text-wrap">武学 | Martial Studies (中文)</span></a></li>	<li id="menu-item-780" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-780"><a href="http://taipinginstitute.com/category/%e6%8b%b3%e8%b0%b1/" class="menu-link"><span class="text-wrap">拳谱 | Boxing Manuals</span></a></li>	<li id="menu-item-775" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-775"><a href="http://taipinginstitute.com/category/chinese-medicine-articles-en/" class="menu-link"><span class="text-wrap">中医 | Chinese Medicine</span></a></li>	<li id="menu-item-776" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-776"><a href="http://taipinginstitute.com/category/health-cultivation/" class="menu-link"><span class="text-wrap">养生 | Health Cultivation</span></a></li>	<li id="menu-item-778" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-778"><a href="http://taipinginstitute.com/category/sports-science/" class="menu-link"><span class="text-wrap">运动学 | Sports Science</span></a></li></ul>
+</li><li class="search-toggle-li" ><a href="javascript:void(0)" class="site-search-toggle search-dropdown-toggle" aria-label="Search website"><i class=" icon-magnifier" aria-hidden="true" role="img"></i></a></li></ul>
+<div id="searchform-dropdown" class="header-searchform-wrap clr" >
+	
+<form role="search" method="get" class="searchform" action="http://taipinginstitute.com/">
+	<label for="ocean-search-form-1">
+		<span class="screen-reader-text">Search this website</span>
+		<input type="search" id="ocean-search-form-1" class="field" autocomplete="off" placeholder="Search" name="s">
+			</label>
+	</form>
+</div><!-- #searchform-dropdown -->
+
+			</nav><!-- #site-navigation -->
+
+			
+			
+					</div><!-- #site-navigation-wrap -->
+			
+		
+	
+				
+	
+	<div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+		
+		
+		
+		<a href="javascript:void(0)" class="mobile-menu"  aria-label="Mobile Menu">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+								<span class="oceanwp-text">Menu</span>
+				<span class="oceanwp-close-text">Close</span>
+						</a>
+
+		
+		
+		
+	</div><!-- #oceanwp-mobile-menu-navbar -->
+
+	
+
+
+			</div><!-- #site-header-inner -->
+
+			
+<div id="mobile-dropdown" class="clr" >
+
+	<nav class="clr has-social" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+
+		<ul id="menu-main-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-1339"><a href="http://taipinginstitute.com/">ABOUT</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1332"><a href="http://taipinginstitute.com/founder/">Founder</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1331"><a href="http://taipinginstitute.com/programs/">Programs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-55"><a href="http://taipinginstitute.com/programs/">Martial Arts Systems | 武学</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-178"><a href="http://taipinginstitute.com/baoding-martial-arts-%e4%bf%9d%e5%ae%9a%e6%ad%a6%e6%9c%af/">Zhili Martial Arts | 直隶武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://taipinginstitute.com/chuojiao/">Chuojiao | 戳脚门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="http://taipinginstitute.com/bafan-men-%e5%85%ab%e7%bf%bb%e9%97%a8/">Bafan Men | 八翻门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a href="http://taipinginstitute.com/duan-quan-%e7%9f%ad%e6%8b%b3%e9%97%a8/">Duan Quan | 短拳门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="http://taipinginstitute.com/tongbei-quan-%e9%80%9a%e8%83%8c%e6%8b%b3/">Tongbei Quan | 通背拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-809"><a href="http://taipinginstitute.com/xingyi-quan-%e5%bd%a2%e6%84%8f%e6%8b%b3/">Xingyi Quan | 形意拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-810"><a href="http://taipinginstitute.com/baguazhang-%e5%85%ab%e5%8d%a6%e6%8e%8c/">Baguazhang | 八卦掌</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-815"><a href="http://taipinginstitute.com/wudangquan-%e6%ad%a6%e5%bd%93%e6%8b%b3/">Wudangquan | 武当拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="http://taipinginstitute.com/taijiquan-%e5%a4%aa%e6%9e%81%e6%8b%b3/">Taijiquan | 太极拳</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-131"><a href="http://taipinginstitute.com/cangzhou-martial-arts/">Cangzhou Martial Arts | 沧州武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="http://taipinginstitute.com/da-liuhe-men-%e5%a4%a7%e5%85%ad%e5%90%88%e9%97%a8/">Da Liuhe Men | 大六合门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="http://taipinginstitute.com/yanqingmen-%e7%87%95%e9%9d%92%e9%97%a8/">Yanqingmen | 燕青门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="http://taipinginstitute.com/bajiquan-%e5%85%ab%e6%9e%81%e6%8b%b3/">Bajiquan | 八极拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="http://taipinginstitute.com/piguaquan-%e5%8a%88%e6%8c%82%e9%97%a8/">Piguaquan | 劈挂门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="http://taipinginstitute.com/chahua-men-%e6%9f%a5%e6%bb%91%e9%97%a8/">Chahua Men | 查滑门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2022"><a href="http://taipinginstitute.com/erlang-men-%e4%ba%8c%e9%83%8e%e9%97%a8/">Erlang Men | 二郎门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://taipinginstitute.com/praying-mantis-boxing-%e8%9e%b3%e8%9e%82%e6%8b%b3/">Praying Mantis Boxing | 螳螂拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="http://taipinginstitute.com/qingping-sword-system-%e9%9d%92%e8%90%8d%e5%8a%8d/">Qingping Sword System | 青萍劍</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-163"><a href="http://taipinginstitute.com/fujian-martial-arts-%e7%a6%8f%e5%bb%ba%e6%ad%a6%e6%9c%af/">Fujian Martial Arts | 福建武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="http://taipinginstitute.com/dishu-quan-%e5%9c%b0%e6%9c%af%e6%8b%b3/">Dishu Quan | 地术拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="http://taipinginstitute.com/huzun-quan-%e6%b0%b8%e7%a6%8f%e8%99%8e%e5%b0%8a%e6%8b%b3/">Huzun Quan | 永福虎尊拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="http://taipinginstitute.com/taizu-quan-%e9%97%bd%e5%8d%97%e5%a4%aa%e7%a5%96%e6%8b%b3/">Taizu Quan | 闽南太祖拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="http://taipinginstitute.com/luohan-quan-%e7%bd%97%e6%b1%89%e6%8b%b3/">Luohan Quan | 罗汉拳</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-183"><a href="http://taipinginstitute.com/jiangxi-martial-arts-%e6%b1%9f%e8%a5%bf%e6%ad%a6%e6%9c%af/">Jiangxi Martial Arts | 江西武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a href="http://taipinginstitute.com/yuejia-quan-%e5%b2%b3%e5%ae%b6%e6%8b%b3/">Yuejia Quan | 岳家拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="http://taipinginstitute.com/zimenquan-%e5%ad%97%e9%97%a8%e6%8b%b3/">Zimenquan | 字门拳</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-184"><a href="http://taipinginstitute.com/lingnan-martial-arts-%e5%b2%ad%e5%8d%97%e6%ad%a6%e6%9c%af/">Lingnan Martial Arts | 岭南武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://taipinginstitute.com/hung-kuen-%e6%b4%aa%e6%8b%b3/">Hung Kuen | 洪拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a href="http://taipinginstitute.com/fut-gar-kuen-%e5%ba%86%e4%ba%91%e4%bd%9b%e5%ae%b6%e6%8b%b3/">Fut Gar Kuen | 庆云佛家拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://taipinginstitute.com/pak-mei-kuen-%e7%99%bd%e7%9c%89%e6%8b%b3/">Pak Mei Kuen | 白眉拳</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-53"><a href="http://taipinginstitute.com/health-cultivation-%e5%85%bb%e7%94%9f/">Health Cultivation | 养生</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="http://taipinginstitute.com/taiping-daoist-health-cultivation-system/">Daoist Cultivation System | 太平全镇功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http://taipinginstitute.com/wild-goose-qigong-%e5%a4%a7%e9%9b%81%e6%b0%94%e5%8a%9f/">Wild Goose Qigong | 大雁气功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="http://taipinginstitute.com/xuan-nv-gong-%e7%8e%84%e5%a5%b3%e5%8a%9f/">Xuan Nv Gong | 玄女功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="http://taipinginstitute.com/shengzhen-gong-%e8%81%96%e7%9c%9f%e5%8d%9a%e6%84%9b%e9%a4%8a%e7%94%9f/">Shengzhen Gong | 聖真博愛養生</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-802"><a href="http://taipinginstitute.com/wu-qin-xi-%e4%ba%94%e7%a6%bd%e6%88%8f/">Wu Qin Xi | 五禽戏</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="http://taipinginstitute.com/zhineng-qigong-%e6%99%ba%e8%83%bd%e6%b0%94%e5%8a%9f/">Zhineng Qigong | 智能气功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"><a href="http://taipinginstitute.com/bagua-hunyuan-qigong-%e5%a4%aa%e4%b9%99%e5%85%ab%e5%8d%a6%e6%b7%b7%e5%85%83%e9%a4%8a%e7%94%9f%e5%8a%9f-2/">Bagua Hunyuan Qigong | 太乙八卦混元養生功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="http://taipinginstitute.com/taiping-fit-%e5%a4%aa%e5%b9%b3%e5%81%a5%e8%ba%ab%e4%bd%93%e6%93%8d/">Taiping Fit | 太平健身体操</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-54"><a href="http://taipinginstitute.com/combat/">Combat | 技击</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://taipinginstitute.com/shuaijiao/">Shuaijiao | 摔跤  – Wrestling &#038; Takedowns</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://taipinginstitute.com/qin-na-%e6%93%92%e6%8b%bf-grappling-and-locking/">Qin-na | 擒拿 – Grappling and Locking</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://taipinginstitute.com/dishu-%e5%9c%b0%e6%9c%af-ground-fighting/">Dishu 地术 | Ground fighting</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://taipinginstitute.com/self-defense-%e9%98%b2%e8%ba%ab/">Fangshen 防身 | Self Defense</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-787"><a href="http://taipinginstitute.com/taiping-combatives-%e5%ae%9e%e6%88%98%e6%8a%80%e5%87%bb/">Shizhan Jiji 实战技击 | Taiping Combatives</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-455"><a href="http://taipinginstitute.com/taiping-blog-articles/">Blog | 文章</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-777"><a href="http://taipinginstitute.com/category/martial-arts-articles-en/">武学 | Martial Studies (EN)</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-779"><a href="http://taipinginstitute.com/category/martial-arts-articles-cn/">武学 | Martial Studies (中文)</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-780"><a href="http://taipinginstitute.com/category/%e6%8b%b3%e8%b0%b1/">拳谱 | Boxing Manuals</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-775"><a href="http://taipinginstitute.com/category/chinese-medicine-articles-en/">中医 | Chinese Medicine</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-776"><a href="http://taipinginstitute.com/category/health-cultivation/">养生 | Health Cultivation</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-778"><a href="http://taipinginstitute.com/category/sports-science/">运动学 | Sports Science</a></li>
+</ul>
+</li>
+<li class="search-toggle-li" ><a href="javascript:void(0)" class="site-search-toggle search-dropdown-toggle" aria-label="Search website"><i class=" icon-magnifier" aria-hidden="true" role="img"></i></a></li></ul>
+
+
+<div class="oceanwp-social-menu clr simple-social">
+
+	<div class="social-menu-inner clr">
+
+		
+			<ul aria-label="Social links">
+
+				<li class="oceanwp-facebook"><a href="https://www.facebook.com/taipinginstitute" aria-label="Facebook (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-facebook" aria-hidden="true" role="img"></i></a></li><li class="oceanwp-youtube"><a href="https://www.youtube.com/user/SifuWu" aria-label="Youtube (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-youtube" aria-hidden="true" role="img"></i></a></li>
+			</ul>
+
+		
+	</div>
+
+</div>
+
+<div id="mobile-menu-search" class="clr">
+	<form aria-label="Search this website" method="get" action="http://taipinginstitute.com/" class="mobile-searchform" role="search">
+		<input aria-label="Insert search query" value="" class="field" id="ocean-mobile-search-2" type="search" name="s" autocomplete="off" placeholder="Search" />
+		<button aria-label="Submit search" type="submit" class="searchform-submit">
+			<i class=" icon-magnifier" aria-hidden="true" role="img"></i>		</button>
+					</form>
+</div><!-- .mobile-menu-search -->
+
+	</nav>
+
+</div>
+
+			
+			
+		
+		
+</header><!-- #site-header -->
+
+
+			
+			<main id="main" class="site-main clr"  role="main">
+
+				
+
+<header class="page-header">
+
+	
+	<div class="container clr page-header-inner">
+
+		
+			<h1 class="page-header-title clr" itemprop="headline">Blog</h1>
+
+			
+		
+		<nav aria-label="Breadcrumbs" class="site-breadcrumbs clr" itemprop="breadcrumb"><ol class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="6" /><meta name="itemListOrder" content="Ascending" /><li class="trail-item trail-begin" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="http://taipinginstitute.com" rel="home" aria-label="Home" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name"><span class="breadcrumb-home">Home</span></span></a><span class="breadcrumb-sep">></span><meta content="1" itemprop="position" /></li><li class="trail-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="http://taipinginstitute.com/2022/" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name">2022</span></a><span class="breadcrumb-sep">></span><meta content="2" itemprop="position" /></li><li class="trail-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="http://taipinginstitute.com/2022/02/" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name">February</span></a><span class="breadcrumb-sep">></span><meta content="3" itemprop="position" /></li><li class="trail-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="http://taipinginstitute.com/2022/02/15/" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name">15</span></a><span class="breadcrumb-sep">></span><meta content="4" itemprop="position" /></li><li class="trail-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="http://taipinginstitute.com/category/%e6%8b%b3%e8%b0%b1/" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name">拳谱</span></a><span class="breadcrumb-sep">></span><meta content="5" itemprop="position" /></li><li class="trail-item trail-end" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="http://taipinginstitute.com/2022/02/15/1459/" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name">李洛能  形意拳谱</span></a><meta content="6" itemprop="position" /></li></ol></nav>
+	</div><!-- .page-header-inner -->
+
+	
+	
+</header><!-- .page-header -->
+
+
+	
+	<div id="content-wrap" class="container clr">
+
+		
+		<div id="primary" class="content-area clr">
+
+			
+			<div id="content" class="site-content clr">
+
+				
+				
+<article id="post-1459">
+
+	
+<div class="thumbnail">
+
+	<img width="1376" height="860" src="http://taipinginstitute.com/wp-content/uploads/2022/02/14514541.jpg" class="attachment-full size-full wp-post-image" alt="You are currently viewing 李洛能  形意拳谱" itemprop="image" decoding="async" srcset="http://taipinginstitute.com/wp-content/uploads/2022/02/14514541.jpg 1376w, http://taipinginstitute.com/wp-content/uploads/2022/02/14514541-300x188.jpg 300w, http://taipinginstitute.com/wp-content/uploads/2022/02/14514541-1024x640.jpg 1024w, http://taipinginstitute.com/wp-content/uploads/2022/02/14514541-768x480.jpg 768w, http://taipinginstitute.com/wp-content/uploads/2022/02/14514541-1200x750.jpg 1200w" sizes="(max-width: 1376px) 100vw, 1376px" />
+</div><!-- .thumbnail -->
+
+
+<header class="entry-header clr">
+	<h2 class="single-post-title entry-title" itemprop="headline">李洛能  形意拳谱</h2><!-- .single-post-title -->
+</header><!-- .entry-header -->
+
+
+<ul class="meta ospm-default clr">
+
+	
+					<li class="meta-author" itemprop="name"><span class="screen-reader-text">Post author:</span><i class=" icon-user" aria-hidden="true" role="img"></i><a href="http://taipinginstitute.com/author/chuojiaowang/" title="Posts by Wuchanlong" rel="author"  itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">Wuchanlong</a></li>
+		
+		
+		
+		
+		
+		
+	
+		
+					<li class="meta-date" itemprop="datePublished"><span class="screen-reader-text">Post published:</span><i class=" icon-clock" aria-hidden="true" role="img"></i>15 February, 2022</li>
+		
+		
+		
+		
+		
+	
+		
+		
+		
+					<li class="meta-cat"><span class="screen-reader-text">Post category:</span><i class=" icon-folder" aria-hidden="true" role="img"></i><a href="http://taipinginstitute.com/category/%e6%8b%b3%e8%b0%b1/" rel="category tag">拳谱</a></li>
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+	
+</ul>
+
+
+
+<div class="entry-content clr" itemprop="text">
+	
+<h1 class="wp-block-heading"></h1>
+
+
+
+<p>形意拳序</p>
+
+
+
+<p>&nbsp; &nbsp; &nbsp;形意拳术之始，本乎天地之大端与夫造化之原理，盖天地之辟于一无气也，万物之生于无知，形意之成本于无意。盖无意至极生有意，意诚心正，乃至于静，静则察候六脉、溶暇二气，静极生动，动而震发四肢，贯通百骸，是谓先天存乎静，后天藏诸动也。故意为体而形为用，静属阴而动属阳，体用动静得阴阳消长生生之功，而真一之气生焉，孔子曰：“冬至养其阳，夏至养其阴，吾善养吾浩然之气。”此皆修养正气之谓也。盖形意拳之原理，则培养天一之道，由后天而达于先天也。重阳不重阴，太刚必折；重阴不重阳，过柔不坚；刚柔相济，乾坤之道乃成。古之传斯术者，多以心法口授，缺少记载，使后学者茫然不知途径，须以涵养正气为先，以为之序。</p>
+
+
+
+<p>又序</p>
+
+
+
+<p>盖夫体育一途，创自达摩老祖师，迢至宋朝岳飞，又精研内经之意义，化生五行十二形之原理，因名为形意拳，总合五纲十二目，统一全体之功用。在内为意，在外为形，是术乃修身之原本，明心见性还原之大道，揽阴阳之造化，转乾坤之枢机，诚强身之捷径也。</p>
+
+
+
+<p>十二形实本天地万物化生之理，取世间禽兽之具有特能者，妙效其性能，摹效时久，自能精神入体。</p>
+
+
+
+<p>形意拳术实与卫生关系至切，如能长习，则疾者能愈，弱者能强，男女老少皆可练习，既无折腰屈膝之痛苦，又无跃高纵险之危劳，斗室席地、长衣缓带也可演习，虽属武术，迹近文雅。</p>
+
+
+
+<p>练习时身体分阴阳，以前心为阴，脊背为阳；手心为阴，手背为阳；大指朝上为阴阳掌；以右肩在前或左肩在前，皆为阴阳身；拳虎口朝上为阴阳拳。​</p>
+
+
+
+<p>初学入门规矩</p>
+
+
+
+<p>练习拳术，不可自专自用而固执不通，如专求力，则凝滞不灵；专求重，则沉重不活；专求气，则拘泥不通；专求轻浮，则神意涣散。要而言之，身外形顺者，无形中自增力气；身内中和者，无形中自生灵气。如练至功深圆满之时，凝神于丹田，则身重于泰山；化神成虚空，则身轻如鹅羽，所以练习不可固执一端也。果得其妙道，也是若有若无，若实若虚，勿忘勿助之意，不免而中，不思而得，从容中道，无形中而生，诚神奇也。</p>
+
+
+
+<p>练习三害</p>
+
+
+
+<p>初学武术，谨当切记三害。三害不明，足以伤身。明者自能得道。三害者：一拙力，二努气，三挺胸拔腹是也。如练拙力，则四肢百骸、血脉不能流通，筋络不能舒畅，全身发拘，手足不能活泼，身为拙气所滞，滞于何处，何处成病；练时努气，则太刚易折，胸内气满，肺为气所排挤，易生满闷肺炸之诸症；若挺胸拔腹，则气逆上行，终不能归于丹田，两足似萍草无根。例如心君不和，百官必失其位。拳法亦然，若不得中和，则万法也不能至中立地步。故练习之时，谨记三害，用以力活气顺，虚胸实腹而道心生，练之设能如此，久而久之，自然能练至化境也。</p>
+
+
+
+<p>呼吸合道</p>
+
+
+
+<p>夫人以气为本，以心为根，以息为元，以肾为蒂，天地相去八万四千里，人之心肾相离八寸四分，一呼百脉皆开，一吸百脉皆闭，天地化工流行，亦不出乎呼吸二字。且呼吸之法，分有三节道理：初节道理，乃是色身上事，即练拳术之准绳，呼吸任其自然，有形于外，谓之调息，亦谓练精化气之功夫；二节道理，谓之身法上事，呼吸有形于内，注意丹田，谓之息调，亦谓之练气化神之功夫；三节道理，乃是心肾相交之内呼吸，无形无象，绵绵若存，似有非有，无声无臭，谓之胎息，也就是化神还虚之功夫。呼吸有三节道理，拳术有三步功夫，谓之明劲、暗劲、化劲是也。明劲者，拳内之法，伸缩开合之势，有形于外；暗劲者，动转神速，动则变，变则化，变化神奇，有形于内；化劲者，无形无象之手法，不见而章，不动而变之神化也。此三步功夫是练拳术之根本实际之道理，也谓之练术合道之真诀，知此道理，可谓之性命双修也。</p>
+
+
+
+<p>三步功夫</p>
+
+
+
+<p>易骨者，明劲也。练时身体动转必须顺逆，而不可悖逆，手足起发必须整齐，不可散乱，为之筑基壮体，充足骨髓，坚如金石，而气质形容如山岳之壮，谓之初步功夫。</p>
+
+
+
+<p>易筋者，暗劲也。练时神气圆满，形式绵绵，舒展应用，活泼不滞，为之长筋腾膜，全身筋络伸展，纵横联络，而生无穷之力，此谓之二步功夫。</p>
+
+
+
+<p>易髓者，化劲也。练时周身运转、起落、进退、伸缩、开合不用力，将神意蛰藏于祖窍之内，身体圆活无滞，形如流水，其心空空洞洞而养灵根，此谓之三步功夫。</p>
+
+
+
+<p>七拳法</p>
+
+
+
+<p>头、肩、肘、胯、膝、足、手是也。</p>
+
+
+
+<p>八字诀</p>
+
+
+
+<p>斩——劈拳，截——钻拳，裹——横拳，跨——崩拳，挑——践拳、燕形，顶——炮拳，云——鼍形，领——蛇形。</p>
+
+
+
+<p>五行名称</p>
+
+
+
+<p>五行者，金、木、水、火、土也。内有五脏，外有五官，皆与五行相配。心属火，肝属木，肺属金，肾属水，此五行隐于内者。舌通心，目通肝，耳通肾，鼻通肺，人中通脾，此五行著于外者也。五行相生之道：金生水，水生木，木生火，火生土，土生金。又有相克之义：木克土，土克水，水克火，火克金，金克木，此五行相克也。五行相生，变化无穷；五行相克，为破他人之手势。盖拳术取名之义，基在此矣。取诸于身，则使五脏充实，而全体无亏，运用在外，能使体舒和畅；运用在内，能使清气上升，浊气下降，坚实其内，整饰其外，以为平时练习规则。</p>
+
+
+
+<p>形体合一</p>
+
+
+
+<p>《易》云：两仪生四象，四象生八卦，八八六十四卦之数，皆从太极分散而来。太极者，天性之命，即人之心意也。意者，心之所发也。人为万象之灵，能感通诸事之应，是以心在内而理周乎物，物在外而理具于心，是故心意诚于中，而万物形于外。在内为意，在外为形，合于术数。近取诸身，内为五行；远取诸物，外为十二形。内外相合，而形生焉。明故其理，则天地万物形体合一也，皆可默悟矣。</p>
+
+
+
+<p>四稍三心归一</p>
+
+
+
+<p>盖人之一身有四稍，曰：血稍，肉稍，筋稍，骨稍是也。</p>
+
+
+
+<p>此四稍者一动，而能变化其常态。发为血稍，属心，心怒气生，气冲血动，血轮发转，精神勇敢，毛发虽微，怒能冲冠，气足血旺，力能撼山；爪为筋稍，属肝，手足之功，手抓足蹬，气力兼并，爪生奇功；齿为骨稍，属肾，化精填骨，骨实齿坚，保齿之道，最忌热凉，冷冬炎夏，唇包齿藏，年迈耆老，上下成行；舌为肉稍，属脾，脾醒舌灵，胃健肉长，坤田气壮，肌肉成镪，充实脏腑，刚柔悠扬。</p>
+
+
+
+<p>三心者，手心、足心、及心是也。用之手心要扣，足心要玄，人心要灵。明乎四稍增神力，明乎三心生灵气，四稍三心要合全，精神勇撼力推山，气浮心意随时用，硬打硬碰无遮拦。遇敌要取胜，成功须放胆，四稍三心归一体，还用灵活一混元。</p>
+
+
+
+<p>步法手法五恶</p>
+
+
+
+<p>步法者，寸步、垫步、剪步、快步是也。一尺远近，则用寸步；三五尺远，则用垫步；六七尺远，则用剪步；丈八尺远，则用快步。步法中为快步最难，是起前足，则后足平飞而去，如马之奔，如虎之践。步法者，足法也。足之要义，是起翻落钻，起者如手上翻之撩阴；落钻如石之沉水。夫足之进忌踢，进则用踩，踩者如鹰之捉物也。</p>
+
+
+
+<p>手法者，单手双手是也。单手起，往上长身而钻；往下落，缩身而翻，形如鹞子穿林，束身而起，展身而飞。双手上起，两肱似直非直，似曲非曲，形如举鼎；手落，似猛虎搜山。然其要者有五恶：即抓、扑、裹、舒、绝也。拳经云：抓为毒，扑如虎，形似猫扑鼠；裹为护，身不露，敌来吾先顾；抖要绝，力舒展，打倒还嫌慢；心要毒，手如弩，出手如蛇毒。总而言之，手不离足，足不离手，手足不能离身。分而言之则万法，合而言之则归一气。三回九转是一势，正此之谓也。上法以手足为妙，进步以手足为奇，以身为纲领，其运用进身而发势，三节要明，四稍要齐，内五行要合，外五行要随，远近应时而用，心一动而即至，其理法行于外，发著于六合之远，承上接下，势如连珠箭，何虑他有邪术！知此道理，神奇技也。</p>
+
+
+
+<p>战手要法</p>
+
+
+
+<p>二人初见面，未交手前，要凝神聚气，审查敌人五行之虚实（精神体格），注意敌人之动静，站近敌人之身旁，成三角斜形Δ式，占左进右，上右进左，进步退身，灵活要快，形似蛟龙翻浪。发拳要攥紧，拳紧增气力；发掌要扣手心，掌扣气力加。三节四稍要相齐，心要虚空而恨毒，不毒无名，俗云：人无伤虎心，虎生食人意。气要上下三田联络往返，精气能灌溉四肢，以心为主宰，以眼为统帅，以手足为先锋，不贪，不歉，不即，不离，胆要大，心要细，面要善，心要毒，静似书生，动似雷鸣。审查来人之形势，彼刚我柔，彼柔我刚，刚柔相济。进步发拳，先占中门，肘不离肋，手不离心，束身而起，长身而落，随高打高，随低就低，远发手足，近发肘膝，上打咽喉下撩阴，左右两肋在中心，发手莫有形，身动勿有势，操演时面前似有人，交手时面前似无人。拳经云：打法须要先上身，足手齐到方为真。身似蛟龙，拳打烈炮，遇敌好似火烧身。起无形落无踪，手似毒箭，身如弩弓，消息全凭后足蹬，进退旋转灵活妙，五行一动如雷声，风吹浮云散，雨打尘灰净，五行合一处，放胆必成功。</p>
+
+
+
+<p>形意摘要</p>
+
+
+
+<p>一要塌腰，二要垂肩，三要扣胸，四要顶，五要提，六要横顺知情，七要起钻落翻分明。塌腰者，尾闾上提，而阳气上升督脉之理，又谓之开督；垂肩者，肩垂则气贯肘，肘垂则气贯手，气垂则气贯丹田；扣胸者，开胸顺气，而通任脉之良箴，能将精气上通泥丸，中通心肾，下通气海，而至于涌泉；顶者，头顶、舌顶、手顶是也。头顶而气冲冠，舌顶而吼狮吞象，手顶而力推山；提者，谷道内提也，古人云：“紧撮谷道内中提，明月辉辉头上飞”，而又谓之醍醐贯顶，欲得不老，还精补脑；横者，起也；顺者，落也；起者钻也，落者翻也，起为钻，落为翻。起为横之始，钻为横之终；落为顺之始，翻为顺之终。头顶而钻，头缩而翻，手起而钻，手落而翻，足起而钻，足落而翻。腰亦然，起横不见横，落顺不见顺，起是去落是打，起亦打，落亦打，起落如水之翻浪，方是真起落也。无论如何，起钻落翻，往来总要肘不离肋，手不离心，出洞入洞紧随身。手起如钢锉，手落似钩竿，起者进也，落者退也，未起如摘字，未落如坠字，起如箭，落如风，追风赶月不放松，起如风落如箭，打倒还嫌慢。足打七分手打三，五营四稍要合全，气浮心意随时用，硬打硬碰无遮拦，打人如走路，视人如蒿草，胆上如风响，起落似箭钻，进步不胜，必有怯敌之心，此是初步明劲，有形有象之用也。至暗劲之时，用法更妙，起似蛰龙升天，落似霹雳击地，起无形落无踪，去意好似卷地风，起不起何用再起，落不落何用再落，低之中望为高，高之中望为低，打起打落，如水之翻浪，不钻不翻，以寸为先，足打七分手打三，五营四稍要合全，气浮心意随时用，打破身势无遮拦，此是二步暗劲，有无穷之妙用也。</p>
+
+
+
+<p>&nbsp; &nbsp; 拳无拳意无意，无意之中是真意，拳打三节不见形，如见形影不为能，随时而发，一言一默、一举一动、行止坐卧，以致于饮食茶水之间，皆可能用，或有人处，或无人处，无处不用，所以无入而不自得，无往而不得其道，以致寂然不动，感而遂通，无可无不可，此是三步化劲，神化之功用也。然而所用三步功夫，虚实奇正，也不可专有意用于奇正虚实。虚者并非专用于彼，己手在彼之上，用劲拉回，落如钩竿，谓之实；彼手不着我之手，用劲将彼手拉回谓之虚。并非专用意于虚实，是在人之形势感触耳。奇正之理亦然，奇无不正，正无不奇，奇中有正，正中有奇，奇正之变化，如循环之无端，所用无穷也。拳经云：拳去不空回，空回非奇拳，正此之意也。学者深思格物此理，而要义得矣。</p>
+
+
+
+<p>十六处练法</p>
+
+
+
+<p>一寸、二践、三钻、四蹴、五夹、六合、七疾、八正、九胫、十警、十一起落、十二进退、十三阴阳、十四五行、十五动静、十六虚实。</p>
+
+
+
+<p>寸——足步也；践——腿也；钻——身也；蹴——束身也；夹——如夹剪之疾也；合——内外六合也；疾——疾毒内外合一也；正——是直也，看斜有正，看正有斜；胫——手摩内五行也；警——警起四稍也，火机一发，其物必落；摩胫摩劲，意气响连声；起落——起是去，落是打，起亦打，落亦打，起落如水之翻浪，才成起落；进退——进步低，退步高，进退不知枉学艺；阴阳——看阳有阴，看阴有阳，天地相合能下雨，拳之阴阳相合能成一气，气成始能打人成其一块，皆谓阴阳之气也；五行——内五行要动，外五行要随；动静——静为本体，动为作用，若言其静，未露其机，若言其动，未见其迹，动静在正发而未发之间，谓之动静；虚实——虚是精也，实是灵也，精灵皆有，成其虚实。</p>
+
+
+
+<p>拳经云：</p>
+
+
+
+<p>精养灵根气养神，养功养道见天真，</p>
+
+
+
+<p>丹田养就长命宝，万两黄金不与人。</p>
+
+
+
+<p>拳经歌曰</p>
+
+
+
+<p>头打落意随足走，起而未起占中央；足踏中门抢他位，</p>
+
+
+
+<p>就是神手亦难防。肩打一阴返一阳，两手只在洞中藏；</p>
+
+
+
+<p>左右全凭盖势取，束长二字一命亡。肘打去意占胸膛，</p>
+
+
+
+<p>起手好似虎扑羊；或往里拨一旁走，后手只在肋下藏。</p>
+
+
+
+<p>把打起落手头挡，降龙伏虎霹雳闪；天地交合云遮月，</p>
+
+
+
+<p>武艺相战蔽日光。胯打中节并相连，阴阳相合必自然；</p>
+
+
+
+<p>外胯好似鱼打挺，里胯藏步变势难。尾打落意不见形，</p>
+
+
+
+<p>猛虎坐卧藏洞中；背尾全凭精灵气，起落二字自分明。</p>
+
+
+
+<p>膝打几处人不明，好似猛虎出木笼，和身展转不停势，</p>
+
+
+
+<p>左右明拨任意行。足打踩意不落空，消息全凭后足蹬，</p>
+
+
+
+<p>与人交手莫计备，去意好似卷地风。足打七分手打三，</p>
+
+
+
+<p>五行四稍要合全，气浮心意随时用，硬打硬碰无遮拦。</p>
+
+
+
+<p>臀打去意要占阴，好似返弓一力精；丹田久练灵根本，</p>
+
+
+
+<p>五行合一见奇能。&nbsp;</p>
+
+
+
+<p>拳经曰</p>
+
+
+
+<p>混元一气吾道成，道成莫外五真形，真形莫外真精神，</p>
+
+
+
+<p>神藏气内丹道成，如问真形须求真，要知真形合真象；</p>
+
+
+
+<p>真象合来有真诀，真诀合道得彻灵。固灵根而动心者，</p>
+
+
+
+<p>敌将也；养灵根而静心者，修道也。</p>
+
+
+
+<p>武艺虽精窍不通，费尽心机枉劳神；</p>
+
+
+
+<p>祖师留下真妙术，知者传授要摘人。</p>
+
+
+
+<p>无极论</p>
+
+
+
+<p>无极者，空空静静，虚若无一物也。圣人自阴阳以说天地。夫有形者生于无形，无形则天地安足生，故曰有太易、太初、太始、太素而太极之五太也。胎胞气质，形之本也，一警而生气质形也。气之轻清上浮者为天，气之重浊而下凝者为地。然太易者，未见其气也；太初者，气之始也；太素者，质之始也；太始者，气形之始也。气形质具，而从未相离，视之不见，听之不闻，寻之不得，故曰易也。易无形状，易变为一，太极生焉，由太极而化生万物也；如易仍无形，太极也不生气，形质混沌而相离，虚无飘渺，复而谓之无极也。</p>
+
+
+
+<p>虚无无极含一气</p>
+
+
+
+<p>虚无者，无形○之势也；无极者，○含一混沌不分之气也，此气乃是先天真一之祖气，氤氲无形，其中有一点生机含藏，名为先天之本，性命之源，生死之道，天地之始，万物之理，阴阳之母，四象之根，八卦之蒂，即太极之发源，而谓之无极也。</p>
+
+
+
+<p>起势</p>
+
+
+
+<p>开势先将身体立正，面向前，两手下垂，两足90度之姿势，心中要空空无物，此势谓之顺行天地自然化生之道，又谓之虚无含一气之势也。此势乃为练拳之要道，形意拳之基础也。</p>
+
+
+
+<p>太极论</p>
+
+
+
+<p>太极者，无形质之本，无极而有极也。自无归有，有必归无，无能生有，有无相生，无有尽时。太极中于四象两仪之母也，其性属土，天地万物皆以土为本，故万物之旺，由土而生；万物之衰，由土而归也。在人五脏属脾，脾旺则人之四肢百骸健全，取诸形意拳为横拳，内包四象，即劈、崩、钻、炮之拳，共为之五德，而又谓之五行。</p>
+
+
+
+<p>太极势</p>
+
+
+
+<p>将无极之姿势，半面向左转，左足跟靠右足里胫骨，为45度之姿势，随时再将身体下沉，腰塌劲，头顶劲，目平视，内中神意抱元守一，和而不疏。口似张非张，似合非合，舌顶上腭，谷道内提，此势取名为一气含四象，谓之揽阴阳、夺造化、转乾坤、扭枢机于后天之中，返先天之真阳，退后天之纯阴，复本来之真面目，归自己之真性命，而谓之性命双修也。故心以动而万物生，其理法行于外，发著于六合之远，无物不有；心以静，其气缩至于心中，退藏于密，无一物之所存，故练拳以此为开势之法也。</p>
+
+
+
+<p>太极</p>
+
+
+
+<p>左足不动，右足向外斜横进步，两手攥拳，左手阳拳，停在左胯，右手随足进时向里拧劲，拧成阴拳，如托物之势，顺胸上起，往前伸出，头顶身拗，目视右拳大指根节，谓之鸡腿、龙身、熊膀、虎抱头。鸡腿者，独立之势；龙身者，三曲之形；熊膀者，项竖之劲；虎抱头者，两手相抱，似猛虎离穴之意。总而言之，即中庸不偏、不倚之谓也。</p>
+
+
+
+<p>两仪势</p>
+
+
+
+<p>两仪者，是太极流行，绵绵不息，分散而生也。太极左伸，则为阳仪；太极右伸，则为阴仪，所谓阳极必生阴，阴极必生阳，生生不息。天为之一大天，人为之一小天，天地相合而生三才。三才者天、地、人三才之象也。人以三才而生三身。三身者，上、中、下三丹田也。三田往返，阴阳相交，为人性命之根，造化之源，生死之本，即道家谓之金丹也。拳术之理亦然，且拳术左分为阳仪，右分为阴仪，阴阳伸缩，生生流行，绵绵不息，即拳内动静、起落、进退、伸缩、开合之玄妙也。所以数不离理，理不离数，数理兼用，方生神化之道，体用一源，动静一理，分而言之为万法，合而言之仍归太极之一气也。形名虽殊，其理则一，正是此意义也。</p>
+
+
+
+<p>两仪生三才</p>
+
+
+
+<p>将太极之姿势，右足不动，左足向前进步，左手随足进时，往前顺右肱推出，至右手腕时向下翻劲，成半阴半阳拳；右手也同，左手向前推翻时，向里拧劲，拉回至下丹田，成半阴半阳掌，两手大指、虎口圆开，两肱曲伸，似直不直，似曲非曲，目视左手大指稍，两肩松开沉劲，两胯根塌劲，是谓肩与胯合。两肘垂劲，两膝合劲，是谓肘与膝合。两足蹬劲，两手五指伸劲，是谓手与足合，此谓之外三合也。要而言之，是肩催肘，肘催手，腰催胯，胯催膝，膝催足，上下合而为一，此时身势不可前栽后仰，左斜右歪，正似斜，斜似正，阴是阳，阳是阴，阴阳相合，内外如一，此谓之六合也。总而言之，六合是内外相合，内外相合即阴阳相合，阴阳相合，三才因斯而生焉。以后无论各拳、各形，皆用三才势为主。熟读拳经，深默温习，法无不中矣。</p>
+
+
+
+<p>三才三身非无因，分明配合天地人；</p>
+
+
+
+<p>三元灵根能妙用，武术之中即超群。</p>
+
+
+
+<p>劈拳讲义</p>
+
+
+
+<p>劈拳性属金，是阴阳连环一气之起落也。气之一静，故形象太极；气之一动而生物，其名为横。横属土，土生万物，故内包四拳。按其五行循环之理，土生金，故先练劈拳，上下运用，有劈物之意，其形似斧，故名劈拳，所诸身内则为肺，劲顺则肺气和，劲谬则肺气乖。夫人以气为主，气和则体壮，气乖则体弱，故学者不可大意也。</p>
+
+
+
+<p>上步初势曰：两手紧握，同变阴拳，左拳落出，肘顺胸前，高不过肩，力垂左肩；右手靠脐，肘至肋边，眼平舌卷，气降丹田。</p>
+
+
+
+<p>换步歌：左足既开，右足大进，手足齐落，推挽两迅，左足斜跟，右足仍顺，指开心齐，后手肋近，手足与鼻，列成直阵。</p>
+
+
+
+<p>转身歌：起势钻，落势翻，行如槐虫，起如挑担，若遇人多，三摇两旋，正是转身之谓也。</p>
+
+
+
+<p>崩拳讲义</p>
+
+
+
+<p>崩拳性属木，取之身内属肝，以拳之运用为崩拳。拳之性能是一气循环之往来，势如连珠箭，所谓崩拳似箭属木也。练之拳势顺，则肝舒气平养心神、增劲力，而无目疾、腿病之患；拳势逆，则伤肝，肝伤则两目晕花，两腿痿痛，一身失和，心火不能下降，拳也不得中立地步。然崩拳之势极间单，其练法：左足前进，右足相跟，相离四五寸；此势不换步，出左手进左足，出右手也进左足，学者于此拳中当细研究其妙道焉。</p>
+
+
+
+<p>初步歌：左足先开，右足跟进，胫对左踵，腿曲势峻，两掌变拳，后阴前顺，顺者力挽，阴者前奋，两手互易，步法莫紊。</p>
+
+
+
+<p>换步歌：左足再进，右足后跟，右手力挽，左拳阴伸，手足齐出，两手力均；后拳成阴，前拳要顺，目视前手，理要齐心。</p>
+
+
+
+<p>转身歌：左扣右横，随时转身，右足横提，右拳阴伸；左拳仰抱，推挽力均；手足齐落，两拳半阴，后拳在肋，前拳齐心。</p>
+
+
+
+<p>钻拳讲义</p>
+
+
+
+<p>钻拳性属水，是一气之流通曲折无微不至也。钻上如龙突然出水，又似涌泉趵突上翻，所诸身内属肾，以拳中为钻拳，其拳快似闪电，形似突泉，所谓属水者是也。拳势顺，则真劲突长，肾足气顺；拳势逆，则拙力横出，肾虚气乖，清气不上升，浊气不下降，真劲不长，拙力不化矣。学者当知此。</p>
+
+
+
+<p>初步歌：，左足先开，右足大进，足落拳钻，复拳宜迅，左足斜跟，右足应顺，前拳取鼻，后拳肘进，手足与鼻，列成直阵。</p>
+
+
+
+<p>换势歌：右足己开，左足大进，右拳撤回，左拳前奋；右足紧跟，左足仍顺，手足齐落，换势莫紊；前拳取鼻，后拳齐心。</p>
+
+
+
+<p>炮拳讲义</p>
+
+
+
+<p>炮拳性属火，是一气之开合，如炮之突出，形最猛，性最烈，取诸身内属心，以拳为炮拳，形似烈火炮弹，所谓属火者是也。拳势顺，则身体舒畅，心气虚灵；拳势逆，则四肢若愚，心气也乖，关窍昧闭，学者务于深究此拳也。</p>
+
+
+
+<p>初步歌：左足先进，右足随之，右斜左提，眼观一隅，掌变阴拳，右肋左脐，有如丁字，莫亢莫卑，两肘加肋，舌卷气息。</p>
+
+
+
+<p>换步歌：右拳顺出，如石之投，左拳外翻，置之眉头，足提者进，与左拳眸，左右互换，勿用他求。</p>
+
+
+
+<p>横拳讲义</p>
+
+
+
+<p>横拳性属土，是一气团聚而后分散也，取诸身内为脾，脾属土，土旺则脏腑滋和，百疾不生，所为属土者是也，取之于拳为横拳。拳势顺，似土之活，滋生万物，五脏和霭，一气之灌溉；拳势逆，气努力拙，内伤脾土，五脏失调，外似死土，万物不生，故此拳为五拳之要素，学者宜慎思明辨之。拳经云：左足退提，右足孤立，两手成拳，前阴后阳，阴者平肩，阳者肘匿，眼平身正，舌卷屏息，停时虽暂，厚其足力，足进而落，已成剪形，后拳外钻，前拳退形，钻翻小指，退与肘平，下拳横出，故以横名，手足变换，反用则成。</p>
+
+
+
+<p>五行合一进退连环拳讲义</p>
+
+
+
+<p>连环者，是五行变化合一之势也。五行分演，则谓之五行拳，而为五纲也；合演，则谓之七政，而为连环也。五拳合为一套，悠进悠退，循环连珠，陆离光怪，贯为一气，进退无常，故谓之进退连环拳。</p>
+
+
+
+<p>练习连环拳，以五行拳为母，五拳未能习熟，不必学连环拳，此拳共有十六势，进退各法，往返练习范围也小，是亦有引长之法，练习于宽地也不见其短，引长之法，至十六势不转身，仍打崩拳，按前势则往复足六十四势矣。且连环拳法，以应用为主，连环拳可以连环用之，握之则成拳，伸之则成掌，故可变为连环掌，此徒手之运用也。刀、剑、棍、枪、戟、铲、鞭、锏无不可用，有刃者则砍，有锋者则剌，无锋刃者则打，不过手势之变化耳。故器械无论大小、长短、双单皆可包括无疑，苟明变化之功，何往而不应用哉。</p>
+
+
+
+<p>十二形讲义</p>
+
+
+
+<p>夫十二形者，本诸天地化生而来也，曩昔本为十形，原属天干气数也，后者扩为十二形，原属地支气数也。干数十，地数十二。盖天之中数五，故气原乎天者，无不有五，五气合一，一阴一阳，故倍之成十；地之中数六，故气之原乎地者，无不有六，六合为一，一阴一阳，故倍之成支，此十二形数之由来也。既有其数，而即取所谓动物之特能，成为十二形。十二形者，龙、虎、猴、马、鼍、鸡、鹞、燕、蛇、鸟、鹰、熊是也。然诸物所具之特长及性能，人以身形物之形，物之意以人意悟之，此形意拳之命名之理源也。练之洁内华外，使人身体四肢百骸、五脏六腑、七表八里、九道十二经络，无闭塞之处，而百病也无发生之源，故拳中有四象、五行、六合、七政、八卦、九宫，而化取十二形，以气贯通十二经络是也。夫学者于形意十二形潜心玩索，洞明奇偶之数、阴阳之理，果无悖谬，久之不特强身，且能强种强国，故不可不勉力行之哉！</p>
+
+
+
+<p>龙形讲义</p>
+
+
+
+<p>龙者水中最灵猛之物，在卦属震，为木，形本属阴，真阳物也。取诸于身而为离，属心，心属火，故道经有言：“龙从火里出，又为云，云从龙。”龙之天性有蛰龙翻浪、升天之势、抖搜之威、游空探爪、缩骨之精，隐现莫测，取之于拳，则为龙形，此形精意，神发于目，威生于爪，劲起于承浆之穴，与虎形之气循环相接，两形一升一降，一前一后，以拳法运用之，外刚猛而内柔顺。形势顺，则心内虚空，而心火下降，心宽而智慧生，即道家火候空空洞洞是也；形势逆，筋络难舒，则身被阴火焚烧矣。故曰：</p>
+
+
+
+<p>一波未定一波生，好似神龙水上行，</p>
+
+
+
+<p>忽而冲空高处跃，声光雄勇令人惊。</p>
+
+
+
+<p>学者于此形当深心格致，久则道理自得矣。</p>
+
+
+
+<p>虎形讲义</p>
+
+
+
+<p>虎者山中猛兽之王，在卦属兑，为金，取之于身而为坎，属水，为肾。坎生风，风从虎，虎之天性有离穴抖毛之威、扑食之勇，故道经有言：“虎向水中生。”此形与龙形之势轮回相属，能通任开督，在丹经谓之水火相交而金木并，四象和合，取之于拳为虎形。此形之威力起于臀尾之劲（督脉），发动涌泉之穴，起落不见形，猛虎坐卧藏洞中。以拳之运用，外猛而内和。形势顺，则虎伏而丹田气足，能起真精补还于脑，道经云：“欲得不老，还精补脑。”正是此形之要义也；形势逆，而灵气不能灌溉三田、流通百脉，反为阴邪所浸，而身重浊不灵空矣。故曰：</p>
+
+
+
+<p>猛虎穴伏双抱头，长啸一声令胆惊，</p>
+
+
+
+<p>翻掀尾剪随风起，跳涧抖搜施威风。</p>
+
+
+
+<p>学者最当注意，格务龙虎二形之理，得之身心，则谓之性命双修也。</p>
+
+
+
+<p>猴形讲义</p>
+
+
+
+<p>猴者最灵巧之物也，性属阴土，取诸身内属脾，为心源，其性能有纵山跳涧飞身之灵，有恍闪变化不测之巧，在拳用形，故取名为猴形。以拳言之，有封猴挂印之精，有偷桃摘果之奇，有上树之巧，有坠枝之力，展转腾挪、神机莫测之妙。以形中最灵巧者，莫过于猴之为物也。故曰：</p>
+
+
+
+<p>不是飞仙体自轻，若闪若电令人惊，</p>
+
+
+
+<p>看他一身无定势，纵山跳涧一片灵。</p>
+
+
+
+<p>然练时，其拳形和，则身体轻便，快利旋转如风；拳形不和，则心内凝滞，而身也不能灵通矣。此拳之运用，与各形势不同，手法步法是一阴一阳，一反一正，先练为阴，回演为阳。学者于此形切不可忽略也。</p>
+
+
+
+<p>左势封猴挂印，偷桃，献果，上树，顺水推舟，摘果，坠枝，大蹬枝，右挂印，爬杆，掐绳。</p>
+
+
+
+<p>马形讲义</p>
+
+
+
+<p>马者最仁义之灵兽也，善知人心，有垂缰之义，抖毛之威，有蹟蹄之功，撞山跳涧之勇，取诸身内则为意，出于心源，故道云：名为马，意属脾，为土，土生万物，意变万象。以性情言之，谓之心源，以拳中言之，谓之马形，以拳法用之，有龙之天性，翻江倒海之威。拳外刚猛而内柔和，有心内虚空之妙，有丹田气足之形。拳势顺，则道心生，阴火消灭，腹实而体健；拳形不顺，则心内不能虚灵，而意忘气努，五脏失和，清气不能上升，浊气不能下降，手足也不能灵巧也。故曰：</p>
+
+
+
+<p>人学烈马蹟蹄功，战场之上抖威风，</p>
+
+
+
+<p>英雄四海扬威名，全凭此势立奇功。</p>
+
+
+
+<p>学者于此形尤宜注意而深究之矣。</p>
+
+
+
+<p>鼍形讲义</p>
+
+
+
+<p>鼍者水中之物，龙之种，身体最有力，而最灵敏者也，有浮水之能，有翻江倒海之力，取之身内为肾，以拳中之性能用其形，外合内顺，练之能消心君之浮火，助命门之相火，满肾水，活泼周身之筋络，化身体之拙气、拙力。拳势顺，丹田气足，而真精补还于脑，身轻如鼍之形，与水相合一气，而能浮于水面也；拳势逆，则手、足、肩、胯之劲必拘束，而全身也必不能灵活也。故曰：</p>
+
+
+
+<p>鼍形须知身有灵，拗步之中藏奇精，</p>
+
+
+
+<p>安不忘危危自解，与人何事须相争。</p>
+
+
+
+<p>正此之谓也。学者须加以细心研究，方不错谬也。</p>
+
+
+
+<p>鸡形讲义</p>
+
+
+
+<p>鸡者最有智谋、性勇、灵性之物也，故晨能报晓，其性虽属禽，而功于陆离，性善斗，斗时皆以智取；口刚而能啄，两腿连环而独立，爪能抓，且能蹬；生威抖翎，能腾空；进退无时，往来无定，全身运用，随时生能。以拳之运用，力量最大，故取名为鸡形，取诸身内为脾，脾健则五脏充足。脾属土，土生万物，故鸡之性能有万法，故曰：</p>
+
+
+
+<p>将在谋而不在勇，败中取胜呈英雄，</p>
+
+
+
+<p>试看鸡斗虚实敏，才知羽化有灵通。</p>
+
+
+
+<p>拳势顺，则脾胃活，有羽化之功；拳势逆，则脾衰胃满，五脏失其调和。学者宜虚心诚意格物至致，始得生化之道也。</p>
+
+
+
+<p>鹞形讲义</p>
+
+
+
+<p>鹞者飞禽中最雄勇、灵敏之物也，其性能有翻身之巧，入林之奇，展翅之威，束身而抓物，且有钻天之勇性，取诸身内能收心脏之气；取之于拳，能舒身缩体，起落翻旋，左右飞腾，外刚内柔，灵巧雄勇，是为鹞子之天性也。形势顺，则能收先天之祖气，而上升于天谷泥丸；形势逆，则心努气乖，身体重浊，而不能轻灵也。故曰：</p>
+
+
+
+<p>古来鹞飞有翱翔，两翅居然似凤凰，</p>
+
+
+
+<p>试观擒捉收放翅，武士才知这势强。</p>
+
+
+
+<p>学者于此拳最当注意研究，灵光巧妙，方能有得，而终身用之不尽也。</p>
+
+
+
+<p>鹞子回首，入林，入林捉雀，抖翅束身，钻天。</p>
+
+
+
+<p>燕形讲义</p>
+
+
+
+<p>燕者，禽之最轻妙、最敏捷者也，性有抄水之巧，钻天之能，飞腾高翔之妙，动转无声之奇，取诸于拳而为燕形，取诸身内则为肝肺。肝主筋，肺主皮毛，且气之机关也，气活则神清，百病不生，气有轻清之象，故拳中燕形能生轻妙之灵。形势顺，则筋络舒展，心内空虚，气顺而有上升、下降之能；形势逆，则气拘筋滞，身体重浊而不灵捷矣。故曰：</p>
+
+
+
+<p>一艺求精百倍功，功成之路自然通，</p>
+
+
+
+<p>扶摇试看燕取水，才知男儿高士风。</p>
+
+
+
+<p>学者须细心研究矣。</p>
+
+
+
+<p>束翅，燕子反首，右抖翅，回身左抖翎，钻天，抄水，束身，大展翅，束翅。</p>
+
+
+
+<p>蛇形讲义</p>
+
+
+
+<p>蛇者，最灵活之物也，其性能有拨草之巧，有缠绕之能，伸缩自如，首尾相应，取之身内为脾之阳，用之于拳能活动腰力、通身之骨节，故击首则尾应，击尾则首应，击身则首尾相应，其身有阴阳相摩之意。因蛇之灵活自如，故拳之命名为蛇形。练之形势顺，能起真精补还于脑，而神经充实，百疾不生；形势逆，则身体也不灵活，心窍也不开朗，反为浊气所束滞矣。故曰：</p>
+
+
+
+<p>从来顺理自成章，拨草能行逞刚强，</p>
+
+
+
+<p>蛇形寄语人学会，水中翻浪细思量。</p>
+
+
+
+<p>学者于此形当勉力求之，灵光巧妙得之于心身，则终身用之不尽也。</p>
+
+
+
+<p>白蛇吐信，白蛇缩身，白蛇抖身。</p>
+
+
+
+<p>（鸟台）形讲义</p>
+
+
+
+<p>（鸟台）者，性最直率，而无弯曲灵巧之禽也。天性有竖尾上升、超达云际之势，下落两掌有触物之形，取之于身内，而能平肝益肺，实为肝肺之股弦。故以拳形一起一落，如雷奔电；以尾之能，如迅疾风变。以性情言之，外猛内柔，有不可言喻之巧也。形势顺，则舒肝固气，实腹而生道心；形势逆，不特全身淤滞，而气也不灵通矣。故曰：</p>
+
+
+
+<p>（鸟台）形求精百倍明，（鸟台）凭收尾得彻灵，</p>
+
+
+
+<p>放他兔走几处远，起落就教性命倾。</p>
+
+
+
+<p>学者明晰斯理，真道得矣。</p>
+
+
+
+<p>鹰形讲义</p>
+
+
+
+<p>鹰者，禽中最猛、最狠之物也。其性瞥目能见细微之物，放爪能有擢获之精，其性外阳内阴，取诸身内，能起肾中真阳，穿关透体，补还于脑，形之于拳，能抑心火，滋肾水。形势顺，真精化气，通任开督，流通百脉，灌溉三田，驱逐一身百窍之阴邪，涤荡百脉之浊秽；形势逆，则肾水失调，阴火上升，目生云翳也。故曰：</p>
+
+
+
+<p>英雄处世不骄矜，遇便何妨一学鹰，</p>
+
+
+
+<p>最是九秋鹰得意，擒完狡兔便起升。</p>
+
+
+
+<p>学者于此形加意焉。</p>
+
+
+
+<p>熊形讲义</p>
+
+
+
+<p>熊者，物之最钝笨者也，性直不屈，而力最猛，其形极威，外阴而内阳，取诸身内，能助脾中真阴，消化饮食，透关健体，使阴气下降，补还丹田。形之于拳，有竖项之力，斗虎之猛，如与鹰形相合演之，气之上升而为阳，气之下降而为阴，谓之阴阳相摩，亦谓鹰熊斗志，总之不过一气之伸缩。前龙形、虎形，单演为开，此二形并演为合。故曰：</p>
+
+
+
+<p>行行出洞老熊形，为要放心胜不伸，</p>
+
+
+
+<p>得来只争斯一点，真情寄语有情人。</p>
+
+
+
+<p>学者明了十二形开合之理，可以入道修德矣。</p>
+
+
+
+<p>五行生克讲义</p>
+
+
+
+<p>五拳者，五行也。五行有生有克，而五拳也有生克之理，故有五行生克之谓也。夫五行火生于寅，旺于午，绝于亥，亥属水，故克火；水生于申，旺于子，绝在巳，巳属土，故克水；木生于亥，旺于卯，绝在申，申属金，故克木；金生于巳，旺于酉，绝在丙，丙属火，故克金；盖土旺于戊己，而衰败在卯木。如金能生水，水能生木，木能生火，火能生土，土能生金。相反者为克，顺者为生。就五行生克讲义，阴阳消长之理，如循环之无端，拳术之运用无穷也。五行拳合一演习，是谓之连环，单习是知致格物，总之在于明明德，在止于至善而已。先哲云：金止于劈，木止于崩，水止于钻，火止于炮，土止于横，五行各用其所当，于是明心见性，至止于至善，故拳明五行生克变化，则进道矣。</p>
+
+</div><!-- .entry -->
+
+<div class="post-tags clr">
+	</div>
+
+
+
+
+	<section id="related-posts" class="clr">
+
+		<h3 class="theme-heading related-posts-title">
+			<span class="text">You Might Also Like</span>
+		</h3>
+
+		<div class="oceanwp-row clr">
+
+			
+			
+				
+				<article class="related-post clr col span_1_of_3 col-1 post-360 post type-post status-publish format-standard has-post-thumbnail hentry category-10 entry has-media">
+
+					
+						<figure class="related-post-media clr">
+
+							<a href="http://taipinginstitute.com/2021/08/05/%e6%9b%b9%e6%b0%8f%e5%85%ab%e5%8d%a6%e6%8e%8c%e8%b0%b1/" class="related-thumb">
+
+								<img width="300" height="225" src="http://taipinginstitute.com/wp-content/uploads/2021/08/caozhongshengbgz-300x225.jpeg" class="attachment-medium size-medium wp-post-image" alt="Read more about the article 曹氏八卦掌谱" itemprop="image" decoding="async" srcset="http://taipinginstitute.com/wp-content/uploads/2021/08/caozhongshengbgz-300x225.jpeg 300w, http://taipinginstitute.com/wp-content/uploads/2021/08/caozhongshengbgz-768x576.jpeg 768w, http://taipinginstitute.com/wp-content/uploads/2021/08/caozhongshengbgz.jpeg 1024w" sizes="(max-width: 300px) 100vw, 300px" />							</a>
+
+						</figure>
+
+					
+					<h3 class="related-post-title">
+						<a href="http://taipinginstitute.com/2021/08/05/%e6%9b%b9%e6%b0%8f%e5%85%ab%e5%8d%a6%e6%8e%8c%e8%b0%b1/" rel="bookmark">曹氏八卦掌谱</a>
+					</h3><!-- .related-post-title -->
+
+								
+						<time class="published" datetime="2021-08-05T22:35:18+00:00"><i class=" icon-clock" aria-hidden="true" role="img"></i>5 August, 2021</time>
+						
+					
+				</article><!-- .related-post -->
+
+				
+			
+				
+				<article class="related-post clr col span_1_of_3 col-2 post-286 post type-post status-publish format-standard has-post-thumbnail hentry category-10 entry has-media">
+
+					
+						<figure class="related-post-media clr">
+
+							<a href="http://taipinginstitute.com/2021/08/05/%e5%8f%a4%e4%bc%a0%e5%bd%a2%e6%84%8f%e6%8b%b3%e4%b8%89%e5%8d%81%e5%85%ad%e5%89%91%e8%b0%b1/" class="related-thumb">
+
+								<img width="300" height="294" src="http://taipinginstitute.com/wp-content/uploads/2021/08/213213123.png" class="attachment-medium size-medium wp-post-image" alt="Read more about the article 古传形意拳三十六剑谱" itemprop="image" decoding="async" />							</a>
+
+						</figure>
+
+					
+					<h3 class="related-post-title">
+						<a href="http://taipinginstitute.com/2021/08/05/%e5%8f%a4%e4%bc%a0%e5%bd%a2%e6%84%8f%e6%8b%b3%e4%b8%89%e5%8d%81%e5%85%ad%e5%89%91%e8%b0%b1/" rel="bookmark">古传形意拳三十六剑谱</a>
+					</h3><!-- .related-post-title -->
+
+								
+						<time class="published" datetime="2021-08-05T22:02:05+00:00"><i class=" icon-clock" aria-hidden="true" role="img"></i>5 August, 2021</time>
+						
+					
+				</article><!-- .related-post -->
+
+				
+			
+				
+				<article class="related-post clr col span_1_of_3 col-3 post-282 post type-post status-publish format-standard has-post-thumbnail hentry category-10 entry has-media">
+
+					
+						<figure class="related-post-media clr">
+
+							<a href="http://taipinginstitute.com/2021/08/05/%e3%80%8a%e6%b8%a9%e5%ae%b6%e6%95%99%e8%82%b2%e6%ad%a6%e6%9c%af%e5%bf%85%e8%a6%81%e3%80%8b/" class="related-thumb">
+
+								<img width="300" height="207" src="http://taipinginstitute.com/wp-content/uploads/2021/08/chuojiao1280-300x207.png" class="attachment-medium size-medium wp-post-image" alt="Read more about the article 《温家教育武术必要》" itemprop="image" decoding="async" loading="lazy" srcset="http://taipinginstitute.com/wp-content/uploads/2021/08/chuojiao1280-300x207.png 300w, http://taipinginstitute.com/wp-content/uploads/2021/08/chuojiao1280-768x530.png 768w, http://taipinginstitute.com/wp-content/uploads/2021/08/chuojiao1280.png 902w" sizes="(max-width: 300px) 100vw, 300px" />							</a>
+
+						</figure>
+
+					
+					<h3 class="related-post-title">
+						<a href="http://taipinginstitute.com/2021/08/05/%e3%80%8a%e6%b8%a9%e5%ae%b6%e6%95%99%e8%82%b2%e6%ad%a6%e6%9c%af%e5%bf%85%e8%a6%81%e3%80%8b/" rel="bookmark">《温家教育武术必要》</a>
+					</h3><!-- .related-post-title -->
+
+								
+						<time class="published" datetime="2021-08-05T21:59:26+00:00"><i class=" icon-clock" aria-hidden="true" role="img"></i>5 August, 2021</time>
+						
+					
+				</article><!-- .related-post -->
+
+				
+			
+		</div><!-- .oceanwp-row -->
+
+	</section><!-- .related-posts -->
+
+
+
+
+</article>
+
+				
+			</div><!-- #content -->
+
+			
+		</div><!-- #primary -->
+
+		
+
+<aside id="right-sidebar" class="sidebar-container widget-area sidebar-primary" itemscope="itemscope" itemtype="https://schema.org/WPSideBar" role="complementary" aria-label="Primary Sidebar">
+
+	
+	<div id="right-sidebar-inner" class="clr">
+
+		<div id="block-2" class="sidebar-box widget_block widget_search clr"><form role="search" method="get" action="http://taipinginstitute.com/" class="wp-block-search__button-outside wp-block-search__text-button wp-block-search"    ><label class="wp-block-search__label" for="wp-block-search__input-3" >Search</label><div class="wp-block-search__inside-wrapper " ><input class="wp-block-search__input" id="wp-block-search__input-3" placeholder="" value="" type="search" name="s" required /><button aria-label="Search" class="wp-block-search__button wp-element-button" type="submit" >Search</button></div></form></div><div id="block-3" class="sidebar-box widget_block clr">
+<div class="wp-block-group"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<h2 class="wp-block-heading">Recent Posts</h2>
+
+
+<ul class="wp-block-latest-posts__list wp-block-latest-posts"><li><a class="wp-block-latest-posts__post-title" href="http://taipinginstitute.com/2024/03/30/energy-systems/">Energy Systems</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="http://taipinginstitute.com/2024/03/16/%e6%9c%b1%e6%96%87%e6%a0%8b%e4%bc%a0%e7%9a%84%e5%bc%80%e9%97%a8%e5%85%ab%e6%9e%81%e6%8b%b3/">朱文栋传的开门八极拳</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="http://taipinginstitute.com/2024/03/05/%e5%85%ab%e5%8d%a6%e6%8e%8c-%e6%ad%8c%e8%af%80/">八卦掌 歌诀</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="http://taipinginstitute.com/2024/03/02/%e6%b8%85%e4%bb%a3%e5%96%84%e6%89%91%e8%90%a5/">清代善扑营</a></li>
+<li><a class="wp-block-latest-posts__post-title" href="http://taipinginstitute.com/2024/02/24/%e7%bf%bb%e5%ad%90%e7%a5%9e%e6%8b%b3%e8%91%a3%e5%ae%aa%e5%91%a8%e8%bd%b6%e4%ba%8b/">董氏八翻拳</a></li>
+</ul></div></div>
+</div>
+	</div><!-- #sidebar-inner -->
+
+	
+</aside><!-- #right-sidebar -->
+
+
+	</div><!-- #content-wrap -->
+
+	
+
+	</main><!-- #main -->
+
+	
+	
+	
+		
+<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter" role="contentinfo">
+
+	
+	<div id="footer-inner" class="clr">
+
+		
+
+<div id="footer-widgets" class="oceanwp-row clr">
+
+	
+	<div class="footer-widgets-inner container">
+
+					<div class="footer-box span_1_of_4 col col-1">
+				<div id="block-7" class="footer-widget widget_block widget_media_image clr">
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" src="http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328-1024x668.png" alt="" class="wp-image-116" width="212" height="138" srcset="http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328-1024x668.png 1024w, http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328-300x196.png 300w, http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328-768x501.png 768w, http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328.png 1070w" sizes="(max-width: 212px) 100vw, 212px" /></figure>
+</div>			</div><!-- .footer-one-box -->
+
+							<div class="footer-box span_1_of_4 col col-2">
+					<div id="nav_menu-3" class="footer-widget widget_nav_menu clr"><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://taipinginstitute.com/programs/">Programs</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://taipinginstitute.com/founder/">Founder</a></li>
+</ul></div></div>				</div><!-- .footer-one-box -->
+				
+							<div class="footer-box span_1_of_4 col col-3 ">
+									</div><!-- .footer-one-box -->
+				
+							<div class="footer-box span_1_of_4 col col-4">
+									</div><!-- .footer-box -->
+				
+			
+	</div><!-- .container -->
+
+	
+</div><!-- #footer-widgets -->
+
+
+
+<div id="footer-bottom" class="clr">
+
+	
+	<div id="footer-bottom-inner" class="container clr">
+
+		
+			<div id="footer-bottom-menu" class="navigation clr">
+
+				<div class="menu-footer-menu-container"><ul id="menu-footer-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://taipinginstitute.com/programs/">Programs</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://taipinginstitute.com/founder/">Founder</a></li>
+</ul></div>
+			</div><!-- #footer-bottom-menu -->
+
+			
+		
+			<div id="copyright" class="clr" role="contentinfo">
+				Copyright 2000 - 2024, Taiping Institute, or its affiliates			</div><!-- #copyright -->
+
+			
+	</div><!-- #footer-bottom-inner -->
+
+	
+</div><!-- #footer-bottom -->
+
+
+	</div><!-- #footer-inner -->
+
+	
+</footer><!-- #footer -->
+
+	
+	
+</div><!-- #wrap -->
+
+
+</div><!-- #outer-wrap -->
+
+
+
+<a aria-label="Scroll to the top of the page" href="#" id="scroll-top" class="scroll-top-right"><i class=" fa fa-angle-up" aria-hidden="true" role="img"></i></a>
+
+
+
+
+<script src="http://taipinginstitute.com/wp-content/plugins/mystickymenu/js/detectmobilebrowser.js?ver=2.5.6" id="detectmobilebrowser-js"></script>
+<script id="mystickymenu-js-extra">
+var option = {"mystickyClass":"header#site-header","activationHeight":"0","disableWidth":"0","disableLargeWidth":"0","adminBar":"false","device_desktop":"1","device_mobile":"1","mystickyTransition":"fade","mysticky_disable_down":"false"};
+</script>
+<script src="http://taipinginstitute.com/wp-content/plugins/mystickymenu/js/mystickymenu.min.js?ver=2.5.6" id="mystickymenu-js"></script>
+<script id="pgc-simply-gallery-plugin-lightbox-script-js-extra">
+var PGC_SGB_LIGHTBOX = {"lightboxPreset":"","postType":"post","lightboxSettigs":""};
+</script>
+<script src="http://taipinginstitute.com/wp-content/plugins/simply-gallery-block/plugins/pgc_sgb_lightbox.min.js?ver=2.2.1" id="pgc-simply-gallery-plugin-lightbox-script-js"></script>
+<script src="http://taipinginstitute.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/isotope.pkgd.min.js?ver=3.0.3" id="isotop-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/flickity.pkgd.min.js?ver=3.0.3" id="flickity-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/photoswipe.min.js?ver=3.0.3" id="photoswipe-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/photoswipe-ui-default.min.js?ver=3.0.3" id="photoswipe-ui-default-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/sidr.js?ver=3.0.3" id="sidr-js"></script>
+<script id="oceanwp-main-js-extra">
+var oceanwpLocalize = {"nonce":"20f8e6a7b5","isRTL":"","menuSearchStyle":"drop_down","mobileMenuSearchStyle":"disabled","sidrSource":null,"sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select"};
+</script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/theme.vanilla.min.js?ver=3.0.3" id="oceanwp-main-js"></script>
+<!--[if lt IE 9]>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/third/html5.min.js?ver=3.0.3" id="html5shiv-js"></script>
+<![endif]-->
+</body>
+</html>

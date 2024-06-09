@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html class="html" lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<title>Yanqingmen | 燕青门 &#8211; Taiping Institute</title>
+<meta name='robots' content='max-image-preview:large' />
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="alternate" type="application/rss+xml" title="Taiping Institute &raquo; Feed" href="http://taipinginstitute.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Taiping Institute &raquo; Comments Feed" href="http://taipinginstitute.com/comments/feed/" />
+<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/taipinginstitute.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.4"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='http://taipinginstitute.com/wp-includes/css/dist/block-library/style.min.css?ver=6.5.4' media='all' />
+<style id='wp-block-library-theme-inline-css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:#ffffffa6}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:#ffffffa6}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='simply-gallery-block-frontend-css' href='http://taipinginstitute.com/wp-content/plugins/simply-gallery-block/blocks/blocks.uni.css?ver=2.2.1' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='http://taipinginstitute.com/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=5.15.1' media='all' />
+<link rel='stylesheet' id='simple-line-icons-css' href='http://taipinginstitute.com/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' media='all' />
+<link rel='stylesheet' id='oceanwp-style-css' href='http://taipinginstitute.com/wp-content/themes/oceanwp/assets/css/style.min.css?ver=3.0.3' media='all' />
+<script src="http://taipinginstitute.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="http://taipinginstitute.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="http://taipinginstitute.com/wp-json/" /><link rel="alternate" type="application/json" href="http://taipinginstitute.com/wp-json/wp/v2/pages/125" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://taipinginstitute.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.5.4" />
+<link rel="canonical" href="http://taipinginstitute.com/yanqingmen-%e7%87%95%e9%9d%92%e9%97%a8/" />
+<link rel='shortlink' href='http://taipinginstitute.com/?p=125' />
+<link rel="alternate" type="application/json+oembed" href="http://taipinginstitute.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftaipinginstitute.com%2Fyanqingmen-%25e7%2587%2595%25e9%259d%2592%25e9%2597%25a8%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://taipinginstitute.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftaipinginstitute.com%2Fyanqingmen-%25e7%2587%2595%25e9%259d%2592%25e9%2597%25a8%2F&#038;format=xml" />
+<style id="mystickymenu" type="text/css">#mysticky-nav { width:100%; position: static; }#mysticky-nav.wrapfixed { position:fixed; left: 0px; margin-top:0px;  z-index: 99990; -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)"; filter: alpha(opacity=90); opacity:0.9; background-color: #e2e2e2;}#mysticky-nav.wrapfixed .myfixed{ background-color: #e2e2e2; position: relative;top: auto;left: auto;right: auto;}#mysticky-nav.wrapfixed ul li.menu-item a { color: #333333;}#mysticky-nav .myfixed { margin:0 auto; float:none; border:0px; background:none; max-width:100%; }</style>			<style type="text/css">
+																															</style>
+			<!-- OceanWP CSS -->
+<style type="text/css">
+.page-header{background-color:#afafaf}/* General CSS */.container{width:1367px}@media only screen and (min-width:960px){.content-area,.content-left-sidebar .content-area{width:100%}}@media only screen and (min-width:960px){.widget-area,.content-left-sidebar .widget-area{width:37%}}.page-header,.has-transparent-header .page-header{padding:13px 0 14px 0}.page-header .page-header-title,.page-header.background-image-page-header .page-header-title{color:#565656}.site-breadcrumbs,.background-image-page-header .site-breadcrumbs{color:#ffffff}.site-breadcrumbs ul li .breadcrumb-sep,.site-breadcrumbs ol li .breadcrumb-sep{color:#353535}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:113px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,.mobile-menu-close,.after-header-content-inner >a{line-height:113px}#site-header,.has-transparent-header .is-sticky #site-header,.has-vh-transparent .is-sticky #site-header.vertical-header,#searchform-header-replace{background-color:#0a0a0a}#site-header{border-color:#6b6b6b}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:403px}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:90px}#site-navigation-wrap .dropdown-menu >li >a{padding:0 14px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#f2f2f2}#site-navigation-wrap .dropdown-menu >li >a .owp-icon use,.oceanwp-mobile-menu-icon a .owp-icon use,#searchform-header-replace-close .owp-icon use{stroke:#f2f2f2}.dropdown-menu .sub-menu{min-width:295px}/* Footer Widgets CSS */#footer-widgets{background-color:#111111}#footer-widgets,#footer-widgets p,#footer-widgets li a:before,#footer-widgets .contact-info-widget span.oceanwp-contact-title,#footer-widgets .recent-posts-date,#footer-widgets .recent-posts-comments,#footer-widgets .widget-recent-posts-icons li .fa{color:#d8d8d8}/* Footer Bottom CSS */#footer-bottom{background-color:#0f0f0f}#footer-bottom,#footer-bottom p{color:#adadad}/* Typography CSS */#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a{font-family:Arial,Helvetica,sans-serif;text-transform:uppercase}.dropdown-menu ul li a.menu-link,#site-header.full_screen-header .fs-dropdown-menu ul.sub-menu li a{font-size:11px;line-height:1.1;letter-spacing:.2px;text-transform:uppercase}.sidebar-box,.footer-box{font-family:Arial,Helvetica,sans-serif}
+</style></head>
+
+<body class="page-template-default page page-id-125 wp-custom-logo wp-embed-responsive oceanwp-theme dropdown-mobile default-breakpoint content-full-width content-max-width has-topbar has-breadcrumbs has-blog-grid" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+
+	
+	
+	<div id="outer-wrap" class="site clr">
+
+		<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+		
+		<div id="wrap" class="clr">
+
+			
+
+<div id="top-bar-wrap" class="clr">
+
+	<div id="top-bar" class="clr container has-no-content">
+
+		
+		<div id="top-bar-inner" class="clr">
+
+			
+
+		</div><!-- #top-bar-inner -->
+
+		
+	</div><!-- #top-bar -->
+
+</div><!-- #top-bar-wrap -->
+
+
+			
+<header id="site-header" class="minimal-header has-social clr" data-height="113" itemscope="itemscope" itemtype="https://schema.org/WPHeader" role="banner">
+
+	
+					
+			<div id="site-header-inner" class="clr container">
+
+				
+				
+
+<div id="site-logo" class="clr" itemscope itemtype="https://schema.org/Brand" >
+
+	
+	<div id="site-logo-inner" class="clr">
+
+		<a href="http://taipinginstitute.com/" class="custom-logo-link" rel="home"><img width="925" height="201" src="http://taipinginstitute.com/wp-content/uploads/2021/08/cropped-logisi12.png" class="custom-logo" alt="Taiping Institute" decoding="async" fetchpriority="high" srcset="http://taipinginstitute.com/wp-content/uploads/2021/08/cropped-logisi12.png 925w, http://taipinginstitute.com/wp-content/uploads/2021/08/cropped-logisi12-300x65.png 300w, http://taipinginstitute.com/wp-content/uploads/2021/08/cropped-logisi12-768x167.png 768w" sizes="(max-width: 925px) 100vw, 925px" /></a>
+	</div><!-- #site-logo-inner -->
+
+	
+	
+</div><!-- #site-logo -->
+
+
+
+
+<div class="oceanwp-social-menu clr simple-social">
+
+	<div class="social-menu-inner clr">
+
+		
+			<ul aria-label="Social links">
+
+				<li class="oceanwp-facebook"><a href="https://www.facebook.com/taipinginstitute" aria-label="Facebook (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-facebook" aria-hidden="true" role="img"></i></a></li><li class="oceanwp-youtube"><a href="https://www.youtube.com/user/SifuWu" aria-label="Youtube (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-youtube" aria-hidden="true" role="img"></i></a></li>
+			</ul>
+
+		
+	</div>
+
+</div>
+			<div id="site-navigation-wrap" class="clr">
+			
+			
+			
+			<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation" >
+
+				<ul id="menu-main-menu" class="main-menu dropdown-menu sf-menu"><li id="menu-item-1339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children dropdown menu-item-1339"><a href="http://taipinginstitute.com/" class="menu-link"><span class="text-wrap">ABOUT<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1332"><a href="http://taipinginstitute.com/founder/" class="menu-link"><span class="text-wrap">Founder</span></a></li>	<li id="menu-item-1331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1331"><a href="http://taipinginstitute.com/programs/" class="menu-link"><span class="text-wrap">Programs</span></a></li></ul>
+</li><li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current_page_ancestor menu-item-has-children dropdown menu-item-55"><a href="http://taipinginstitute.com/programs/" class="menu-link"><span class="text-wrap">Martial Arts Systems | 武学<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-178"><a href="http://taipinginstitute.com/baoding-martial-arts-%e4%bf%9d%e5%ae%9a%e6%ad%a6%e6%9c%af/" class="menu-link"><span class="text-wrap">Zhili Martial Arts | 直隶武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://taipinginstitute.com/chuojiao/" class="menu-link"><span class="text-wrap">Chuojiao | 戳脚门</span></a></li>		<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="http://taipinginstitute.com/bafan-men-%e5%85%ab%e7%bf%bb%e9%97%a8/" class="menu-link"><span class="text-wrap">Bafan Men | 八翻门</span></a></li>		<li id="menu-item-170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a href="http://taipinginstitute.com/duan-quan-%e7%9f%ad%e6%8b%b3%e9%97%a8/" class="menu-link"><span class="text-wrap">Duan Quan | 短拳门</span></a></li>		<li id="menu-item-169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="http://taipinginstitute.com/tongbei-quan-%e9%80%9a%e8%83%8c%e6%8b%b3/" class="menu-link"><span class="text-wrap">Tongbei Quan | 通背拳</span></a></li>		<li id="menu-item-809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-809"><a href="http://taipinginstitute.com/xingyi-quan-%e5%bd%a2%e6%84%8f%e6%8b%b3/" class="menu-link"><span class="text-wrap">Xingyi Quan | 形意拳</span></a></li>		<li id="menu-item-810" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-810"><a href="http://taipinginstitute.com/baguazhang-%e5%85%ab%e5%8d%a6%e6%8e%8c/" class="menu-link"><span class="text-wrap">Baguazhang | 八卦掌</span></a></li>		<li id="menu-item-815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-815"><a href="http://taipinginstitute.com/wudangquan-%e6%ad%a6%e5%bd%93%e6%8b%b3/" class="menu-link"><span class="text-wrap">Wudangquan | 武当拳</span></a></li>		<li id="menu-item-837" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="http://taipinginstitute.com/taijiquan-%e5%a4%aa%e6%9e%81%e6%8b%b3/" class="menu-link"><span class="text-wrap">Taijiquan | 太极拳</span></a></li>	</ul>
+</li>	<li id="menu-item-131" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown menu-item-131"><a href="http://taipinginstitute.com/cangzhou-martial-arts/" class="menu-link"><span class="text-wrap">Cangzhou Martial Arts | 沧州武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="http://taipinginstitute.com/da-liuhe-men-%e5%a4%a7%e5%85%ad%e5%90%88%e9%97%a8/" class="menu-link"><span class="text-wrap">Da Liuhe Men | 大六合门</span></a></li>		<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-125 current_page_item menu-item-129"><a href="http://taipinginstitute.com/yanqingmen-%e7%87%95%e9%9d%92%e9%97%a8/" class="menu-link"><span class="text-wrap">Yanqingmen | 燕青门</span></a></li>		<li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="http://taipinginstitute.com/bajiquan-%e5%85%ab%e6%9e%81%e6%8b%b3/" class="menu-link"><span class="text-wrap">Bajiquan | 八极拳</span></a></li>		<li id="menu-item-201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="http://taipinginstitute.com/piguaquan-%e5%8a%88%e6%8c%82%e9%97%a8/" class="menu-link"><span class="text-wrap">Piguaquan | 劈挂门</span></a></li>		<li id="menu-item-202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="http://taipinginstitute.com/chahua-men-%e6%9f%a5%e6%bb%91%e9%97%a8/" class="menu-link"><span class="text-wrap">Chahua Men | 查滑门</span></a></li>		<li id="menu-item-2022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2022"><a href="http://taipinginstitute.com/erlang-men-%e4%ba%8c%e9%83%8e%e9%97%a8/" class="menu-link"><span class="text-wrap">Erlang Men | 二郎门</span></a></li>		<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://taipinginstitute.com/praying-mantis-boxing-%e8%9e%b3%e8%9e%82%e6%8b%b3/" class="menu-link"><span class="text-wrap">Praying Mantis Boxing | 螳螂拳</span></a></li>		<li id="menu-item-203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="http://taipinginstitute.com/qingping-sword-system-%e9%9d%92%e8%90%8d%e5%8a%8d/" class="menu-link"><span class="text-wrap">Qingping Sword System | 青萍劍</span></a></li>	</ul>
+</li>	<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-163"><a href="http://taipinginstitute.com/fujian-martial-arts-%e7%a6%8f%e5%bb%ba%e6%ad%a6%e6%9c%af/" class="menu-link"><span class="text-wrap">Fujian Martial Arts | 福建武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="http://taipinginstitute.com/dishu-quan-%e5%9c%b0%e6%9c%af%e6%8b%b3/" class="menu-link"><span class="text-wrap">Dishu Quan | 地术拳</span></a></li>		<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="http://taipinginstitute.com/huzun-quan-%e6%b0%b8%e7%a6%8f%e8%99%8e%e5%b0%8a%e6%8b%b3/" class="menu-link"><span class="text-wrap">Huzun Quan | 永福虎尊拳</span></a></li>		<li id="menu-item-166" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="http://taipinginstitute.com/taizu-quan-%e9%97%bd%e5%8d%97%e5%a4%aa%e7%a5%96%e6%8b%b3/" class="menu-link"><span class="text-wrap">Taizu Quan | 闽南太祖拳</span></a></li>		<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="http://taipinginstitute.com/luohan-quan-%e7%bd%97%e6%b1%89%e6%8b%b3/" class="menu-link"><span class="text-wrap">Luohan Quan | 罗汉拳</span></a></li>	</ul>
+</li>	<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-183"><a href="http://taipinginstitute.com/jiangxi-martial-arts-%e6%b1%9f%e8%a5%bf%e6%ad%a6%e6%9c%af/" class="menu-link"><span class="text-wrap">Jiangxi Martial Arts | 江西武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a href="http://taipinginstitute.com/yuejia-quan-%e5%b2%b3%e5%ae%b6%e6%8b%b3/" class="menu-link"><span class="text-wrap">Yuejia Quan | 岳家拳</span></a></li>		<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="http://taipinginstitute.com/zimenquan-%e5%ad%97%e9%97%a8%e6%8b%b3/" class="menu-link"><span class="text-wrap">Zimenquan | 字门拳</span></a></li>	</ul>
+</li>	<li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-184"><a href="http://taipinginstitute.com/lingnan-martial-arts-%e5%b2%ad%e5%8d%97%e6%ad%a6%e6%9c%af/" class="menu-link"><span class="text-wrap">Lingnan Martial Arts | 岭南武学<i class="nav-arrow fa fa-angle-right" aria-hidden="true" role="img"></i></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://taipinginstitute.com/hung-kuen-%e6%b4%aa%e6%8b%b3/" class="menu-link"><span class="text-wrap">Hung Kuen | 洪拳</span></a></li>		<li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a href="http://taipinginstitute.com/fut-gar-kuen-%e5%ba%86%e4%ba%91%e4%bd%9b%e5%ae%b6%e6%8b%b3/" class="menu-link"><span class="text-wrap">Fut Gar Kuen | 庆云佛家拳</span></a></li>		<li id="menu-item-793" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://taipinginstitute.com/pak-mei-kuen-%e7%99%bd%e7%9c%89%e6%8b%b3/" class="menu-link"><span class="text-wrap">Pak Mei Kuen | 白眉拳</span></a></li>	</ul>
+</li></ul>
+</li><li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-53"><a href="http://taipinginstitute.com/health-cultivation-%e5%85%bb%e7%94%9f/" class="menu-link"><span class="text-wrap">Health Cultivation | 养生<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="http://taipinginstitute.com/taiping-daoist-health-cultivation-system/" class="menu-link"><span class="text-wrap">Daoist Cultivation System | 太平全镇功</span></a></li>	<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http://taipinginstitute.com/wild-goose-qigong-%e5%a4%a7%e9%9b%81%e6%b0%94%e5%8a%9f/" class="menu-link"><span class="text-wrap">Wild Goose Qigong | 大雁气功</span></a></li>	<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="http://taipinginstitute.com/xuan-nv-gong-%e7%8e%84%e5%a5%b3%e5%8a%9f/" class="menu-link"><span class="text-wrap">Xuan Nv Gong | 玄女功</span></a></li>	<li id="menu-item-801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="http://taipinginstitute.com/shengzhen-gong-%e8%81%96%e7%9c%9f%e5%8d%9a%e6%84%9b%e9%a4%8a%e7%94%9f/" class="menu-link"><span class="text-wrap">Shengzhen Gong | 聖真博愛養生</span></a></li>	<li id="menu-item-802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-802"><a href="http://taipinginstitute.com/wu-qin-xi-%e4%ba%94%e7%a6%bd%e6%88%8f/" class="menu-link"><span class="text-wrap">Wu Qin Xi | 五禽戏</span></a></li>	<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="http://taipinginstitute.com/zhineng-qigong-%e6%99%ba%e8%83%bd%e6%b0%94%e5%8a%9f/" class="menu-link"><span class="text-wrap">Zhineng Qigong | 智能气功</span></a></li>	<li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"><a href="http://taipinginstitute.com/bagua-hunyuan-qigong-%e5%a4%aa%e4%b9%99%e5%85%ab%e5%8d%a6%e6%b7%b7%e5%85%83%e9%a4%8a%e7%94%9f%e5%8a%9f-2/" class="menu-link"><span class="text-wrap">Bagua Hunyuan Qigong | 太乙八卦混元養生功</span></a></li>	<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="http://taipinginstitute.com/taiping-fit-%e5%a4%aa%e5%b9%b3%e5%81%a5%e8%ba%ab%e4%bd%93%e6%93%8d/" class="menu-link"><span class="text-wrap">Taiping Fit | 太平健身体操</span></a></li></ul>
+</li><li id="menu-item-54" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-54"><a href="http://taipinginstitute.com/combat/" class="menu-link"><span class="text-wrap">Combat | 技击<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://taipinginstitute.com/shuaijiao/" class="menu-link"><span class="text-wrap">Shuaijiao | 摔跤  – Wrestling &#038; Takedowns</span></a></li>	<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://taipinginstitute.com/qin-na-%e6%93%92%e6%8b%bf-grappling-and-locking/" class="menu-link"><span class="text-wrap">Qin-na | 擒拿 – Grappling and Locking</span></a></li>	<li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://taipinginstitute.com/dishu-%e5%9c%b0%e6%9c%af-ground-fighting/" class="menu-link"><span class="text-wrap">Dishu 地术 | Ground fighting</span></a></li>	<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://taipinginstitute.com/self-defense-%e9%98%b2%e8%ba%ab/" class="menu-link"><span class="text-wrap">Fangshen 防身 | Self Defense</span></a></li>	<li id="menu-item-787" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-787"><a href="http://taipinginstitute.com/taiping-combatives-%e5%ae%9e%e6%88%98%e6%8a%80%e5%87%bb/" class="menu-link"><span class="text-wrap">Shizhan Jiji 实战技击 | Taiping Combatives</span></a></li></ul>
+</li><li id="menu-item-455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-455"><a href="http://taipinginstitute.com/taiping-blog-articles/" class="menu-link"><span class="text-wrap">Blog | 文章<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-777" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-777"><a href="http://taipinginstitute.com/category/martial-arts-articles-en/" class="menu-link"><span class="text-wrap">武学 | Martial Studies (EN)</span></a></li>	<li id="menu-item-779" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-779"><a href="http://taipinginstitute.com/category/martial-arts-articles-cn/" class="menu-link"><span class="text-wrap">武学 | Martial Studies (中文)</span></a></li>	<li id="menu-item-780" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-780"><a href="http://taipinginstitute.com/category/%e6%8b%b3%e8%b0%b1/" class="menu-link"><span class="text-wrap">拳谱 | Boxing Manuals</span></a></li>	<li id="menu-item-775" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-775"><a href="http://taipinginstitute.com/category/chinese-medicine-articles-en/" class="menu-link"><span class="text-wrap">中医 | Chinese Medicine</span></a></li>	<li id="menu-item-776" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-776"><a href="http://taipinginstitute.com/category/health-cultivation/" class="menu-link"><span class="text-wrap">养生 | Health Cultivation</span></a></li>	<li id="menu-item-778" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-778"><a href="http://taipinginstitute.com/category/sports-science/" class="menu-link"><span class="text-wrap">运动学 | Sports Science</span></a></li></ul>
+</li><li class="search-toggle-li" ><a href="javascript:void(0)" class="site-search-toggle search-dropdown-toggle" aria-label="Search website"><i class=" icon-magnifier" aria-hidden="true" role="img"></i></a></li></ul>
+<div id="searchform-dropdown" class="header-searchform-wrap clr" >
+	
+<form role="search" method="get" class="searchform" action="http://taipinginstitute.com/">
+	<label for="ocean-search-form-1">
+		<span class="screen-reader-text">Search this website</span>
+		<input type="search" id="ocean-search-form-1" class="field" autocomplete="off" placeholder="Search" name="s">
+			</label>
+	</form>
+</div><!-- #searchform-dropdown -->
+
+			</nav><!-- #site-navigation -->
+
+			
+			
+					</div><!-- #site-navigation-wrap -->
+			
+		
+	
+				
+	
+	<div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+		
+		
+		
+		<a href="javascript:void(0)" class="mobile-menu"  aria-label="Mobile Menu">
+							<i class="fa fa-bars" aria-hidden="true"></i>
+								<span class="oceanwp-text">Menu</span>
+				<span class="oceanwp-close-text">Close</span>
+						</a>
+
+		
+		
+		
+	</div><!-- #oceanwp-mobile-menu-navbar -->
+
+	
+
+
+			</div><!-- #site-header-inner -->
+
+			
+<div id="mobile-dropdown" class="clr" >
+
+	<nav class="clr has-social" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+
+		<ul id="menu-main-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-1339"><a href="http://taipinginstitute.com/">ABOUT</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1332"><a href="http://taipinginstitute.com/founder/">Founder</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1331"><a href="http://taipinginstitute.com/programs/">Programs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current_page_ancestor menu-item-has-children menu-item-55"><a href="http://taipinginstitute.com/programs/">Martial Arts Systems | 武学</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-178"><a href="http://taipinginstitute.com/baoding-martial-arts-%e4%bf%9d%e5%ae%9a%e6%ad%a6%e6%9c%af/">Zhili Martial Arts | 直隶武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://taipinginstitute.com/chuojiao/">Chuojiao | 戳脚门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-130"><a href="http://taipinginstitute.com/bafan-men-%e5%85%ab%e7%bf%bb%e9%97%a8/">Bafan Men | 八翻门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a href="http://taipinginstitute.com/duan-quan-%e7%9f%ad%e6%8b%b3%e9%97%a8/">Duan Quan | 短拳门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-169"><a href="http://taipinginstitute.com/tongbei-quan-%e9%80%9a%e8%83%8c%e6%8b%b3/">Tongbei Quan | 通背拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-809"><a href="http://taipinginstitute.com/xingyi-quan-%e5%bd%a2%e6%84%8f%e6%8b%b3/">Xingyi Quan | 形意拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-810"><a href="http://taipinginstitute.com/baguazhang-%e5%85%ab%e5%8d%a6%e6%8e%8c/">Baguazhang | 八卦掌</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-815"><a href="http://taipinginstitute.com/wudangquan-%e6%ad%a6%e5%bd%93%e6%8b%b3/">Wudangquan | 武当拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-837"><a href="http://taipinginstitute.com/taijiquan-%e5%a4%aa%e6%9e%81%e6%8b%b3/">Taijiquan | 太极拳</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-131"><a href="http://taipinginstitute.com/cangzhou-martial-arts/">Cangzhou Martial Arts | 沧州武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="http://taipinginstitute.com/da-liuhe-men-%e5%a4%a7%e5%85%ad%e5%90%88%e9%97%a8/">Da Liuhe Men | 大六合门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-125 current_page_item menu-item-129"><a href="http://taipinginstitute.com/yanqingmen-%e7%87%95%e9%9d%92%e9%97%a8/" aria-current="page">Yanqingmen | 燕青门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="http://taipinginstitute.com/bajiquan-%e5%85%ab%e6%9e%81%e6%8b%b3/">Bajiquan | 八极拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-201"><a href="http://taipinginstitute.com/piguaquan-%e5%8a%88%e6%8c%82%e9%97%a8/">Piguaquan | 劈挂门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-202"><a href="http://taipinginstitute.com/chahua-men-%e6%9f%a5%e6%bb%91%e9%97%a8/">Chahua Men | 查滑门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2022"><a href="http://taipinginstitute.com/erlang-men-%e4%ba%8c%e9%83%8e%e9%97%a8/">Erlang Men | 二郎门</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://taipinginstitute.com/praying-mantis-boxing-%e8%9e%b3%e8%9e%82%e6%8b%b3/">Praying Mantis Boxing | 螳螂拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-203"><a href="http://taipinginstitute.com/qingping-sword-system-%e9%9d%92%e8%90%8d%e5%8a%8d/">Qingping Sword System | 青萍劍</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-163"><a href="http://taipinginstitute.com/fujian-martial-arts-%e7%a6%8f%e5%bb%ba%e6%ad%a6%e6%9c%af/">Fujian Martial Arts | 福建武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="http://taipinginstitute.com/dishu-quan-%e5%9c%b0%e6%9c%af%e6%8b%b3/">Dishu Quan | 地术拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"><a href="http://taipinginstitute.com/huzun-quan-%e6%b0%b8%e7%a6%8f%e8%99%8e%e5%b0%8a%e6%8b%b3/">Huzun Quan | 永福虎尊拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166"><a href="http://taipinginstitute.com/taizu-quan-%e9%97%bd%e5%8d%97%e5%a4%aa%e7%a5%96%e6%8b%b3/">Taizu Quan | 闽南太祖拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="http://taipinginstitute.com/luohan-quan-%e7%bd%97%e6%b1%89%e6%8b%b3/">Luohan Quan | 罗汉拳</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-183"><a href="http://taipinginstitute.com/jiangxi-martial-arts-%e6%b1%9f%e8%a5%bf%e6%ad%a6%e6%9c%af/">Jiangxi Martial Arts | 江西武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165"><a href="http://taipinginstitute.com/yuejia-quan-%e5%b2%b3%e5%ae%b6%e6%8b%b3/">Yuejia Quan | 岳家拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="http://taipinginstitute.com/zimenquan-%e5%ad%97%e9%97%a8%e6%8b%b3/">Zimenquan | 字门拳</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-184"><a href="http://taipinginstitute.com/lingnan-martial-arts-%e5%b2%ad%e5%8d%97%e6%ad%a6%e6%9c%af/">Lingnan Martial Arts | 岭南武学</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a href="http://taipinginstitute.com/hung-kuen-%e6%b4%aa%e6%8b%b3/">Hung Kuen | 洪拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a href="http://taipinginstitute.com/fut-gar-kuen-%e5%ba%86%e4%ba%91%e4%bd%9b%e5%ae%b6%e6%8b%b3/">Fut Gar Kuen | 庆云佛家拳</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-793"><a href="http://taipinginstitute.com/pak-mei-kuen-%e7%99%bd%e7%9c%89%e6%8b%b3/">Pak Mei Kuen | 白眉拳</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-53"><a href="http://taipinginstitute.com/health-cultivation-%e5%85%bb%e7%94%9f/">Health Cultivation | 养生</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="http://taipinginstitute.com/taiping-daoist-health-cultivation-system/">Daoist Cultivation System | 太平全镇功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="http://taipinginstitute.com/wild-goose-qigong-%e5%a4%a7%e9%9b%81%e6%b0%94%e5%8a%9f/">Wild Goose Qigong | 大雁气功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="http://taipinginstitute.com/xuan-nv-gong-%e7%8e%84%e5%a5%b3%e5%8a%9f/">Xuan Nv Gong | 玄女功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-801"><a href="http://taipinginstitute.com/shengzhen-gong-%e8%81%96%e7%9c%9f%e5%8d%9a%e6%84%9b%e9%a4%8a%e7%94%9f/">Shengzhen Gong | 聖真博愛養生</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-802"><a href="http://taipinginstitute.com/wu-qin-xi-%e4%ba%94%e7%a6%bd%e6%88%8f/">Wu Qin Xi | 五禽戏</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="http://taipinginstitute.com/zhineng-qigong-%e6%99%ba%e8%83%bd%e6%b0%94%e5%8a%9f/">Zhineng Qigong | 智能气功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-722"><a href="http://taipinginstitute.com/bagua-hunyuan-qigong-%e5%a4%aa%e4%b9%99%e5%85%ab%e5%8d%a6%e6%b7%b7%e5%85%83%e9%a4%8a%e7%94%9f%e5%8a%9f-2/">Bagua Hunyuan Qigong | 太乙八卦混元養生功</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="http://taipinginstitute.com/taiping-fit-%e5%a4%aa%e5%b9%b3%e5%81%a5%e8%ba%ab%e4%bd%93%e6%93%8d/">Taiping Fit | 太平健身体操</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-54"><a href="http://taipinginstitute.com/combat/">Combat | 技击</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://taipinginstitute.com/shuaijiao/">Shuaijiao | 摔跤  – Wrestling &#038; Takedowns</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://taipinginstitute.com/qin-na-%e6%93%92%e6%8b%bf-grappling-and-locking/">Qin-na | 擒拿 – Grappling and Locking</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://taipinginstitute.com/dishu-%e5%9c%b0%e6%9c%af-ground-fighting/">Dishu 地术 | Ground fighting</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://taipinginstitute.com/self-defense-%e9%98%b2%e8%ba%ab/">Fangshen 防身 | Self Defense</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-787"><a href="http://taipinginstitute.com/taiping-combatives-%e5%ae%9e%e6%88%98%e6%8a%80%e5%87%bb/">Shizhan Jiji 实战技击 | Taiping Combatives</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-455"><a href="http://taipinginstitute.com/taiping-blog-articles/">Blog | 文章</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-777"><a href="http://taipinginstitute.com/category/martial-arts-articles-en/">武学 | Martial Studies (EN)</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-779"><a href="http://taipinginstitute.com/category/martial-arts-articles-cn/">武学 | Martial Studies (中文)</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-780"><a href="http://taipinginstitute.com/category/%e6%8b%b3%e8%b0%b1/">拳谱 | Boxing Manuals</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-775"><a href="http://taipinginstitute.com/category/chinese-medicine-articles-en/">中医 | Chinese Medicine</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-776"><a href="http://taipinginstitute.com/category/health-cultivation/">养生 | Health Cultivation</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-778"><a href="http://taipinginstitute.com/category/sports-science/">运动学 | Sports Science</a></li>
+</ul>
+</li>
+<li class="search-toggle-li" ><a href="javascript:void(0)" class="site-search-toggle search-dropdown-toggle" aria-label="Search website"><i class=" icon-magnifier" aria-hidden="true" role="img"></i></a></li></ul>
+
+
+<div class="oceanwp-social-menu clr simple-social">
+
+	<div class="social-menu-inner clr">
+
+		
+			<ul aria-label="Social links">
+
+				<li class="oceanwp-facebook"><a href="https://www.facebook.com/taipinginstitute" aria-label="Facebook (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-facebook" aria-hidden="true" role="img"></i></a></li><li class="oceanwp-youtube"><a href="https://www.youtube.com/user/SifuWu" aria-label="Youtube (opens in a new tab)" target="_blank" rel="noopener noreferrer"><i class=" fab fa-youtube" aria-hidden="true" role="img"></i></a></li>
+			</ul>
+
+		
+	</div>
+
+</div>
+
+<div id="mobile-menu-search" class="clr">
+	<form aria-label="Search this website" method="get" action="http://taipinginstitute.com/" class="mobile-searchform" role="search">
+		<input aria-label="Insert search query" value="" class="field" id="ocean-mobile-search-2" type="search" name="s" autocomplete="off" placeholder="Search" />
+		<button aria-label="Submit search" type="submit" class="searchform-submit">
+			<i class=" icon-magnifier" aria-hidden="true" role="img"></i>		</button>
+					</form>
+</div><!-- .mobile-menu-search -->
+
+	</nav>
+
+</div>
+
+			
+			
+		
+		
+</header><!-- #site-header -->
+
+
+			
+			<main id="main" class="site-main clr"  role="main">
+
+				
+
+<header class="page-header">
+
+	
+	<div class="container clr page-header-inner">
+
+		
+			<h1 class="page-header-title clr" itemprop="headline">Yanqingmen | 燕青门</h1>
+
+			
+		
+		<nav aria-label="Breadcrumbs" class="site-breadcrumbs clr" itemprop="breadcrumb"><ol class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="2" /><meta name="itemListOrder" content="Ascending" /><li class="trail-item trail-begin" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="http://taipinginstitute.com" rel="home" aria-label="Home" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name"><span class="breadcrumb-home">Home</span></span></a><span class="breadcrumb-sep">></span><meta content="1" itemprop="position" /></li><li class="trail-item trail-end" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="http://taipinginstitute.com/yanqingmen-%e7%87%95%e9%9d%92%e9%97%a8/" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name">Yanqingmen | 燕青门</span></a><meta content="2" itemprop="position" /></li></ol></nav>
+	</div><!-- .page-header-inner -->
+
+	
+	
+</header><!-- .page-header -->
+
+
+	
+	<div id="content-wrap" class="container clr">
+
+		
+		<div id="primary" class="content-area clr">
+
+			
+			<div id="content" class="site-content clr">
+
+				
+				
+<article class="single-page-article clr">
+
+	
+<div class="entry clr" itemprop="text">
+
+	
+	
+<p>Yanqingquan | 燕青拳 (or Mizongquan | 迷踪拳)</p>
+
+
+
+<p>Yanqingmen (燕青门) is also known as Yanqingquan (燕青拳), Mizongquan (秘踪拳), Mizongyi (迷踪艺), and Yanqingjia (燕青架). In general in its hometown in Hebei Cangxian (Cangzhou) county it is called Yanqing Quan whilst outside of Cang County it is known as Mizong Quan. In general the larger system is referred to as Yanqing Men,&nbsp;which encompasses&nbsp;other conventions including Yanqing Jia, Mizongquan, Yanqingquan and Mizongyi (which are also specific methods within Yanqing Men).&nbsp;</p>
+
+
+
+<p>Yanqingquan (Mizongquan), is one of the most famous martial arts of Hebei province. Practiced widely from Cangzhou to Tianjin, it is a very complete and effective martial system with a large variety of techniques and methods. Many legends from Yanqing and Linchong of Shuihuzhuan (Heroes of the Water Margin) novel until the twentieth century with the famous Huo Yuanjia, the style has been propagated and practiced by many.&nbsp;&nbsp;</p>
+
+
+
+<p>Yanqingquan (Mizongquan) is agile and has techniques movements that can be changed with ease allowing for its deceptive approach. The rises and falls are clear and the execution is crisp with speed. The waist is essential in the support and power generation with a balance between both soft and hard movements. Both hands and feet are equally used but the legs are given ample space to gain effectiveness. Although considered rare few have endured through, as the style&#8217;s methodologies and basic practices are often difficult requiring immense amounts of strength and coordination, it is both beautiful and cunning simultaneously with effectiveness and combat orientated deceptive ability. Dodge, evade, lean, turn and light are some of the key body motions that give Yanqingquan essence.</p>
+
+
+
+<p>The origins of Yanqingquan (燕青拳) are both ancient and mysterious. Dating back to the Sui or Tang dynasty. It is also known as Mizuquan, Mizongquan (迷踪拳, 秘踪拳拳), Mizongyi (迷踪艺) or Yanqingjiazi. It is popular throughout China but is mostly practised throughout the Cang County regions of Hebei Province in Northern China. The exact origins are unknown and legends differ amongst practitioners. Some suggest that it was related to ancient Shaolin Master Jin Naluo, others suggest that Yan Qing and Cheng Zijing had mastered the arts of the Sui period and developed separate arts, Yan Qing called it Yanqingquan and Cheng Zijing called it Mizongquan.<br><br>In line with&nbsp;<a href="http://taipinginstitute.com/courses/northern-central-plains/chuojiao" target="_blank" rel="noreferrer noopener">Chuojiao Men</a>&nbsp;and&nbsp;<a href="http://taipinginstitute.com/courses/northern-central-plains/liuhequan" target="_blank" rel="noreferrer noopener">Liuhe Men</a>, it is sometimes also said that disciples of Master Zhou Tong in the Song dynasty taught the art. In Folklore, Zhou Tong’s disciples included Lin Chong, Lu Junyi (Yanqing ), Wu Song (Chuojiao) and Yue Fei (Liuhe). Further, the&nbsp;legend states that in the Song dynasty Lu Junyi from Daming county in Hebei province was a great master of martial arts and imparted his skills to a servant named Yan Qing, his sole disciple. After teaching others his students called it Yanqing Quan in his honor, but since they were rebels (Heroes of the Water Margin story) they had called it Secret Boxing (Mizong Quan), further since when escaping there footwork left pursuers lost in their tracks, it was also referred to as Secret Skills (Mizong Yi).&nbsp;&nbsp;</p>
+
+
+<div class="wp-block-image">
+<figure class="alignright size-medium is-resized"><img decoding="async" width="237" height="300" src="http://taipinginstitute.com/wp-content/uploads/2024/03/suntong2-237x300.png" alt="" class="wp-image-2101" style="width:182px;height:auto" srcset="http://taipinginstitute.com/wp-content/uploads/2024/03/suntong2-237x300.png 237w, http://taipinginstitute.com/wp-content/uploads/2024/03/suntong2.png 512w" sizes="(max-width: 237px) 100vw, 237px" /></figure></div>
+
+
+<p><strong>Sun Tong (孙通, 1772-1882)</strong><br>The development and propagation of Yanqing quan however, can be attributed to Sun Tong (孙通, 1772-1882) who was born in Taian county, Shandong Province. He had loved wushu since very young and studied from various masters. He became a disciple of great master Zhang in Yanzhou county, Shandong province. He studied for over 10 years and progressed so quickly that he was nicknamed “Sun the Iron Leg” as excelled in the kicking methods and legwork. His teacher advised that he seek out masters from around North China and improved his skills tremendously. (some records suggest Shaolin Temple, however its destruction during by Yongzheng emperor in 1732, leads to possibly practitioners of Shaolin not necessarily the temple itself). There is also records suggesting that Sun Tong&#8217;s teacher M Zhang was Zhang Bailu, a member of the Bagua/Wanglun Sect. Wang Lun learnt martial arts from Zhang Jicheng, that had inherited martial arts and traditional medicine from Yuan Gongpu. Wang Lun used to be an official in Yanggu county, well loved for teaching martial arts, qigong and offering free medical treatments. Wang Lun in 1774, led an uprising that captured three small cities and laid siege to the larger city of Linqing, a strategic location on the north-south Grand Canal transportation route. </p>
+
+
+
+<p>Sun Tong is thought to have mastered over 30 different martial arts from across the Northern Central plains, as a result he was respected as “Wan Neng Shou” basically meaning that he was capable with any style of martial art. He returned after his travels to Master Zhang’s home only to discover he had passed away. After expressing his learnings to Zhang Yulan, who wanted to challenge him, and by accident killed her. Deeply depresed by the event he left Shandong and ended up at Yaoguantun village, Cang County, Hebei Province. It is here that he passed on his skills to students, and from then forward the style of Yanqingquan laid its foundational mark on the martial world. During his later years Sun Tong also taught in other places where he often focused on only key skills so that the naming conventions changed based on the respective set of emphasis, so there were Yanqing Jia, Mizong Quan and Mizongyi as examples that are essentially parts of Yanqing Men that became styles onto themselves. </p>
+
+
+
+<p>In Cang County Sun Tong’s skills were passed on to his two sons and by his key disciples (thereafter branches) :</p>
+
+
+
+<ul>
+<li>Cangzhou Sunzhuangzi – Chen Shan </li>
+
+
+
+<li>Tianjin Jinghai County Sujiayuan – Zhou Changsheng, Lu Tongchui</li>
+
+
+
+<li>Cangzhou Keniuzhuang – Yu Shi</li>
+
+
+
+<li>Cangzhou Lilongtunmiao – Zhi Yuan </li>
+
+
+
+<li>Cangzhou&nbsp;Dongguang County Anletunzhuang – Huo Xuwu</li>
+
+
+
+<li>Tianjin Jinghai County&nbsp;Yangcheng Zhuang Village –&nbsp;Tian Yongchun, Wen Lin</li>
+</ul>
+
+
+
+<p>Sun Tong’s most senior disciple was Chen Shan, whom together with his sons would become the main inheritors of Yanqing Men. The Cang&nbsp;County Yanqing Men system&nbsp;of Chen Shan became the most popular in all of Hebei province. He taught many great masters and his disciples were famous for their excellent skills. Keeping to the original teachings this school contains the most content and training methods. This school has been propagated all over China including Dongbei (Heilongjiang and Liaoning province), Sichuan and Shandong.</p>
+
+
+
+<p><strong>2. Chen Shan (</strong><strong>陈善</strong><strong>)</strong>, also known as Chen Wanshan (陈万善)  from Sun Zhuang Village, in Cangzhou was by far the most famous of Sun Tong’s disciples. Chen Shan had loved martial arts since a young age and was diligent hard working child. In his youth he liked climbing and acrobatics, whilst also being known as a strong young man in the village. When he heard Master Sun Tong was passing by the village and accepting students, he was eager to seek his guidance. Unfortunately coming from a peasant family, he could only practice with Master Sun when it was not harvest season, as he had to help the family with the crops. </p>
+
+
+
+<p>Sometimes though such difficulties build the best character, and after a few years, Master Sun noticed the dedication and responsibility of young Chen Shan so imparted all his knowledge over many years to Chen Shan, who was extremely capable with the Qin-na, Dian Xue (Cavity Point Striking) and Bone misplacement skills. After Sun Tong passed away, it was Chen Shan who had the most followers and passed on the great skills of Yanqingquan to the next generation. His key disciples included his son Chen Guangzhi (陈广智), Zhao Mingmao (赵明茂), Zhou Changchun, Li Shi (李实), Lu Zhanao (吕占鳌), Wang Jiwu (王继武), Sun Sijing (孙思敬), Yang Hongbao (杨鸿宝), Yu Changsheng (于长生), Yu Tongbo (于同波) and Yu Wu (于五).</p>
+
+
+
+<p><strong>2. Zhou Changsheng (周长生)</strong>&nbsp;after studying with Sun Tong, taught Mizongquan around the areas of Huanghua City such as Luqiao, Heqiao, Zhangfu Zhuang, and Qing County Ouxin Zhuang and Sujiayuan. His most notable disciples however were his sons Zhou Zongde and Zhou Zongi, whom maintained the style in the Zhou family for generations.&nbsp;</p>
+
+
+
+<p><strong>2. Huo Xuwu (霍旭武)</strong> was from Dongguang county in Cangzhou and one of the disciples of Sun Tong. Huo Xuwu developed his own version of Lianshou Quan (in the past Lian Shou were sequenced lines of continuous techniques) and of Mizong Yi.  These were taught to taught Huo Endi (霍恩第)</p>
+
+
+
+<p><strong>3. Chen Guangzhi (</strong><strong>陈广智</strong><strong>/</strong><strong>陈光治</strong><strong>)</strong>&nbsp;was from a wealthy family and dedicated much of his time to business. He was renowned for his Bagua Qimen Spear. He later became a Biaoshi (Security Bureau Officer) and during the time had worked with Guo Yunshen becoming friends so Chen Guangzhi absorbed Xingyiquan as well. Chen Guangzhi did not have any sons and passed the skills to his nephew Chen Yushan (陈玉山), the main inheritor, as well as students Liu Junling (刘俊岭) and Jiang Detai (姜德泰) who later continued studying with Chen Yushan, Yang Kunshan (杨昆山)&nbsp; and many others.</p>
+
+
+
+<p><strong>3. Zhang Mingmao (张明茂 1846~1923</strong>&nbsp;) Manchurian, studied with Chen Shan since a young age. He was naturally gifted and gained amazing skills, obtaining his teacher’s great praise. His Qin-na (grappling) skills were superb and his kicks had attained the essence of Yanqingquan’s hooking skills, where one kick becomes multiple, one movement has multiple dis balancing skills. His kicks were respected as having no way to defeat because once touched, the direction of the whole kick and body will naturally re position itself into areas that opponents could never interpret and then suddenly be struck.&nbsp;</p>
+
+
+
+<p><strong>3. Su Mingyuan</strong>&nbsp;(苏明远, 1875-1935) was originally known as Su Diankui (苏殿魁), had been born into a well known martial family. His grandfather was a disciple of Sun Tong and his father an expert as well. He studied with them since a young age, receiving a thorough and comprehensive Mizongquan system in detail. He became a Biaoju (Security Logistics Escort) and participated in the Yihetuan (Boxer Rebellion). After disbanding Su Mingyuan setup a “Mizong Boxing Society” in Yantai, some of his key disciples included Sun Yuesheng, Li Shushan, Li Shufeng, Li Shusheng and Zhou Desheng.&nbsp;</p>
+
+
+
+<p><strong>3. Zhang Zhaozhu</strong>&nbsp;(张兆珠, 1877-1945) was from Chengguan Village (today known as Qingzhou Vilklage), Qing County, Cangzhou. He was the first Yanqingquan Master to come to Dalian in 1904, after him many others followed. Zhang Zhaozhu was born into on of the villages that is home to Mizongquan/Yanqingquan, so from childhood studied the martial arts, his martial brother during training included Su Mingyuan. Zhang become very skilled, so much so that by the age of 18 he already was capable of working as a Biaoju (Security Logistics Escort). &nbsp;In 1900, he also joined in the Yihe Tuan (Boxer Rebellion) and fought in the Tianjin confrontations, as well is other areas returning home in 1903. After the Japanese bombings in the summer of 1904 he went to Dalian and at first did not consider teaching but in order to teach his son, set up a small class which in time gradually grew. His disciples include his sons, Zhang Hongshuang and Zhang Hongquan as well as Gao Yu, Wang Wenyong, Liu Maosheng, Zhou Jinsheng, Qu Guangjin, Qu Guangyin, Wu Kui, . As Zhang always remained a patriach many of his students fought in the various resistance against Japanese occupation.&nbsp;</p>
+
+
+
+<p><strong>3. Sun Yuesheng</strong>&nbsp;(孙曰胜) was from Mouping County, Shandong Province. He was disciple of Su Mingyuan (苏明远). During the spring of 1932 he travelled from Yantai to Dalian where he established the Mizong Quan Society. He got ill in 1943 and then decided to return to his old home in Shandong. His most notable students in Dalian included Zhao Fengting, Li Shushan and Guo Lianglao (郭良劳, 1915-1989).&nbsp;Yantai students included&nbsp;Sun Shaoting (孙绍亭,1888-1953)&nbsp;who taught in Fushan County, Yantai, Shandong.&nbsp;</p>
+
+
+
+<p><strong>3. Huo Endi&nbsp;</strong>was born in Dongguang County, Cangzhou  where he studied with his father. He later moved his family to Jinghai, where his method became known as Huo family Boxing, or Mizong Quan. He taught his sons Huo Yuanliao (霍元卿), Huo Yuandong (霍元栋) and Huo Yuanjia (霍元甲) and&nbsp;students&nbsp;including Liu Baoxiang (刘宝祥) and Zhang Jintang (張金堂)</p>
+
+
+
+<p><strong>3. Zhou Zongde 周崇德</strong> studied with father Zhou Changsheng, and passed the skills within the family. </p>
+
+
+
+<p><strong>4. Yang Kunshan (杨昆山, 1881-1960)</strong>&nbsp;was nicknamed as ‘fast hands Yang’ and was one of the outstanding disciples of Yu Changsheng and Chen Guangzhi. Yang Kunshan also learnt the Qingping Sword from Liu Wenshi (刘文石, disciple (cousin) of famed Qingping Sword Master Jia Yunpeng). Yang Kunshan taught Yanqingquan to many including the most talented Liu Zhenshan ((刘振山, 1907-1982) also known as ‘double broadsword Yang’, Yang Liansheng (杨连生), Lu Zhenduo (卢振铎), Guo Yufen (郭玉芬), Guo Jianwei (郭建伟), Guo Jingchun (郭景春), Liu Enhua (刘恩华), Liu Yanzhao (刘延照).</p>
+
+
+
+<p>4.&nbsp;<strong>Chen Yushan (</strong><strong>陈玉山</strong><strong>&nbsp;1858~1943)</strong>&nbsp;born in Cang county, was one of the most prominent Yanqing Quan masters of his generation, had the largest number of followers and was responsible for the wide spread of Yanqingquan across Cang county. Chen Yushan taught his sons&nbsp; Chen Fengkui, Chen Fengqi, Chen Fengyi (陳風儀), as well as Chen Youliang disciples Sun Baye, Lu Jinsheng, Huang Qiwen, Zhao Tongen, Zhao Jinglan, Zhou Yuxiang, Li Yuanzhi, Li Yuan Qi, Jiang Detai, Jiang Rongqiao and many others.</p>
+
+
+
+<p><strong>4. Guo Zhongsan (</strong><strong>郭仲三</strong><strong>,1886-1973)</strong>&nbsp;originally his family originated from Fujian, but they migrated to Hebei in the Cangzhou city area. Guo Chongsan studied with Chen Guangzhi. With some friends he moved south in nearby Binzhou, Shandong province and set up a store there. He also taught Yanqingquan to local enthusiasts.&nbsp;</p>
+
+
+
+<p><strong>4. Liu Junling (1881-1956)</strong>&nbsp;was of Manchurian descent&nbsp; and resided near the Northern gates of Cangzhou. Liu practiced Yanqingquan with M Chen&nbsp;Guangzhi&nbsp;from a young age, emphasizing the development of his iron palms, fists and iron arms. He continued studies with his martial brother Chen Yushan thereafter. In terms of weapons he became highly skilled with the three sectional staff. There is a story about one of his feats where there used to be a bridge in Cangzhou known as the lost souls bridge (because it was an execution ground underneath). Since it was a rainy, wet and muddy surface two cars on the bridge were stuck after a collision. With limited equipment, Liu offered his arm supporting iron plate for the car to drive over. As a result he became known as the iron arm Liu by the local community. In 1929 he travelled to Shanghai for the Jin De society, at the same time he helped Jiang Rongqiao to complete his book on Kun Wu Sword. Thereafter he moved to Tianjin for a while where he taught students. M Liu passed the Yanqingquan system to his disciples including&nbsp;Zhao Shoushan, Chen Wanling, Tian Jingfu and Liu Zengren.&nbsp;</p>
+
+
+
+<p>4.&nbsp;<strong>Zhang Hongshuang (</strong><strong>张洪双</strong><strong>, 1898</strong><strong>－</strong><strong>1979)</strong>&nbsp;was the eldest son of Zhang Zhaozhu and helped popularize Mizongquan in Dalian. Hongshuang spent most of his life working at the Dalian Shipyard factory and during the Japanese occupation he ganged with friends to destroy a Japanese military ship, later forced into custody and severly beaten but lucklily survived and continued his service into the new China aiding to build ships for the progress of his nation. He used to practice in the late nights at the Xigang Temple courtyard. His students include Zhang Baoting, Zhang Baofa, Zhang Baocai, Zhang Baogui, Zhang Baofu and Zhang Baolong.&nbsp;</p>
+
+
+
+<p>4.&nbsp;<strong>Gao Yuchun (高玉春, 1885-1967)</strong>&nbsp;was originally from Gaojia Kouzi town in Cang County, Cangzhou. He was responsible for setting up the Mizong Quan Society. Students included Liu Boyang, Xue Yiheng, Gao Shuanggui, Zhang Xiushan and Liu Keping.&nbsp;</p>
+
+
+
+<p><strong>4. Huo Yuanjia</strong>&nbsp;(霍元甲, 1868-1910) was the 4th son of Huo Endi (of 10 Children), born in Jinghai County. Although descendant from a martial family, Huo Yuanjia unfortunately due to his weak complexture (he had asmtha and Jaundice) was not encouraged to study Yanqing Quan by his father. Rather Huo Yuanjia was supposed to focus on academic study. However, due to his interest he observed the teachings of his father and started to practice the family”s Huo Family Mizongquan.&nbsp;Huo Yuanjia is thought to have had four key students Liu Zhensheng (劉振聲) Chen Qimei (陳其美) Chen Gongzhe (陳公哲) Chen Tiesheng (陳鐵生). After going to Shanghai was associated with the committee (inclusive of his students Chen Gongzhe, Chen Tiesheng whom were members of Sun Zhongshan’s Tongmen Association) that founded/commenced the Tongmen Association supported Martial arts school in Shanghai (known as 精武體操會 Jingwu Gymnastics Association) which had Sun Zhongshan as the Honorary President, Nong Jingsun as President and Huo Yuanjia was a director in the Combat Department (Head coach of the Martial arts Studies). The first batch had 73 students enrolled. After only 70 days of the opening of the Jingwu Gymnastics Association, Huo Yuanjia did not have time to establish the Martial arts courses, and then passed away at only 42 years old. Therefore there are no inheritors of Huo Yuanjia’s martial arts in the Jingwu Association. After he passed away&nbsp;students studied other Jingwu curriculums (mainly through Zhao Lianhe) and some had tried to re-create aspects of the lost Mizong Quan.&nbsp;</p>
+
+
+
+<p>4. Zhou Shiming 周世明&nbsp; (Zhou Yi) and Zhou Shitai&nbsp; 周世泰(Zhou Tai) were outstanding inheritors of the Zhou family Mizong Quan. </p>
+
+
+
+<p>4. Liu Baoxiang (刘宝祥) and Zhang Jintang (張金堂) whom were very talented students of Huo Endi and mastered Mizong Quan. They later resided in Qing county, Hebei Province, working as Bao Biao (Personal Bodyguards) and also taught to the locals in Qing County.&nbsp;</p>
+
+
+
+<p>5.&nbsp;<strong>Chen Fengkui ( 陈凤魁, 1888-1960)</strong>&nbsp;was the eldest of M Chen Yushan. Feng Kui became renowned for his combat skills, iron palm and fierceness. Born into a family of experts that trained together from childhood, he achieve great skills. Many had employed him as trainer and also as a protection/security officer for some of the officials and warlords during the time. Whilst serving duties in&nbsp;Dongbei&nbsp;around year 1929, he encountered a&nbsp;group of Japanese army officers&nbsp;(this was just a few years prior to the Japanese invasion with the Manchuko protocol and the puppet Manchurian state) abusing locals violently. GM Chen&nbsp;could not handle the abuse to his fellow men, so although the officers had rifles, he picked up a wooden pole from nearby, ended up beating them up and murdering one of the army officers. As a result, he ran away and hid away from society for some time. GM Chen Fengkui taught in villages around Cangzhou and Tianjin, he also served different roles in training resistance army regiments.</p>
+
+
+
+<p>5.&nbsp;<strong>Chen Fengqi ( 陈凤岐, 1905-1998)</strong>&nbsp;was one of the younger sons of Chen Yushan, renowned for his nimble and quick movements. Chen Fengqi was born into a family with a deep Yanqing quan tradition and he diligently achieved skills expected of him from that. At the age of 13 he had already gained great abilities and his father would take him to meet other martial uncles and masters to develop even further. During those teen years he already took on many challengers (often physically larger) and won the praise of his teachers for his speed and clear techniques being nicknamed Xiao Baiyuan (Little white ape).&nbsp;</p>
+
+
+
+<p>In 1931, he easily passed the exams of the Zhongyang National Martial Arts Institute in Nanjing, also later involved in training the army and after being dis-illusioned by the KMT at the time for focusing on internal issues rather than protection against foreign invasions (like Japanese), in consultation with his father he returned to Cangzhou to help with farming and promote martial arts amongst his local community.A martial prodigy he received instructions from many experts such as Tong Zhongyi (Liuhequan), Liu Yuchun (Tongbeiquan), Fu Wanxiang (8 Immortals Boxing) and Li Shunan (Bajiquan/Piguaquan). He enhanced his skills in Shuaijiao (Wrestling/takedowns), Zuibaxian (Drunken 8 Immortals Boxing), Miao Dao (Willow Leaf Saber), Piguaquan and more. In this manner, he did much effort to not only preserve Yanqingquan but supplement it with great methods from other systems.&nbsp;</p>
+
+
+
+<p>He became well known and had over a hundred followers from around the country. Unfortunately during the cultural revolution he disappeared avoiding any issues associated with his past with the KMT. After though, when the National research council in 1980’s sought representatives of traditional Yanqing quan, Chen Fengqi was selected to represent, he also became the vice president of the Cangzhou martial arts association, and obtained many awards in his lifetime culminating in a national award for contributions to martial arts in 1988. Master Chen taught many disciples and was instrumental in the preservation and development of the Chen family Yanqingquan which is one of the most wide spread in Northern China today. &nbsp;</p>
+
+
+
+<p><strong>5. Sun Ba Ye.&nbsp;</strong>Other than Chen Yushan’s sons,&nbsp;Sun Baye was Chen Yushan’s most recognized disciple. Sun Ba Ye was from the Nangutun Village of Cang County. He started his studies since young and had achieve a deep foundation, whilst also learning the Yanqingquan system in great detail and comprehensively. GM Sun was fast, strong and heavy handed, he demanded practical combat skill and whilst being light and agile, his strikes were merciless,&nbsp; stepping unpredictable, kicks&nbsp;from unexpected angles&nbsp;and his Chin Na methods second to none. In the South Eastern quarter of Cang County, his name was well known by all martial artists. Although Sun Ba Ye taught in his hometown, later Sun Ba Ye served in the frontlines of the military and also became an instructor in Shaanxi and Gansu of the military for many years.&nbsp;&nbsp;After returning to his home village in his&nbsp;sixties, he was still very strong and agile. He taught many of the locals. With a very complete knowledge of Yanqingquan and the experiences of war and military combat, M Sun Ba Ye became the main teacher of villages across the Fenghua jurisdiction of Cang County.&nbsp;&nbsp;</p>
+
+
+
+<p><strong>5. Jiang Rongqiao</strong>&nbsp;<strong>(</strong><strong>姜容樵</strong><strong>, 1891-1974)</strong>&nbsp;was a renowned scholar of martial arts. He started his studies with his uncle Jiang Detai (姜德泰) and directly with his uncle’s teacher Chen Yushan (陈玉山) , studying Yanqing Quan. Later he studied with Zhang Zhaodong (张兆东), learning Xingyi Quan, Baguazhang and Taijiquan which were to become his focus. He became blind through an accident at his later age but continued his great contributions by writing books on all facets of martial arts, many are considered classics in their own right.</p>
+
+
+
+<p>5.&nbsp;<strong>Lu Zhenduo (卢振铎, 1903-1981)</strong>&nbsp;since the age of 7 studied with Yang Kunshan, mastering Yanqing Quan and Qingping Sword. He was also skilled Acupuncture for Traumatic injuries. In 1922, at only 19 years of age he started the Zhenwei Martial Arts Society (振威武术社) in Shenyang, where he also won the Lei-tai (free fight/combat often resulting in death or severe injury) in 1923. His lethal palms that often knockout opponents, earned him the nickname ”Iron Palm Lu” and “Lightning hands Lu”.&nbsp;</p>
+
+
+
+<p>A few years later in 1935 established the society in Shanghai. For a period, he was also a bodyguard for a local warlord Zhang Xueliang. Lu Zhenduo settled in Shanghai and had many students, he was involved throughout his life in the martial arts. After the establishment of the republic of China he taught many students at the Shanghai Sports Stadium, Fuxing Park and was an advisor for many martial arts associations. Lu in addition to Mizong Quan studied/exchanged Taijiquan with Yang Chengfu, Xingyiquan with Chu Guiting, Baguazhang with Jiang Rongqiao. Thereafter, Lu was very innovative and created a number of sets that integrated Yanqing Quan with the popular internal arts at the time (Taiji, Xingyi and Bagua) which remain as classics until this day.&nbsp;</p>
+
+
+
+<p>In Shanghai he taught many with his earlier (1950’s) students including Tong Shimu, Chen Ruishu, Lu Rongqin, Cheng Guosheng, Wang Yuezhen, Hou Yuanqing, Hou Genfu, Yu Fengyi, Pan Tonghai and so on. Unfortunately due to the cultural revolution (1966-76) it became more difficult to openly pass on his skills and many of his earlier students disbanded.&nbsp;After the cultural revolution&nbsp;he had even more students such as Song Liankang, Shen weigen, Qianjianmin, Qianruixian, Bao Tieming, Chen Xuanxian, Chen Yijie, Shen Ah Xing, Qiu Zhenjian, Wang Jinzhong, Yong Youcai, Shen Weiyi, Jiang Bing, Wei Zijian, Wei Zikang, Wu Jian, Cheng Rusong, Tang Shenyun, Li Jianzhong, Feng Boming, Wu Chao, Wu Liping, Bei Yijun, Qian Wenjiang, Cao Zhigang. His children eldest son, Lu Junjiang, second son Lu Junhai , daughter Lu Junhua, and adopted son Pu Chongren also inherited his skills, with Lu Junhai (who migrated to UK in 1999) being especially talented.&nbsp;</p>
+
+
+
+<p>5.&nbsp;<strong>Li Yuanzhi (李元智,1902-1972)</strong>&nbsp;studied&nbsp;<a rel="noreferrer noopener" href="http://taipinginstitute.com/courses/northern-central-plains/yanqingquan" target="_blank">Yanqing Quan</a>&nbsp;with Chen Yushan, and later also&nbsp;<a rel="noreferrer noopener" href="http://taipinginstitute.com/courses/northern-central-plains/liuhequan" target="_blank">Liuhe Quan</a>&nbsp;with Tong Zhongyi (his father in Law). He later studied&nbsp;<a rel="noreferrer noopener" href="http://taipinginstitute.com/courses/northern-central-plains/bajiquan" target="_blank">Bajiquan</a>&nbsp;with Han Huachen, Ma Yingtu and Zhao Shude at the Zhongyang Guoshu Academy in Nanjing. Li published a text on Bajiquan in 1931. In 1932, he became martial arts instructor for the army university and&nbsp;the national guards.&nbsp;&nbsp;In 1938&nbsp;he served as the&nbsp;deputy director for the Nanjing Guoshu academy. In 1940 he became the instructor for the National Revolutionary Army.&nbsp;In the 1940’s with the support of his teachers (Han &amp; Ma Bajiquan) he developed Ju Quan and in 1949 he followed the Guomingtang (KMT) to Taiwan. In the 1960’s whilst in Taiwan he continued held posts within the National Army military research and development team, which were responsible for the development and preparation of combat materials for training (his Ju Quan was adopted by the Taiwanese military from 1966-1976). The hand to hand combat, Chi-na grappling and associated skills of the Taiwan armed forces have much to do with Li Yuanzhi’s efforts and legacy. Li was always a very quite, resolute and diligent martial artist focused on true application and scientific considerations. He was not often seen in crowds, enjoying the freedom and tranquility away from public attention. M Li having an education in the most comprehensive systems of Cangzhou, did not entertain empty discussion but focused on the practical cultivating true martial arts talents.&nbsp;</p>
+
+
+
+<p>5.&nbsp;<strong>Liu Zhenshan (</strong><strong>刘振山</strong><strong>&nbsp;1907-1982)</strong>&nbsp;was born into a martial family&nbsp;in Cangzhou. He later became a disciple of Yanqing Quan experts Yang Kunshan and Li Lichun, as well as exchanging with others (such as Du Xinwu when Liu was in Chongqing in 1937). He was considered the most senior disciple of Yang Kunshan. Liu became the head of Guoshu academy of the Wan County and taught many students over the course of 15 years. In 1956 he returned to Cang county where he accepted disciples and passed Yanqing Quan. At a martial competition in those days with practitioners across North China, of the ten champions, five were from Cangzhou and all five were students of Liu Zhenshan. Although he taught many students his most notable disciples included Hu Zhengshun, Qi Fangxian and Hu Changshun.&nbsp;&nbsp;</p>
+
+
+
+<p><strong>5. Zhao Shoushan (</strong><strong>赵寿山</strong><strong>&nbsp;1909~1992)</strong>&nbsp;was from Manchurian descent and resided in Cangzhou. Inspired by his family ancestor Zhao Mingmao, whom was a renowned expert of Yanqingquan, he became a disciple of M Liu Jinling from a young age and achieved much skills of Yanqingquan. He later joined the 29th route army. After retirement he taught in his home town and helped propagate Yanqingquan throughout Cangzhou.&nbsp;</p>
+
+
+
+<p>5.&nbsp;<strong>Guo Yufen (郭玉芬 1910-1996)</strong>&nbsp;started practicing Yanqingquan with his father Guo Zhongsan since the age of 12. His father also permitted his son to study with Yang Kunshan for sometime. Not to disappoint his father Yupen studied diligently and gain commendable skill. In those days, Guo’s Mianzhang Quan was executed with great perfection and his most notable skills in Yanqingquan’s representative weapons such as the Guai (Crutches), Bian (Hard whip), Yuanyang Chan (Moon Knives) and Qingping Sword were all held in great regard. The Double Sabers he learnt from Yang Kunshan were also amazing especially the ground rolling moves which are usually challenging. He continued his fathers legacy and taught in Binzhou, Shandong with many students including his son Guo Baoshen (郭宝申), Zhang Fengyuan (张风员), Chen Anji (陈安记), Sun Zhongcheng (孙忠诚) and many others.&nbsp;</p>
+
+
+
+<p>5.&nbsp;<strong>Hu Zhenhai (</strong><strong>胡振海</strong><strong>&nbsp;1918-1990)</strong>&nbsp;born to a martial family (his father was a Taizu Changquan practitioner) he loved martial arts since a young age. He was known as the most knowledgeable and senior dsiciple of M Liu Junling. He was the one of the treasures of Yanqingquan having studied for most of his life. When he was 20 years old he already was renowned in Cangzhou for his formidable skills. Unfortunately during the various wars and political changes it was not until 1983, that he opened the Mizong Ying Wuguan (Mizong Martial Arts Academy) in Cangzhou which at it’s peak had over 1,100 students, many which came from all over China and abroad (Taiwan, Japan, Australia and Europe).</p>
+
+
+
+<p>M Hu was renowned for his Ying Qigong (Hard Qigong) and became known as Iron Head Monk and the Iron Man of Cangzhou (an important&nbsp;nickname given the symbolic Iron Lion of Cangzhou). M Hu’s knowledge of the various unique weapons of Yanqingquan. Whilst open in his teachings,&nbsp; M&nbsp; Hu was a very traditional teacher and ensured to impart the right ethics and principles in addition to the combat skills. M Hu Zhenhai had become the&nbsp;vice-chairman of the Martial arts association and dedicated his last years to the continued development of traditional martial arts.&nbsp;</p>
+
+
+
+<p>5.&nbsp;<strong>Zhao Fengting (赵凤亭, 1906-1963)</strong>&nbsp;originally Pingtu county, Shandong Province. At the age of 10, in 1916 he commenced his studies under the tutelage of Sun Yuesheng and was one of his most prominent disciples. In 1930, Zhao accompanied his Master Sun together to Dalian where they esatblished the Mizong Quan Society in 1932. After Master Sun left, it was Zhao Fengting who was made responsible to continue teaching the Mizong Quan society. A well rounded master, Zhao Fengting was well known for his spear and nicknamed ‘Great Spear Zhao’. Some of his notable students included Zhao Ruizhang, Liu Baoyu, Yu Bojun, Zhang Xunde, Wang Peigang, Liu Xisheng, Xu Shouchun, Xu Huatian, Chang Songsheng, Zhang Yunhai, Yan Guangcai and Zhang Baoting.&nbsp;</p>
+
+
+
+<p><strong>5.&nbsp;Wang Zihua</strong>&nbsp;(王子华, 1898-1961), also known as Wang Sheshi (王射石) came from a challenging childhood and left home alone in 1910 (at only 12 years of age) to Yantai, Shandong where he became a worker. In Yantai he encountered Sun Yuesheng’s disciple Li Shushan and became his disciple. He studied with great effort for over 10 years, with sustained diligence he was able to encompass most of Mizongquan system. In 1923 he opened a school to teach students in Yantai. Between 1927-1930 he setup a school and taught Mizongquan in Vladivostok, Primorsky Krai, Russia.</p>
+
+
+
+<p>He also taught in Sinuiju, North Korea. In 1930 returning to China he setup schools in Dalian, Qingdao and Dandong (near Korean border), where he married. In the late thirties he participated in numerous wars/resistance activities including teaching some of the armed forces. An official known as Mao asked Wang to come to Dalian to teach. Wang Zihua had a great many students including Liu Dexi, Jia Deren, Zhang Baoting, Zhang Xifu, Dai Benshan, Jiang Huanlong, Zhang Jinshan, Xiao Liang, Wang Hui’en, Du Wenqi, Li Bingwen, Han Yilian, Cao Yongyang, Zhang Pengfei and so forth.&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<p>5. Zhou Yitang 周玉堂 , Zhou Yuqing 周玉庆, Zhou Yicheng 周玉庆, Zhou Yuzhen 周玉震, Zhou Yuqin 周玉庆</p>
+
+
+
+<p><strong>6. Lu Junhai (</strong><strong>卢俊海</strong><strong>&nbsp;1941-)</strong>&nbsp;Studied Mizongquan with his father from a young age and held various positions in martial arts academies across China. He also contributed to research by writing a manuscript for a book about Qingping Sword during China’s martial arts research project in the 1980s. Many of his fathers students and his own in Shanghai are still guided by Lu Junhai. He currently resides in the UK and leads the Zhenwei Academy there with some excellent students improving their skills day by day.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+
+
+<p><strong>6. Zhang Jinfa (张锦发)</strong>&nbsp;was born in Fenghuadian township, Cang County. M Zhang started practicing Yanqingquan under the tutelage of Huang Qiwen (1907-1981), a disciple of Chen Yushan. When he was 12, M Zhang was also&nbsp;admitted into the sports school of Cang County, where he majored in martial arts and studied under M Guan Fenghua. M Zhang also obtained tutelage from Sub Baye and his descendants on Yanqingquan. After graduation, M Zhang remained as a coach in his county Fenghuadian, where he established the Yanqingquan Boxing Society (燕青拳社) and has been teaching until today.&nbsp;&nbsp;</p>
+
+
+
+<p>6. Zhou Fengwu 周凤梧, Zhou Fengchi 周凤池, Zhou Fengjia 周凤甲, Zhou Fengcheng 周凤城, Zhou Fengting 周凤亭, Zhou Feglou 周凤楼 and Zhou Fengjiang 周凤江</p>
+
+
+
+<p>7. Zhou Lianjia 周连甲、 Zhou Lianyuan 周连元、Zhou Junshan 周俊山、Lu Bingxun 吕秉逊、Xu Liansheng 徐连升、Zhou Yun’en 周允起、Wang Yuxi 王玉玺、Liu Zimiao 刘滋茂、Yang Fuchen 杨福臣、Yang Jinbang 杨金榜.</p>
+
+
+
+<p><strong><em>Current Lineages of Yanqing Men Mizong Quan</em></strong><br>Due to the size and complexity of Yanqingquan (Mizongquan), much of the methods have been lost through time. Chen Style Yanqing Quan was the largest and highly prominent in Cangzhou, however many Masters were lost during the 1900’s through participation in the many conflicts that engulfed China at the time, such as the Sino Japanese War, various warlord rebellions and so forth.&nbsp;Today, the remaining lineages noted below include parts of the overall system. We have spent the last decade to advance our studies of the other styles of Yanqingquan. With the intention to research, develop and preserve as much as possible of the known Yanqing Quan families.&nbsp;</p>
+
+
+
+<ul>
+<li>Cangzhou Yanqing Men (practised by Chen Shan, most senior disciple of Sun Tong and his Chen descendants for generations)</li>
+
+
+
+<li>Cangzhou Zhao Style Yanqing Quan (derived from Chen Shan, named after 5th generation Manchurian M Zhao Shoushan)</li>
+
+
+
+<li>Cangzhou Mizong Quan (derived from Chen Shan, named by the 4th generation Hu Zhenhai)</li>
+
+
+
+<li>Jinghai Tian Style Mizongquan (derived from Tian Yongchun, disciple of Sun Tong)</li>
+
+
+
+<li>Qing County Li Style Mizongquan (Derived from the teachings of Huo Enwu, named after 7th generation Li Yuchuan)</li>
+
+
+
+<li>Qing County Zhao Style Mizongquan (Derived from Lu Tongchui and Zhou Changsheng, passed down in Daxuzhuang village)</li>
+
+
+
+<li>Baoding Nanquantou Mizongquan (derived from teachings of Lu Tongchui &amp; Chen Shan , passed down by Xu Yucong in Gaoyang)</li>
+
+
+
+<li>Huanghua Zhou Style Mizongquan (derived from teachings of Zhou Changsheng, disciple of Sun Tong)</li>
+
+
+
+<li>Huanghua Gao Style Mizongquan (Derived from teachings of Gao Xilin)</li>
+
+
+
+<li>Huanghua Yu Style MIzongquan (derived from the teachings of Yu Shi, disciple of Sun Tong)</li>
+
+
+
+<li>Shanghai Lu Style Mizongquan (derived from Chen Shan, named after 5th generation Lu Zhenduo who taught in Shanghai)</li>
+</ul>
+
+
+
+<p>There are also hybrid or derived styles, but these usually just a few sets of Yanqing Men/Mizongquan combined with other material. Examples include Mizong Luohan (by Ye Yuting in Hong Kong) and Yanqing Fanzi Quan (in Shengfang Village, Ba County, Hebei).&nbsp;&nbsp;</p>
+
+
+
+<h3 class="wp-block-heading" id="1--outline-of-taiping-yanqingquan-"><strong>Outline of Taiping Yanqingquan</strong></h3>
+
+
+
+<p>Taiping Yanqingquan is predominantly of the Chen Family Yanqing quan descendant from Grandmasters Sun Baye, Chen Fengkui, Chen Fengqi, Liu Zhenshan, Hu Zhenhai, Huang Qiwen, Zhao Shoushan and Lu Zhenduo. Although iniitally of the Nanquantou line of Yanqingquan, Chen family Yanqingquan dominated focus thereafter. In recent years we have also undertaken studies with other Mizongquan experts including Liang Jincheng, Zhao Hongqing and Gao Enyi in Qing County and Huanghua. As a result Taiping Yanqingquan preserves one of the most comprehensive&nbsp;systems of Yanqing/Mizong Quan. The practice of Yanqingquan is a fairly involved process. It is categorically of the Northern Long fist based range of styles and as a result requires good physical coordination and strength couple with internal development. Most branches of Yanqingquan all have their most representative methods that are often resultant from the training approach. Traditionally students would have to master the basic movements and spend almost three years in the practice of Yanqing Jiazi. In Yanqingquan it is commonly expressed that one should have &#8221; Strength, Guts and Skill&#8221;. This means that one first starts with obtaining strength and conditioning, then followed by courage and wisdom of combat and then the skills which are techniques and methods. Yanqingquan emphasizes light and agile techniques. Every movement has its specific requirements, they must be coherent, flexible and natural. Although strength is not used, it is filled everywhere with power. Harmonization of the hard and soft into true power is the higher levels of the skill.&nbsp;</p>
+
+
+
+<p>These should be mutually combined and cannot be separated thereafter. Yanqing Jiazi represents the concept that when practicing slow one obtains the Gong/Strength or skill, yet when practicing fast then the techniques and methods are practiced. To ensure that only the worthy are taught there are three not taught rules. Do not teach those who study but do not practice, do not teach those that do not practice with passion and dedication and do not teach those that do not value their ancestors. In fact this also prevents injury because Yanqingquan is a really tough and arduous martial art, so that if you do not practice diligently you would also increase the risk of injury. It takes years of dedicated skill but once achieved the methods of Yanqingquan are amazingly effective indeed.&nbsp;</p>
+
+
+
+<p><strong>&nbsp;</strong></p>
+
+
+
+<p>Nowadays, training is commenced by the practice of footwork to which there are over 50 different or fundamental footwork methods such as Jin, Tui, Tiao, shan, teng, nuo, chen, jing, fa, xu etc……, all essential to the practice of Yanqingquan. Simultaneously many of the basic body motions, hands, arms and kicks are practiced. In terms of Structure practioners would commence by ensuring Xingzheng (Straight Structure), Ti Song (Relaxed Body), Tou Ding (Head upright), Chen Jian (Shoulders Sunken), and more. Yanqing quan has a saying ” Release Hands moving like a wild cyclone, stand as calm as Mount. Tai” which means that although there is a lot of speed the stability and structure must be maintained (i.e. not sloppy).</p>
+
+
+
+<p>In terms of Some of the basic strikes these include both hard and soft approaches with such movements as Chong (straight Punch), Beng (Ramming Punch), Pi (Chop), Za (Hammer), Tui (Push), Cha (Pierce) and in kicking methods such as Deng (Side or Press kicks), Tan (Springing kicks), Ti (Taping kicks), and more. Yanqingquan releases hands like cotton, but resembles iron when it makes contact with the opponent. With hand/leg work it is to understand the static gates and the various attacking and defensive actions. With the Body work, it is about angles distance and timing development of which many exercises are conducted with a partner. Stepping methods are then combined with the hands and body into small sequences of drills which are referred to as Lianda or lianshou (interlinked methods). During this time the training of Jiazi (Framwork Form) is ongoing which develops good strength, coordination and technique.</p>
+
+
+
+<p>In Yanqing quan it is often expressed “Slowly one trains skills, quickly one trains combat (慢练功，快练攻)” where the ability to undertake slow movements enhances ones precision, effectiveness and speed of attack. Yanqingquan is renowned for integrated the hard and the soft, the fast and the slow.&nbsp;</p>
+
+
+
+<p><strong>Mother Fist of Yanqingquan&nbsp;</strong></p>
+
+
+
+<p>Yanqing Jiazi is considered the Mother fist of Yanqingquan (Yanqing Quan is also known as Mizong Quan, Mizong Yi and so on). There is an old saying in Yanqingquan &nbsp;”燕青拳架子功，终生习练不放松 | Yanqing Quan Jiazi Gong, Chong Sheng Xi Lian Bu Fangsong ” which essentially means Yanqing Jiazi should be practiced from birth (start) and never given upon ever. Jiazi means frame or structure. What Jiazi actually focuses is thus the achievement of the alignment, strength and balance whilst simultaneously conditioning the musculoskeletal system. Many of the fundamental techniques of Yanqingquan are also within the Jiazi set/routine. Jiazi is fantastic at opening up the body as the muscles/tendons are stretched, strenghthened and co-ordinated The limbs are fully extended, the stances are low and wide, the kicks are clear and precise. To be able to execute all movements with the calmness yet quickness of Yanqingquan requires a very solid foundation. Jiazi is the epitome of such a foundation.&nbsp;</p>
+
+
+
+<p><strong>Practice of Yanqing Jiazi</strong></p>
+
+
+
+<p>Throughout the course of development a student endures different levels of hardship in the practice of Jiazi which is undertaken through the variations to its practice.&nbsp;</p>
+
+
+
+<p>Ding Jiazi (定架子|Stationary Frame) – The first of practise consists of learning the movements within Jiazi. The breath is maintained stable, the movements are conducted at a natural pace (not too fast and not slow) and positions are held for a single breath. The key is learning the movements properly and ensuring the static structures are understood whilst the dynamic lines are clear.&nbsp;</p>
+
+
+
+<p>Man Jiazi (慢架子| Slow Frame) – The Slow frame emphasizes the precision of the path of the technique. Whilst in Ding Jiazi it was a macro view or path, now things become smaller so that it is not just an outside hook as an example but the path must be clearly broken down. The breath here becomes longer and more relaxed, the legs require good strength so as to not obstruct technique. This approach is the main practice method and is also known with variants as Dun Jiazi (蹲架子| Low Frame) or Kao Jiazi (靠架子| Strengthening Frame).&nbsp;</p>
+
+
+
+<p>Huo Jiazi (活架子| Rapid Frame) – In Huo (lively) Jiazi, given the completion of the strength and precision of movements, the practitioner now applies the light stepping approach of Yanqingquan. Movements become lighter and agile, fast yet not sloppy, strong but not rigid. At certain intervals the techniques can be paused or held, whilst accelerated in others. By the time of Huo Jiazi, the student has already studied other boxing methods and now their strength, power and stability or enhanced across the realms of all their practices.&nbsp;</p>
+
+
+
+<p>After obtaining a grasp of the basics then some of the key theories of Yanqingquan are introduced from both an individual and combat practice perspective. Yanqingquan takes the waist as the central co-ordinator and therefore the waist almost always will be guiding the body and plays a dominant role in the execution of its techniques. Here are also developed the concepts of opposing yin yang hands, passing steps, close adhering. Yanqingquan emphasizes 8 principles, 36 keys and 72 mechanisms of combat as a foundation. The effectiveness of the 36 keys are such that there is a saying that with the mastery of the 36 keys then all can be conquered. As an example something as simple as yin and yang hands becomes methods of playing with the left and right or ups and downs or retreats and entries and even in terms of power applied (soft and hard), and then leads on to passing of an attack to the passing of a defense to the counter and to the indefensible.</p>
+
+
+
+<p>So training would evolve into hundreds of techniques or interpretation of single techniques. This seemingly simple complexity becomes the key to Yanqingquan and for each of the keys/principles is extrapolated yet again. In addition to technique based training there is also the development various skills from the famous iron kicks of Yanqingquan to the external conditioning (Ying Gong) methods and the internal cultivation which are acquired through the practice of Jiazi Quan and essential conditioning methods. Yanqingquan develops weapons from the human body that are as lethal as the are deceptive. What must also be developed is the continuity of movement and attack. Yanqingquan does not practice single blow mentality (although it can), rather it it develops coordination amongst the limbs and body, thus movements are interlinked and connected in harmony together.</p>
+
+
+
+<p>The Key combat methods are summarized by the 16 word formula of &nbsp;Bao (embrace), Kao(close in), Nian (adhere) , Ao (bend), Ti (lift), juan (roll), Tan (spring), Mu (catch),Na (take), Ling (lead), Tuo (prop up), Jie (intercept), Shuai (throw), Ji (press), Lan (block) and Hua (cross). To develop these in addition to individual and partner practice, there are also many methods with apparatus that are used. Yanqingquan (Mizongquan) is characterized by a lot of training in singular methods and large amount of partner based drills, exercises and combat practices.</p>
+
+
+
+<p>Yanqingquan is one of the largest system of martial arts in China, it is very complete with a huge range of different strategies, techniques and combat methods. There are over 50 empty hand forms and each consists of a large number of specialized unique techniques. Each set of practice emphasizes key fighting principles/strategies, they are organized by specific skills and combat strategies that they invoke. Each is actually a universe of methods on to itself, therefore just mastering one there is already great skill to be obtained. Thus some important strategies have many series of practice (such as Lianshou quan, yanqingquan and mizongquan). Yanqing Quan requires substantial stamina as the forms are some of the longest within the martial arts world with the level of speed and intensity required.</p>
+
+
+
+<p>Core </p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>燕青架子 Yanqing Framework<br>连手拳 (一至八路) Linked hands (8 Sets)<br>燕青拳 (一至五路)&nbsp;Yanqing Boxing (5 Sets)<br>燕青豹拳 Leopard Boxing (2 Sets)<br>大小进拳 Large/Small&nbsp;Entering Boxing (2 Sets)</td><td>迷踪架 Mizong Frame<br>迷踪拳 (一至六路)&nbsp;Mizong Boxing (6 Sets)<br>迷踪艺 Mizong Skill<br>五虎拳 5 Tigers (2 Sets) <br>罗汉拳 (一至三路)&nbsp;Luohan Boxing (3 sets)</td><td>溜腿架子 Swinging Legs Framework<br>绵掌拳 Cotton Palm Boxing<br>燕青靠&nbsp;Yanqing Lean<br>燕青十八勾 18 Hooks<br>燕青十八翻, 18 Rotations</td></tr></tbody></table></figure>
+
+
+
+<figure class="wp-block-image size-large"><img decoding="async" width="1024" height="155" src="http://taipinginstitute.com/wp-content/uploads/2024/03/yanqingmen13-1024x155.png" alt="" class="wp-image-2056" srcset="http://taipinginstitute.com/wp-content/uploads/2024/03/yanqingmen13-1024x155.png 1024w, http://taipinginstitute.com/wp-content/uploads/2024/03/yanqingmen13-300x45.png 300w, http://taipinginstitute.com/wp-content/uploads/2024/03/yanqingmen13-768x116.png 768w, http://taipinginstitute.com/wp-content/uploads/2024/03/yanqingmen13-1536x233.png 1536w, http://taipinginstitute.com/wp-content/uploads/2024/03/yanqingmen13.png 2000w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Due to interactions with Security Logistics Bureau, Rebellion and armed conflicts, Yanqing Mizong Quan absorbed skills from different martial arts (as an example Yanqing Cha, is from Chahua Men) and also deveeloped composite sets over the course of its evolution, these include the following: </p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>燕青唐拳&nbsp;Tang Boxing<br>燕青查拳 Cha Boxing<br>燕青华拳 Hua Boxing (2 sets)<br>五花炮&nbsp;&nbsp;5 Cannons<br>八打拳 8 Strikes Boxing<br>六家势 6 families styles</td><td>迷踪靠, Mizong Lean<br>迷踪掌 Mizong Palm<br>飞虎拳 Flying Tiger Boxing&nbsp;<br>車前勢 Front of the Carriage postures<br>埋伏拳 Ambushing fists<br>武松拳 Wusong Boxing (3 sets)</td><td>劈砸拳 Chopping &amp; Hammering Boxing<br>呼延拳 Huyan Family Boxing<br>太祖拳, Great Ancestor Boxing<br>四门拳 4 Gates Boxing<br>奔打 Running Strikes<br>梅花拳 Plum Blossom Boxing</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Empty hand&nbsp;Combat Sets</strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Zimu Chui (子母捶 Mother &amp; Son fist)<br>Ba Chai (八拆 8 Parts)<br>Ba Da (八打 8 Strikes)<br>Jin Quan (大小进拳 Entering)<br>Tao Huan San (套环散 Linked Chains)<br>Qin Na Shou (擒拿手 Grappling &amp; Locking hands)</td><td>Jin Ji Dou (金鸡斗 Golden Roosters challenge)<br>Zhai Kou Zi (择扣子 Open the button)<br>Shiba Gou (十八钩 18 Hooks)<br>Liu Jiu Tou (六九头 6 9 Leads)<br>Po Jia (破架 Split frame)<br>Erlong Kao Da (二龙靠打 Two Dragons Closing in Strikes)</td></tr></tbody></table></figure>
+
+
+
+<p>There are a vast number of comprehensive weapons in Yanqing Quan, both in terms of their techniques but also in their array with unique weapons as well.</p>
+
+
+
+<p><strong>Staff</strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Qun Yang Gun (群羊棍 Sheperd’s Staff)<br>Xing Zhe Bang (行者棍 Monkkey King’s Staff)<br>Yun Mo Gun (云摩棍 Cloud Rubbing Staff)<br>Er Lang Dui Gun&nbsp; (二郎棍 Erlang 2 man Staff)</td><td>Sanjie Gun (三節棍 Three Sectional Staff)<br>Xiaozi Gun (肖子棍 Two Sectional Staff)&nbsp;<br>Tai Zi Gun (太子棍 Taizi Staff)<br>Yunmo Dui Gun&nbsp;(雲摩對棍 2 Man Yunmo dual Staff&nbsp;)</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Broadsword</strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Xiao Hua Dao (小花刀 Small Flower Saber)<br>Simen Dao (四门刀&nbsp; 4 Doors Saber)<br>Meihua Dao (梅花刀 Plum Blossom Saber)&nbsp;<br>Liuhe Dao (六合刀 6 Harmonies Saber)<br>Linglong Dao (玲珑刀 Exquisite Saber)</td><td>Lianhuan Dao (連環刀 Continuous Saber)<br>Wolong Dao (卧龙刀 Dragon Saber)<br>Pigua Dao (劈挂刀 Chopping &amp; Hanging Saber)<br>Miao Dao (苗刀 Grain Leaf Saber)<br>Yan Qing Shuang Dao (燕青双刀 (一至六路) Double Sabers)</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Spear</strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Wu Hu Qunyang Qiang (五虎群羊枪 5 Tigers catch lamb Spear )<br>Ba Gua Qi Men Qiang (八卦奇门枪 Mysterious Spear)<br>Jiu Qiang&nbsp;(四門九枪 9 Spear)<br>Yang Jia Qiang (杨家梨花枪 Yang Family Spear)</td><td>Shuang Tou Qiang (双头蛇枪 Double headed Spear)<br>Shuang Qiang ( 双枪 Double Short Spears )<br>Liuhe Da Qiang (六合大枪 Six Harmonies Long Spear)&nbsp;<br>Qunyang Dui Qiang (群羊对枪&nbsp;&nbsp;2 man dual spear)</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Sword</strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Qing Long Jian (青龙剑 Green Dragon Sword)<br>Kun Wu Jian (昆吾剑 Kunwu Sword)<br>Fo Chen Jian (佛尘剑 (一至三路)&nbsp; Whisk and Sword)<br>Ba Gua Jian (八卦剑 Bagua Sword)</td><td>Fengwei Sword (凤尾剑 Phoenix Tail Sword)<br>Meihua Shuang Jian (梅花双剑 Plum Blossom Double Swords)<br>Da Mo Shuang Jian (達摩双剑 Da Mo Double Swords)<br>Jia Style Qing Ping Jian (贾氏青萍剑 (一至六路) Qingping Sword)&nbsp;</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Hard Whip</strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Huwei Bian (太师鞭 – 虎尾鞭 Tiger Tail Hard Whip)&nbsp;<br>Shuimo Bian (太师鞭 – 水磨鞭 Water Mill Whip)&nbsp;<br>Taishi Dual Bian (太师鞭 – 对击 Taishi Dual Set Whip)&nbsp;</td><td>Zhujie Gang Bian (竹节钢鞭 Bamboo sectioned Hard Whip)<br>Huyan Shuang Bian (呼延双鞭 Double Iron Whip)</td></tr></tbody></table></figure>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><strong>Hook Swords</strong><br>Hutou Shuang Gou ( 虎头双钩 Tiger’s Head Hook Swords)<br>Longxing Shuang Gou (龙行双钩 Moving Dragon Hook Swords)<br>Hushou Shuang Gou (护手双钩 Protect the hand Hook Swords)<br>Meihua&nbsp;Shuang Gou (梅花双钩 Plum blossom Hook Swords)<br>Bagua Jianjinjiao Gou (八卦剪金较钩 Bagua Slicing Hook Swords)</td><td><strong>Axes</strong>&nbsp;&nbsp;<br>Xuanfeng Shuang Fu (旋风双斧 Whirlwind Axes)<br>Xuanhua Shuang Fu (宣化双斧 Declaration Axes)<br>Jinque Shuang Fu (金雀双斧 Golden Bird Axes)<br>Kai Shan Fu (开山斧, Long handled Axe)</td></tr></tbody></table></figure>
+
+
+
+<p><strong>Others&nbsp;</strong></p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td>Qing Long Da Dao (青龙偃月大刀 Long Handled Knife)<br>Shuang Bi Shou (龍鳳雙匕首 Double Daggers)<br>Kua Hu Shuang Lian (跨虎双镰 double Sickles)<br>Chenxiang Guai (陈香拐 Walking stick )<br>Sun Bin Guai (孙膑拐 Crutch)<br>Hunyuan Shuang Chui (混元双捶&nbsp;Primordial Hammers)<br>Xuanba Shuang Chui (玄霸双捶 Dark Tyrant Hammers)<br>Lianzi Shuang Chui (链子双锤 Chained Hammers)<br>Shuang jian (双锏 Double Rods)<br>Tiangang&nbsp;Da Yan Dai (天罡大煙袋 Long Smoking Pipe)</td><td>Yueya Chan (月牙铲 Moon and Shovel)<br>fangbian Chan (方便铲 Shovel/Monk’s Spade)<br>Fo Chen (佛尘 Whisk) Dao Jia Guai ( 刀加拐 Saber with Baton)<br>Gou Qiang Guai (勾枪拐 Hooking spear Crutch)<br>Tulong Shuang Guai (土龙雙拐 Earthly Dragon Double Crutches)<br>Pu Dao (朴刀 Long handled Chopper Knife)<br>Zimu Yuanyang Yue (子母鸳鸯钺 Mother son Mandarin duck knives)<br>Ziwu Yuanyang Yue (子午鸳鸯钺 Ziwu Mandarin duck Knives)<br>Shierlian Ji (十二连戟 12 Interlinked Halberd)&nbsp;</td></tr></tbody></table></figure>
+
+	
+</div>
+
+</article>
+
+				
+			</div><!-- #content -->
+
+			
+		</div><!-- #primary -->
+
+		
+	</div><!-- #content-wrap -->
+
+	
+
+	</main><!-- #main -->
+
+	
+	
+	
+		
+<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter" role="contentinfo">
+
+	
+	<div id="footer-inner" class="clr">
+
+		
+
+<div id="footer-widgets" class="oceanwp-row clr">
+
+	
+	<div class="footer-widgets-inner container">
+
+					<div class="footer-box span_1_of_4 col col-1">
+				<div id="block-7" class="footer-widget widget_block widget_media_image clr">
+<figure class="wp-block-image size-large is-resized"><img loading="lazy" decoding="async" src="http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328-1024x668.png" alt="" class="wp-image-116" width="212" height="138" srcset="http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328-1024x668.png 1024w, http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328-300x196.png 300w, http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328-768x501.png 768w, http://taipinginstitute.com/wp-content/uploads/2021/08/taiping10328.png 1070w" sizes="(max-width: 212px) 100vw, 212px" /></figure>
+</div>			</div><!-- .footer-one-box -->
+
+							<div class="footer-box span_1_of_4 col col-2">
+					<div id="nav_menu-3" class="footer-widget widget_nav_menu clr"><div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://taipinginstitute.com/programs/">Programs</a></li>
+<li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://taipinginstitute.com/founder/">Founder</a></li>
+</ul></div></div>				</div><!-- .footer-one-box -->
+				
+							<div class="footer-box span_1_of_4 col col-3 ">
+									</div><!-- .footer-one-box -->
+				
+							<div class="footer-box span_1_of_4 col col-4">
+									</div><!-- .footer-box -->
+				
+			
+	</div><!-- .container -->
+
+	
+</div><!-- #footer-widgets -->
+
+
+
+<div id="footer-bottom" class="clr">
+
+	
+	<div id="footer-bottom-inner" class="container clr">
+
+		
+			<div id="footer-bottom-menu" class="navigation clr">
+
+				<div class="menu-footer-menu-container"><ul id="menu-footer-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://taipinginstitute.com/programs/">Programs</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://taipinginstitute.com/founder/">Founder</a></li>
+</ul></div>
+			</div><!-- #footer-bottom-menu -->
+
+			
+		
+			<div id="copyright" class="clr" role="contentinfo">
+				Copyright 2000 - 2024, Taiping Institute, or its affiliates			</div><!-- #copyright -->
+
+			
+	</div><!-- #footer-bottom-inner -->
+
+	
+</div><!-- #footer-bottom -->
+
+
+	</div><!-- #footer-inner -->
+
+	
+</footer><!-- #footer -->
+
+	
+	
+</div><!-- #wrap -->
+
+
+</div><!-- #outer-wrap -->
+
+
+
+<a aria-label="Scroll to the top of the page" href="#" id="scroll-top" class="scroll-top-right"><i class=" fa fa-angle-up" aria-hidden="true" role="img"></i></a>
+
+
+
+
+<script src="http://taipinginstitute.com/wp-content/plugins/mystickymenu/js/detectmobilebrowser.js?ver=2.5.6" id="detectmobilebrowser-js"></script>
+<script id="mystickymenu-js-extra">
+var option = {"mystickyClass":"header#site-header","activationHeight":"0","disableWidth":"0","disableLargeWidth":"0","adminBar":"false","device_desktop":"1","device_mobile":"1","mystickyTransition":"fade","mysticky_disable_down":"false"};
+</script>
+<script src="http://taipinginstitute.com/wp-content/plugins/mystickymenu/js/mystickymenu.min.js?ver=2.5.6" id="mystickymenu-js"></script>
+<script id="pgc-simply-gallery-plugin-lightbox-script-js-extra">
+var PGC_SGB_LIGHTBOX = {"lightboxPreset":"","postType":"page","lightboxSettigs":""};
+</script>
+<script src="http://taipinginstitute.com/wp-content/plugins/simply-gallery-block/plugins/pgc_sgb_lightbox.min.js?ver=2.2.1" id="pgc-simply-gallery-plugin-lightbox-script-js"></script>
+<script src="http://taipinginstitute.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/isotope.pkgd.min.js?ver=3.0.3" id="isotop-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/flickity.pkgd.min.js?ver=3.0.3" id="flickity-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/photoswipe.min.js?ver=3.0.3" id="photoswipe-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/photoswipe-ui-default.min.js?ver=3.0.3" id="photoswipe-ui-default-js"></script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/vendors/sidr.js?ver=3.0.3" id="sidr-js"></script>
+<script id="oceanwp-main-js-extra">
+var oceanwpLocalize = {"nonce":"20f8e6a7b5","isRTL":"","menuSearchStyle":"drop_down","mobileMenuSearchStyle":"disabled","sidrSource":null,"sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"link","verticalHeaderTarget":"link","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select"};
+</script>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/theme.vanilla.min.js?ver=3.0.3" id="oceanwp-main-js"></script>
+<!--[if lt IE 9]>
+<script src="http://taipinginstitute.com/wp-content/themes/oceanwp/assets/js/third/html5.min.js?ver=3.0.3" id="html5shiv-js"></script>
+<![endif]-->
+</body>
+</html>
