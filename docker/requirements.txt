@@ -2,7 +2,7 @@ aiohttp
 channels[daphne]
 channels-redis
 coloredlogs
-django<5
+django<6
 django-stubs
 inotify
 ipython

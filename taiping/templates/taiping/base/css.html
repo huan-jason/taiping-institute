@@ -1,0 +1,67 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 12px;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-sans);
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .button-disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .fs-smaller {
+        font-size: smaller;
+    }
+
+    .htmx-indicator {
+        display: none;
+    }
+
+    .htmx-request .htmx-indicator {
+        display: inline-block;
+    }
+
+    .htmx-request.htmx-indicator {
+        display: inline-block;
+    }
+
+    input,
+    textarea,
+    select {
+        padding: 0.5em 1em;
+        border: solid thin var(--gray-4);
+        border-radius: 0.5em;
+    }
+
+    input[type=checkbox],
+    input[type=radio] {
+        vertical-align: middle;
+        margin-right: 0.5em;
+    }
+
+    input[type=text]:invalid,
+    input[type=email]:invalid,
+    input[type=password]:invalid,
+    select:invalid {
+        box-shadow: 0 0 1em var(--stone-0);
+    }
+
+    label:has(input[type=checkbox]:invalid),
+    label:has(input[type=radio]:invalid) {
+        color: red;
+    }
+</style>
+
+{% include "./icons.html" %}

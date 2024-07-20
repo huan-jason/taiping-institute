@@ -1,0 +1,60 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, var(--size-content-3));
+    }
+
+    .form-label {
+        margin-top: 1.5em;
+    }
+
+    #course-description {
+        display: grid;
+        place-items: center;
+    }
+</style>
+
+
+<div class="container" hx-swap="none">
+
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <h4 class="mt-5">Taiping Institute Course Registration</h4>
+
+        <label class="form-label">Course</label>
+        <select class="form-control" name="course_id" required hx-post="?description">
+            <option value="">Select a course</option>
+
+            {% for item in courses %}
+            <option value="{{ item.id }}">{{ item.name }}</option>
+            {% endfor %}
+
+        </select>
+
+        <label class="form-label">Name</label>
+        <input class="form-control" name="name" required />
+
+        <label class="form-label">Email</label>
+        <input class="form-control" name="email" type="email" required />
+
+        <label class="form-label">Tel</label>
+        <input class="form-control" name="tel" type="tel" required />
+
+        <label class="form-label">Comments</label>
+        <textarea class="form-control" name="comments" rows="5"></textarea>
+
+        <div class="text-center mt-5">
+            <button class="btn btn-primary" type="submit">Register</button>
+        </div>
+
+        {% csrf_token %}
+    </form>
+
+    <div id="course-description"></div>
+
+</div>
+{% endblock content %}
