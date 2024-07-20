@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+set -eu
+
+commit_msg="$(date +"%x %X")"
+
+help(){
+  echo "usage: $(basename $0) [options] HOSTNAME
+    Options:
+    -m commit message
+  "
+  exit 0
+}
+
+while getopts "hm:" opt; do
+  case $opt in
+    h) help;;
+    m) commit_msg="$OPTARG";;
+    *) exit
+  esac
+done
+shift $((OPTIND-1))
+
+message(){
+  color="\033[32m"
+  nocolor="\033[0m"
+  echo -e "\n"${color}${*}${nocolor}
+}
+
+collect-static(){
+  message Collect static
+  docker compose exec -T \
+    --user $ID \
+    app ./manage.py collectstatic --noinput
+}
+
+django-migrate(){
+  message Django migrate
+  docker compose exec -T \
+    --user $ID \
+    app ./manage.py migrate
+}
+
+git-commit-push(){
+    message Git commit "$commit_msg"
+    if ! (git status | grep "nothing to commit"); then
+      git add -A .
+      git commit -m "$commit_msg"
+    fi
+
+    message Git push
+    git push
+}
+
+git-pull(){
+    message Git pull
+    git pull
+}
+
+reload-nginx-unit(){  # FIXME
+  message NginX-Unit reload
+  docker compose exec -T \
+    --user root \
+    app bin/nginx-unit -r
+}
+
+restart-app(){
+  message Restart App
+  docker compose restart app
+}
+
+update-app-version(){
+  message Update app version
+  git log --oneline | head -n1 | tee version.txt
+}
+
+run-source() {
+  local host="${1:?}"
+  local app_dir="$(basename $PWD)"
+  ID="$(id -u)"
+
+  collect-static
+  django-migrate
+  git-commit-push
+
+  echo -e "\033[33m""\nUpdating ${host}...\n""\033[0m"
+  ssh $host ${app_dir}/.deploy $ID
+}
+
+run-destination(){
+  ID="${1:?}"
+  local app_dir="$(dirname "$(readlink -f $0)" )"
+  cd "$app_dir" || exit 1
+
+  git-pull
+  restart-app
+  django-migrate
+  update-app-version
+}
+
+
+if [[ "${SSH_CLIENT:-}" ]]; then
+  run-destination "$@"
+else
+  [[ "${1:-}" ]] || { help; exit 1; }
+  run-source "$@"
+fi

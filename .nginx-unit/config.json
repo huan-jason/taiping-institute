@@ -1,0 +1,38 @@
+{
+    "listeners": {
+       "*:8000": {
+          "pass": "routes"
+       }
+    },
+
+    "routes": [
+
+      {
+         "match":  { "uri": [ "/static/*" ] },
+         "action": { "share": "/app/$uri" }
+      },
+
+      {
+         "match":  { "uri": "/media/*" },
+         "action": { "share": "/app/$uri" }
+      },
+
+      {
+         "action": { "pass": "applications/app" }
+      }
+   ],
+
+    "applications": {
+       "app": {
+          "type": "python 3.11",
+          "working_directory": "/app",
+          "path": "/app",
+          "module": "project.wsgi",
+          "environment": {
+            "DJANGO_SETTINGS_MODULE": "project.settings"
+         }
+       }
+    },
+
+    "access_log": "/dev/stdout"
+ }

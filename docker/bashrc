@@ -1,0 +1,15 @@
+alias l='ls -lhF --color'
+alias ll='l -a'
+
+bind '"\e[A":history-search-backward'
+bind '"\e[B":history-search-forward'
+
+export PATH=$HOME/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/user/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

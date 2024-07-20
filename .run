@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+port=${1:-8000}
+
+while true; do
+    docker compose exec app ./manage.py runserver --force-color 0.0.0.0:${port}
+    echo Sleeping 1s...
+    sleep 1
+done

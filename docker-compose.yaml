@@ -1,0 +1,32 @@
+services:
+
+  app:
+    image: taiping
+    build: ./docker
+    pull_policy: build
+    restart: always
+    volumes:
+      - ./:/app
+      - ./.nginx-unit:/docker-entrypoint.d
+    links:
+      - db
+    depends_on:
+      - db
+
+
+  db:
+    image: postgres:16
+    restart: always
+    volumes:
+      - ./.data:/var/lib/postgresql/data
+      - ./:/app
+    environment:
+      - POSTGRES_PASSWORD=/run/secrets/postgres_password
+    shm_size: '4gb'
+    secrets:
+      - postgres_password
+
+
+secrets:
+  postgres_password:
+    file: ./secrets/postgres_password.txt

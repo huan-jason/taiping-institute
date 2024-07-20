@@ -1,0 +1,16 @@
+*.pyc
+*.log
+
+__pycache__/
+.pnpm-store/
+.mypy_cache/
+
+/.data/
+/.home/
+/node_modules/
+/secrets/
+/tmp/
+/venv/
+
+/docker-compose.override.yaml
+/version.txt

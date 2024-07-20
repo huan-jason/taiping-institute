@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+# Run dev server
+set -eu
+
+level=1
+port=
+server=
+
+while getopts 'p:l:' opt; do
+  case $opt in
+    l) level=$OPTARG;;
+    p) port=$OPTARG;;
+  esac
+done
+shift $((OPTIND-1))
+
+server=${1:?}
+
+
+install-node(){
+  echo Installing node...
+  pnpm env use --global lts
+}
+
+run-dev-server-django() {
+    port=${port:-8001}
+    ./manage.py runserver 0.0.0.0:${port}
+}
+
+run-dev-server-node() {
+  which node >/dev/null || install-node
+
+  if [[ ! -e .app-dirs ]]; then
+    echo >/dev/stderr Not found: .app-dirs
+    exit 1
+  fi
+
+  src_dir="$(cat .app-dirs | grep "$server"= | cut -d= -f2)"
+  : ${src_dir:?App dir not found: $server }
+  cd $src_dir || exit
+
+  pnpm run dev ${port:+" --port $port"}
+}
+
+
+run-docker-exec() {
+  docker compose exec app \
+    bash --login -ic \
+      "./$(basename $0) -l 2 -p ${port:-''} $server"
+}
+
+
+while true; do
+  if [[ $level == 1 ]]; then
+    run-docker-exec
+    exit
+  fi
+
+  if [[ $server == d ]]; then
+    run-dev-server-django
+  else
+    run-dev-server-node
+  fi
+
+  echo -n Sleeping 1s...
+  sleep 1
+done
