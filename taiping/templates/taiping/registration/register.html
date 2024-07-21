@@ -5,6 +5,17 @@
     #page-content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 2em;
+    }
+
+    @media (max-width: 800px) {
+        #page-content {
+            grid-template-columns: 1fr;
+        }
+
+        #form-section {
+            padding-inline: 3em;
+        }
     }
 </style>
 
@@ -14,13 +25,13 @@
 
     <div id="page-content" class="fs-5">
 
-        <div>
+        <section>
             {% include "./description.html" %}
-        </div>
+        </section>
 
-        <div>
+        <section id="form-section">
             {% include "./form.html" %}
-        </div>
+        </section>
 
     </div>
 
