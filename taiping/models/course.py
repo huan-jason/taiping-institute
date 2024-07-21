@@ -5,6 +5,7 @@ from django.db.models import (
     IntegerField,
     PROTECT,
     TextField,
+    URLField,
 )
 from .basemodel import BaseModel
 
@@ -18,6 +19,7 @@ class Course(BaseModel):
     max_students = IntegerField(null=True, blank=True)
     next_class = DateField(null=True, blank=True)
     sort_order = IntegerField(default=999)
+    image = URLField(null=True, blank=True)
 
     def __str__(self) -> str:
         return self.name

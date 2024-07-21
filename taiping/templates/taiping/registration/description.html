@@ -1,0 +1,20 @@
+<style>
+    #course-description {
+        padding: 2em 3em;
+    }
+
+    .course-image {
+        width: 100%;
+    }
+</style>
+
+
+<div id="course-description">
+    <h4 class="mb-5">{{ course.name }}</h4>
+    <img class="course-image" src="{{course.image}}" alt="" />
+
+    <div class="opacity-75">
+        <div class="mt-5">{{ course.description }}</div>
+        <div class="mt-4">Registration fee: ${{ course.course_fee }}</div>
+    </div>
+</div>

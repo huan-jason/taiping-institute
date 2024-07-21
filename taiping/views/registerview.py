@@ -8,14 +8,19 @@ from taiping.models import Course
 
 class RegisterView(View):
 
-    def get(self, request: HttpRequest) -> HttpResponse:
-        courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
-        return render(request, "taiping/register.html", locals())
+    def get(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
 
-    def post(self, request: HttpRequest) -> HttpResponse:
+        if not course_id:
+            courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
+            return render(request, "taiping/registration/courses_list.html", locals())
 
-        if "description" in request.GET:
-            course_obj: Course | None = Course.objects.filter(id=request.POST["course_id"] or 0).first()
-            return render(request, "taiping/course_description.html", locals())
+        course: Course | None = Course.objects.filter(id=course_id).first()
+        return (
+            render(request, "taiping/registration/register.html", locals())
+            if course else
+            HttpResponse(f"Invalid course ID: {course_id}", status=400)
+        )
 
+
+    def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
         raise NotImplementedError

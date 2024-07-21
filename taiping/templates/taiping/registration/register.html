@@ -1,0 +1,28 @@
+{% extends "taiping//base.html" %}
+
+{% block content %}
+<style>
+    #page-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+</style>
+
+
+<div class="container" hx-swap="none">
+
+
+    <div id="page-content" class="fs-5">
+
+        <div>
+            {% include "./description.html" %}
+        </div>
+
+        <div>
+            {% include "./form.html" %}
+        </div>
+
+    </div>
+
+</div>
+{% endblock content %}

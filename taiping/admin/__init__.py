@@ -3,7 +3,7 @@ import logging
 from pathlib import Path
 
 from django.contrib import admin
-from django.contrib.admin.sites import AlreadyRegistered
+from django.contrib.admin.sites import AlreadyRegistered  # type: ignore
 
 from .. import models
 
@@ -20,4 +20,4 @@ for name in models.__all__:
     model = getattr(models, name)
     try:admin.site.register(model)
     except AlreadyRegistered as exc:
-        logging.warning(exc)
+        logging.debug(exc)

@@ -1,0 +1,34 @@
+<style>
+    .form-label {
+        margin-top: 1.5em;
+    }
+</style>
+
+<h5 class="mt-5">Taiping Institute Course Registration</h5>
+
+
+<form method="POST" enctype="multipart/form-data">
+
+    <label class="form-label">Name</label>
+    <input class="form-control" name="name" required />
+
+    <label class="form-label">Email</label>
+    <input class="form-control" name="email" type="email" required />
+
+    <label class="form-label">Tel</label>
+    <input class="form-control" name="tel" type="tel" required />
+
+    <label class="form-label">Comments</label>
+    <textarea class="form-control" name="comments" rows="5"></textarea>
+
+
+    <div class="fst-italic opacity-75 my-5">
+        A class will be created after receiving {{ course.min_students }} registrations.
+    </div>
+
+    <div class="text-center mt-5">
+        <button class="btn btn-primary" type="submit">Register</button>
+    </div>
+
+    {% csrf_token %}
+</form>
