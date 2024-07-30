@@ -2,14 +2,19 @@
     .form-label {
         margin-top: 1.5em;
     }
+
+    .hide {
+        display: none;
+    }
 </style>
 
 <h5 class="mt-5">Taiping Institute Course Registration</h5>
 
 
-<form method="POST" enctype="multipart/form-data">
+<form method="POST" enctype="multipart/form-data"
+    _="on submit remove .hide from .spinner-border then wait 50ms then add .pe-none to .spinner-border">
 
-    <label class="form-label">Name</label>
+    <label class=" form-label">Name</label>
     <input class="form-control" name="name" required />
 
     <label class="form-label">Email</label>
@@ -27,7 +32,10 @@
     </div>
 
     <div class="text-center mt-5">
-        <button class="btn btn-primary" type="submit">Register</button>
+        <button class="btn btn-primary" type="submit">
+            <span>Register</span>
+            <span class="spinner-border spinner-border-sm ms-2 hide"></span>
+        </button>
     </div>
 
     {% csrf_token %}

@@ -1,3 +1,4 @@
+from .config import Config
 from .course import Course
 from .courseclass import CourseClass
 from .coursegroup import CourseGroup
@@ -6,6 +7,7 @@ from .student import Student
 
 
 __all__ = [
+    "Config",
     "Course",
     "CourseClass",
     "CourseGroup",

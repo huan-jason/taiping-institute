@@ -1,0 +1,21 @@
+{% extends "taiping//base.html" %}
+
+{% block content %}
+<style>
+    #page-content {
+        display: grid;
+        place-items: center;
+        height: 75vh;
+    }
+</style>
+
+
+<div class="container" hx-swap="none">
+
+
+    <div id="page-content" class="{{ css_classes }}" stule="{{ css_style }}">
+        {{ message | safe }}
+    </div>
+
+</div>
+{% endblock content %}
