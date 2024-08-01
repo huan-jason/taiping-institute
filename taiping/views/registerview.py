@@ -1,6 +1,5 @@
 import logging
 from django.core.mail import send_mail
-from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.template.loader import render_to_string
@@ -15,12 +14,7 @@ from taiping.models import (
 
 class RegisterView(View):
 
-    def get(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
-
-        if not course_id:
-            courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
-            return render(request, "taiping/registration/courses_list.html", locals())
-
+    def get(self, request: HttpRequest, course_id: int) -> HttpResponse:
         course: Course | None = Course.objects.filter(id=course_id).first()
         return (
             render(request, "taiping/registration/register.html", locals())
@@ -54,8 +48,8 @@ class RegisterView(View):
 
         self.send_notification(request, course)
 
-        css_classes: str = "fs-1"
-        message: str = (
+        css_classes = "fs-1"
+        message = (
             f"Thank you for registering for {course.name}.  "
             "We will notify you when the course details are available."
         )

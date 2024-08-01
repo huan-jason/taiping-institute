@@ -4,10 +4,10 @@ from django.urls import path
 from . import views
 
 
-redirect_to_register = lambda request: redirect("/register/")
+index_redirect = lambda request: redirect("/courses/")
 
 urlpatterns = [
     path('register/<int:course_id>/', views.RegisterView.as_view(), name="register"),
-    path('register/', views.RegisterView.as_view(), name="register"),
-    path('', redirect_to_register),
+    path('courses/', views.CoursesView.as_view(), name="courses"),
+    path('', index_redirect),
 ]
