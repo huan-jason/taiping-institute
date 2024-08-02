@@ -2,6 +2,13 @@ from django.contrib import admin
 
 from .. import models
 
+
+class CourseDedendencyInline(admin.TabularInline):
+    model = models.CourseDependency
+    fk_name = "course"
+    extra = 0
+
+
 @admin.register(models.Course)
 class CourseAdmin(admin.ModelAdmin):
     list_display = [
@@ -22,4 +29,7 @@ class CourseAdmin(admin.ModelAdmin):
     ]
     ordering = [
         "sort_order",
+    ]
+    inlines = [
+        CourseDedendencyInline,
     ]
