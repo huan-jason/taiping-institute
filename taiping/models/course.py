@@ -1,5 +1,4 @@
-import logging
-from typing import Optional
+from typing import Optional, TypedDict
 
 from django.db.models import (
     CharField,
@@ -7,11 +6,17 @@ from django.db.models import (
     ForeignKey,
     IntegerField,
     PROTECT,
+    QuerySet,
     TextField,
     URLField,
 )
 
 from .basemodel import BaseModel
+
+
+class DependentCourse(TypedDict):
+    id: int
+    name: str
 
 
 class Course(BaseModel):
@@ -29,20 +34,23 @@ class Course(BaseModel):
     def __str__(self) -> str:
         return self.name
 
-    def dependencies(self,
-        results: dict[int, 'Course'] | None = None,
+    def prerequisites(self,
         course: Optional['Course'] = None,
-    ) -> dict[int, 'Course']:
+        course_dependencies: list[DependentCourse] | None = None,
+    ) -> list[DependentCourse]:
 
-        results = results or {}
         course = course or self
+        queryset: QuerySet = course.coursedependency_set.all()
+        if not queryset.count():
+            return []
 
-        for obj in course.coursedependency_set.all():
-            if obj.id in results:
-                logging.warning(f"Course already in prerequesites: {obj.id}")
-                continue
+        course_dependencies = course_dependencies or []
+        for obj in queryset:
+            obj_dependencies = self.prerequisites(obj.dependent_course, course_dependencies)
+            obj_dependencies.append({
+                "id": obj.dependent_course.id,
+                "name": obj.dependent_course.name,
+            })
+            course_dependencies += obj_dependencies
 
-            results[obj.id] = obj.dependent_course
-            results |= self.dependencies(results, obj.dependent_course)
-
-        return results
+        return course_dependencies

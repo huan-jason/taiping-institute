@@ -4,9 +4,33 @@
         line-height: 1.75em;
     }
 
+    .prerequisites--title {
+        color: var(--stone-12);
+        text-decoration: underline;
+        margin-top: 2em;
+    }
+
+    .prerequisite--item {
+        display: list-item;
+        margin-left: 1em;
+    }
+
+    body {
+        color: var(--stone-10);
+    }
+
+    .course--name {
+        color: black;
+
+    }
+
     .course--image {
         width: 100%;
         max-height: 50vh;
+    }
+
+    .course-info--label {
+        margin-right: 1em;
     }
 
     .course-info--value {
@@ -20,7 +44,7 @@
     <img class="course--image my-5" src="{{course.static_url | default:course.image}}" alt="" />
 
 
-    <div class="opacity-75">
+    <div>
 
         <div class="course--description">{{ course.description }}</div>
 
@@ -40,4 +64,18 @@
         </div>
 
     </div>
+
+
+    {% if course.prerequisites %}
+
+    <h5 class="prerequisites--title">Prerequisites</h5>
+
+    <div id="prerequisites">
+        {% for item in course.prerequisites %}
+        <div class="prerequisite--item">{{ item.name }}</div>
+        {% endfor %}
+    </div>
+
+    {% endif %}
+
 </div>

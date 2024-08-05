@@ -1,4 +1,8 @@
 <style>
+    .form-title {
+        color: var(--stone-12);
+    }
+
     .form-label {
         margin-top: 1.5em;
     }
@@ -8,17 +12,17 @@
     }
 </style>
 
-<h5 class="mt-5">Taiping Institute Course Registration</h5>
+<h5 class="form-title mt-5">Taiping Institute Course Registration</h5>
 
 
 <form method="POST" enctype="multipart/form-data"
     _="on submit remove .hide from .spinner-border then wait 50ms then add .pe-none to .spinner-border">
 
-    <label class=" form-label">Name</label>
-    <input class="form-control" name="name" required />
-
     <label class="form-label">Email</label>
     <input class="form-control" name="email" type="email" required />
+
+    <label class=" form-label">Name</label>
+    <input class="form-control" name="name" required />
 
     <label class="form-label">Tel</label>
     <input class="form-control" name="tel" type="tel" required />
