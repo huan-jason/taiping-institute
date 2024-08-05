@@ -54,3 +54,21 @@ class Course(BaseModel):
             course_dependencies += obj_dependencies
 
         return course_dependencies
+
+    def prerequisite_course_ids(self, course: Optional['Course'] = None) -> set[int]:
+        course = course or self
+        queryset: QuerySet = course.coursedependency_set.all()
+        if not queryset.count():
+            return set()
+
+        course_ids: set[int] = set()
+
+        for obj in queryset:
+            obj_course_ids: set[int] = self.prerequisite_course_ids(obj.dependent_course)
+            obj_course_ids.add(obj.id)
+            breakpoint()  # zzz
+            course_ids.union(obj_course_ids)
+
+        print(course_ids)
+
+        return course_ids
