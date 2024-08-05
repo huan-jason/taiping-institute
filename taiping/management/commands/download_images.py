@@ -13,6 +13,7 @@ from taiping.models import Course
 class Command(BaseCommand):
 
     def add_arguments(self, parser: CommandParser) -> None:
+        parser.add_argument("--all", action="store_true", help="include previously processed courses")
         parser.add_argument("course_ids", nargs="*", metavar="Course ID")
 
     def handle(self, *args: Any, **options: Any) -> None:
@@ -26,6 +27,9 @@ class Command(BaseCommand):
         queryset: QuerySet = Course.objects.filter(image__startswith="http://")
         if options["course_ids"]:
             queryset = queryset.filter(id__in=options["course_ids"])
+
+        if not options["all"]:
+            queryset = queryset.filter(static_url__isnull=True)
 
         for obj in queryset:
             print(f"Downloading {obj.image}")
