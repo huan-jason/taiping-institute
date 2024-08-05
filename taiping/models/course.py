@@ -34,6 +34,15 @@ class Course(BaseModel):
     def __str__(self) -> str:
         return self.name
 
+    def met_prerequisites(self, email: str) -> bool:
+        from taiping.models import Student
+
+        student_courses: set[int] = set(Student.objects
+            .filter(registration__email=email)
+            .values_list("course_class__course_id", flat=True)
+        )
+        return student_courses >= self.prerequisite_course_ids()
+
     def prerequisites(self,
         course: Optional['Course'] = None,
         course_dependencies: list[DependentCourse] | None = None,
@@ -65,10 +74,7 @@ class Course(BaseModel):
 
         for obj in queryset:
             obj_course_ids: set[int] = self.prerequisite_course_ids(obj.dependent_course)
-            obj_course_ids.add(obj.id)
-            breakpoint()  # zzz
-            course_ids.union(obj_course_ids)
-
-        print(course_ids)
+            obj_course_ids.add(obj.dependent_course.id)
+            course_ids |= obj_course_ids
 
         return course_ids
