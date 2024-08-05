@@ -33,3 +33,6 @@ class CourseAdmin(admin.ModelAdmin):
     inlines = [
         CourseDedendencyInline,
     ]
+    readonly_fields = [
+        "static_url",
+    ]
