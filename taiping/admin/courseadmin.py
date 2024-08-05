@@ -19,6 +19,7 @@ class CourseAdmin(admin.ModelAdmin):
         "min_students",
         "max_students",
         "next_class",
+        "sort_order",
     ]
     list_filter = [
         "course_group",

@@ -1,21 +1,43 @@
 <style>
     #course-description {
         padding: 2em 3em;
+        line-height: 1.75em;
     }
 
-    .course-image {
+    .course--image {
         width: 100%;
         max-height: 50vh;
+    }
+
+    .course-info--value {
+        font-weight: bold;
     }
 </style>
 
 
 <div id="course-description">
-    <h4 class="fw-bold mb-5">{{ course.name }}</h4>
-    <img class="course-image" src="{{course.static_url | default:course.image}}" alt="" />
+    <h4 class="course--name fw-bold">{{ course.name }}</h4>
+    <img class="course--image my-5" src="{{course.static_url | default:course.image}}" alt="" />
+
 
     <div class="opacity-75">
-        <div class="mt-5">{{ course.description }}</div>
-        <div class="mt-4">Registration fee: ${{ course.course_fee }}</div>
+
+        <div class="course--description">{{ course.description }}</div>
+
+        <div class="course--next-class mt-4">
+            <span class="course-info--label">Date:</span>
+            <span class="course-info--value">{{ course.next_class }}</span>
+        </div>
+
+        <div class="course--min-students">
+            <span class="course-info--label">Minimum students:</span>
+            <span class="course-info--value">{{ course.min_students }}</span>
+        </div>
+
+        <div class="course--fee">
+            <span class="course-info--label">Registration fee:</span>
+            <span class="course-info--value">${{ course.course_fee }}</span>
+        </div>
+
     </div>
 </div>
