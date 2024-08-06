@@ -1,7 +1,5 @@
 from django.db.models import (
     BooleanField,
-    CharField,
-    EmailField,
     ForeignKey,
     IntegerField,
     PROTECT,

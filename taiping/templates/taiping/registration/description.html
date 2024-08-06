@@ -4,21 +4,6 @@
         line-height: 1.75em;
     }
 
-    .prerequisites--title {
-        color: var(--stone-12);
-        text-decoration: underline;
-        margin-top: 2em;
-    }
-
-    .prerequisite--item {
-        display: list-item;
-        margin-left: 1em;
-    }
-
-    body {
-        color: var(--stone-10);
-    }
-
     .course--name {
         color: black;
 
@@ -65,17 +50,6 @@
 
     </div>
 
-
-    {% if course.prerequisites %}
-
-    <h5 class="prerequisites--title">Prerequisites</h5>
-
-    <div id="prerequisites">
-        {% for item in course.prerequisites %}
-        <div class="prerequisite--item">{{ item.name }}</div>
-        {% endfor %}
-    </div>
-
-    {% endif %}
+    {% include "./prerequisites.html" %}
 
 </div>

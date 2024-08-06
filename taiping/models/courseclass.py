@@ -1,6 +1,6 @@
 from django.db.models import (
     CharField,
-    DateTimeField,
+    DateField,
     ForeignKey,
     PROTECT,
     TextField,
@@ -12,8 +12,8 @@ class CourseClass(BaseModel):
     course = ForeignKey('taiping.Course', on_delete=PROTECT)
     name = CharField(max_length=128, db_index=True)
     notes = TextField(null=True, blank=True)
-    start_date = DateTimeField(db_index=True)
-    end_date = DateTimeField(db_index=True, null=True, blank=True)
+    start_date = DateField(db_index=True)
+    end_date = DateField(db_index=True, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Course classes"

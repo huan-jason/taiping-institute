@@ -1,4 +1,4 @@
-from typing import Optional, TypedDict
+from typing import Optional
 
 from django.db.models import (
     CharField,
@@ -12,11 +12,6 @@ from django.db.models import (
 )
 
 from .basemodel import BaseModel
-
-
-class DependentCourse(TypedDict):
-    id: int
-    name: str
 
 
 class Course(BaseModel):
@@ -38,15 +33,23 @@ class Course(BaseModel):
         from taiping.models import Student
 
         student_courses: set[int] = set(Student.objects
-            .filter(registration__email=email)
+            .filter(
+                registration__email=email,
+                registration__course=self,
+            )
             .values_list("course_class__course_id", flat=True)
         )
-        return student_courses >= self.prerequisite_course_ids()
+        if not student_courses: return False
+
+        prerequisite_course_ids: set[int] = {
+            item.id for item in self.prerequisites()
+        }
+        return student_courses >= prerequisite_course_ids
 
     def prerequisites(self,
         course: Optional['Course'] = None,
-        course_dependencies: list[DependentCourse] | None = None,
-    ) -> list[DependentCourse]:
+        course_dependencies: list['Course'] | None = None,
+    ) -> list['Course']:
 
         course = course or self
         queryset: QuerySet = course.coursedependency_set.all()
@@ -56,10 +59,7 @@ class Course(BaseModel):
         course_dependencies = course_dependencies or []
         for obj in queryset:
             obj_dependencies = self.prerequisites(obj.dependent_course, course_dependencies)
-            obj_dependencies.append({
-                "id": obj.dependent_course.id,
-                "name": obj.dependent_course.name,
-            })
+            obj_dependencies.append(obj.dependent_course)
             course_dependencies += obj_dependencies
 
         return course_dependencies
