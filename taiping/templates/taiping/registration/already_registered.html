@@ -1,0 +1,11 @@
+<div hx-swap-oob="true" id="error-message" class="text-danger text-center mt-5">
+    You have already registered for this course on {{ registration.created | date:'d-M-Y' }}.
+
+
+    <script>
+        var btn = document.querySelector('#register-button')
+        btn.disabled = true
+    </script>
+
+
+</div>
