@@ -46,6 +46,14 @@ class Course(BaseModel):
         }
         return student_courses >= prerequisite_course_ids
 
+    @property
+    def name_1(self) -> str:
+        return self.name.split("|")[0]
+
+    @property
+    def name_2(self) -> str:
+        return self.name.split("|")[-1]
+
     def prerequisites(self,
         course: Optional['Course'] = None,
         course_dependencies: list['Course'] | None = None,

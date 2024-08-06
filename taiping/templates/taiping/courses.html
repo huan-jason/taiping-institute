@@ -17,7 +17,7 @@
 
     .card-title {
         color: black;
-        line-height: 1.5em;
+        line-height: 1.75em;
     }
 
     .card-text {
@@ -36,7 +36,11 @@
         <div class="card">
 
             <div class="card-body">
-                <h5 class="card-title">{{ item.name }}</h5>
+                <h5 class="card-title">
+                    <span>{{ item.name_1 }}</span>
+                    <br />
+                    <span>{{ item.name_2 }}</span>
+                </h5>
                 <hr />
                 <p class="card-text">
                     {{ item.description }}
