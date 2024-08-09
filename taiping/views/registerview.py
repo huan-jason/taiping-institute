@@ -20,6 +20,7 @@ class RegisterView(View):
     def check_already_registered(self, request: HttpRequest, course_id: int) -> HttpResponse | None:
         if registration := self.get_registration_object(request, course_id):
             return render(request, "taiping/registration/already_registered.html", locals())
+        return None
 
     def check_prerequisites(self, request: HttpRequest, course_id: int) -> HttpResponse:
         if response := self.check_already_registered(request, course_id):
@@ -27,15 +28,14 @@ class RegisterView(View):
 
         email: str = request.POST["email"]
         course: Course = Course.objects.get(id=course_id)
-        prerequisites: list[Course] = course.prerequisites()
-        results: list[dict[str, Any]] = []
+        prerequisites_list: list[Course] = course.prerequisites()
+        prerequisites: list[dict[str, Any]] = []
 
-        for item in prerequisites:
+        for item in prerequisites_list:
             data: dict[str, Any] = model_to_dict(item)
             data["completed"] = item.met_prerequisites(email)
-            results.append(data)
+            prerequisites.append(data)
 
-        prerequisites = cast(Any, results)
         all_completed: bool = all(item["completed"] for item in prerequisites)
         error_message: str = ("" if all_completed else
             "You have not met all the prerequisites of this course."
@@ -44,12 +44,11 @@ class RegisterView(View):
 
     def get(self, request: HttpRequest, course_id: int) -> HttpResponse:
         course: Course | None = Course.objects.filter(id=course_id).first()
+        if not course:
+            return HttpResponse(f"Invalid course ID: {course_id}", status=404)
+
         prerequisites: list[Course] = course.prerequisites()
-        return (
-            render(request, "taiping/registration/register.html", locals())
-            if course else
-            HttpResponse(f"Invalid course ID: {course_id}", status=404)
-        )
+        return render(request, "taiping/registration/register.html", locals())
 
     def get_registration_object(self, request: HttpRequest, course_id: int) -> Registration | None:
         email: str = request.POST["email"]
