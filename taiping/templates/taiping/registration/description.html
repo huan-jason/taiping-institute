@@ -21,6 +21,10 @@
     .course-info--value {
         font-weight: bold;
     }
+
+    p {
+        margin-bottom: 1em;
+    }
 </style>
 
 
@@ -31,7 +35,8 @@
 
     <div>
 
-        <div class="course--description">{{ course.description }}</div>
+        <div class="course--description">{{ course.long_description_html | default:course.description_html | safe }}
+        </div>
 
         <div class="course--next-class mt-5">
             <span class="course-info--label">Date:</span>

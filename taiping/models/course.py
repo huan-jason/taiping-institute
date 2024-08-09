@@ -1,3 +1,4 @@
+from markdown import markdown
 from typing import Optional
 
 from django.db.models import (
@@ -18,6 +19,7 @@ class Course(BaseModel):
     course_group = ForeignKey('taiping.CourseGroup', on_delete=PROTECT)
     name = CharField(max_length=128, unique=True)
     description = TextField()
+    long_description = TextField(null=True, blank=True)
     course_fee = IntegerField()
     min_students = IntegerField()
     max_students = IntegerField(null=True, blank=True)
@@ -28,6 +30,15 @@ class Course(BaseModel):
 
     def __str__(self) -> str:
         return self.name
+
+    @property
+    def description_html(self) -> str:
+        return markdown(self.description)
+
+    @property
+    def long_description_html(self) -> str | None:
+        if not self.long_description: return None
+        return markdown(self.long_description)
 
     def met_prerequisites(self, email: str) -> bool:
         from taiping.models import Student
