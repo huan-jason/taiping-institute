@@ -26,7 +26,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.84690634.xyz",
+    "https://*.agojin.com",
     "https://*.527664826.xyz",
 ]
 

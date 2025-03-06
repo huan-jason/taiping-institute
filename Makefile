@@ -1,0 +1,38 @@
+make:
+
+coll: collectstatic
+
+collectstatic:
+	@echo "\033[32m" Collect static "\033[0m"
+	.m collectstatic --noinput
+
+comm: commit
+
+commit: collectstatic migrate git-commit git-push-origin
+
+deploy: git-push-production
+	bin/deploy.sh gce
+
+dev: django
+
+django:
+	screen -SRR taiping bin/dev
+
+git-commit:
+	@echo "\033[32m" Git commit "\033[0m"
+	gcd
+
+git-push-origin:
+	@echo "\033[32m" Git push origin"\033[0m"
+	bash -c "git push origin"
+
+git-push-production: git-push-origin
+
+migrate:
+	@echo "\033[32m" Migrate "\033[0m"
+	.m migrate
+
+my: mypy
+
+mypy:
+	.mypy
