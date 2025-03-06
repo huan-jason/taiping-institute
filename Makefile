@@ -24,7 +24,7 @@ git-commit:
 
 git-push-origin:
 	@echo "\033[32m" Git push origin"\033[0m"
-	bash -c "git push origin"
+	git push origin;
 
 git-push-production: git-push-origin
 
