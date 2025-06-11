@@ -1,7 +1,7 @@
 services:
 
   app:
-    image: taiping
+    image: agojin
     build: ./docker
     pull_policy: build
     restart: always

@@ -1,4 +1,4 @@
-FROM nginx/unit:1.29.0-python3.11
+FROM unit:python3.13
 
 COPY packages.txt requirements.txt bashrc /
 

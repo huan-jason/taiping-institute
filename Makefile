@@ -16,7 +16,7 @@ deploy: git-push-production
 dev: django
 
 django:
-	screen -SRR taiping bin/dev
+	screen -SRR agojin bin/dev
 
 git-commit:
 	@echo "\033[32m" Git commit "\033[0m"

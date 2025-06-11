@@ -132,14 +132,6 @@ MEDIA_ROOT  = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-# email
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# DEFAULT_FROM_EMAIL = 'dgchart.hrd@gmail.com'
-
 USE_THOUSAND_SEPARATOR = True
 
 

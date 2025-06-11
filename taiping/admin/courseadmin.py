@@ -8,10 +8,6 @@ class CourseAdmin(admin.ModelAdmin):
         "name",
         "course_group",
         "description",
-        "course_fee",
-        "min_students",
-        "max_students",
-        "next_class",
     ]
     list_filter = [
         "course_group",

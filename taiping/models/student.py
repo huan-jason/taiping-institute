@@ -1,30 +1,35 @@
 from django.db.models import (
     BooleanField,
     CharField,
+    DateField,
     EmailField,
+    FileField,
+    FloatField,
     ForeignKey,
     IntegerField,
+    OneToOneField,
     PROTECT,
     TextField,
     UniqueConstraint,
 )
+from taiping.constants import GenderChoices
 from .basemodel import BaseModel
 
 
 class Student(BaseModel):
-    course_class = ForeignKey('taiping.CourseClass', on_delete=PROTECT)
-    registration = ForeignKey('taiping.Registration', on_delete=PROTECT, null=True, blank=True)
-    non_registration_id = IntegerField(null=True, blank=True)
-    paid = BooleanField(default=False)
+    user = OneToOneField('auth.User', on_delete=PROTECT)
+    alternative_name = CharField(max_length=128, db_index=True, null=True, blank=True)
     comments = TextField(null=True, blank=True)
-
-    class Meta:
-        constraints = [
-            UniqueConstraint(
-                name="student__unique",
-                fields=["course_class", "registration", "non_registration_id"],
-            )
-        ]
+    date_of_birth = DateField(db_index=True)
+    gender = CharField(max_length=8, choices=GenderChoices, null=True, blank=True, db_index=True)
+    phone = CharField(max_length=128)
+    profile_photo = FileField()
+    experience_years = IntegerField(default=0, blank=True)
+    styles_trained = TextField(null=True, blank=True)
+    medical_conditions = TextField(null=True, blank=True)
+    preferred_languages = TextField(null=True, blank=True)
+    emergency_contact_name = CharField(max_length=128, null=True, blank=True)
+    emergency_contact_phone = CharField(max_length=128, null=True, blank=True)
 
     def __str__(self) -> str:
-        return f"{self.course_class} :: {self.registration} :: {self.non_registration_id}"
+        return self.user.username
