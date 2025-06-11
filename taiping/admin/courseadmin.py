@@ -1,6 +1,27 @@
 from django.contrib import admin
+from django.http import HttpRequest
 
 from .. import models
+
+
+class CourseClassInlineAdmin(admin.TabularInline):
+
+    FIELDS = [
+        "start_date",
+        "end_date",
+        "instructor",
+        "course_fee",
+        "min_students",
+        "max_students",
+        "facility",
+        "status",
+        "auto_start",
+    ]
+
+    model = models.CourseClass
+    extra = 0
+    show_change_link = True
+
 
 @admin.register(models.Course)
 class CourseAdmin(admin.ModelAdmin):
@@ -18,4 +39,8 @@ class CourseAdmin(admin.ModelAdmin):
     ]
     ordering = [
         "sort_order",
+    ]
+
+    inlines = [
+        CourseClassInlineAdmin
     ]
