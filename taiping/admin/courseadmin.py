@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.http import HttpRequest
 
 from .. import models
 
@@ -27,6 +26,7 @@ class CourseClassInlineAdmin(admin.TabularInline):
 class CourseAdmin(admin.ModelAdmin):
     list_display = [
         "name",
+        "chinese_name",
         "course_group",
         "description",
     ]
