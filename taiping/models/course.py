@@ -1,3 +1,5 @@
+from markdown import markdown # type: ignore
+
 from django.db.models import (
     CharField,
     FileField,
@@ -14,6 +16,7 @@ class Course(BaseModel):
     name = CharField(max_length=128, unique=True)
     chinese_name = CharField(max_length=128, unique=True, null=True)
     description = TextField()
+    short_description = TextField(default="")
     default_course_fee = IntegerField(null=True, blank=True)
     default_min_students = IntegerField(null=True, blank=True)
     default_max_students = IntegerField(null=True, blank=True)
@@ -24,3 +27,11 @@ class Course(BaseModel):
 
     def __str__(self) -> str:
         return self.name
+
+    @property
+    def description_md(self) -> str:
+        return markdown(self.description)
+
+    @property
+    def short_description_md(self) -> str:
+        return markdown(self.description)

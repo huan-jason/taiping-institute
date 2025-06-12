@@ -11,10 +11,13 @@
 
 <div id="course-description">
     <h3 class="text-center fw-bold mb-5">{{ course.name }}</h3>
+    <h3 class="text-center fw-bold mb-5">{{ course.chinese_name }}</h3>
     <img class="course-image" src="{{course.image}}" alt="" />
 
     <div class="opacity-75">
-        <div class="mt-5">{{ course.description }}</div>
+        <div class="mt-5">
+            {{ course.description_md | safe }}
+        </div>
         <div class="mt-4">Registration fee: ${{ course.course_fee }}</div>
     </div>
 </div>
