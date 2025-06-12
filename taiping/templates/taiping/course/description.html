@@ -1,9 +1,12 @@
+{% load extra_tags %}
+
 <style>
     #course-description {
 
         .course-description-text p {
             margin-bottom: 1.5em;
         }
+
     }
 
     .course-image {
@@ -20,6 +23,6 @@
     <img class="course-image" src="{{course.image}}" alt="" />
 
     <div class="course-description-text">
-        {{ course.description_md | safe }}
+        {{ course.description | from_markdown }}
     </div>
 </div>

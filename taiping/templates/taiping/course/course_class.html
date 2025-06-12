@@ -1,0 +1,46 @@
+{% load extra_tags %}
+
+<details class="course-class-container mt-3" open>
+
+    <summary>
+        <span class="ms-0">{{ course_class.start_date }}</span>
+        <span class="ms-1">-</span>
+        <span class="ms-1">{{ course_class.end_date }}</span>
+        <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-2 ms-4"
+            onclick="alert('xxx')">Enroll</button>
+    </summary>
+
+    <div class="course-class-details">
+        <span class="course-info--label">Course fee</span>
+        <span class="course-info--data">${{ course_class.get_course_fee }}</span>
+
+        <span class="course-info--label">Min students</span>
+        <span class="course-info--data">{{  course_class.get_min_students }}</span>
+
+        <span class="course-info--label">Max students</span>
+        <span class="course-info--data">{{ course_class.get_max_students }}</span>
+
+        <span class="course-info--label grid-column-1">Venue</span>
+        <details class="course-info--details">
+            <summary>{{ course_class.get_facility.name }}</summary>
+
+            <div>
+                {{  course_class.get_facility.address | from_markdown }}
+            </div>
+            </span>
+        </details>
+
+        <span class="course-info--label grid-column-1">Instructor</span>
+        <details class="course-info--details">
+            <summary>{{ course_class.get_instructor.user.get_full_name }}</summary>
+
+            <div>
+                {{  course_class.get_instructor.bio | from_markdown }}
+            </div>
+            </span>
+        </details>
+    </div>
+
+    <hr />
+
+</details>

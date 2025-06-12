@@ -1,4 +1,5 @@
 {% extends "taiping/base.html" %}
+{% load extra_tags %}
 
 
 {% block header %}
@@ -63,7 +64,7 @@
 
 <div class="container">
 
-    <h4 class="text-center mt-3">Agojin Courses</h4>
+    <h4 class="text-center">Agojin Courses</h4>
 
     <div id="courses-container">
 
@@ -79,9 +80,9 @@
                 <div class="course-card-text mt-3">
                     <!-- noformat -->
                     {% if item.short_description %}
-                        {{ item.short_description_md | safe }}
+                        {{ item.short_description | from_markdown }}
                     {% else %}
-                        {{ item.description_md | safe }}
+                        {{ item.description | from_markdown }}
                     <!-- noformat -->
                     {% endif %}
                 </div>
@@ -90,10 +91,17 @@
             <div class="d-flex justify-content-around align-items-center py-3">
                 <a href="/course/{{ item.id }}/" id="button--details"
                     class="btn btn-outline-secondary button--footer">Details</a>
-                <a href="/course/{{ item.id }}/register/" class="btn btn-primary button--footer">Register</a>
+
+                {% if item.upcoming_classes.count %}
+                <a href="/course/{{ item.id }}/register/" class="btn btn-primary button--footer">Enroll</a>
+                {% else %}
+                <a href="/course/{{ item.id }}/register/" title="No classes available"
+                    class="btn btn-outline-primary disabled button--footer">Enroll</a>
+                {% endif %}
             </div>
 
         </div>
+
         {%  endfor %}
 
     </div>

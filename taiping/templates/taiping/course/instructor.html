@@ -1,8 +1,13 @@
-<style>
-    /* #course-instructor {
-    } */
-</style>
+{% load extra_tags %}
 
+<hr />
 
 <div id="course-instructor">
+    <h5>
+        <span>Instructor:</span>
+        <span class="fw-bold ms-3">{{ course.instructor.user.get_full_name }}</span>
+    </h5>
+    <div class="course-instructor-bio">
+        {{ course.instructor.bio | from_markdown }}
+    </div>
 </div>
