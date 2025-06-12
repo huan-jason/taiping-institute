@@ -56,7 +56,7 @@
             <div class="course-card-body">
                 <h4 class="course-card-title">{{ item.name }}</h4>
                 <p class="course-card-text mt-3">
-                    {{ item.description }}
+                    {{ item.short_description_md | default:item.description_md | safe }}
                 </p>
             </div>
 
