@@ -7,6 +7,11 @@ from django.contrib.admin.sites import AlreadyRegistered  # type: ignore
 
 from .. import models
 
+
+admin.site.site_header = "DB administration"
+admin.site.site_title = "Agojin admin"
+admin.site.index_title = "Agojin DB"
+
 admins = list(Path(__file__).parent.glob("*admin.py"))
 
 for item in admins:
