@@ -20,7 +20,7 @@
         gap: 2em;
         justify-content: center;
 
-        margin-top: 2em;
+        margin-block: 2em 3em;
 
         .course-card {
             display: grid;
@@ -41,8 +41,8 @@
 
             .course-card-text * {
                 font-size: 1.15em;
+                line-height: 1.6em;
                 color: var(--stone-10);
-                /* font-family: var(--font-transitional); */
             }
 
             .button--footer {
@@ -56,7 +56,7 @@
 
 <div class="container">
 
-    <h4 class="text-center mt-5">Agojin Courses</h4>
+    <h4 class="text-center mt-3">Agojin Courses</h4>
 
     <div id="courses-container">
 
@@ -69,7 +69,13 @@
                     <div class="mt-2 mb-4">{{ item.chinese_name }}</div>
                 </h4>
                 <div class="course-card-text mt-3">
-                    {{ item.short_description_md | default:item.description_md | safe }}
+                    <!-- noformat -->
+                    {% if item.short_description %}
+                        {{ item.short_description_md | safe }}
+                    {% else %}
+                        {{ item.description_md | safe }}
+                    <!-- noformat -->
+                    {% endif %}
                 </div>
             </div>
 

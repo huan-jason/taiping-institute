@@ -34,4 +34,4 @@ class Course(BaseModel):
 
     @property
     def short_description_md(self) -> str:
-        return markdown(self.description)
+        return markdown(self.short_description)
