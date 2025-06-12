@@ -1,10 +1,9 @@
 <style>
     #course-description {
-        max-width: 75ch;
-        margin-inline: auto;
-        padding: 2em 3em;
-        line-height: 1.7em;
-        color: var(--stone-10);
+
+        .course-description-text p {
+            margin-bottom: 1.5em;
+        }
     }
 
     .course-image {
@@ -18,12 +17,9 @@
         <div>{{ course.name }}</div>
         <div class="mt-3">{{ course.chinese_name }}</div>
     </h3>
-    <img class=" course-image" src="{{course.image}}" alt="" />
+    <img class="course-image" src="{{course.image}}" alt="" />
 
-    <div class="">
-        <div>
-            {{ course.description_md | safe }}
-        </div>
-        <div class="mt-4">Registration fee: ${{ course.course_fee }}</div>
+    <div class="course-description-text">
+        {{ course.description_md | safe }}
     </div>
 </div>

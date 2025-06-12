@@ -3,7 +3,14 @@
 {% block content %}
 <style>
     #page-content {
-        margin-bottom: 2em;
+        max-width: 75ch;
+        min-height: 100vh;
+        margin-inline: auto;
+        padding: 2em 3em;
+        /* padding-bottom: 2em; */
+        line-height: 1.6em;
+        color: var(--stone-10);
+        background-color: white;
     }
 
     @media (max-width: 800px) {
@@ -24,6 +31,14 @@
 
         <section>
             {% include "./description.html" %}
+        </section>
+
+        <section>
+            {% include "./classes.html" %}
+        </section>
+
+        <section>
+            {% include "./instructor.html" %}
         </section>
 
     </div>
