@@ -16,7 +16,7 @@
 <style>
     #courses-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, 50ch);
+        grid-template-columns: repeat(auto-fit, 60ch);
         gap: 2em;
         justify-content: center;
 
@@ -33,6 +33,16 @@
 
             &:hover {
                 background-color: white;
+            }
+
+            .course-card-title {
+                font-weight: 600;
+            }
+
+            .course-card-text * {
+                font-size: 1.15em;
+                color: var(--stone-10);
+                /* font-family: var(--font-transitional); */
             }
 
             .button--footer {
@@ -54,10 +64,13 @@
         <div class="course-card">
 
             <div class="course-card-body">
-                <h4 class="course-card-title">{{ item.name }}</h4>
-                <p class="course-card-text mt-3">
+                <h4 class="course-card-title">
+                    <div>{{ item.name }}</div>
+                    <div class="mt-2 mb-4">{{ item.chinese_name }}</div>
+                </h4>
+                <div class="course-card-text mt-3">
                     {{ item.short_description_md | default:item.description_md | safe }}
-                </p>
+                </div>
             </div>
 
             <div class="d-flex justify-content-around align-items-center py-3">
