@@ -3,8 +3,6 @@
 {% block content %}
 <style>
     #page-content {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
         margin-bottom: 2em;
     }
 
@@ -22,15 +20,10 @@
 
 <div class="container" hx-swap="none">
 
-
     <div id="page-content" class="fs-5">
 
         <section>
             {% include "./description.html" %}
-        </section>
-
-        <section id="form-section">
-            {% include "./form.html" %}
         </section>
 
     </div>

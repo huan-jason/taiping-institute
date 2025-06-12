@@ -1,8 +1,8 @@
-from .indexview import IndexView
+from .courseview import CourseView
 from .registerview import RegisterView
 
 
 __all__ = [
-    "IndexView",
+    "CourseView",
     "RegisterView",
 ]

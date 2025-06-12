@@ -1,5 +1,17 @@
 make:
 
+deploy: git-push-production
+	bin/deploy.sh gce
+
+dev: django
+
+###
+
+cd: comm deploy
+
+django:
+	screen -SRR agojin bin/dev
+
 coll: collectstatic
 
 collectstatic:
@@ -10,13 +22,7 @@ comm: commit
 
 commit: collectstatic migrate git-commit git-push-origin
 
-deploy: git-push-production
-	bin/deploy.sh gce
-
 dev: django
-
-django:
-	screen -SRR agojin bin/dev
 
 git-commit:
 	@echo "\033[32m" Git commit "\033[0m"
