@@ -9,6 +9,7 @@ class GenderChoices(TextChoices):
 class CourseStatusChoices(TextChoices):
     DRAFT = "DRAFT"
     PUBLISHED = "PUBLISHED"
+    CANCELLED = "CANCELLED"
 
 
 class UserTypeChoices(TextChoices):

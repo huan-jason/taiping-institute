@@ -71,6 +71,8 @@
 
             {% for course_class in course.upcoming_classes %}
             {% include "./course_class.html" %}
+            {% empty %}
+            <div>No classes available yet. Come back when the sun rises from the west.</div>
             {% endfor %}
 
         </section>
