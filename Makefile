@@ -1,16 +1,14 @@
 make:
 
 deploy: git-push-production
-	bin/deploy.sh gce
+	bin/deploy.sh agojin
 
-dev: django
+django:
+	screen -SRR agojin bin/dev
 
 ###
 
 cd: comm deploy
-
-django:
-	screen -SRR agojin bin/dev
 
 coll: collectstatic
 
