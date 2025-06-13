@@ -12,6 +12,7 @@ class CourseClassAdmin(admin.ModelAdmin):
         "start_date",
         "end_date",
         "status",
+        "started",
         "auto_start",
         "instructor",
         "facility",
@@ -26,6 +27,7 @@ class CourseClassAdmin(admin.ModelAdmin):
         "status",
         "start_date",
         "end_date",
+        "started",
         "auto_start",
     ]
     ordering = [

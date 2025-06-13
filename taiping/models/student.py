@@ -1,16 +1,11 @@
 from django.db.models import (
-    BooleanField,
     CharField,
     DateField,
-    EmailField,
     FileField,
-    FloatField,
-    ForeignKey,
     IntegerField,
     OneToOneField,
     PROTECT,
     TextField,
-    UniqueConstraint,
 )
 from taiping.constants import GenderChoices
 from .basemodel import BaseModel

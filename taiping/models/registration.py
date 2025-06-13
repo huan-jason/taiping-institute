@@ -1,6 +1,5 @@
 from django.db.models import (
-    CharField,
-    EmailField,
+    BooleanField,
     ForeignKey,
     PROTECT,
     TextField,
@@ -10,19 +9,19 @@ from .basemodel import BaseModel
 
 
 class Registration(BaseModel):
-    course = ForeignKey('taiping.Course', on_delete=PROTECT)
-    name = CharField(max_length=128, db_index=True)
-    email = EmailField(db_index=True)
-    tel = CharField(max_length=32)
+    course_class = ForeignKey('taiping.CourseClass', on_delete=PROTECT)
+    student = ForeignKey('auth.User', on_delete=PROTECT)
+    started = BooleanField(default=False, db_index=True)
+    completed = BooleanField(default=False, db_index=True)
     comments = TextField(null=True, blank=True)
 
-    class Meta:
+    class Meta: # type: ignore
         constraints = [
             UniqueConstraint(
                 name="registration__unique",
-                fields=["course", "email"],
+                fields=["course_class", "student"],
             )
         ]
 
     def __str__(self) -> str:
-        return f"{self.course} :: {self.name} :: {self.email}"
+        return f"{self.course_class.course.name} :: {self.student.username}"

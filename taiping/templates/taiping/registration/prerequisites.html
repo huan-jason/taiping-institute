@@ -1,0 +1,32 @@
+<style>
+    #prerequisites-container {
+        max-width: max-content;
+        margin-inline: auto;
+        background-color: white;
+        padding: 2em;
+        border: solid thin lightgrey;
+        border-radius: 1em;
+    }
+</style>
+
+
+<section id="prerequisites-container">
+
+    <h5 class="fw-bold text-decoration-underline mb-3">Course Prerequisites</h5>
+
+    {% for item in dependent_courses %}
+    <div class="mt-2">
+        {% if item.met_dependency %}
+        <span class="text-success">&check;</span>
+        <span class="ms-2">{{ item.dependency_course }}</span>
+        {% else %}
+        <span class="text-danger fw-bold">
+            <span>&cross;</span>
+            <span class="ms-2">{{ item.dependency_course }}</span>
+        </span>
+        {% endif %}
+
+    </div>
+    {% endfor %}
+
+</section>

@@ -38,10 +38,33 @@
   <style>
     body {
       display: grid;
-      place-items: center;
-      height: 50vh;
+      grid-template-rows: auto auto;
+      justify-content: center;
 
       .form-row {
+        margin-top: 2em;
+      }
+    }
+
+    #content-main {
+      border: solid thin lightgrey;
+      border-radius: 1em;
+      padding: 2em;
+      background-color: white;
+      margin-block: 10vh 3em;
+      ;
+
+      #link--forgot-password {
+        display: block;
+        margin-top: 2em;
+        text-align: center
+      }
+
+      label {
+        margin-right: 0.5em;
+      }
+
+      .submit-row {
         margin-top: 2em;
       }
     }
@@ -68,12 +91,16 @@
     </div>
     {% url 'admin_password_reset' as password_reset_url %}
     <div class="password-reset-link" style="margin: 1em 0;">
-      <a href="{% url 'password_reset' %}">{% translate 'Forgotten your password or username?' %}</a>
     </div>
     <div class="submit-row">
-      <input type="submit" value="{% translate 'Log in' %}">
+      <input class="btn btn-primary w-100" type="submit" value="{% translate 'Log in' %}">
     </div>
+    <a id="link--forgot-password"
+      href="{% url 'password_reset' %}">{% translate 'Forgotten your password or username?' %}</a>
   </form>
 
 </div>
+
+<a href="/create-account/" class="btn btn-outline-primary">Create an account</a>
+
 {% endblock %}

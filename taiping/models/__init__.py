@@ -1,5 +1,6 @@
 from .course import Course
 from .courseclass import CourseClass
+from .coursedependency import CourseDependency
 from .coursegroup import CourseGroup
 from .instructor import Instructor
 from .facility import Facility
@@ -10,6 +11,7 @@ from .student import Student
 __all__ = [
     "Course",
     "CourseClass",
+    "CourseDependency",
     "CourseGroup",
     "Registration",
     "Student",

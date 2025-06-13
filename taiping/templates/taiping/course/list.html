@@ -93,9 +93,9 @@
                     class="btn btn-outline-secondary button--footer">Details</a>
 
                 {% if item.upcoming_classes.count %}
-                <a href="/course/{{ item.id }}/register/" class="btn btn-primary button--footer">Enroll</a>
+                <a href="/course/{{ item.id }}/enroll/" class="btn btn-primary button--footer">Enroll</a>
                 {% else %}
-                <a href="/course/{{ item.id }}/register/" title="No classes available"
+                <a href="/course/{{ item.id }}/enroll/" title="No classes available"
                     class="btn btn-outline-primary disabled button--footer">Enroll</a>
                 {% endif %}
             </div>

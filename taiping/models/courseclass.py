@@ -24,7 +24,8 @@ class CourseClass(BaseModel):
     start_date = DateField(db_index=True)
     end_date = DateField(db_index=True)
     status = CharField(max_length=32, db_index=True, choices=CourseStatusChoices, default=CourseStatusChoices.DRAFT)
-    auto_start = BooleanField(default=False)
+    started = BooleanField(default=False, db_index=True)
+    auto_start = BooleanField(default=False, db_index=True)
 
     class Meta: # type: ignore
         verbose_name_plural = "Course classes"

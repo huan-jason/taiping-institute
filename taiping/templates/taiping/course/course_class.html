@@ -6,8 +6,8 @@
         <span class="ms-0">{{ course_class.start_date }}</span>
         <span class="ms-1">-</span>
         <span class="ms-1">{{ course_class.end_date }}</span>
-        <button class="btn btn-sm btn-outline-primary rounded-pill px-3 py-2 ms-4"
-            onclick="alert('xxx')">Enroll</button>
+        <a href="enroll/{{ course_class.id }}/"
+            class="btn btn-sm btn-outline-primary rounded-pill px-3 py-2 ms-4">Enroll</a>
     </summary>
 
     <div class="course-class-details">

@@ -1,8 +1,10 @@
 from .courseview import CourseView
-from .registerview import RegisterView
+from .createaccountview import CreateAccountView
+from .enrollview import EnrollView
 
 
 __all__ = [
     "CourseView",
-    "RegisterView",
+    "CreateAccountView",
+    "EnrollView",
 ]

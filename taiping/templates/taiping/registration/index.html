@@ -1,0 +1,44 @@
+{% extends "taiping/base.html" %}
+
+
+{% block content %}
+<style>
+    #page--course-registration {
+        max-width: 800px;
+        font-size: 1.25em;
+    }
+
+    #unmet-prequisites {
+        color: var(--bs-danger);
+        margin: 3em auto;
+        font-weight: bold;
+        text-wrap: balanced;
+        text-wrap: pretty;
+        width: 50ch
+    }
+</style>
+
+
+<div id="page--course-registration" class="container">
+
+    <h4 class="text-center fw-bold my-5">{{ course.name }}</h4>
+
+    {% if not met_prequisites %}
+    <div id="unmet-prequisites">
+        <p>
+            You have not met the pre-requisites for this course. &nbsp;
+            Please complete all prerequisite courses before registering.
+        </p>
+    </div>
+    {% endif %}
+
+
+    {% include "./prerequisites.html" %}
+
+
+    {% if met_prequisites %}
+    <h1 class="text-center fw-bold mt-5">Payment details...</h1>
+    {% endif %}
+
+</div>
+{% endblock content %}
