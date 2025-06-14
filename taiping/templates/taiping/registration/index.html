@@ -8,7 +8,7 @@
         font-size: 1.25em;
     }
 
-    #unmet-prequisites {
+    #unmet-prerequisites {
         color: var(--bs-danger);
         margin: 3em auto;
         font-weight: bold;
@@ -19,25 +19,24 @@
 </style>
 
 
-<div id="page--course-registration" class="container">
+<div id="page--course-registration" class="container" hx-swap="none">
 
-    <h4 class="text-center fw-bold my-5">{{ course.name }}</h4>
+    <h4 class="text-center fw-bold mt-5">
+        <div>{{ course.name }}</div>
+        <div class="mt-3">{{ course.chinese_name }}</div>
+    </h4>
 
-    {% if not met_prequisites %}
-    <div id="unmet-prequisites">
-        <p>
-            You have not met the pre-requisites for this course. &nbsp;
-            Please complete all prerequisite courses before registering.
-        </p>
-    </div>
+    {% if met_prerequisites %}
+
+
+    <div id="course-class-details" hx-get="?htmx=course-class-details" hx-trigger="load"></div>
+
+    {% else %}
+    {% include "./prerequisites.html" %}
     {% endif %}
 
-
-    {% include "./prerequisites.html" %}
-
-
-    {% if met_prequisites %}
-    <h1 class="text-center fw-bold mt-5">Payment details...</h1>
+    {% if met_prerequisites %}
+    {% include "./payment.html" %}
     {% endif %}
 
 </div>

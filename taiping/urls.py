@@ -12,6 +12,7 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
 
     path('course/<int:course_id>/enroll/<int:course_class_id>/', login_required(views.EnrollView.as_view()), name="enroll"),
+    path('course/<int:course_id>/enroll/', login_required(views.EnrollView.as_view()), name="enroll"),
     path('course/<int:course_id>/', views.CourseView.as_view(), name="course"),
     path('course/', views.CourseView.as_view(), name="course_list"),
 

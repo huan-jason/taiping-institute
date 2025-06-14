@@ -1,0 +1,67 @@
+{% load extra_tags %}
+
+<div hx-swap-oob="true" id="course-class-details" class="w-max-content mx-auto my-5">
+
+    <style>
+        #course-class-details {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1em 1em;
+
+            margin-top: 1em;
+
+            .course-info--label {
+                color: var(--stone-9);
+                font-size: smaller;
+
+                &::after {
+                    content: ":";
+                }
+            }
+
+            .course-info--data {
+                text-align: left;
+            }
+
+            .info-detail {
+                max-width: 50ch;
+            }
+
+            select[name="course_classs_id"] {
+                width: 35ch;
+            }
+        }
+    </style>
+
+
+    <span class="text-muted">Class:</span>
+    <select class="form-select d-inline-block" name="course_class_id" hx-get="?htmx=course-class-details">
+
+        {% for item in course.courseclass_set.all %}
+        <option value="{{ item.id }}" {% if item.id == course_class_id %} selected {% endif %}>
+            {{ item.start_date }} - {{ item.end_date }}
+            {% endfor %}
+
+    </select>
+
+    <span class="course-info--label">Course fee</span>
+    <span class="course-info--data">${{ course_class.get_course_fee }}</span>
+
+    <span class="course-info--label">Min students</span>
+    <span class="course-info--data">{{  course_class.get_min_students }}</span>
+
+    <span class="course-info--label">Max students</span>
+    <span class="course-info--data">{{ course_class.get_max_students }}</span>
+
+    <div class="course-info--label">Venue</div>
+    <div>
+        <div class="fw-medium">{{ course_class.get_facility.name }}</div>
+        <div class="info-detail">{{ course_class.get_facility.address | from_markdown }}</div>
+    </div>
+
+    <span class="course-info--label">Instructor</span>
+    <div>
+        <div class="fw-medium">{{ course_class.get_instructor.user.get_full_name }}</div>
+        <div class="info-detail">{{ course_class.get_instructor.bio | from_markdown }}</div>
+    </div>
+</div>
