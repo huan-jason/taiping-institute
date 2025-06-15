@@ -1,0 +1,9 @@
+<script hx-swap-oob="true" id="htmx-script">
+    (() => {
+        alert("Account {{ email }} already exists.")
+
+        const input = document.querySelector('[name=email]')
+        input.value = ""
+        input.focus()
+    })()
+</script>

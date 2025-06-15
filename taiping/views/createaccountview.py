@@ -1,5 +1,6 @@
 from typing import Any, Literal, TypeAlias, cast
 
+from django.contrib.auth.models import User
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views import View
@@ -14,21 +15,32 @@ UserType: TypeAlias = Literal["student", "instructor"]
 
 class CreateAccountView(View):
 
+    def create_instructor(self, request: HttpRequest) -> HttpResponse:
+        raise NotImplementedError
+
+    def create_student(self, request: HttpRequest) -> HttpResponse:
+            ...
+
     def get(self, request: HttpRequest, user_type: UserType="student") -> HttpResponse:
         gender_options: list[tuple[str, str]] = list(cast(Any, GenderChoices.choices))
         return render(request, f"taiping/create_account/{ user_type }.html", locals())
 
     def get_verification_code(self, request: HttpRequest) -> HttpResponse:
+        email: str = request.POST["email"].strip().lower()
+        user_exists: bool = User.objects.filter(username=email).exists()
+        if user_exists:
+            return render(request, "taiping/create_account/user_exists.html", locals())
+
         verification_code: str = EmailVerification.gen_code()
         EmailVerification.objects.update_or_create(
-            email=request.POST["email"].lower(),
+            email=email,
             defaults={ "code": verification_code },
         )
         send_mail(
             subject="Agojin Email Verification",
             message=f"Your Agojin email verification code is {verification_code}.",
             from_email=None,
-            recipient_list=[request.POST["email"]],
+            recipient_list=[email],
             fail_silently=False,
         )
         return render(request, "taiping/create_account/verification_code.html", locals())
@@ -41,7 +53,11 @@ class CreateAccountView(View):
         if htmx == "verify-code":
             return self.verify_code(request)
 
-        raise NotImplementedError
+        return (
+            self.create_student(request)
+            if user_type == "student" else
+            self.create_instructor(request)
+        )
 
     def verify_code(self, request: HttpRequest) -> HttpResponse:
         verification_code: str = request.POST["email_verification_code"]
