@@ -1,0 +1,6 @@
+Hi {{ student.user.first_name }},
+
+Welcome to Agojin.
+
+Your username is {{ student.user.username }}.
+Go to this link to reset your password https:{{ request.META.HTTP_HOST }}/accounts/password_reset/.

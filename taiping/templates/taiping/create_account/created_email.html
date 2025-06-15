@@ -1,0 +1,7 @@
+<p>Hi {{ student.user.first_name }},</p>
+
+<p?>Welcome to Agojin.</p>
+
+    <p>Your username is {{ student.user.username }}.</p>
+    <p>Go to this link to reset your password: <a
+            href="https://{{ request.META.HTTP_HOST }}/accounts/password_reset/">reset password</a></p>

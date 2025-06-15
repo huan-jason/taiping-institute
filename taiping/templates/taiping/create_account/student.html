@@ -31,6 +31,16 @@
                 font-weight: 100;
             }
         }
+
+        label:has(+input:invalid),
+        label:has(+textarea:invalid),
+        label:has(+div input[type=radio]:invalid) {
+            color: var(--red-8);
+        }
+    }
+
+    input[type=radio]+span {
+        color: var(--stone-10);
     }
 </style>
 
@@ -96,10 +106,10 @@
                 <label class="form-label input-label--required">Gender</label>
                 <div>
 
-                    {% for name, value in gender_options %}
+                    {% for value, label in gender_options %}
                     <label class="form-check-inline">
-                        <input type="radio" class="form-check-inline" name="gender" value="{{ value }}">
-                        <span>{{ name | title }}</span>
+                        <input type="radio" class="form-check-inline" name="gender" value="{{ value }}" required>
+                        <span>{{ label }}</span>
                     </label>
                     {% endfor %}
 
@@ -152,7 +162,11 @@
                     placeholder="Enter your emergency contact's phone number" required>
             </div>
 
-            <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled>Create account</button>
+            <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled
+                _="on click remove .d-none from .spinner">
+                Create account
+                <span id="spinner--submit" class="spinner spinner-border spinner-border-sm ms-2 d-none"></span>
+            </button>
 
         </fieldset>
 
@@ -165,6 +179,15 @@
     function checkVerificationCode(input) {
         if (input.value.trim().length != 4) { return }
         htmx.trigger(input, 'verify-code')
+    }
+
+    function invalidInputs(form) {
+        form = form || document.querySelector('#form--student-details')
+        const items = [...form.elements]
+        const invalids = items
+            .filter(item => !item.validity.valid)
+            .map(item => item.name)
+        console.log(invalids)
     }
 
     function onChangeEmail(input) {

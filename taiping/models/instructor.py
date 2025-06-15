@@ -14,7 +14,7 @@ class Instructor(BaseModel):
     user = OneToOneField('auth.User', on_delete=PROTECT)
     bio = TextField()
     certifications = TextField()
-    photo = FileField()
+    photo = FileField(upload_to="instructor/", null=True, blank=True)
     verified = BooleanField(default=False, db_index=True)
     calendar_sync = BooleanField(default=False, db_index=True)
     date_joined = DateField(db_index=True)

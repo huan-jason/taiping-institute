@@ -16,6 +16,7 @@ urlpatterns = [
     path('course/<int:course_id>/', views.CourseView.as_view(), name="course"),
     path('course/', views.CourseView.as_view(), name="course_list"),
 
+    path('create-account/created/', views.CreateAccountView.as_view(), { "created": True }, name="account_created"),
     path('create-account/instructor/', views.CreateAccountView.as_view(), { "user_type": "instructor" }, name="create_account"),
     path('create-account/', views.CreateAccountView.as_view(), name="create_account"),
 

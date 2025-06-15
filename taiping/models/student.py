@@ -18,7 +18,7 @@ class Student(BaseModel):
     date_of_birth = DateField(db_index=True)
     gender = CharField(max_length=8, choices=GenderChoices, null=True, blank=True, db_index=True)
     phone = CharField(max_length=128)
-    profile_photo = FileField()
+    profile_photo = FileField(upload_to="student/", null=True, blank=True)
     experience_years = IntegerField(default=0, blank=True)
     styles_trained = TextField(null=True, blank=True)
     medical_conditions = TextField(null=True, blank=True)
