@@ -1,0 +1,209 @@
+{% extends "taiping//base.html" %}
+
+
+{% block content %}
+<style>
+    #page-content {
+        max-width: 75ch;
+        min-height: 100vh;
+        margin-inline: auto;
+        padding: 2em 3em;
+        line-height: 1.6em;
+        color: var(--stone-10);
+        background-color: white;
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        .form-label {
+            margin-bottom: 0;
+        }
+
+        label:has(+input[required]),
+        label:has(+textarea[required]),
+        .input-label--required {
+            font-weight: bold;
+
+            &::after {
+                content: "*";
+                margin-left: 0.25em;
+            }
+        }
+    }
+</style>
+
+
+<form id="form--student-details" method="post" enctype="multipart/form-data" onchange="onChangeForm(this)">
+
+    {% csrf_token %}
+
+    <div id="page-content" class="container" hx-swap="none">
+
+        <h5 class="fw-bold mb-5">Agojin Student Registration</h5>
+
+        <div class="form-group">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" placeholder="Enter your email address" required
+                onchange="onChangeEmail(this)">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label input-label--required">Email verification code</label>
+            <div class="d-flex gap-3">
+
+                <button id="button--send-verification-code" type="button" class="btn btn-outline-secondary btn-sm"
+                    hx-post="?htmx=get-verification-code" hx-indicator disabled
+                    onclick="disableGetVerificationCodeButton(true)">
+
+                    Send me verification code
+                    <span class="htmx-indicator spinner spinner-border spinner-border-sm ms-2"></span>
+                </button>
+
+                <input type="text" class="form-control w-auto" name="email_verification_code"
+                    placeholder="Enter verification code" maxlength="4" required disabled
+                    oninput="checkVerificationCode(this)" hx-post="?htmx=verify-code" hx-trigger="verify-code">
+
+            </div>
+        </div>
+
+        <fieldset id="fieldset--student-details" disabled>
+
+            <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" name="first_name" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" name="last_name" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Alternative Name</label>
+                <input type="text" class="form-control" name="alternative_name"
+                    placeholder="Enter your alternative/Chinese name">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" name="date_of_birth" placeholder="Enter your date of birth"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label input-label--required">Gender</label>
+                <div>
+
+                    {% for name, value in gender_options %}
+                    <label class="form-check-inline">
+                        <input type="radio" class="form-check-inline" name="gender" value="{{ value }}">
+                        <span>{{ name | title }}</span>
+                    </label>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Phone no.</label>
+                <input type="text" class="form-control" name="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Photo</label>
+                <input type="file" class="form-control" name="profile_photo" placeholder="Upload your photo"
+                    accept="image/*" capture="user" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Years of Experience</label>
+                <input type="number" class="form-control" min="0" value="0" name="experience_years" />
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Styles trained</label>
+                <textarea class="form-control" rows="3" name="styles_trained"
+                    placeholder="Enter the styles you have trained in"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Medical Conditions</label>
+                <textarea class="form-control" rows="3" name="medical_conditions"
+                    placeholder="Enter any medical conditions"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Preferred languages</label>
+                <textarea class="form-control" rows="3" name="preferred_languages"
+                    placeholder="Enter the preferred languages"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Emergency contact name</label>
+                <input type="text" class="form-control" name="emergency_contact_name"
+                    placeholder="Enter your emergency contact name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Emergency contact phone no.</label>
+                <input type="text" class="form-control" name="emergency_contact_phone"
+                    placeholder="Enter your emergency contact's phone number" required>
+            </div>
+
+            <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled>Create account</button>
+
+        </fieldset>
+
+    </div>
+
+</form>
+
+
+<script>
+    function checkVerificationCode(input) {
+        if (input.value.trim().length != 4) { return }
+        htmx.trigger(input, 'verify-code')
+    }
+
+    function onChangeEmail(input) {
+        const button = document.querySelector('#button--send-verification-code')
+        button.disabled = !input.validity.valid
+
+        disableGetVerificationCodeButton(false)
+        disableVerificationCodeInput(true)
+    }
+
+    function onChangeForm(form) {
+        const items = [...form.elements]
+        const isValid = items.every(item => item.validity.valid)
+        document.querySelector('#button--submit').disabled = !isValid
+    }
+
+    function disableGetVerificationCodeButton(disabled) {
+        const button = document.querySelector('#button--send-verification-code')
+        button.disabled = disabled
+
+        if (disabled) {
+            button.classList.remove('btn-success')
+            button.classList.add('btn-outline-secondary')
+        } else {
+            button.classList.remove('btn-outline-secondary')
+            button.classList.add('btn-success')
+        }
+        return button
+    }
+
+    function disableVerificationCodeInput(disabled) {
+        const input = document.querySelector('input[name=email_verification_code]')
+        input.disabled = disabled
+        return input
+    }
+
+    var AGOJIN_VERIFIED = false
+
+</script>
+
+<script id="htmx-script"></script>
+
+{% endblock content %}

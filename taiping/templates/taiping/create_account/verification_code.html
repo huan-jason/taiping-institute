@@ -1,0 +1,17 @@
+<script hx-swap-oob="true" id="htmx-script">
+    alert(
+        "Please check your email for the verification code.\n\n"
+        + "If you do not receive it, please check your spam folder or click the button again in 1 minute."
+    );
+
+    const input = disableVerificationCodeInput(false)
+    input.focus()
+
+    setTimeout(() => {
+        if (!AGOJIN_VERIFIED) {
+            disableGetVerificationCodeButton(false)
+        }
+    }, 60000)
+
+
+</script>

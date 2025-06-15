@@ -2,6 +2,7 @@ from .course import Course
 from .courseclass import CourseClass
 from .coursedependency import CourseDependency
 from .coursegroup import CourseGroup
+from .emailverification import EmailVerification
 from .instructor import Instructor
 from .facility import Facility
 from .registration import Registration
@@ -13,8 +14,9 @@ __all__ = [
     "CourseClass",
     "CourseDependency",
     "CourseGroup",
-    "Registration",
-    "Student",
+    "EmailVerification",
     "Facility",
     "Instructor",
+    "Registration",
+    "Student",
 ]

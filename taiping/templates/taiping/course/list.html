@@ -5,13 +5,35 @@
 {% block header %}
 <section class="d-flex mt-3">
     <span class="ms-auto me-3">
+
         {% if user.is_authenticated %}
-        <span>{{ user.get_full_name | default:user.username }}</span>
+
+        <form id="form--logout" method="post" action="/accounts/logout/?next=/accounts/login/">
+            {% csrf_token %}
+
+            <div class="dropdown">
+                <span class="dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                    {{ user.get_full_name | default:user.username }}
+                </span>
+
+                <ul class="dropdown-menu">
+                    <li><button type="submit" class="dropdown-item" href="#">Sign out</button></li>
+                </ul>
+            </div>
+        </form>
+
         {% else %}
-        <a href="/accounts/login/?next=/" type="button" class="btn btn-outline-secondary rounded-pill">
+
+        <a href="/create-account/" type="button" class="btn btn-outline-primary rounded-pill">
+            Create account
+        </a>
+
+        <a href="/accounts/login/?next=/" type="button" class="btn btn-outline-primary rounded-pill ms-2">
             Sign in
         </a>
+
         {% endif %}
+
     </span>
 </section>
 {% endblock header %}

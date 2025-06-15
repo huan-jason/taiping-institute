@@ -1,0 +1,19 @@
+<script hx-swap-oob="true" id="htmx-script">
+
+    //{% if verified %}
+
+    AGOJIN_VERIFIED = true
+    disableGetVerificationCodeButton(true)
+    disableVerificationCodeInput(true)
+
+    var fieldset = document.querySelector('#fieldset--student-details')
+    fieldset.disabled = false;
+    [...fieldset.elements][0].focus()
+
+    //{% else %}
+
+    alert("Invalid verification code")
+
+    //{% endif %}
+
+</script>

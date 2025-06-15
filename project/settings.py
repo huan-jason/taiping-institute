@@ -134,6 +134,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 USE_THOUSAND_SEPARATOR = True
 
+LOGIN_REDIRECT_URL = "/"
 
 try: from .settings_test import *  # type: ignore
 except ModuleNotFoundError: pass

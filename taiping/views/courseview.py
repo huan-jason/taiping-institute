@@ -26,6 +26,3 @@ class CourseView(View):
     def get_courses_list(self, request: HttpRequest) -> HttpResponse:
             courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
             return render(request, "taiping/course/list.html", locals())
-
-    def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
-        raise NotImplementedError
