@@ -7,7 +7,7 @@
         max-width: 75ch;
         min-height: 100vh;
         margin-inline: auto;
-        padding: 2em 3em;
+        padding: 0 3em 2em;
         line-height: 1.6em;
         color: var(--stone-10);
         background-color: white;
@@ -57,9 +57,23 @@
 
     <div id="page-content" class="fs-5">
 
+        {% if user.instructor.id == course.instructor_id or user.is_superuser%}
+        <section class="d-flex pt-3">
+            <span class="ms-auto">
+
+                <a href="edit/" type="button" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                    Edit
+                </a>
+
+            </span>
+        </section>
+        {% endif %}
+
+
         <section>
             {% include "./description.html" %}
         </section>
+
 
         <section id="course-classes-container" class="mt-5">
             <h5 class="fw-bold">Classes</h5>

@@ -34,6 +34,8 @@ class CourseAdmin(admin.ModelAdmin):
     list_display = [
         "name",
         "chinese_name",
+        "instructor",
+        "facility",
         "course_group",
         "description",
     ]
