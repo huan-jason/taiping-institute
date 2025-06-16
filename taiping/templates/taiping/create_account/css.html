@@ -1,0 +1,41 @@
+<style>
+    #page-content {
+        max-width: 75ch;
+        min-height: 100vh;
+        margin-inline: auto;
+        padding: 2em 3em;
+        line-height: 1.6em;
+        color: var(--stone-10);
+        background-color: white;
+
+        .form-group {
+            margin-bottom: 1.5em;
+        }
+
+        .form-label {
+            margin-bottom: 0;
+        }
+
+        label:has(+input[required]),
+        label:has(+textarea[required]),
+        .input-label--required {
+            font-weight: bold;
+
+            &::after {
+                content: "*";
+                margin-left: 0.25em;
+                font-weight: 100;
+            }
+        }
+
+        label:has(+input:invalid),
+        label:has(+textarea:invalid),
+        label:has(+div input[type=radio]:invalid) {
+            color: var(--red-8);
+        }
+    }
+
+    input[type=radio]+span {
+        color: var(--stone-10);
+    }
+</style>

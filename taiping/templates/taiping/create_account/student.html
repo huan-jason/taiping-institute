@@ -1,48 +1,9 @@
-{% extends "taiping//base.html" %}
+{% extends "taiping/base.html" %}
 
 
 {% block content %}
-<style>
-    #page-content {
-        max-width: 75ch;
-        min-height: 100vh;
-        margin-inline: auto;
-        padding: 2em 3em;
-        line-height: 1.6em;
-        color: var(--stone-10);
-        background-color: white;
 
-        .form-group {
-            margin-bottom: 1.5em;
-        }
-
-        .form-label {
-            margin-bottom: 0;
-        }
-
-        label:has(+input[required]),
-        label:has(+textarea[required]),
-        .input-label--required {
-            font-weight: bold;
-
-            &::after {
-                content: "*";
-                margin-left: 0.25em;
-                font-weight: 100;
-            }
-        }
-
-        label:has(+input:invalid),
-        label:has(+textarea:invalid),
-        label:has(+div input[type=radio]:invalid) {
-            color: var(--red-8);
-        }
-    }
-
-    input[type=radio]+span {
-        color: var(--stone-10);
-    }
-</style>
+{% include "./css.html" %}
 
 
 <form id="form--student-details" method="post" enctype="multipart/form-data" onchange="onChangeForm(this)">
@@ -53,32 +14,9 @@
 
         <h5 class="fw-bold mb-5">Agojin Student Registration</h5>
 
-        <div class="form-group">
-            <label class="form-label">Email address</label>
-            <input type="email" class="form-control" name="email" placeholder="Enter your email address" required
-                onchange="onChangeEmail(this)">
-        </div>
+        {% include "./email_fields.html" %}
 
-        <div class="form-group">
-            <label class="form-label input-label--required">Email verification code</label>
-            <div class="d-flex gap-3">
-
-                <button id="button--send-verification-code" type="button" class="btn btn-outline-secondary btn-sm"
-                    hx-post="?htmx=get-verification-code" hx-indicator disabled
-                    onclick="disableGetVerificationCodeButton(true)">
-
-                    Send me verification code
-                    <span class="htmx-indicator spinner spinner-border spinner-border-sm ms-2"></span>
-                </button>
-
-                <input type="text" class="form-control w-auto" name="email_verification_code"
-                    placeholder="Enter verification code" maxlength="4" required disabled
-                    oninput="checkVerificationCode(this)" hx-post="?htmx=verify-code" hx-trigger="verify-code">
-
-            </div>
-        </div>
-
-        <fieldset id="fieldset--student-details" disabled>
+        <fieldset id="fieldset--user-details" disabled>
 
             <div class="form-group">
                 <label class="form-label">First Name</label>
@@ -175,58 +113,7 @@
 </form>
 
 
-<script>
-    function checkVerificationCode(input) {
-        if (input.value.trim().length != 4) { return }
-        htmx.trigger(input, 'verify-code')
-    }
-
-    function invalidInputs(form) {
-        form = form || document.querySelector('#form--student-details')
-        const items = [...form.elements]
-        const invalids = items
-            .filter(item => !item.validity.valid)
-            .map(item => item.name)
-        console.log(invalids)
-    }
-
-    function onChangeEmail(input) {
-        const button = document.querySelector('#button--send-verification-code')
-        button.disabled = !input.validity.valid
-
-        disableGetVerificationCodeButton(false)
-        disableVerificationCodeInput(true)
-    }
-
-    function onChangeForm(form) {
-        const items = [...form.elements]
-        const isValid = items.every(item => item.validity.valid)
-        document.querySelector('#button--submit').disabled = !isValid
-    }
-
-    function disableGetVerificationCodeButton(disabled) {
-        const button = document.querySelector('#button--send-verification-code')
-        button.disabled = disabled
-
-        if (disabled) {
-            button.classList.remove('btn-success')
-            button.classList.add('btn-outline-secondary')
-        } else {
-            button.classList.remove('btn-outline-secondary')
-            button.classList.add('btn-success')
-        }
-        return button
-    }
-
-    function disableVerificationCodeInput(disabled) {
-        const input = document.querySelector('input[name=email_verification_code]')
-        input.disabled = disabled
-        return input
-    }
-
-    var AGOJIN_VERIFIED = false
-
-</script>
+{% include "./js.html" %}
 
 <script id="htmx-script"></script>
 

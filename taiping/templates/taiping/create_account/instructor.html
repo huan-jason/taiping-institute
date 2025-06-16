@@ -1,0 +1,65 @@
+{% extends "taiping/base.html" %}
+
+
+{% block content %}
+
+{% include "./css.html" %}
+
+
+<form id="form--student-details" method="post" enctype="multipart/form-data" onchange="onChangeForm(this)">
+
+    {% csrf_token %}
+
+    <div id="page-content" class="container" hx-swap="none">
+
+        <h5 class="fw-bold mb-5">Agojin Instructor Registration</h5>
+
+        {% include "./email_fields.html" %}
+
+        <fieldset id="fieldset--user-details" disabled>
+
+            <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" name="first_name" placeholder="Enter your first name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" name="last_name" placeholder="Enter your last name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Bio</label>
+                <textarea class="form-control" name="bio" placeholder="Enter your bio" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Certifications</label>
+                <textarea class="form-control" name="certifications" placeholder="Enter your Certifications" rows="5"
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Photo</label>
+                <input type="file" class="form-control" name="photo" placeholder="Upload your photo" accept="image/*"
+                    capture="user" required>
+            </div>
+
+            <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled
+                _="on click remove .d-none from .spinner">
+                Create account
+                <span id="spinner--submit" class="spinner spinner-border spinner-border-sm ms-2 d-none"></span>
+            </button>
+
+        </fieldset>
+
+    </div>
+
+</form>
+
+
+{% include "./js.html" %}
+
+<script id="htmx-script"></script>
+
+{% endblock content %}

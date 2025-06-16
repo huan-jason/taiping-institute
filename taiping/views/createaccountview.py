@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import date, datetime
 from typing import Any, Literal, TypeAlias, cast
 
 from django.contrib.auth.models import User
@@ -11,7 +11,7 @@ from django.template.loader import render_to_string
 from django.views import View
 
 from taiping.constants import GenderChoices
-from taiping.models import EmailVerification, Student
+from taiping.models import EmailVerification, Student, Instructor
 
 
 UserType: TypeAlias = Literal["student", "instructor"]
@@ -19,36 +19,56 @@ UserType: TypeAlias = Literal["student", "instructor"]
 
 class CreateAccountView(View):
 
-    DATE_FIELDS: list[str] = [
-        "date_of_birth",
-    ]
+    STUDENT_FIELDS: dict[str, list[str]] = {
+        "date": [
+            "date_of_birth",
+        ],
+        "int": [
+            "experience_years",
+        ],
+        "text": [
+            "alternative_name",
+            "gender",
+            "phone",
+            "styles_trained",
+            "medical_conditions",
+            "preferred_languages",
+            "emergency_contact_name",
+            "emergency_contact_phone",
+        ],
+    }
 
-    FILE_FIELDS: list[str] = [
-        "profile_photo",
-    ]
-
-    INT_FIELDS: list[str] = [
-        "experience_years",
-    ]
-
-    TEXT_FIELDS: list[str] = [
-        "alternative_name",
-        "gender",
-        "phone",
-        "styles_trained",
-        "medical_conditions",
-        "preferred_languages",
-        "emergency_contact_name",
-        "emergency_contact_phone",
-    ]
+    INSTRUCTOR_FIELDS: dict[str, list[str]] = {
+        "text": [
+            "bio",
+            "certifications",
+        ],
+    }
 
     def account_created(self, request: HttpRequest) -> HttpResponse:
-        student: Student = Student.objects.get(id=request.GET["student"])
         return render(request, "taiping/create_account/created.html", locals())
 
-
     def create_instructor(self, request: HttpRequest) -> HttpResponse:
-        raise NotImplementedError
+        user: User = self.create_user(request)
+        data: dict = {
+            "user": user,
+            "date_joined": date.today(),
+        }
+        data |= {
+            key: request.POST[key]
+            for key in self.INSTRUCTOR_FIELDS["text"]
+        }
+        data |= {
+            name: ContentFile(
+                cast(Any, upload).file.read(),
+                name=f"student_{cast(Any, user).id}_{cast(Any, upload)._name}",
+            )
+            for name, upload in request.FILES.items()
+        }
+
+        instructor: Instructor = Instructor.objects.create(**data)
+        self.send_email(request, instructor.user)
+        return redirect(f"/create-account/created/?instructor={cast(Any, instructor).id}")
 
     def create_student(self, request: HttpRequest) -> HttpResponse:
         user: User = self.create_user(request)
@@ -57,15 +77,15 @@ class CreateAccountView(View):
         }
         data |= {
             key: request.POST[key]
-            for key in self.TEXT_FIELDS
+            for key in self.STUDENT_FIELDS["text"]
         }
         data |= {
             key: int(request.POST[key])
-            for key in self.INT_FIELDS
+            for key in self.STUDENT_FIELDS["int"]
         }
         data |= {
             key: datetime.strptime(request.POST[key], "%Y-%m-%d")
-            for key in self.DATE_FIELDS
+            for key in self.STUDENT_FIELDS["date"]
         }
         data |= {
             name: ContentFile(
@@ -76,7 +96,7 @@ class CreateAccountView(View):
         }
 
         student: Student = Student.objects.create(**data)
-        self.send_email(request, student)
+        self.send_email(request, student.user)
         return redirect(f"/create-account/created/?student={cast(Any, student).id}")
 
     def create_user(self, request: HttpRequest) -> User:
@@ -95,7 +115,7 @@ class CreateAccountView(View):
         gender_options: list[tuple[str, str]] = list(cast(Any, GenderChoices.choices))
         return render(request, f"taiping/create_account/{ user_type }.html", locals())
 
-    def get_email_message(self, request: HttpRequest, student: Student, message_type: str) -> str:
+    def get_email_message(self, request: HttpRequest, user: User, message_type: str) -> str:
         return render_to_string(
             request=request,
             template_name=f"taiping/create_account/created_email.{message_type}",
@@ -137,14 +157,14 @@ class CreateAccountView(View):
                 self.create_instructor(request)
             )
 
-    def send_email(self, request: HttpRequest, student: Student) -> None:
+    def send_email(self, request: HttpRequest, user: User) -> None:
         send_mail(
             subject="Welcome to Agojin",
             from_email=None,
-            recipient_list=[student.user.email],
+            recipient_list=[user.email],
             fail_silently=False,
-            message=self.get_email_message(request=request, student=student, message_type="txt"),
-            html_message=self.get_email_message(request=request, student=student, message_type="html"),
+            message=self.get_email_message(request=request, user=user, message_type="txt"),
+            html_message=self.get_email_message(request=request, user=user, message_type="html"),
         )
 
     def verify_code(self, request: HttpRequest) -> HttpResponse:
