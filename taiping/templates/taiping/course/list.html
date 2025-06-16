@@ -8,11 +8,17 @@
 
         {% if user.is_authenticated %}
 
-        <form id="form--logout" method="post" action="/accounts/logout/?next=/accounts/login/">
+        {% if user.instructor %}
+        <a href="new/" type="button" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-3">
+            New Course
+        </a>
+        {% endif %}
+
+        <form id="form--logout" class="d-inline-block" method="post" action="/accounts/logout/?next=/accounts/login/">
             {% csrf_token %}
 
             <div class="dropdown">
-                <span class="dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                <span class="dropdown-toggle d-inline-block" role="button" data-bs-toggle="dropdown">
                     {{ user.get_full_name | default:user.username }}
                 </span>
 

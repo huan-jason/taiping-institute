@@ -5,7 +5,7 @@
     }
 
     function invalidInputs(form) {
-        form = form || document.querySelector('#form--student-details')
+        form = form || document.querySelector('#form--user-details')
         const items = [...form.elements]
         const invalids = items
             .filter(item => !item.validity.valid)

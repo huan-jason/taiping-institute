@@ -1,0 +1,124 @@
+{% extends "taiping/base.html" %}
+
+
+{% block content %}
+
+{% include "../create_account/css.html" %}
+
+
+<form id="form--course-details" method="post" enctype="multipart/form-data" onchange="onChangeForm(this)">
+
+    <div class="container" hx-swap="none">
+
+
+        <div id="page-content">
+
+            <h5 class="fw-bold mb-4">
+                {% if course_id %} Edit {% else %} New {% endif %}
+                Agojin Course
+            </h5>
+
+            <div class="form-group">
+                <label class="form-label">Course Type</label>
+                <select class="form-select" name="course_group_id">
+                    <option value=""></option>
+
+                    {% for item in course_groups %}
+                    <option value="{{ item.id }}">{{ item.name }}</option>
+                    {% endfor %}
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Course Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter course name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Course Chinese Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter course Chinese name" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Description</label>
+                <textarea class="form-control" name="description" placeholder="Enter course description" rows="5"
+                    required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Short Description</label>
+                <textarea class="form-control" name="short_description" placeholder="Enter course short description"
+                    rows="5" required></textarea>
+            </div>
+
+            <hr />
+
+            <div class="form-group">
+                <label class="form-label">Instructor</label>
+                <select class="form-select" name="instructor_id" required>
+                    <option></option>
+
+                    {% for item in instructors %}
+                    <option value="{{ item.id }}" {% if item.user_id == user.id %} selected {% endif %}>
+                        {{ item.user.get_full_name }}</option>
+                    {% endfor %}
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Facility</label>
+                <select class="form-select" name="facility_id" required>
+                    <option></option>
+
+                    {% for item in facilities %}
+                    <option value="{{ item.id }}">{{ item.name }}</option>
+                    {% endfor %}
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Course Fee</label>
+                <input type="number" class="form-control" name="course_fee" min="0" placeholder="Enter course fee"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Min Students</label>
+                <input type="number" class="form-control" name="min_students" min="1"
+                    placeholder="Enter minimum students" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Max Students</label>
+                <input type="number" class="form-control" name="max_students" min="1"
+                    placeholder="Enter maximum students" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Image</label>
+                <input type="file" class="form-control" name="image" placeholder="Upload course image" accept="image/*">
+            </div>
+
+            <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled
+                _="on click remove .d-none from .spinner">
+                Submit
+                <span id="spinner--submit" class="spinner spinner-border spinner-border-sm ms-2 d-none"></span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function onChangeForm(form) {
+            const items = [...form.elements]
+            const isValid = items.every(item => item.validity.valid)
+            document.querySelector('#button--submit').disabled = !isValid
+        }
+    </script>
+
+    {% endblock content %}

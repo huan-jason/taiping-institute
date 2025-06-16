@@ -18,6 +18,7 @@
 
         label:has(+input[required]),
         label:has(+textarea[required]),
+        label:has(+select[required]),
         .input-label--required {
             font-weight: bold;
 
@@ -30,6 +31,7 @@
 
         label:has(+input:invalid),
         label:has(+textarea:invalid),
+        label:has(+select:invalid),
         label:has(+div input[type=radio]:invalid) {
             color: var(--red-8);
         }
