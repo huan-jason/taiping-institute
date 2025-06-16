@@ -11,14 +11,16 @@
 <hr />
 
 <div id="course-instructor">
+
     <h5>
         <span>Instructor:</span>
         <span class="fw-bold ms-3">{{ course.instructor.user.get_full_name }}</span>
     </h5>
+
     <div class="course-instructor-bio-container">
         <div>{{ course.instructor.bio | from_markdown }}</div>
 
         <img src="{{ course.instructor.profile_photo }}" alt="{{ course.instructor.user.get_full_name }}" />
-
     </div>
+
 </div>
