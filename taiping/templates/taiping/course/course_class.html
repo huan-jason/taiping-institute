@@ -34,10 +34,16 @@
         <details class="course-info--details">
             <summary>{{ course_class.get_instructor.user.get_full_name }}</summary>
 
-            <div>
-                {{  course_class.get_instructor.bio | from_markdown }}
+            {% with instructor=course_class.get_instructor %}
+
+            <div class="course-instructor-bio-container">
+                <div>{{ instructor.bio | from_markdown }}</div>
+
+                <img src="{{ instructor.profile_photo }}" alt="{{ instructor.user.get_full_name }}" />
             </div>
-            </span>
+
+            {% endwith %}
+
         </details>
     </div>
 
