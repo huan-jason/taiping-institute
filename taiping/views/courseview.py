@@ -24,5 +24,6 @@ class CourseView(View):
         )
 
     def get_courses_list(self, request: HttpRequest) -> HttpResponse:
+            show_create_course_button: bool = True
             courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
             return render(request, "taiping/course/list.html", locals())
