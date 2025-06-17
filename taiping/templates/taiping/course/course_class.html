@@ -38,8 +38,12 @@
             {% with instructor=course_class.get_instructor %}
 
             <div class="course-instructor-bio-container">
+
+                {% if instructor.photo %}
                 <img class="float-end ms-3 mb-2" src="{% get_media_prefix %}{{ instructor.photo }}"
                     alt="{{ instructor.user.get_full_name }}" />
+                {% endif %}
+
                 <div>{{ instructor.bio | from_markdown }}</div>
 
             </div>
