@@ -18,7 +18,7 @@ class Course(BaseModel):
     name = CharField(max_length=128, unique=True)
     chinese_name = CharField(max_length=128, unique=True, null=True)
     description = TextField()
-    short_description = TextField(default="")
+    short_description = TextField(default="", blank=True)
     course_fee = IntegerField(null=True, blank=True)
     min_students = IntegerField(null=True, blank=True)
     max_students = IntegerField(null=True, blank=True)
