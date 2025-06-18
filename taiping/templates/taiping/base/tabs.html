@@ -1,0 +1,37 @@
+<style>
+    .nav-link {
+        font-size: 1.25em;
+        color: black;
+
+        &.active {
+            font-weight: 500;
+            color: var(--bs-primary);
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+            text-underline-offset: 0.6em;
+            text-decoration-color: var(--bs-primary);
+        }
+    }
+</style>
+
+
+<ul class="nav gap-5">
+
+    <!-- noformat -->
+    {% for item in tabs %}
+
+        <li class="nav-item">
+            <span
+                class="nav-link {% if item.id == active_tab %} active {% endif %}"
+                role="button"
+                _="on click take .active from .nav-link"
+                hx-get="?htmx={{ item.id }}"
+                {% if item.id == active_tab %} hx-trigger="load, click" {% endif %}
+                >{{ item.label }}
+            </span>
+        </li>
+
+    {% endfor %}
+    <!-- noformat -->
+
+</ul>

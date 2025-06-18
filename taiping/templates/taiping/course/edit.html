@@ -20,7 +20,7 @@
             </h5>
 
             <div class="form-group">
-                <label class="form-label">Course Type</label>
+                <label class="form-label">Course Group</label>
                 <select class="form-select" name="course_group_id">
                     <option value=""></option>
 
@@ -108,9 +108,10 @@
             </div>
 
             <div class="form-group">
-                <label class="form-label">Image</label>
-                <input type="file" class="form-control" name="image" value="{{ course.image }}"
-                    placeholder="Upload course image" accept="image/*">
+                <label class="form-label d-inline-block">Image: </label>
+                <div class="d-inline-block ms-3">{{ course.image_name }}</div>
+                <input type="file" class="form-control mt-2" name="image" placeholder="Upload course image"
+                    accept="image/*">
             </div>
 
             <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled

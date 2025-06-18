@@ -1,0 +1,96 @@
+{% load extra_tags %}
+
+<style>
+    #courses-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 60ch);
+        gap: 2em;
+        justify-content: center;
+
+        margin-block: 2em 3em;
+
+        .course-card {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            padding: 1em 2em;
+            padding-bottom: 0.5em;
+            border: solid thin var(--stone-4);
+            border-radius: 1em;
+            box-shadow: 5px 5px 5px var(--stone-3);
+            background-color: white;
+            cursor: pointer;
+
+            &:hover #button--details {
+                background-color: var(--bs-secondary);
+                color: white;
+            }
+
+            .course-card-title {
+                font-weight: 600;
+            }
+
+            .course-card-text * {
+                font-size: 1.15em;
+                line-height: 1.5em;
+                color: var(--stone-10);
+            }
+
+            .button--footer {
+                border-radius: 100em;
+                padding-inline: 1.5em;
+            }
+        }
+    }
+</style>
+
+
+<div class="container">
+
+    <h4 class="text-center mt-2">Agojin Courses</h4>
+
+    <div id="courses-container">
+
+        {% for item in courses %}
+
+        <div class="course-card" _="on click go to url '/course/{{ item.id }}/'">
+
+            <div class="course-card-body">
+                <h4 class="course-card-title">
+                    <div>{{ item.name }}</div>
+                    <div class="mt-2 mb-4">{{ item.chinese_name }}</div>
+                </h4>
+
+                {% if item.image %}
+                <div><img class="w-100" src="{{ item.image.url }}" alt="{{ item.name }}" /></div>
+                {% endif %}
+
+                <div class="course-card-text mt-3">
+                    <!-- noformat -->
+                    {% if item.short_description %}
+                        {{ item.short_description | from_markdown }}
+                    {% else %}
+                        {{ item.description | from_markdown }}
+                    <!-- noformat -->
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-around align-items-center py-3">
+                <a href="/course/{{ item.id }}/" id="button--details"
+                    class="btn btn-outline-secondary button--footer">Details</a>
+
+                {% if item.upcoming_classes.count %}
+                <a href="/course/{{ item.id }}/enroll/" class="btn btn-primary button--footer">Enroll</a>
+                {% else %}
+                <a href="/course/{{ item.id }}/enroll/" title="No classes available"
+                    class="btn btn-outline-primary disabled button--footer">Enroll</a>
+                {% endif %}
+            </div>
+
+        </div>
+
+        {%  endfor %}
+
+    </div>
+
+</div>

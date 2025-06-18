@@ -30,6 +30,10 @@ class Course(BaseModel):
     def __str__(self) -> str:
         return self.name
 
+    @property
+    def image_name(self) -> str:
+        return self.image.name.rsplit("/", 1)[-1]
+
     def upcoming_classes(self) -> QuerySet:
         return (self.courseclass_set  # type: ignore
             .filter(

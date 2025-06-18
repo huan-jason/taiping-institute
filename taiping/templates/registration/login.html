@@ -18,6 +18,8 @@
 
 {% block breadcrumbs %}{% endblock %}
 
+{% block header %}{% endblock header %}
+
 {% block content %}
 {% if form.errors and not form.non_field_errors %}
 <p class="errornote">
@@ -52,7 +54,7 @@
       padding: 2em;
       background-color: white;
       margin-block: 10vh 3em;
-      ;
+      max-width: 50ch;
 
       #link--forgot-password {
         display: block;
@@ -79,24 +81,33 @@
   </p>
   {% endif %}
 
-  <form action="{{ app_path }}" method="post" id="login-form">{% csrf_token %}
+  <form action="{{ app_path }}" method="post" id="login-form">
+
+    {% csrf_token %}
+
     <div class="form-row">
       {{ form.username.errors }}
       {{ form.username.label_tag }} {{ form.username }}
     </div>
+
     <div class="form-row">
       {{ form.password.errors }}
       {{ form.password.label_tag }} {{ form.password }}
       <input type="hidden" name="next" value="{{ next }}">
     </div>
+
     {% url 'admin_password_reset' as password_reset_url %}
-    <div class="password-reset-link" style="margin: 1em 0;">
-    </div>
+
+    <div class="password-reset-link" style="margin: 1em 0;"></div>
+
     <div class="submit-row">
       <input class="btn btn-primary w-100" type="submit" value="{% translate 'Log in' %}">
     </div>
+
     <a id="link--forgot-password"
-      href="{% url 'password_reset' %}">{% translate 'Forgotten your password or username?' %}</a>
+      href="{% url 'password_reset' %}">{% translate 'Forgotten your password or username?' %}
+    </a>
+
   </form>
 
 </div>

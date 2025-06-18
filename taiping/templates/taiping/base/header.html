@@ -1,5 +1,11 @@
-<section class="container d-flex border-bottom mt-3 pb-2">
-    <span class="ms-auto me-3">
+<section class="container d-flex border-bottom mt-3">
+
+    {% if active_tab %}
+    {% include "./tabs.html" %}
+    {% endif %}
+
+    <span class="ms-auto me-3 pb-2">
+
 
         {% if user.is_authenticated %}
 
