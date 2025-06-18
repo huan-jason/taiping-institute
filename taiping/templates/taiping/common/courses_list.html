@@ -40,6 +40,11 @@
                 padding-inline: 1.5em;
             }
         }
+
+        .image--course {
+            object-fit: fill;
+            height: 200px;
+        }
     }
 </style>
 
@@ -61,7 +66,7 @@
                 </h4>
 
                 {% if item.image %}
-                <div><img class="w-100" src="{{ item.image.url }}" alt="{{ item.name }}" /></div>
+                <div><img class="image--course w-100" src="{{ item.image.url }}" alt="{{ item.name }}" /></div>
                 {% endif %}
 
                 <div class="course-card-text mt-3">
