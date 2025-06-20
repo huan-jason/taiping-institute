@@ -8,9 +8,12 @@
 
 <div id="page-content" class="container d-grid gap-5 text-center pt-5" style="font-size: 1.5em">
 
-    <div class="mt-5">Your account has been created.</div>
+    <div class="mt-5">Your student account has been created.</div>
+    <div class="mt-5">Click <a href="/?tab=courses">here</a> to view available courses.</div>
 
+    {% if not user.instructor %}
     <div>Click <a href="/accounts/password_reset/">here</a> to reset your password.</div>
+    {% endif %}
 </div>
 
 {% endblock content %}

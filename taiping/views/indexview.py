@@ -55,6 +55,9 @@ class IndexView(View):
                     else "courses"
                 )
 
+        if tab := request.GET.get("tab"):
+            active_tab = tab
+
         return render(request, "taiping/dashboard/index.html", locals())
 
     def htmx(self, request: HttpRequest) -> HttpResponse:

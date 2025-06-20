@@ -1,7 +1,7 @@
 from typing import Any, cast
 from django.db.models import F
 from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views import View
 
 from taiping.models import Course, CourseClass, Registration
@@ -26,6 +26,9 @@ class EnrollView(View):
         return render(request, "taiping/registration/course_class_details.html", locals())
 
     def get(self, request: HttpRequest, course_id: int, course_class_id: int = 0) -> HttpResponse:
+        if not hasattr(request.user, "student"):
+            return redirect("create_account")
+
         if request.GET.get("htmx") == "course-class-details":
             return self.course_class_details(
                 request=request,

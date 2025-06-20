@@ -48,6 +48,15 @@ class CreateAccountView(View):
     def account_created(self, request: HttpRequest) -> HttpResponse:
         return render(request, "taiping/create_account/created.html", locals())
 
+    def check_code(self, request: HttpRequest) -> EmailVerification | None:
+        verification_code: str = request.POST["email_verification_code"]
+        return (EmailVerification.objects
+            .filter(
+                email=request.POST["email"].lower(),
+                code=verification_code,
+            ).first()
+        )
+
     def create_instructor(self, request: HttpRequest) -> HttpResponse:
         user: User = self.create_user(request)
         data: dict = {
@@ -71,7 +80,8 @@ class CreateAccountView(View):
         return redirect(f"/create-account/created/?instructor={cast(Any, instructor).id}")
 
     def create_student(self, request: HttpRequest) -> HttpResponse:
-        user: User = self.create_user(request)
+        is_instructor: bool = hasattr(request.user, "instructor")
+        user: User = cast(Any, request.user) if is_instructor else self.create_user(request)
         data: dict = {
             "user": user,
         }
@@ -87,16 +97,25 @@ class CreateAccountView(View):
             key: datetime.strptime(request.POST[key], "%Y-%m-%d")
             for key in self.STUDENT_FIELDS["date"]
         }
-        data |= {
-            name: ContentFile(
-                cast(Any, upload).file.read(),
-                name=f"student_{cast(Any, user).id}_{cast(Any, upload)._name}",
-            )
-            for name, upload in request.FILES.items()
-        }
+
+        if is_instructor:
+            data |= {
+                "photo": cast(Any, request.user).instructor.photo,
+            }
+        else:
+            data |= {
+                name: ContentFile(
+                    cast(Any, upload).file.read(),
+                    name=f"student_{cast(Any, user).id}_{cast(Any, upload)._name}",
+                )
+                for name, upload in request.FILES.items()
+            }
 
         student: Student = Student.objects.create(**data)
-        self.send_email(request, student.user)
+
+        if not hasattr(request.user, "instructor"):
+            self.send_email(request, student.user)
+
         return redirect(f"/create-account/created/?student={cast(Any, student).id}")
 
     def create_user(self, request: HttpRequest) -> User:
@@ -150,6 +169,9 @@ class CreateAccountView(View):
         if htmx == "verify-code":
             return self.verify_code(request)
 
+        if not hasattr(request.user, "instructor") and not self.check_code(request):
+                return HttpResponse("", status=403)
+
         with transaction.atomic():
             return (
                 self.create_student(request)
@@ -168,12 +190,6 @@ class CreateAccountView(View):
         )
 
     def verify_code(self, request: HttpRequest) -> HttpResponse:
-        verification_code: str = request.POST["email_verification_code"]
-        verified: EmailVerification | None = (EmailVerification.objects
-            .filter(
-                email=request.POST["email"].lower(),
-                code=verification_code,
-            ).first()
-        )
+        verified: EmailVerification | None = self.check_code(request)
         return render(request, "taiping/create_account/verify_code.html", locals())
 
