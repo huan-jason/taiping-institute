@@ -7,7 +7,13 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 
-from taiping.models import Course, CourseGroup, Facility, Instructor
+from taiping.models import (
+    Course,
+    CourseClass,
+    CourseGroup,
+    Facility,
+    Instructor,
+)
 
 
 class CourseEditView(View):
@@ -30,13 +36,33 @@ class CourseEditView(View):
     }
 
     def get(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
+        if (action := request.GET.get("htmx")):
+            action = action.replace("-", "_")
+            return getattr(self, f"htmx_{action}")(request)
+
         course: Course | None = Course.objects.filter(id=course_id or 0).first()
         course_groups: QuerySet[CourseGroup] = CourseGroup.objects.order_by("name")
         facilities: QuerySet[Facility] = Facility.objects.order_by("name")
         instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
         return render(request, "taiping/course/edit.html", locals())
 
+    def htmx_modal_course_class(self, request: HttpRequest) -> HttpResponse:
+        course_class_id : str = request.GET.get("id", "")
+        action: str = "Edit" if course_class_id else "Add"
+        course: Course = Course.objects.get(id=request.GET["course"])
+        course_class: CourseClass = (
+            CourseClass.objects.select_related("course").get(id=int(course_class_id))
+            if course_class_id else
+            CourseClass()
+        )
+        facilities: QuerySet[Facility] = Facility.objects.order_by("name")
+        instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
+        return render(request, "taiping/course/modal_course_class/modal_content.html", locals())
+
     def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
+
+        if "save_modal_course_class" in request.GET:
+            return self.save_modal_course_class(request)
 
         with transaction.atomic():
             course: Course = Course() if not course_id else Course.objects.get(id=course_id)
@@ -68,4 +94,5 @@ class CourseEditView(View):
             course.save()
             return redirect("course_list")
 
-
+    def save_modal_course_class(self, request: HttpRequest) -> HttpResponse:
+        raise NotImplementedError

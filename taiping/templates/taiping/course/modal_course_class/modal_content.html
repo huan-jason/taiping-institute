@@ -1,0 +1,67 @@
+<div hx-swap-oob="true" id="modal--course-class__modal-content" class="modal-content">
+    <form id="form--course-details" method="post" enctype="multipart/form-data"
+        onchange="onChangeForm(this, '#button--modal-submit')" action="./?save_modal_course_class">
+
+        {% csrf_token %}
+
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ action }} Course Class</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body px-4 pb-4">
+
+            <div class="display-grid gap-3" style="--columns: 2">
+                <div class="form-group">
+                    <label class="form-label">Start date</label>
+                    <input type="date" class="form-control" name="start_date"
+                        value="{{ course_class.start_date | date:'Y-m-d' }}" min="1" placeholder="Enter start date"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">End date</label>
+                    <input type="date" class="form-control" name="end_date"
+                        value="{{ course_class.end_date | date:'Y-m-d' }}" min="1" placeholder="Enter end date"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Min students</label>
+                    <input type="number" class="form-control" name="min_students" min="1"
+                        placeholder="Enter minimum students" required
+                        value="{{ course_class.min_students | default:course.min_students }}">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Max students</label>
+                    <input type="number" class="form-control" name="max_students" min="1"
+                        placeholder="Enter maximum students" required
+                        value="{{ course_class.max_students | default:course.max_students }}">
+                </div>
+
+                {% include "../select_instructor.html" %}
+
+                {% include "../select_facility.html" %}
+
+                <div class="form-group">
+                    <label class="form-label">Fee</label>
+                    <input type="number" class="form-control" name="course_fee" min="1" placeholder="Enter course fee"
+                        required value="{{ course_class.course_fee | default:course.course_fee }}">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" id="button--modal-submit" disabled>Save changes</button>
+        </div>
+
+    </form>
+
+    <script>
+        dateInputsInit()
+    </script>
+</div>

@@ -1,0 +1,36 @@
+<script>
+    function dateInputsInit() {
+        const inputs = [...document.querySelectorAll('input[type = date]')]
+        inputs.map(item => {
+            item.addEventListener('click', e => e.target.showPicker())
+            item.addEventListener('focus', e => e.target.showPicker())
+        })
+    }
+
+    function invalidInputs(form) {
+        form = form
+        const items = [...form.elements]
+        const invalids = items
+            .filter(item => !item.validity.valid)
+            .map(item => item.name)
+        console.log(invalids)
+    }
+
+    function onChangeForm(form, buttonId = '#button--submit') {
+        const items = [...form.elements]
+        const isValid = items.every(item => item.validity.valid)
+        document.querySelector(buttonId).disabled = !isValid
+        if (window.DEBUG) { invalidInputs(form) }
+    }
+
+
+    function resizeTextarea(textarea) {
+        textarea.style.height = `${textarea.scrollHeight + 3}px`
+    }
+
+    function resizeAllTextareas() {
+        const textareas = [...document.querySelectorAll('textarea')]
+        textareas.map(resizeTextarea)
+        textareas.map(item => item.addEventListener('input', e => resizeTextarea(e.target)))
+    }
+</script>

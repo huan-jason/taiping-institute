@@ -1,0 +1,12 @@
+<div class="modal fade" id="modal--course-class" tabindex="-1">
+    <div class="modal-dialog">
+        <div id="modal--course-class__modal-content" class="modal-content"></div>
+    </div>
+</div>
+
+
+<script>
+    document.querySelector('#modal--course-class').addEventListener('shown.bs.modal', event => {
+        htmx.trigger(event.relatedTarget, 'open-modal-course-class')
+    })
+</script>

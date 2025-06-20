@@ -3,7 +3,25 @@
 
 {% block content %}
 
+
 {% include "../create_account/css.html" %}
+
+
+<style>
+    .course-class-row {
+
+        margin-top: 0.5em;
+        margin-left: 1.5em;
+
+        &:hover {
+            color: var(--bs-primary);
+            font-weight: 500;
+        }
+    }
+</style>
+
+
+{% include "./modal_course_class/index.html" %}
 
 
 <form id="form--course-details" method="post" enctype="multipart/form-data" onchange="onChangeForm(this)">
@@ -56,38 +74,9 @@
                     rows="5" required>{{ course.short_description }}</textarea>
             </div>
 
-            <div class="form-group">
-                <label class="form-label">Instructor</label>
-                <select class="form-select {% if not user.is_superuser %} pe-none {% endif %}" name="instructor_id"
-                    required>
-                    <option></option>
+            {% include "./select_instructor.html" %}
 
-                    <!-- noformat -->
-                    {% for item in instructors %}
-                        <option value="{{ item.id }}"
-                            {% if not course and item.user_id == user.id %} selected
-                            {% elif item.id == course.instructor.id %} selected {% endif %}
-                        >
-                            {{ item.user.get_full_name }}
-                        </option>
-                    {% endfor %}
-                    <!-- noformat -->
-
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label class="form-label">Facility</label>
-                <select class="form-select" name="facility_id" required>
-                    <option></option>
-
-                    {% for item in facilities %}
-                    <option value="{{ item.id }}" {% if item.id == course.facility.id %} selected {% endif %}>
-                        {{ item.name }}</option>
-                    {% endfor %}
-
-                </select>
-            </div>
+            {% include "./select_facility.html" %}
 
             <div class="form-group">
                 <label class="form-label">Course Fee</label>
@@ -114,7 +103,36 @@
                     accept="image/*">
             </div>
 
-            <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled
+            <hr class="mt-5 mb-4" />
+
+            <section>
+                <div>
+                    <span class="fw-bold">Classes:</span>
+
+                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill ms-4"
+                        data-bs-toggle="modal" data-bs-target="#modal--course-class"
+                        hx-get="?htmx=modal-course-class&course={{ course.id }}"
+                        hx-trigger="open-modal-course-class">Add class</button>
+                </div>
+
+                {% for item in course.courseclass_set.all %}
+
+                <div class="course-class-row" role="button" data-bs-toggle="modal" data-bs-target="#modal--course-class"
+                    hx-get="?htmx=modal-course-class&course={{ course.id }}&id={{ item.id }}"
+                    hx-trigger="open-modal-course-class">
+                    &bull; <span>{{ item.start_date }}</span> - <span>{{ item.end_date }}</span>
+                </div>
+
+                {% empty %}
+
+                <div class=" text-danger fw-bold my-2">No classes.
+                </div>
+
+                {% endfor %}
+
+            </section>
+
+            <button id="button--submit" type="submit" class="btn btn-primary mt-4" disabled
                 _="on click remove .d-none from .spinner">
                 Submit
                 <span id="spinner--submit" class="spinner spinner-border spinner-border-sm ms-2 d-none"></span>
@@ -126,24 +144,13 @@
 
 
     <script>
-        function onChangeForm(form) {
-            form = form || document.querySelector('#form--course-details')
-            const items = [...form.elements]
-            const isValid = items.every(item => item.validity.valid)
-            document.querySelector('#button--submit').disabled = !isValid
-        }
-
-        function resizeTextarea(textarea) {
-            textarea.style.height = `${textarea.scrollHeight + 3}px`
-        }
-
         window.onload = () => {
-            onChangeForm();
-            const textareas = [...document.querySelectorAll('textarea')]
-            textareas.map(resizeTextarea)
-            textareas.map(item => item.addEventListener('input', e => resizeTextarea(e.target)))
-        }
+            const form = document.querySelector('#form--course-details')
+            onChangeForm(form)
 
+            resizeAllTextareas()
+            dateInputsInit()
+        }
     </script>
 
     {% endblock content %}

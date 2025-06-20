@@ -4,27 +4,12 @@
         htmx.trigger(input, 'verify-code')
     }
 
-    function invalidInputs(form) {
-        form = form || document.querySelector('#form--user-details')
-        const items = [...form.elements]
-        const invalids = items
-            .filter(item => !item.validity.valid)
-            .map(item => item.name)
-        console.log(invalids)
-    }
-
     function onChangeEmail(input) {
         const button = document.querySelector('#button--send-verification-code')
         button.disabled = !input.validity.valid
 
         disableGetVerificationCodeButton(false)
         disableVerificationCodeInput(true)
-    }
-
-    function onChangeForm(form) {
-        const items = [...form.elements]
-        const isValid = items.every(item => item.validity.valid)
-        document.querySelector('#button--submit').disabled = !isValid
     }
 
     function disableGetVerificationCodeButton(disabled) {

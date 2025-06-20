@@ -23,8 +23,17 @@
         pointer-events: none;
     }
 
+    .display-grid {
+        display: grid;
+        grid-template-columns: repeat(var(--columns, 1), 1fr);
+    }
+
     .fit-content {
         width: fit-content;
+    }
+
+    .form-label {
+        margin-bottom: 0.25em;
     }
 
     .fs-smaller {
@@ -49,6 +58,11 @@
 
     .htmx-request.htmx-indicator {
         display: inline-block;
+    }
+
+    .modal-header {
+        background-color: var(--bs-primary);
+        color: white;
     }
 
     .w-max-content {
