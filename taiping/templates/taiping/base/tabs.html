@@ -18,7 +18,9 @@
 <ul class="nav gap-5">
 
     <!-- noformat -->
-    {% for item in tabs %}
+    {% for item in tabs.values %}
+
+        {% if item.show %}
 
         <li class="nav-item">
             <span
@@ -30,6 +32,8 @@
                 >{{ item.label }}
             </span>
         </li>
+
+        {% endif %}
 
     {% endfor %}
     <!-- noformat -->

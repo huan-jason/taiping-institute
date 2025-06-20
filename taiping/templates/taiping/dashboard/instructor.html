@@ -1,5 +1,39 @@
 <section hx-swap-oob="true" id="tab-content">
 
+    <style>
+        #teaching-classes-container {
+            display: grid;
+            grid-template-columns: repeat(6, auto);
+            gap: 1em;
+
+            .cell--header {
+                font-weight: bold;
+            }
+        }
+    </style>
+
     <h5 class="m-5">My Teaching Classes</h5>
+
+    <div id="teaching-classes-container" class="text-start">
+
+        <div class="cell--header">Course</div>
+        <div class="cell--header">Start date</div>
+        <div class="cell--header">End date</div>
+        <div class="cell--header">Facility</div>
+        <div class="cell--header">Status</div>
+        <div class="cell--header">Commenced</div>
+
+        {% for item in course_classes %}
+
+        <div class="cell--body">{{ item.course.name }}</div>
+        <div class="cell--body">{{ item.start_date }}</div>
+        <div class="cell--body">{{ item.end_date }}</div>
+        <div class="cell--body">{{ item.facility.name }}</div>
+        <div class="cell--body">{{ item.status.name }}</div>
+        <div class="cell--body">{{ item.started | yesno }}</div>
+
+        {% endfor %}
+
+    </div>
 
 </section>

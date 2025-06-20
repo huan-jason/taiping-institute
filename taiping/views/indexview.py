@@ -1,4 +1,4 @@
-from typing import cast
+from typing import Any, cast
 
 from django.contrib.auth.models import User
 from django.db.models import QuerySet
@@ -6,28 +6,28 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 
-from taiping.models import Course
+from taiping.models import Course, CourseClass, Registration
 
 
 class IndexView(View):
 
-    TABS: list[dict] = [
-        {
-            "id": "dashboard",
-            "label": "Dashboard",
+    TABS: dict[str, dict] = {
+        "student": {
+            "id": "student",
+            "label": "Student Info",
             "show": False,
         },
-        {
+        "instructor": {
+            "id": "instructor",
+            "label": "Instructor Info",
+            "show": False,
+        },
+        "courses": {
             "id": "courses",
             "label": "Courses",
             "show": True,
         },
-        {
-            "id": "instructor",
-            "label": "Classes",
-            "show": False,
-        },
-    ]
+    }
 
     def get(self, request: HttpRequest) -> HttpResponse:
         if not request.user.is_authenticated:
@@ -39,15 +39,15 @@ class IndexView(View):
         user: User = cast(User, request.user)
         is_instructor: bool = hasattr(user,"instructor")
         is_student: bool = hasattr(user,"student")
-        tabs: list[dict] = self.TABS
+        tabs: dict[str, dict] = self.TABS
         active_tab: str = ""
 
         if is_instructor:
             active_tab = "instructor"
-            tabs[2]["show"] = True
+            tabs["instructor"]["show"] = True
 
         if is_student:
-            tabs[0]["show"] = True
+            tabs["student"]["show"] = True
             if not is_instructor:
                 active_tab = "dashboard"
 
@@ -62,11 +62,12 @@ class IndexView(View):
         courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
         return render(request, "taiping/dashboard/courses.html", locals())
 
-    def htmx_dashboard(self, request: HttpRequest) -> HttpResponse:
-        return render(request, "taiping/dashboard/student.html", locals())
-
     def htmx_instructor(self, request: HttpRequest) -> HttpResponse:
+        user: Any = request.user
+        course_classes: QuerySet[CourseClass] = CourseClass.objects.filter(instructor=user.instructor)
         return render(request, "taiping/dashboard/instructor.html", locals())
 
-
-
+    def htmx_student(self, request: HttpRequest) -> HttpResponse:
+        user: Any = request.user
+        registrations: QuerySet[Registration] = Registration.objects.filter(student=user.student)
+        return render(request, "taiping/dashboard/student.html", locals())
