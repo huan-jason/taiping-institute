@@ -12,14 +12,14 @@ from taiping.models import Course, CourseClass, Registration
 class IndexView(View):
 
     TABS: dict[str, dict] = {
-        "student": {
-            "id": "student",
-            "label": "Student Info",
-            "show": False,
-        },
         "instructor": {
             "id": "instructor",
-            "label": "Instructor Info",
+            "label": "Instructor Dashboard",
+            "show": False,
+        },
+        "student": {
+            "id": "student",
+            "label": "Student Dashboard",
             "show": False,
         },
         "courses": {
@@ -36,7 +36,7 @@ class IndexView(View):
         if "htmx" in request.GET:
             return self.htmx(request)
 
-        user: User = cast(User, request.user)
+        user: Any = request.user
         is_instructor: bool = hasattr(user,"instructor")
         is_student: bool = hasattr(user,"student")
         tabs: dict[str, dict] = self.TABS
@@ -49,7 +49,11 @@ class IndexView(View):
         if is_student:
             tabs["student"]["show"] = True
             if not is_instructor:
-                active_tab = "dashboard"
+                active_tab = (
+                    "student"
+                    if Registration.objects.filter(student=user.student).exists()
+                    else "courses"
+                )
 
         return render(request, "taiping/dashboard/index.html", locals())
 

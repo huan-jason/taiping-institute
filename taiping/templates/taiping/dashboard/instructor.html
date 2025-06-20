@@ -12,7 +12,7 @@
         }
     </style>
 
-    <h5 class="m-5">My Teaching Classes</h5>
+    <h5 class="m-5">My Classes</h5>
 
     <div id="teaching-classes-container" class="text-start">
 
@@ -29,7 +29,7 @@
         <div class="cell--body">{{ item.start_date }}</div>
         <div class="cell--body">{{ item.end_date }}</div>
         <div class="cell--body">{{ item.facility.name }}</div>
-        <div class="cell--body">{{ item.status.name }}</div>
+        <div class="cell--body">{{ item.status | title }}</div>
         <div class="cell--body">{{ item.started | yesno }}</div>
 
         {% endfor %}

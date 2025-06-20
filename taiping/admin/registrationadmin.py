@@ -22,5 +22,5 @@ class RegistrationAdmin(admin.ModelAdmin):
     ]
     ordering = [
         "course_class__course__name",
-        "student__username",
+        "student__user__username",
     ]

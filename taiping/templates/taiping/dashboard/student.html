@@ -1,5 +1,46 @@
 <section hx-swap-oob="true" id="tab-content">
 
-    <h5 class="m-5">My Enrolled Courses</h5>
+    <style>
+        #enrolled-courses-container {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            gap: 1em;
+        }
+
+        .cell--header {
+            font-weight: bold;
+        }
+
+        .span-all {
+            grid-column: 1 / -1;
+        }
+    </style>
+
+    <h5 class="my-5">Enrolled Courses</h5>
+
+    <div id="enrolled-courses-container">
+
+        {% for item in registrations %}
+        <div class="cell--header">Course</div>
+        <div class="cell--header">Start Date</div>
+        <div class="cell--header">End Date</div>
+        <div class="cell--header">Started</div>
+        <div class="cell--header">Completed</div>
+
+        <div class="cell--body">{{ item.course_class.course.name }}</div>
+        <div class="cell--body">{{ item.course_class.start_date }}</div>
+        <div class="cell--body">{{ item.course_class.end_date }}</div>
+        <div class="cell--body">{{ item.course_class.Started | yesno }}</div>
+        <div class="cell--body">{{ item.course_class.Completed | yesno }}</div>
+
+        {% empty %}
+
+        <div class="span-all fs-5">
+            You havenot enrolled in any classes yet.
+        </div>
+
+        {% endfor %}
+
+    </div>
 
 </section>

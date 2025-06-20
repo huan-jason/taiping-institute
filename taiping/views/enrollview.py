@@ -40,7 +40,7 @@ class EnrollView(View):
     def get_dependent_courses(self, request: HttpRequest, course: Course) -> list[dict]:
         student_course_ids: set[int] = {
             item.course_class.course_id for item in
-            Registration.objects.filter(student=cast(Any, request).user, completed=True)
+            Registration.objects.filter(student=cast(Any, request).user.student, completed=True)
         }
         dependent_courses: list[dict] = list(course
             .coursedependency_set # type: ignore
