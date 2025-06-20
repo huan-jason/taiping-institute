@@ -115,18 +115,13 @@
                         hx-trigger="open-modal-course-class">Add class</button>
                 </div>
 
-                {% for item in course.courseclass_set.all %}
+                {% for course_class in course.courseclass_set.all %}
 
-                <div class="course-class-row" role="button" data-bs-toggle="modal" data-bs-target="#modal--course-class"
-                    hx-get="?htmx=modal-course-class&course={{ course.id }}&id={{ item.id }}"
-                    hx-trigger="open-modal-course-class">
-                    &bull; <span>{{ item.start_date }}</span> - <span>{{ item.end_date }}</span>
-                </div>
+                {% include "./course_class.html" with show_edit_button=True %}
 
                 {% empty %}
 
-                <div class=" text-danger fw-bold my-2">No classes.
-                </div>
+                <div class=" text-danger fw-bold my-2">No classes.</div>
 
                 {% endfor %}
 
