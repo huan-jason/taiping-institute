@@ -41,6 +41,7 @@ class IndexView(View):
         is_student: bool = hasattr(user,"student")
         tabs: dict[str, dict] = self.TABS
         active_tab: str = ""
+        show_create_course_button: bool = True
 
         if is_instructor:
             active_tab = "instructor"
@@ -65,7 +66,6 @@ class IndexView(View):
         return getattr(self, htmx)(request)
 
     def htmx_courses(self, request: HttpRequest) -> HttpResponse:
-        show_create_course_button: bool = True
         courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
         return render(request, "taiping/dashboard/courses.html", locals())
 

@@ -14,7 +14,7 @@
 
             {% if show_create_course_button %}
                 {% if user.instructor or user.is_superuser %}
-                    <a href="new/" type="button" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-3">
+                    <a href="/course/new/" type="button" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-3">
                         New Course
                     </a>
                 {% endif %}

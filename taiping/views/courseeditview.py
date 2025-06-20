@@ -71,10 +71,10 @@ class CourseEditView(View):
             return getattr(self, f"htmx_{action}")(request)
 
         course: Course | None = Course.objects.filter(id=course_id or 0).first()
-        course_classes: QuerySet[CourseClass] = (course
+        course_classes: QuerySet[CourseClass] | list = (course
             .courseclass_set # type: ignore
             .order_by("start_date", "end_date")
-        ) if course else QuerySet()
+        ) if course else []
 
         edit_mode: bool = True
         course_groups: QuerySet[CourseGroup] = CourseGroup.objects.order_by("name")

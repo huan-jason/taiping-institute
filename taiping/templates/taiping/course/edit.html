@@ -105,6 +105,8 @@
 
             <hr class="mt-5 mb-4" />
 
+
+            {% if course_id %}
             <section>
                 <div>
                     <span class="fw-bold">Classes:</span>
@@ -114,6 +116,7 @@
                         hx-get="?htmx=modal-course-class&course={{ course.id }}"
                         hx-trigger="open-modal-course-class">Add class</button>
                 </div>
+
 
                 {% for course_class in course_classes %}
 
@@ -126,6 +129,8 @@
                 {% endfor %}
 
             </section>
+            {% endif %}
+
 
             <div class="mt-4">
 
@@ -133,7 +138,7 @@
 
                 <button id="button--submit" type="submit" class="btn btn-primary ms-2" disabled
                     _="on click remove .d-none from .spinner">
-                    Submit
+                    Save
                     <span id="spinner--submit" class="spinner spinner-border spinner-border-sm ms-2 d-none"></span>
                 </button>
 
