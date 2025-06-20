@@ -3,7 +3,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views import View
 
-from taiping.models import Course
+from taiping.models import Course, CourseClass
 
 
 class CourseView(View):

@@ -1,8 +1,11 @@
 <div hx-swap-oob="true" id="modal--course-class__modal-content" class="modal-content">
-    <form id="form--course-details" method="post" enctype="multipart/form-data"
+    <form id="form--course-class-details" method="post" enctype="multipart/form-data"
         onchange="onChangeForm(this, '#button--modal-submit')" action="./?save_modal_course_class">
 
         {% csrf_token %}
+
+        <input type="hidden" name="course_class_id" value="{{ course_class_id }}" />
+        <input type="hidden" name="course_id" value="{{ course.id }}" />
 
         <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">{{ action }} Course Class</h1>
@@ -50,12 +53,33 @@
                         required value="{{ course_class.course_fee | default:course.course_fee }}">
                 </div>
 
+                <div class="form-group">
+                    <label class="form-label">Status</label>
+                    <select class="form-select" name="status" required>
+
+                        {% for value, label in course_status_choices %}
+                        <option value="{{ value }}" {% if value == course_class.status %} selected {% endif %}>
+                            {{ label }}</option>
+                        {% endfor %}
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        <input type="checkbox" name="auto_start" {% if course_class.auto_start %} checked {% endif %} />
+                        <span>Auto-start</span>
+                    </label>
+                </div>
+
             </div>
 
         </div>
 
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-outline-danger" name="delete"
+                onclick="return confirm('Confirm delete class?')">Delete</button>
             <button type="submit" class="btn btn-primary" id="button--modal-submit" disabled>Save changes</button>
         </div>
 
@@ -63,5 +87,6 @@
 
     <script>
         dateInputsInit()
+        onChangeForm(document.querySelector('#form--course-class-details'), '#button--modal-submit')
     </script>
 </div>

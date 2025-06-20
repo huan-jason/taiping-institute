@@ -1,3 +1,4 @@
+from datetime import date, datetime
 from typing import Any, cast
 
 from django.core.files.base import ContentFile
@@ -7,6 +8,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 
+from taiping.constants import CourseStatusChoices
 from taiping.models import (
     Course,
     CourseClass,
@@ -35,12 +37,46 @@ class CourseEditView(View):
         ],
     }
 
+    COURSE_CLASS_FIELDS: dict[str, list[str]] = {
+        "text": [
+            "status",
+        ],
+        "date": [
+            "start_date",
+            "end_date",
+        ],
+        "int": [
+            "facility_id",
+            "instructor_id",
+            "course_fee",
+            "max_students",
+            "min_students",
+        ],
+        "checkbox": [
+            "auto_start",
+        ],
+    }
+
+    def delete_course_class(self, request: HttpRequest) -> HttpResponse:
+        course_class_id: str = request.POST["course_class_id"]
+        CourseClass.objects.filter(id=course_class_id).delete()
+
+        course_id: int = int(request.POST["course_id"])
+        return redirect("course_edit", course_id=course_id)
+
+
     def get(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
         if (action := request.GET.get("htmx")):
             action = action.replace("-", "_")
             return getattr(self, f"htmx_{action}")(request)
 
         course: Course | None = Course.objects.filter(id=course_id or 0).first()
+        course_classes: QuerySet[CourseClass] = (course
+            .courseclass_set # type: ignore
+            .order_by("start_date", "end_date")
+        ) if course else QuerySet()
+
+        edit_mode: bool = True
         course_groups: QuerySet[CourseGroup] = CourseGroup.objects.order_by("name")
         facilities: QuerySet[Facility] = Facility.objects.order_by("name")
         instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
@@ -57,12 +93,16 @@ class CourseEditView(View):
         )
         facilities: QuerySet[Facility] = Facility.objects.order_by("name")
         instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
+        course_status_choices: list[tuple[str, str]] = list(cast(Any, CourseStatusChoices.choices))
         return render(request, "taiping/course/modal_course_class/modal_content.html", locals())
 
     def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
 
+        if "delete" in request.POST:
+            return self.delete_course_class(request)
+
         if "save_modal_course_class" in request.GET:
-            return self.save_modal_course_class(request)
+            return self.save_course_class(request)
 
         with transaction.atomic():
             course: Course = Course() if not course_id else Course.objects.get(id=course_id)
@@ -82,7 +122,7 @@ class CourseEditView(View):
             for key, val in data.items():
                 setattr(course, key, val)
 
-            course.save()
+            course.save()  # obtain course id
 
             for name, upload in request.FILES.items():
                 content_file: ContentFile = ContentFile(
@@ -94,5 +134,34 @@ class CourseEditView(View):
             course.save()
             return redirect("course_list")
 
-    def save_modal_course_class(self, request: HttpRequest) -> HttpResponse:
-        raise NotImplementedError
+    def save_course_class(self, request: HttpRequest) -> HttpResponse:
+        course_class_id: str = request.POST["course_class_id"]
+        course_id: int = int(request.POST["course_id"])
+        course_class: CourseClass = (
+            CourseClass.objects.get(id=int(course_class_id))
+            if course_class_id else
+            CourseClass()
+        )
+        data: dict = {}
+        data |= {
+            field: request.POST[field]
+            for field in self.COURSE_CLASS_FIELDS["text"]
+        }
+        data |= {
+            field: int(request.POST[field])
+            for field in self.COURSE_CLASS_FIELDS["int"]
+        }
+        data |= {
+            field: datetime.strptime(request.POST[field], "%Y-%m-%d").date()
+            for field in self.COURSE_CLASS_FIELDS["date"]
+        }
+        data |= {
+            field: field in request.POST
+            for field in self.COURSE_CLASS_FIELDS["checkbox"]
+        }
+
+        for key, val in data.items():
+            setattr(course_class, key, val)
+
+        course_class.save()
+        return redirect("course_edit", course_id=course_id)

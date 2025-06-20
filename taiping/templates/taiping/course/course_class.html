@@ -4,9 +4,23 @@
 <details class="course-class-container overflow-x-clip mt-3" open>
 
     <summary>
-        <span class="ms-0">{{ course_class.start_date }}</span>
-        <span class="ms-1">-</span>
-        <span class="ms-1">{{ course_class.end_date }}</span>
+        <span class="fw-bold">
+            <span class="ms-0">{{ course_class.start_date }}</span>
+            <span class="ms-1">-</span>
+            <span class="ms-1">{{ course_class.end_date }}</span>
+        </span>
+
+        {% if course_class.auto_start %}
+        <span class="d-inline-block ms-2" title="Auto-start">@</span>
+        {% endif %}
+
+        {% if edit_mode %}
+        <span class="badge ms-4
+            {% if course_class.status == 'PUBLISHED' %} text-bg-success
+            {% elif course_class.status == 'CANCELLED' %} text-bg-danger
+            {% else %} text-bg-secondary {% endif %}
+        ">{{ course_class.status }}</span>
+        {% endif %}
 
         {% if show_enroll_button %}
         <a href="enroll/{{ course_class.id }}/"

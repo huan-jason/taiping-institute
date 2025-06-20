@@ -115,7 +115,7 @@
                         hx-trigger="open-modal-course-class">Add class</button>
                 </div>
 
-                {% for course_class in course.courseclass_set.all %}
+                {% for course_class in course_classes %}
 
                 {% include "./course_class.html" with show_edit_button=True %}
 
@@ -127,11 +127,17 @@
 
             </section>
 
-            <button id="button--submit" type="submit" class="btn btn-primary mt-4" disabled
-                _="on click remove .d-none from .spinner">
-                Submit
-                <span id="spinner--submit" class="spinner spinner-border spinner-border-sm ms-2 d-none"></span>
-            </button>
+            <div class="mt-4">
+
+                <a href=".." class="btn btn-outline-secondary">Cancel</a>
+
+                <button id="button--submit" type="submit" class="btn btn-primary ms-2" disabled
+                    _="on click remove .d-none from .spinner">
+                    Submit
+                    <span id="spinner--submit" class="spinner spinner-border spinner-border-sm ms-2 d-none"></span>
+                </button>
+
+            </div>
 
         </div>
 

@@ -37,7 +37,8 @@ class Course(BaseModel):
     def upcoming_classes(self) -> QuerySet:
         return (self.courseclass_set  # type: ignore
             .filter(
-                start_date__gte=timezone.now(),
+                end_date__gte=timezone.now().date(),
                 status=CourseStatusChoices.PUBLISHED,
             )
+            .order_by("start_date", "end_date")
         )
