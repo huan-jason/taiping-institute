@@ -71,10 +71,16 @@ class IndexView(View):
 
     def htmx_instructor(self, request: HttpRequest) -> HttpResponse:
         user: Any = request.user
-        course_classes: QuerySet[CourseClass] = CourseClass.objects.filter(instructor=user.instructor)
+        course_classes: QuerySet[CourseClass] = (CourseClass.objects
+            .filter(instructor=user.instructor)
+            .order_by("start_date", "end_date")
+        )
         return render(request, "taiping/dashboard/instructor.html", locals())
 
     def htmx_student(self, request: HttpRequest) -> HttpResponse:
         user: Any = request.user
-        registrations: QuerySet[Registration] = Registration.objects.filter(student=user.student)
+        registrations: QuerySet[Registration] = (Registration.objects
+            .filter(student=user.student)
+            .order_by("course_class__start_date", "course_class__end_date")
+        )
         return render(request, "taiping/dashboard/student.html", locals())

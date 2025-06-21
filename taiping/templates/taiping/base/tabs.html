@@ -25,7 +25,7 @@
         <li class="nav-item">
             <span
                 class="nav-link {% if item.id == active_tab %} active {% endif %}"
-                role="button"
+                role="button" onclick="onClickTab('{{ item.id }}')"
                 _="on click take .active from .nav-link"
                 hx-get="?htmx={{ item.id }}"
                 {% if item.id == active_tab %} hx-trigger="load, click" {% endif %}
@@ -37,5 +37,13 @@
 
     {% endfor %}
     <!-- noformat -->
+
+    <script>
+        function onClickTab(tab) {
+            const url = new URL(location)
+            url.searchParams.set("tab", tab)
+            window.history.pushState({}, "", url)
+        }
+    </script>
 
 </ul>

@@ -25,7 +25,9 @@
 
         {% for item in course_classes %}
 
-        <div class="cell--body">{{ item.course.name }}</div>
+        <div class="cell--body">
+            <a href="/class/{{ item.id }}/">{{ item.course.name }}</a>
+        </div>
         <div class="cell--body">{{ item.start_date }}</div>
         <div class="cell--body">{{ item.end_date }}</div>
         <div class="cell--body">{{ item.facility.name }}</div>
