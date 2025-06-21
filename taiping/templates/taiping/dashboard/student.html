@@ -30,8 +30,8 @@
         <div class="cell--body">{{ item.course_class.course.name }}</div>
         <div class="cell--body">{{ item.course_class.start_date }}</div>
         <div class="cell--body">{{ item.course_class.end_date }}</div>
-        <div class="cell--body">{{ item.course_class.Started | yesno }}</div>
-        <div class="cell--body">{{ item.course_class.Completed | yesno }}</div>
+        <div class="cell--body">{{ item.course_class.Started | yesno:"&check;,&nbsp;" | safe }}</div>
+        <div class="cell--body">{{ item.course_class.Completed | yesno:"&check;,&nbsp;" | safe }}</div>
 
         {% empty %}
 

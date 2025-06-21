@@ -30,7 +30,7 @@
         <div class="cell--body">{{ item.end_date }}</div>
         <div class="cell--body">{{ item.facility.name }}</div>
         <div class="cell--body">{{ item.status | title }}</div>
-        <div class="cell--body">{{ item.started | yesno }}</div>
+        <div class="cell--body">{{ item.started | yesno:"&check;,&nbsp;" | safe }}</div>
 
         {% endfor %}
 

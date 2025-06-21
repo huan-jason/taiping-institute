@@ -1,0 +1,62 @@
+{% extends "taiping/base.html" %}
+
+
+{% block content %}
+
+<style>
+    #page-content {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: 1em;
+        margin-inline: auto;
+
+        .cell--header {
+            font-weight: bold;
+        }
+    }
+</style>
+
+
+{% with course=course_class.course %}
+<div class="container">
+
+    <h4 class="my-5">
+        <span class="fw-bold">{{ course.name }}</span>:
+        <span class="ms-3">{{ course_class.start_date }}</span> -
+        <span>{{ course_class.end_date }}</span>
+    </h4>
+
+    <div id="page-content">
+
+        {% if registrations %}
+        <div class="cell--header">Student Name</div>
+        <div class="cell--header">Email</div>
+        <div class="cell--header">Started</div>
+        <div class="cell--header">Completed</div>
+        <div class="cell--header"></div>
+        {% endif %}
+
+        {% for item in registrations %}
+
+        <div>{{ item.student.user.get_full_name }}</div>
+
+        {% with email=item.student.user.email %}
+        <div>
+            <a href="mailto:{{ email }}" target="_blank">{{ email }}</a>
+        </div>
+        {% endwith %}
+
+        <div>{{ item.started | yesno:"&check;,&nbsp;" | safe }}</div>
+        <div>{{ item.completed | yesno:"&check;,&nbsp;" | safe }}</div>
+        <div>{{ item.comments }}</div>
+
+        {% empty %}
+
+        <div class="grid-column-all fs-4 my-5">No students.</div>
+
+        {% endfor %}
+    </div>
+</div>
+{% endwith %}
+
+{% endblock content %}
