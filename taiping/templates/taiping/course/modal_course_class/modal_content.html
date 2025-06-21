@@ -19,14 +19,14 @@
                     <label class="form-label">Start date</label>
                     <input type="date" class="form-control" name="start_date"
                         value="{{ course_class.start_date | date:'Y-m-d' }}" min="1" placeholder="Enter start date"
-                        required>
+                        required onchange="checkDates()">
                 </div>
 
                 <div class="form-group">
                     <label class="form-label">End date</label>
                     <input type="date" class="form-control" name="end_date"
-                        value="{{ course_class.end_date | date:'Y-m-d' }}" min="1" placeholder="Enter end date"
-                        required>
+                        value="{{ course_class.end_date | date:'Y-m-d' }}" min="1" placeholder="Enter end date" required
+                        onchange="checkDates()">
                 </div>
 
                 <div class="form-group">
@@ -74,6 +74,11 @@
 
             </div>
 
+            <div class="form-group mt-2">
+                <label class=" form-label">Notes</label>
+                <textarea class="form-control" name="notes">{{ course_class.notes }}</textarea>
+            </div>
+
         </div>
 
         <div class="modal-footer">
@@ -86,7 +91,16 @@
     </form>
 
     <script>
-        dateInputsInit()
+        function checkDates() {
+            const dateStart = document.querySelector('[name=start_date]')
+            const dateEnd = document.querySelector('[name=end_date]')
+            const error = dateEnd.value > dateStart.value ? '' : 'Invalid end date'
+            dateEnd.setCustomValidity(error)
+            dateEnd.reportValidity()
+        }
+
         onChangeForm(document.querySelector('#form--course-class-details'), '#button--modal-submit')
+        dateInputsInit()
+        resizeAllTextareas()
     </script>
 </div>

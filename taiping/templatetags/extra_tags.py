@@ -9,4 +9,4 @@ register = template.Library()
 
 @register.filter
 def from_markdown(value: str, *args: Any):
-    return mark_safe(markdown(value))
+    return mark_safe(markdown(value or ""))

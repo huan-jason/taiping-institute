@@ -21,6 +21,7 @@
 
 <div id="page--course-registration" class="container" hx-swap="none">
 
+
     <h4 class="text-center fw-bold mt-5">
         <div>{{ course.name }}</div>
         <div class="mt-3 mb-5">{{ course.chinese_name }}</div>
@@ -32,11 +33,16 @@
     <div id="course-class-details" hx-get="?htmx=course-class-details" hx-trigger="load"></div>
 
     {% else %}
+
     {% include "./prerequisites.html" %}
+
     {% endif %}
 
+
     {% if met_prerequisites %}
+
     {% include "./payment.html" %}
+
     {% endif %}
 
 </div>

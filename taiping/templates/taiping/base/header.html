@@ -2,7 +2,7 @@
 
     {% if active_tab %}
     {% include "./tabs.html" %}
-    {% else %}
+    {% elif show_back_button %}
     <span role="button" onclick="history.back()" title="Back">&xlarr;</span>
     {% endif %}
 

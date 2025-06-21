@@ -1,0 +1,7 @@
+{% if error %}
+<script hx-swap-oob="true" id="htmx-script">
+    const input = document.querySelector('[name={{ field }}]')
+    input.setCustomValidity('{{ error_message }}')
+    input.reportValidity()
+</script>
+{% endif %}

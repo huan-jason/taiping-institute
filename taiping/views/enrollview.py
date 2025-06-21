@@ -38,6 +38,7 @@ class EnrollView(View):
         course: Course = get_object_or_404(Course.objects.filter(id=course_id))
         dependent_courses: list[dict] = self.get_dependent_courses(request, course)
         met_prerequisites: bool = all(item["met_dependency"] for item in dependent_courses)
+        show_back_button: bool = True
         return render(request, "taiping/registration/index.html", locals())
 
     def get_dependent_courses(self, request: HttpRequest, course: Course) -> list[dict]:

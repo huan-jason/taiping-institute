@@ -1,4 +1,4 @@
-from datetime import date, datetime
+from datetime import datetime, date
 from typing import Any, cast
 
 from django.core.files.base import ContentFile
@@ -6,6 +6,7 @@ from django.db import transaction
 from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
+from django.utils import timezone
 from django.views import View
 
 from taiping.constants import CourseStatusChoices
@@ -28,24 +29,28 @@ class CourseEditView(View):
             "short_description",
         ],
         "int": [
-            "course_group_id",
             "instructor_id",
             "facility_id",
             "course_fee",
             "min_students",
             "max_students",
         ],
+        "optional_int": [
+            "course_group_id",
+        ]
     }
 
     COURSE_CLASS_FIELDS: dict[str, list[str]] = {
         "text": [
             "status",
+            "notes",
         ],
         "date": [
             "start_date",
             "end_date",
         ],
         "int": [
+            "course_id",
             "facility_id",
             "instructor_id",
             "course_fee",
@@ -56,6 +61,26 @@ class CourseEditView(View):
             "auto_start",
         ],
     }
+
+    def check_field_name(self, request: HttpRequest) -> HttpResponse:
+        field: str = "name"
+        value: str = request.GET[field].strip()
+        if not value: return HttpResponse("")
+
+        error: bool = Course.objects.filter(name__iexact=value).exists()
+        error_message: str = f"Course name {value} already exists"
+
+        return render(request, "taiping/course/check_field.html", locals())
+
+    def check_field_chinese_name(self, request: HttpRequest) -> HttpResponse:
+        field: str = "chinese_name"
+        value: str = request.GET[field].strip()
+        if not value: return HttpResponse("")
+
+        error: bool = Course.objects.filter(chinese_name=value).exists()
+        error_message: str = f"Course name {value} already exists"
+
+        return render(request, "taiping/course/check_field.html", locals())
 
     def delete_course_class(self, request: HttpRequest) -> HttpResponse:
         course_class_id: str = request.POST["course_class_id"]
@@ -70,6 +95,7 @@ class CourseEditView(View):
             action = action.replace("-", "_")
             return getattr(self, f"htmx_{action}")(request)
 
+        today: date = timezone.now().date()
         course: Course | None = Course.objects.filter(id=course_id or 0).first()
         course_classes: QuerySet[CourseClass] | list = (course
             .courseclass_set # type: ignore
@@ -81,6 +107,10 @@ class CourseEditView(View):
         facilities: QuerySet[Facility] = Facility.objects.order_by("name")
         instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
         return render(request, "taiping/course/edit.html", locals())
+
+    def htmx_check_field(self, request: HttpRequest) -> HttpResponse:
+        field: str = request.GET["field"]
+        return getattr(self, f"check_field_{field}")(request)
 
     def htmx_modal_course_class(self, request: HttpRequest) -> HttpResponse:
         course_class_id : str = request.GET.get("id", "")
@@ -118,6 +148,11 @@ class CourseEditView(View):
                 name: int(request.POST[name])
                 for name in self.COURSE_FIELDS["int"]
             }
+            data |= {
+                name: int(value)
+                for name in self.COURSE_FIELDS["optional_int"]
+                if (value := request.POST[name])
+            }
 
             for key, val in data.items():
                 setattr(course, key, val)
@@ -132,7 +167,10 @@ class CourseEditView(View):
                 setattr(course, name, content_file)
 
             course.save()
-            return redirect("course_list")
+            return (
+                redirect("course_list") if course_id else
+                redirect("course_edit", course_id=(cast(Any, course).id))
+            )
 
     def save_course_class(self, request: HttpRequest) -> HttpResponse:
         course_class_id: str = request.POST["course_class_id"]

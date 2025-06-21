@@ -36,6 +36,7 @@
         .instructor-photo {
             max-width: 100%;
         }
+
     }
 
 
@@ -55,17 +56,17 @@
 
     <div id="page-content" class="fs-5">
 
-        {% if user.instructor.id == course.instructor_id or user.is_superuser%}
         <section class="d-flex pt-3">
-            <span class="ms-auto">
 
-                <a href="edit/" type="button" class="btn btn-outline-primary btn-sm rounded-pill px-3">
-                    Edit
-                </a>
+            <a href="/?tab=courses" class="text-dark" title="Back">&xlarr;</a>
 
-            </span>
+            {% if user.instructor.id == course.instructor_id or user.is_superuser%}
+            <a href="edit/" type="button" class="btn btn-outline-primary btn-sm rounded-pill px-3 ms-auto">
+                Edit
+            </a>
+            {% endif %}
+
         </section>
-        {% endif %}
 
 
         <section>

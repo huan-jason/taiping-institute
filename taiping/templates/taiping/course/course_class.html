@@ -3,23 +3,26 @@
 
 <details class="course-class-container overflow-x-clip mt-3" open>
 
-    <summary>
-        <span class="fw-bold">
+    <summary class="{% if course_class.end_date < today %} text-decoration-line-through {% endif %}">
+        <span class="text-primary">
             <span class="ms-0">{{ course_class.start_date }}</span>
             <span class="ms-1">-</span>
             <span class="ms-1">{{ course_class.end_date }}</span>
         </span>
 
+
+        {% if edit_mode %}
+
         {% if course_class.auto_start %}
         <span class="d-inline-block ms-2" title="Auto-start">@</span>
         {% endif %}
 
-        {% if edit_mode %}
         <span class="badge ms-4
             {% if course_class.status == 'PUBLISHED' %} text-bg-success
             {% elif course_class.status == 'CANCELLED' %} text-bg-danger
             {% else %} text-bg-secondary {% endif %}
         ">{{ course_class.status }}</span>
+
         {% endif %}
 
         {% if show_enroll_button %}
@@ -40,27 +43,12 @@
 
     <div class="course-class-details ps-3">
 
-        <div class="display-grid mt-2" style="--columns: 3">
-            <div>
-                <span class="course-info--label ps-3">Course fee</span>
-                <span class="course-info--data">${{ course_class.get_course_fee }}</span>
-            </div>
+        <div class="course-class--notes">{{ course_class.notes | from_markdown }}</div>
 
-            <div>
-                <span class="course-info--label">Min students</span>
-                <span class="course-info--data">{{  course_class.get_min_students }}</span>
-            </div>
-
-            <div>
-                <span class="course-info--label">Max students</span>
-                <span class="course-info--data">{{ course_class.get_max_students }}</span>
-            </div>
-        </div>
-
-        <details class="mt-2">
+        <details>
             <summary>
                 <span class="course-info--label grid-column-1">Venue:</span>
-                <span class="fw-bold">{{ course_class.get_facility.name }}</span>
+                <span class="fw-medium">{{ course_class.get_facility.name }}</span>
             </summary>
 
             <div class="mt-2">
@@ -72,7 +60,7 @@
         <details class="mt-2">
             <summary>
                 <span class="course-info--label">Instructor</span>
-                <span class="fw-bold">{{ course_class.get_instructor.user.get_full_name }}</span>
+                <span class="fw-medium">{{ course_class.get_instructor.user.get_full_name }}</span>
             </summary>
 
             {% with instructor=course_class.get_instructor %}
@@ -91,6 +79,24 @@
             {% endwith %}
 
         </details>
+
+        <div class="display-grid mt-2" style="--columns: 3">
+            <div>
+                <span class="course-info--label">Course fee</span>
+                <span class="course-info--data">${{ course_class.get_course_fee }}</span>
+            </div>
+
+            <div>
+                <span class="course-info--label">Min students</span>
+                <span class="course-info--data">{{  course_class.get_min_students }}</span>
+            </div>
+
+            <div>
+                <span class="course-info--label">Max students</span>
+                <span class="course-info--data">{{ course_class.get_max_students }}</span>
+            </div>
+        </div>
+
     </div>
 
     <hr />

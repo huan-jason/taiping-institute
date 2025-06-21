@@ -18,6 +18,12 @@
             font-weight: 500;
         }
     }
+
+    .course-class--notes {
+        p {
+            margin-bottom: 0.5em;
+        }
+    }
 </style>
 
 
@@ -53,13 +59,13 @@
             <div class="form-group">
                 <label class="form-label">Course Name</label>
                 <input type="text" class="form-control" name="name" value="{{ course.name }}"
-                    placeholder="Enter course name" required>
+                    placeholder="Enter course name" required hx-get="?htmx=check-field&field=name">
             </div>
 
             <div class="form-group">
                 <label class="form-label">Course Chinese Name</label>
                 <input type="text" class="form-control" name="chinese_name" value="{{ course.chinese_name }}"
-                    placeholder="Enter course Chinese name" required>
+                    placeholder="Enter course Chinese name" required hx-get="?htmx=check-field&field=chinese_name">
             </div>
 
             <div class="form-group">
@@ -158,5 +164,8 @@
             dateInputsInit()
         }
     </script>
+
+
+    <script id="htmx-script"></script>
 
     {% endblock content %}
