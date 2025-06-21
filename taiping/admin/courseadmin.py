@@ -38,6 +38,7 @@ class CourseAdmin(admin.ModelAdmin):
         "facility",
         "course_group",
         "description",
+        "sort_order",
     ]
     list_filter = [
         "course_group",
