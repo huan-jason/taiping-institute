@@ -46,6 +46,9 @@
 
     </select>
 
+    <span class="course-info--label"></span>
+    <span class="course-info--data">${{ course_class.notes | from_markdown }}</span>
+
     <span class="course-info--label">Course fee</span>
     <span class="course-info--data">${{ course_class.get_course_fee }}</span>
 
