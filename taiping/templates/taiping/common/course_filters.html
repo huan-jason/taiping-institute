@@ -7,7 +7,7 @@
 </style>
 
 
-<div class="collapse show mt-3" id="course-filters-container">
+<div class="collapse {% if has_filters %} show {% endif %} mt-3" id="course-filters-container">
     <form id="form--course-filters" onchange="this.submit()">
         <input type="hidden" name="tab" value="courses" />
 
