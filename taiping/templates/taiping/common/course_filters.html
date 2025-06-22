@@ -1,0 +1,67 @@
+<style>
+    #course-filters-container {
+        select {
+            width: max-content;
+        }
+    }
+</style>
+
+
+<div class="collapse show mt-3" id="course-filters-container">
+    <form id="form--course-filters" onchange="this.submit()">
+        <input type="hidden" name="tab" value="courses" />
+
+        <div class="display-grid justify-content-evenly" style="--columns: 5; --size: auto;">
+
+            <select class="form-select" name="filter_course_group">
+                <option value="">
+                    {% if filters.filter_course_group %} - Clear filter - {% else %} Filter by course group {% endif %}
+                </option>
+                {% for item in course_groups %}
+                <option value="{{ item.id }}" {% if item.id == filters.filter_course_group %} selected {% endif %}>
+                    {{ item.course_group.name | default:'- ungrouped -' }}</option>
+                {% endfor %}
+            </select>
+
+            <select class="form-select" name="filter_instructor">
+                <option value="">
+                    {% if filters.filter_instructor %} - Clear filter - {% else %} Filter by instructor {% endif %}
+                </option>
+                {% for item in instructors %}
+                <option value="{{ item.id }}" {% if item.id == filters.filter_instructor %} selected {% endif %}>
+                    {{ item.user.get_full_name }}</option>
+                {% endfor %}
+            </select>
+
+            <select class="form-select" name="filter_facility">
+                <option value="">
+                    {% if filters.filter_facility %} - Clear filter - {% else %} Filter by facility {% endif %}
+                </option>
+                {% for item in facilities %}
+                <option value="{{ item.id }}" {% if item.id == filters.filter_facility %} selected {% endif %}>
+                    {{ item.name }}</option>
+                {% endfor %}
+            </select>
+
+            <div>
+                <span class="">Month</span>
+                <input type="month" name="filter_month" value="{{ filters.filter_month }}" />
+            </div>
+
+            {% if has_filters %}
+            <a class="pt-2" href="?tab=courses" role="button">Clear filters</a>
+            {% endif %}
+
+        </div>
+
+    </form>
+</div>
+</div>
+
+
+<script>
+    function courseFiltersInit() {
+        dateInputsInit();
+    }
+    document.addEventListener("DOMContentLoaded", courseFiltersInit());
+</script>

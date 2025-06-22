@@ -1,9 +1,13 @@
 <script>
     function dateInputsInit() {
-        const inputs = [...document.querySelectorAll('input[type = date]')]
-        inputs.map(item => {
-            item.addEventListener('click', e => e.target.showPicker())
-            item.addEventListener('focus', e => e.target.showPicker())
+        inputTypes = ['date', 'month']
+        inputTypes.map(inputType => {
+            const inputs = [...document.querySelectorAll(`input[type=${inputType}]`)]
+
+            inputs.map(item => {
+                item.addEventListener('click', e => e.target.showPicker())
+                item.addEventListener('focus', e => e.target.showPicker())
+            })
         })
     }
 

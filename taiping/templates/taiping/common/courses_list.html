@@ -51,7 +51,27 @@
 
 <div class="container">
 
-    <h4 class="text-center mt-4">Agojin Courses</h4>
+    <div class="position-relative">
+
+        <h4 class="text-center mt-4">Agojin Courses</h4>
+
+        {% if show_filters %}
+        <div style="position: absolute; top: -0.25em; right: 0;">
+
+            <span class="d-inline-block float-end btn btn-outline-secondary" data-bs-toggle="collapse"
+                data-bs-target="#course-filters-container">
+                Filters
+            </span>
+        </div>
+        {% endif %}
+
+    </div>
+
+
+    {% if show_filters %}
+    {% include "./course_filters.html" %}
+    {% endif %}
+
 
     <div id="courses-container">
 
