@@ -1,0 +1,6 @@
+Hi {{ request.user.first_name }},
+
+    You have enrolled for the {{ course_class.course.name }} ({{ course_class.course.chinese_name }}) course.
+
+    Start date: {{ course_class.start_date }}
+    End date: {{ course_class.end_date }}

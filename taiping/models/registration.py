@@ -11,8 +11,8 @@ from .basemodel import BaseModel
 class Registration(BaseModel):
     course_class = ForeignKey('taiping.CourseClass', on_delete=PROTECT)
     student = ForeignKey('taiping.Student', on_delete=PROTECT)
-    started = BooleanField(default=False, db_index=True)
-    completed = BooleanField(default=False, db_index=True)
+    started = BooleanField(default=False, db_index=False)
+    completed = BooleanField(default=False, db_index=False)
     comments = TextField(null=True, blank=True)
 
     class Meta: # type: ignore

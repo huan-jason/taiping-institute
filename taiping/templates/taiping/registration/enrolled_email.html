@@ -1,0 +1,15 @@
+Hi {{ request.user.first_name }},
+
+
+<div style="margin-top: 2em">
+    You have enrolled for the
+    {{ course_class.course.name }}
+    ({{ course_class.course.chinese_name }})
+    course.
+</div>
+
+
+<div style="margin-top: 2em">
+    <div>Start date: {{ course_class.start_date }}</div>
+    <div>End date: {{ course_class.end_date }}</div>
+</div>

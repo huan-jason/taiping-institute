@@ -37,11 +37,13 @@
 
 
     <span class="text-muted">Class:</span>
-    <select class="form-select d-inline-block" name="course_class_id" hx-get="?htmx=course-class-details">
+    <select class="form-select d-inline-block" name="course_class_id" hx-get="?htmx=course-class-details" required>
 
         {% for item in course.courseclass_set.all %}
-        <option value="{{ item.id }}" {% if item.id == course_class_id %} selected {% endif %}>
+        <option value="{{ item.id }}" {% if item.id == course_class_id %} selected {% endif %}
+            {% if item.id in enrolled_class_ids %} disabled {% endif %}>
             {{ item.start_date }} - {{ item.end_date }}
+            {% if item.id in enrolled_class_ids %} (already enrolled) {% endif %}
             {% endfor %}
 
     </select>
