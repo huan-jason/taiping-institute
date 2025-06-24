@@ -10,7 +10,7 @@ class AppData(BaseModel):
     data = TextField()
 
     class Meta: # type: ignore
-        verbose_name_plural = "App Data"
+        verbose_name_plural = "App data"
 
     def __str__(self) -> str:
         return self.name
