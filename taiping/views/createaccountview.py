@@ -11,7 +11,12 @@ from django.template.loader import render_to_string
 from django.views import View
 
 from taiping.constants import GenderChoices
-from taiping.models import EmailVerification, Student, Instructor
+from taiping.models import (
+    AppData,
+    EmailVerification,
+    Student,
+    Instructor,
+)
 
 
 UserType: TypeAlias = Literal["student", "instructor"]
@@ -131,8 +136,19 @@ class CreateAccountView(View):
         if created:
             return self.account_created(request)
 
+        app_data: dict = self.get_app_data()
         gender_options: list[tuple[str, str]] = list(cast(Any, GenderChoices.choices))
         return render(request, f"taiping/create_account/{ user_type }.html", locals())
+
+    def get_app_data(self) -> dict:
+        names: list[str] = [
+            "terms_and_conditions",
+            "indemnity",
+        ]
+        return (AppData.objects
+            .filter(name__in=names)
+            .in_bulk(field_name="name")
+        )
 
     def get_email_message(self, request: HttpRequest, user: User, message_type: str) -> str:
         return render_to_string(

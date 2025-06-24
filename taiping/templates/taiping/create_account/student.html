@@ -5,6 +5,9 @@
 
 {% include "./css.html" %}
 
+{% include "./modal_terms_and_conditions.html" %}
+{% include "./modal_indemnity.html" %}
+
 
 <form id="form--user-details" method="post" enctype="multipart/form-data" onchange="onChangeForm(this)">
 
@@ -108,7 +111,19 @@
                     placeholder="Enter your emergency contact's phone number" required>
             </div>
 
-            <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled
+            <div class="agreement-container mt-4" data-bs-toggle="modal" data-bs-target="#modal-terms-and-conditions"
+                role="button">
+                <input type="checkbox" name="terms_and_conditions" class="pe-none" required />
+                <span>Click here to read and agree to our terms and conditions.</span>
+            </div>
+
+            <div class="agreement-container mt-2" data-bs-toggle="modal" data-bs-target="#modal-indemnity"
+                role="button">
+                <input type="checkbox" name="indemnity" class="pe-none" required />
+                <span>Click here to read and agree to our martial arts training indemnity.</span>
+            </div>
+
+            <button id="button--submit" type="submit" class="btn btn-primary mt-4" disabled
                 _="on click remove .d-none from .spinner">
                 Create account
                 <span id="spinner--submit" class="spinner spinner-border spinner-border-sm ms-2 d-none"></span>
@@ -122,6 +137,14 @@
 
 
 {% include "./js.html" %}
+
+<script>
+    function accept(name, agree = true) {
+        const input = document.querySelector(`input[name=${name}]`)
+        input.checked = agree
+        input.form.onchange()
+    }
+</script>
 
 <script id="htmx-script"></script>
 
