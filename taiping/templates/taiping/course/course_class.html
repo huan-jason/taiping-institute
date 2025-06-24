@@ -1,6 +1,7 @@
 {% load static %}
 {% load extra_tags %}
 
+{% with instructor=course_class.get_instructor %}
 <details class="course-class-container overflow-x-clip mt-3" open>
 
     <summary class="{% if course_class.end_date < today %} text-decoration-line-through {% endif %}">
@@ -30,7 +31,7 @@
             class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 ms-4">Enroll</a>
         {% endif %}
 
-        {% if user.instructor == course_class.get_instructor or user.is_superuser %}
+        {% if user.instructor == instructor or user.is_superuser %}
         <a href="/class/{{ course_class.id }}/" class="btn btn-outline-primary btn-sm rounded-pill px-3 ms-2">
             Students
         </a>
@@ -63,13 +64,12 @@
             </span>
         </details>
 
+
         <details class="mt-2">
             <summary>
                 <span class="course-info--label">Instructor</span>
-                <span class="fw-medium">{{ course_class.get_instructor.user.get_full_name }}</span>
+                <span class="fw-medium">{{ instructor.user.get_full_name }}</span>
             </summary>
-
-            {% with instructor=course_class.get_instructor %}
 
             <div class="course-instructor-bio-container mt-2">
 
@@ -81,8 +81,6 @@
                 <div class="pe-3">{{ instructor.bio | from_markdown }}</div>
 
             </div>
-
-            {% endwith %}
 
         </details>
 
@@ -108,3 +106,4 @@
     <hr />
 
 </details>
+{% endwith %}

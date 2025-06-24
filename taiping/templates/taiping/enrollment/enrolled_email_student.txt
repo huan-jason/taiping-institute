@@ -1,4 +1,4 @@
-Hi {{ request.user.first_name }},
+Hi {{ student.user.first_name }},
 
     You have enrolled for the {{ course_class.course.name }} ({{ course_class.course.chinese_name }}) course.
 

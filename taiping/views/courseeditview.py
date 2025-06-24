@@ -136,10 +136,7 @@ class CourseEditView(View):
 
         with transaction.atomic():
             course: Course = Course() if not course_id else Course.objects.get(id=course_id)
-            data: dict = {
-                name: request.POST[name]
-                for name in request.POST.keys()
-            }
+            data: dict = {}
             data |= {
                 name: request.POST[name]
                 for name in self.COURSE_FIELDS["text"]

@@ -1,4 +1,4 @@
-from typing import Any, cast
+from typing import Any, Self, cast
 from django.db.models import (
     BooleanField,
     CharField,
@@ -6,6 +6,7 @@ from django.db.models import (
     ForeignKey,
     IntegerField,
     PROTECT,
+    QuerySet,
     TextField,
     UniqueConstraint,
 )
@@ -58,3 +59,7 @@ class CourseClass(BaseModel):
     @property
     def get_facility(self) -> Any:
         return self.facility or self.course.facility
+
+    @property
+    def students(self) -> QuerySet[Self]:
+        return cast(Any, self).registration_set.all()

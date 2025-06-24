@@ -1,0 +1,22 @@
+Hi {{ instructor.user.first_name }},
+
+
+<div style="margin-top: 2em">
+    {{ student.user.get_full_name }} has enrolled for the
+    {{ course_class.course.name }}
+    ({{ course_class.course.chinese_name }})
+    course.
+</div>
+
+
+<div style="margin-top: 2em">
+    <div>Start date: {{ course_class.start_date }}</div>
+    <div>End date: {{ course_class.end_date }}</div>
+</div>
+
+
+<div style="margin-top: 2em">
+    <div>Minimum students: {{ course_class.min_students }}</div>
+    <div>Maximum students: {{ course_class.max_students }}</div>
+    <div>Students enrolled: {{ course_class.students.count }}</div>
+</div>

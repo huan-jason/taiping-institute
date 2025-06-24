@@ -43,9 +43,9 @@
                         value="{{ course_class.max_students | default:course.max_students }}">
                 </div>
 
-                {% include "../select_instructor.html" %}
+                {% include "../select_instructor.html" with instructor=course_class.get_instructor %}
 
-                {% include "../select_facility.html" %}
+                {% include "../select_facility.html" with facility=course_class.get_facility %}
 
                 <div class="form-group">
                     <label class="form-label">Fee</label>

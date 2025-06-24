@@ -5,7 +5,7 @@
 
         {% for item in instructors %}
         <option value="{{ item.id }}" {% if not course and item.user_id == user.id %} selected
-            {% elif item.id == course.instructor.id %} selected {% endif %}>
+            {% elif item.id == instructor.id %} selected {% endif %}>
             {{ item.user.get_full_name }}
         </option>
         {% endfor %}

@@ -9,10 +9,13 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.template.loader import render_to_string
 from django.views import View
 
+from taiping.constants import UserTypeChoices
 from taiping.models import (
     Course,
     CourseClass,
+    Instructor,
     Registration,
+    Student,
 )
 
 
@@ -39,7 +42,7 @@ class EnrollView(View):
             )
             .values_list("course_class_id", flat=True)
         )
-        return render(request, "taiping/registration/course_class_details.html", locals())
+        return render(request, "taiping/enrollment/course_class_details.html", locals())
 
     def get(self, request: HttpRequest, course_id: int, course_class_id: int = 0, enrolled: bool = False) -> HttpResponse:
         if not hasattr(request.user, "student"):
@@ -59,14 +62,14 @@ class EnrollView(View):
         dependent_courses: list[dict] = self.get_dependent_courses(request, course)
         met_prerequisites: bool = all(item["met_dependency"] for item in dependent_courses)
         show_back_button: bool = True
-        return render(request, "taiping/registration/index.html", locals())
+        return render(request, "taiping/enrollment/index.html", locals())
 
     def enrolled(self, request: HttpRequest, course_class_id: int)-> HttpResponse:
         course_class: CourseClass = (CourseClass.objects
             .select_related("course")
             .get(id=course_class_id)
         )
-        return render(request, "taiping/registration/enrolled.html", locals())
+        return render(request, "taiping/enrollment/enrolled.html", locals())
 
 
     def get_dependent_courses(self, request: HttpRequest, course: Course) -> list[dict]:
@@ -85,7 +88,7 @@ class EnrollView(View):
 
         return dependent_courses
 
-    def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
+    def post(self, request: HttpRequest, course_id: int | None = None, **kwargs: Any) -> HttpResponse:
         course_class: CourseClass = (CourseClass.objects
             .select_related("course")
             .get(id=int(request.POST["course_class_id"]))
@@ -97,10 +100,14 @@ class EnrollView(View):
                     course_class=course_class,
                     student=cast(Any, request.user).student,
                 )
-                self.send_email(request, course_class)
+                self.send_emails(request, course_class)
             except Exception as exc:
                 logging.error(exc)
-                return HttpResponse(f"<div>A system error occurred<./div><div style='margin-top:2em'>{exc}</div>")
+                if "debug" in request.GET: raise
+                return HttpResponse(
+                    f"<div>A system error occurred</div>"
+                    f"<div style='margin-top:2em'>{exc}</div>"
+                )
 
         return redirect(
             "enrolled",
@@ -108,15 +115,17 @@ class EnrollView(View):
             course_class_id=int(request.POST["course_class_id"]),
         )
 
-    def send_email(self, request: HttpRequest, course_class: CourseClass) -> None:
+    def send_email(self, request: HttpRequest, course_class: CourseClass, email_type: UserTypeChoices) -> None:
+        student: Student = cast(Any, request.user).student
+        instructor: Instructor = course_class.get_instructor
         message: str = render_to_string(
             request=request,
-            template_name="taiping/registration/enrolled_email.txt",
+            template_name=f"taiping/enrollment/enrolled_email_{email_type}.txt",
             context=locals(),
         )
         html_message: str = render_to_string(
             request=request,
-            template_name="taiping/registration/enrolled_email.html",
+            template_name=f"taiping/enrollment/enrolled_email_{email_type}.html",
             context=locals(),
         )
         course_name: str = f"{course_class.course.name} ({course_class.course.chinese_name})"
@@ -128,3 +137,7 @@ class EnrollView(View):
             html_message=html_message,
             fail_silently=False,
         )
+
+    def send_emails(self, request: HttpRequest, course_class: CourseClass) -> None:
+        self.send_email(request=request, course_class=course_class, email_type=UserTypeChoices.STUDENT)
+        self.send_email(request=request, course_class=course_class, email_type=UserTypeChoices.INSTRUCTOR)

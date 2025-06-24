@@ -80,9 +80,9 @@
                     rows="5" required>{{ course.short_description }}</textarea>
             </div>
 
-            {% include "./select_instructor.html" %}
+            {% include "./select_instructor.html" with instructor=course.instructor %}
 
-            {% include "./select_facility.html" %}
+            {% include "./select_facility.html" with facility=course.facility %}
 
             <div class="form-group">
                 <label class="form-label">Course Fee</label>
