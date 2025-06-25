@@ -79,7 +79,15 @@ class IndexView(View):
         filters: dict = request.session.get("course_filters") or {}
 
         if (instructor := filters.get("filter_instructor")):
-            queryset = queryset.filter(instructor_id=int(instructor))
+            subquery_instructor: QuerySet[CourseClass] = CourseClass.objects.filter(
+                course_id=OuterRef('id'),
+                instructor_id=int(instructor),
+                status=CourseStatusChoices.PUBLISHED,
+            )
+            queryset = queryset.filter(
+                Q(instructor_id=int(instructor))
+                | Q(Exists(subquery_instructor))
+            )
 
         if (facility := filters.get("filter_facility")):
             queryset = queryset.filter(facility_id=int(facility))
@@ -95,12 +103,12 @@ class IndexView(View):
             q_start_date: Q = Q(start_date__year=year, start_date__month= month)
             q_end_date: Q = Q(end_date__year=year, end_date__month= month)
 
-            subquery: QuerySet[CourseClass] = CourseClass.objects.filter(
+            subquery_date: QuerySet[CourseClass] = CourseClass.objects.filter(
                 q_start_date | q_end_date,
-                course=OuterRef('id'),
+                course_id=OuterRef('id'),
                 status=CourseStatusChoices.PUBLISHED,
             )
-            queryset = queryset.filter(Exists(subquery))
+            queryset = queryset.filter(Exists(subquery_date))
 
         return queryset
 
