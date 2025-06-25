@@ -196,6 +196,7 @@ class CreateAccountView(View):
             )
 
     def send_email(self, request: HttpRequest, user: User) -> None:
+        today: str = date.today().strftime("%d-%b-%Y")
         send_mail(
             subject="Welcome to Agojin",
             from_email=None,

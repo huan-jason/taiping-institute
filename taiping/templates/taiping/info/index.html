@@ -1,0 +1,26 @@
+{% extends "taiping/base.html" %}
+{% load extra_tags %}
+
+{% block content %}
+<style>
+    #page-content {
+        max-width: 100ch;
+        margin-inline: auto;
+        padding: 2em 3em;
+        line-height: 1.6em;
+        color: var(--stone-10);
+        background-color: white;
+    }
+</style>
+
+
+<div class="container">
+
+    <div id="page-content" class="fs-5">
+
+        <div>{{ app_data.data | from_markdown }}</div>
+
+    </div>
+
+</div>
+{% endblock content %}

@@ -4,6 +4,7 @@ from .courseview import CourseView
 from .createaccountview import CreateAccountView
 from .enrollview import EnrollView
 from .indexview import IndexView
+from .infoview import InfoView
 
 
 __all__ = [
@@ -13,4 +14,5 @@ __all__ = [
     "CreateAccountView",
     "EnrollView",
     "IndexView",
+    "InfoView",
 ]

@@ -4,3 +4,8 @@ Welcome to Agojin.
 
 Your username is {{ student.user.username }}.
 Go to this link to reset your password https:{{ request.META.HTTP_HOST }}/accounts/password_reset/.
+
+
+You have accepted Agojin's terms and conditions on {{ today }}.  Go to {{ request.META.HTTP_HOST }}/terms-and-conditions/ to view.
+
+You have agreed to Agojin's indemnity waiver on {{ today }}.  Go to {{ request.META.HTTP_HOST }}/indemnity/ to view.

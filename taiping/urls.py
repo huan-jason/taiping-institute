@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
-from django.urls import path, include
+from django.urls import path, re_path, include
 
 from . import views
 
@@ -23,6 +23,9 @@ urlpatterns = [
     path('create-account/', views.CreateAccountView.as_view(), name="create_account"),
 
     path('class/<int:course_class_id>/', views.CourseClassView.as_view(), name="course_class"),
+
+    re_path(r'(?P<info_type>terms-and-conditions)/', views.InfoView.as_view(), name="terms_and_conditions"),
+    re_path(r'(?P<info_type>indemnity)/', views.InfoView.as_view(), name="indemnity"),
 
     path('', views.IndexView.as_view(), name="index"),
 ]
