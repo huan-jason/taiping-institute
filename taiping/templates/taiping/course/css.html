@@ -1,0 +1,47 @@
+<style>
+    #page-content {
+        max-width: 75ch;
+        min-height: 100vh;
+        margin-inline: auto;
+        padding: 0 3em 2em;
+        line-height: 1.6em;
+        color: var(--stone-10);
+        background-color: white;
+    }
+
+    #course-classes-container {
+        overflow-x: hidden;
+    }
+
+    .course-class-details {
+        margin-top: 0.5em;
+
+        .course-info--label {
+            color: var(--stone-7);
+            font-size: smaller;
+
+            &::after {
+                content: ":";
+            }
+        }
+
+        .course-info--data {
+            text-align: left;
+        }
+    }
+
+    .instructor-photo {
+        max-width: 50%;
+    }
+
+
+    @media (max-width: 800px) {
+        #page-content {
+            grid-template-columns: 1fr;
+        }
+
+        #form-section {
+            padding-inline: 3em;
+        }
+    }
+</style>
