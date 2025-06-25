@@ -84,7 +84,10 @@ class IndexView(View):
                 instructor_id=int(instructor),
                 status=CourseStatusChoices.PUBLISHED,
             )
-            queryset = queryset.filter(Exists(subquery_instructor))
+            queryset = queryset.filter(
+                Q(instructor_id=int(instructor))
+                | Q(Exists(subquery_instructor))
+            )
 
         if (facility := filters.get("filter_facility")):
             queryset = queryset.filter(facility_id=int(facility))
