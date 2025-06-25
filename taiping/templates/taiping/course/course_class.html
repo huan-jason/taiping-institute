@@ -5,6 +5,7 @@
 <details class="course-class-container overflow-x-clip mt-3" open>
 
     <summary class="{% if course_class.end_date < today %} text-decoration-line-through {% endif %}">
+
         <span class="text-primary">
             <span class="ms-0">{{ course_class.start_date }}</span>
             <span class="ms-1">-</span>
@@ -48,6 +49,7 @@
 
     </summary>
 
+
     <div class="course-class-details ps-3">
 
         <div class="course-class--notes">{{ course_class.notes | from_markdown }}</div>
@@ -71,7 +73,7 @@
                 <span class="fw-medium">{{ instructor.user.get_full_name }}</span>
             </summary>
 
-            <div class="course-instructor-bio-container mt-2">
+            <div class="course-instructor-bio-container clear-fix mt-2">
 
                 {% if instructor.photo %}
                 <img class="instructor-photo float-end ms-3 mb-2" src="{% get_media_prefix %}{{ instructor.photo }}"
