@@ -144,11 +144,18 @@
 {% include "./js.html" %}
 
 <script>
+
+    function init() {
+        dateInputsInit()
+    }
+
     function accept(name, agree = true) {
         const input = document.querySelector(`input[name=${name}]`)
         input.checked = agree
         input.form.onchange()
     }
+
+    document.addEventListener('DOMContentLoaded', init)
 </script>
 
 <script id="htmx-script"></script>

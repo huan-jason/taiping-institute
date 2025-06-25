@@ -1,6 +1,11 @@
 from django.db.models import TextChoices
 
 
+class ComplianceTypeChoices(TextChoices):
+    TERMS_AND_CONDITIONS = "terms and conditions"
+    INDEMNITY_WAIVER = "indemnity waiver"
+
+
 class GenderChoices(TextChoices):
     MALE = "male"
     FEMALE = "female"

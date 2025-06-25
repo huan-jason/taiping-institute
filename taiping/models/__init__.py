@@ -1,4 +1,5 @@
 from .appdata import AppData
+from .compliance import Compliance
 from .course import Course
 from .courseclass import CourseClass
 from .coursedependency import CourseDependency
@@ -12,6 +13,7 @@ from .student import Student
 
 __all__ = [
     "AppData",
+    "Compliance",
     "Course",
     "CourseClass",
     "CourseDependency",

@@ -10,9 +10,10 @@ from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 from django.views import View
 
-from taiping.constants import GenderChoices
+from taiping.constants import GenderChoices, ComplianceTypeChoices
 from taiping.models import (
     AppData,
+    Compliance,
     EmailVerification,
     Student,
     Instructor,
@@ -52,6 +53,14 @@ class CreateAccountView(View):
 
     def account_created(self, request: HttpRequest) -> HttpResponse:
         return render(request, "taiping/create_account/created.html", locals())
+
+    def archive_compliance(self, request: HttpRequest, student: Student, compliance_type: ComplianceTypeChoices) -> None:
+        app_data: AppData = AppData.objects.get(name=compliance_type.replace(" ", "_"))
+        Compliance.objects.create(
+            student=student,
+            compliance_type=compliance_type,
+            data=app_data.data
+        )
 
     def check_code(self, request: HttpRequest) -> EmailVerification | None:
         verification_code: str = request.POST["email_verification_code"]
@@ -121,6 +130,15 @@ class CreateAccountView(View):
         if not hasattr(request.user, "instructor"):
             self.send_email(request, student.user)
 
+        self.archive_compliance(
+            request=request, student=student,
+            compliance_type=ComplianceTypeChoices.TERMS_AND_CONDITIONS,
+        )
+        self.archive_compliance(
+            request=request, student=student,
+            compliance_type=ComplianceTypeChoices.INDEMNITY_WAIVER,
+        )
+
         return redirect(f"/create-account/created/?student={cast(Any, student).id}")
 
     def create_user(self, request: HttpRequest) -> User:
@@ -136,15 +154,20 @@ class CreateAccountView(View):
         if created:
             return self.account_created(request)
 
+        user: Any = request.user
+
+        if user_type == "student" and hasattr(user, "student"):
+            return HttpResponse("You have already registered as a student.")
+
+        elif user_type == "instructor" and hasattr(user, "instructor"):
+            return HttpResponse("You have already registered as an instructor.")
+
         app_data: dict = self.get_app_data()
         gender_options: list[tuple[str, str]] = list(cast(Any, GenderChoices.choices))
         return render(request, f"taiping/create_account/{ user_type }.html", locals())
 
     def get_app_data(self) -> dict:
-        names: list[str] = [
-            "terms_and_conditions",
-            "indemnity",
-        ]
+        names: list[str] = [item.lower() for item in ComplianceTypeChoices._member_names_]
         return (AppData.objects
             .filter(name__in=names)
             .in_bulk(field_name="name")
@@ -209,4 +232,3 @@ class CreateAccountView(View):
     def verify_code(self, request: HttpRequest) -> HttpResponse:
         verified: EmailVerification | None = self.check_code(request)
         return render(request, "taiping/create_account/verify_code.html", locals())
-
