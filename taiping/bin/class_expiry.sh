@@ -6,4 +6,5 @@ readonly LOG_DIR="$SCRIPT_DIR/../../../logs"
 
 mkdir -p $LOG_DIR
 
+cd $SCRIPT_DIR
 docker compose exec app ./manage.py class_expiry >>$LOG_DIR/class_expiry.log

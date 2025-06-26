@@ -6,4 +6,5 @@ readonly LOG_DIR="$SCRIPT_DIR/../../../logs"
 
 mkdir -p $LOG_DIR
 
+cd $SCRIPT_DIR
 docker compose exec app ./manage.py class_auto_start >>$LOG_DIR/class_auto_start.log
