@@ -1,0 +1,15 @@
+<p></p>
+
+<p>
+    Course {{ course_class.course.name }} {{ course_class.course.chinese_name }}
+    ({{ course_class.start_date }}) has been cancelled due to insufficient students.
+</p>
+
+<p>
+    Your registration fee will be refunded.
+</p>
+
+<p>
+    Click <a href="https://{{ request.META.HTTP_HOST }}/course/{{ course_class.course_id }}/">here</a> to view course
+    details.
+</p>

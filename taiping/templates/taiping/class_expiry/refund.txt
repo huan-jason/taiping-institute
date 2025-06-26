@@ -1,0 +1,3 @@
+Hi {{ registration.student.user.first_name }},
+
+Your registration fee for {{ registration.course_class.course.name }} {{ registration.course_class.course.chinese_name }} ({{ registration.course_class.start_date }}) has been refunded.

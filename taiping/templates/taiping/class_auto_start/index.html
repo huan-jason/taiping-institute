@@ -1,0 +1,13 @@
+<p></p>
+
+<p>Course {{ course_class.course.name }} {{ course_class.course.chinese_name }} will be commencing on
+    {{ course_class.start_date }}.</p>
+
+<p>{{ course_class.notes }}</p>
+
+<p>Venue: {{ course_class.get_facility }}</p>
+
+<p>
+    Click <a href="https://{{ request.META.HTTP_HOST }}/course/{{ course_class.course_id }}/">here</a> to view course
+    details.
+</p>

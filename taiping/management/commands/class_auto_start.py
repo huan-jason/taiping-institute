@@ -32,7 +32,7 @@ class Command(BaseCommand):
                 continue
 
             self.stdout.write(
-                f"Auto starting course {item.course.name} "
+                f"Auto starting class {item.course.name} "
                 f"({item.start_date})"
             )
 
@@ -44,11 +44,11 @@ class Command(BaseCommand):
 
     def send_emails(self, course_class: CourseClass) -> None:
         msg_text: str = render_to_string(
-            template_name="taiping/auto_start/index.txt",
+            template_name="taiping/class_auto_start/index.txt",
             context=locals(),
         )
         msg_html: str = render_to_string(
-            template_name="taiping/auto_start/index.html",
+            template_name="taiping/class_auto_start/index.html",
             context=locals(),
         )
         subject: str = (

@@ -4,3 +4,5 @@ Course {{ course_class.course.name }} {{ course_class.course.chinese_name }} wil
 {{ course_class.notes }}
 
 Venue: {{ course_class.get_facility }}
+
+Go to https://{{ request.META.HTTP_HOST }}/course/{{ course_class.course_id }}/ to view course details.
