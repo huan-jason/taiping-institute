@@ -5,6 +5,8 @@
 
 {% include "./css.html" %}
 
+{% include "./modal_terms_and_conditions.html" %}
+
 
 <form id="form--user-details" method="post" enctype="multipart/form-data" onchange="onChangeForm(this)">
 
@@ -43,6 +45,12 @@
                 <label class="form-label">Photo</label>
                 <input type="file" class="form-control" name="photo" placeholder="Upload your photo" accept="image/*"
                     capture="user" required>
+            </div>
+
+            <div class="agreement-container mt-4" data-bs-toggle="modal" data-bs-target="#modal-terms-and-conditions"
+                role="button">
+                <input type="checkbox" name="terms_and_conditions" class="pe-none" required />
+                <span>Click here to read and agree to our terms and conditions.</span>
             </div>
 
             <button id="button--submit" type="submit" class="btn btn-primary mt-3" disabled

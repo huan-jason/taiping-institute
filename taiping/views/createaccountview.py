@@ -163,6 +163,13 @@ class CreateAccountView(View):
             return HttpResponse("You have already registered as an instructor.")
 
         app_data: dict = self.get_app_data()
+        terms_and_conditions_key: str = (
+            ComplianceTypeChoices.INSTRUCTOR_TERMS_AND_CONDITIONS.name.lower()
+            if user_type == "instructor" else
+            ComplianceTypeChoices.TERMS_AND_CONDITIONS.name.lower()
+        )
+        terms_and_conditions: str = app_data[terms_and_conditions_key].data
+
         gender_options: list[tuple[str, str]] = list(cast(Any, GenderChoices.choices))
         return render(request, f"taiping/create_account/{ user_type }.html", locals())
 

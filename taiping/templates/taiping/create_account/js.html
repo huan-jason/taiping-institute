@@ -1,4 +1,10 @@
 <script>
+    function accept(name, agree = true) {
+        const input = document.querySelector(`input[name=${name}]`)
+        input.checked = agree
+        input.form.onchange()
+    }
+
     function checkVerificationCode(input) {
         if (input.value.trim().length != 4) { return }
         htmx.trigger(input, 'verify-code')

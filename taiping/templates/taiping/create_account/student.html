@@ -149,12 +149,6 @@
         dateInputsInit()
     }
 
-    function accept(name, agree = true) {
-        const input = document.querySelector(`input[name=${name}]`)
-        input.checked = agree
-        input.form.onchange()
-    }
-
     document.addEventListener('DOMContentLoaded', init)
 </script>
 
