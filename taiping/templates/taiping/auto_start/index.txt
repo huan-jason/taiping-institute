@@ -1,0 +1,6 @@
+
+Course {{ course_class.course.name }} {{ course_class.course.chinese_name }} will be commencing on {{ course_class.start_date }}.
+
+{{ course_class.notes }}
+
+Venue: {{ course_class.get_facility }}
