@@ -54,10 +54,16 @@ class CreateAccountView(View):
     def account_created(self, request: HttpRequest) -> HttpResponse:
         return render(request, "taiping/create_account/created.html", locals())
 
-    def archive_compliance(self, request: HttpRequest, student: Student, compliance_type: ComplianceTypeChoices) -> None:
+    def archive_compliance(self,
+        compliance_type: ComplianceTypeChoices,
+        student: Student | None = None,
+        instructor: Instructor | None = None,
+    ) -> None:
+
         app_data: AppData = AppData.objects.get(name=compliance_type.replace(" ", "_"))
         Compliance.objects.create(
             student=student,
+            instructor=instructor,
             compliance_type=compliance_type,
             data=app_data.data
         )
@@ -91,6 +97,12 @@ class CreateAccountView(View):
 
         instructor: Instructor = Instructor.objects.create(**data)
         self.send_email(request, instructor.user)
+
+        self.archive_compliance(
+            instructor=instructor,
+            compliance_type=ComplianceTypeChoices.INSTRUCTOR_TERMS_AND_CONDITIONS,
+        )
+
         return redirect(f"/create-account/created/?instructor={cast(Any, instructor).id}")
 
     def create_student(self, request: HttpRequest) -> HttpResponse:
@@ -131,11 +143,11 @@ class CreateAccountView(View):
             self.send_email(request, student.user)
 
         self.archive_compliance(
-            request=request, student=student,
+            student=student,
             compliance_type=ComplianceTypeChoices.TERMS_AND_CONDITIONS,
         )
         self.archive_compliance(
-            request=request, student=student,
+            student=student,
             compliance_type=ComplianceTypeChoices.INDEMNITY_WAIVER,
         )
 
