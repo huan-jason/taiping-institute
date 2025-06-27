@@ -2,6 +2,7 @@ from .appdata import AppData
 from .compliance import Compliance
 from .course import Course
 from .courseclass import CourseClass
+from .courseclassschedule import CourseClassSchedule
 from .coursedependency import CourseDependency
 from .coursegroup import CourseGroup
 from .emailverification import EmailVerification
@@ -16,6 +17,7 @@ __all__ = [
     "Compliance",
     "Course",
     "CourseClass",
+    "CourseClassSchedule",
     "CourseDependency",
     "CourseGroup",
     "EmailVerification",
