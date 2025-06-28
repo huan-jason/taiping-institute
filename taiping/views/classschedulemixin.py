@@ -1,3 +1,4 @@
+import calendar
 from collections import defaultdict
 from datetime import date, timedelta
 from typing import Generator
@@ -56,6 +57,9 @@ class ClassScheduleMixin:
         max_count: int = 35
         count: int = 0
 
+        last_day: int = calendar.monthrange(end_date.year, end_date.month)[1]
+        cal_end: date = date(end_date.year, end_date.month, last_day)
+
         while True:
             yield calendar_date
             count += 1
@@ -63,7 +67,7 @@ class ClassScheduleMixin:
             if count >= max_count:
                 break
 
-            if calendar_date >= end_date and count % columns == 0:
+            if calendar_date >= cal_end and count % columns == 0:
                 break
 
             calendar_date = calendar_date + timedelta(days=1)
