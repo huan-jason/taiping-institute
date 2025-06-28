@@ -16,25 +16,6 @@
             margin-bottom: 0;
         }
 
-        label:has(+input[required]),
-        label:has(+textarea[required]),
-        label:has(+select[required]),
-        .input-label--required {
-            font-weight: bold;
-
-            &::after {
-                content: "*";
-                margin-left: 0.25em;
-                font-weight: 100;
-            }
-        }
-
-        label:has(+input:invalid),
-        label:has(+textarea:invalid),
-        label:has(+select:invalid),
-        label:has(+div input[type=radio]:invalid) {
-            color: var(--red-8);
-        }
     }
 
     input[type=radio]+span {

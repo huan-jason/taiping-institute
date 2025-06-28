@@ -93,14 +93,29 @@
         margin-right: 0.5em;
     }
 
-    input,
-    select:invalid {
-        box-shadow: 0 0 1em var(--stone-0);
-    }
-
     label:has(input[type=checkbox]:invalid),
     label:has(input[type=radio]:invalid) {
         color: red;
+    }
+
+    label:has(+input[required]),
+    label:has(+textarea[required]),
+    label:has(+select[required]),
+    .input-label--required {
+        font-weight: bold;
+
+        &::after {
+            content: "*";
+            margin-left: 0.25em;
+            font-weight: 100;
+        }
+    }
+
+    label:has(+input:invalid),
+    label:has(+textarea:invalid),
+    label:has(+select:invalid),
+    label:has(+div input[type=radio]:invalid) {
+        color: var(--red-8);
     }
 </style>
 
