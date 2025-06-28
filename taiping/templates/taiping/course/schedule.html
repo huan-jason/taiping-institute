@@ -10,11 +10,15 @@
             margin-inline: auto;
             width: max-content;
 
+            .calendar--header,
             .calendar--day {
                 border: solid thin #efefef;
                 text-align: center;
                 height: var(--size);
                 padding-top: calc((var(--size) - 1.75em) / 2);
+            }
+
+            .calendar--day {
                 cursor: pointer;
 
                 &.has-data {
@@ -48,6 +52,14 @@
     </div>
 
     <div id="calendar-subcontainer">
+
+        <div class="calendar--header">Sun</div>
+        <div class="calendar--header">Mon</div>
+        <div class="calendar--header">Tue</div>
+        <div class="calendar--header">Wed</div>
+        <div class="calendar--header">Thu</div>
+        <div class="calendar--header">Fri</div>
+        <div class="calendar--header">Sat</div>
 
         {% for item in class_schedule %}
 
