@@ -4,23 +4,11 @@ from typing import Generator
 from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
-from django.views import View
 
-from taiping.models import Course, CourseClass, CourseClassSchedule
-from .classschedulemixin import ClassScheduleMixin
+from taiping.models import CourseClass, CourseClassSchedule
 
 
-class CourseView(ClassScheduleMixin, View):
-
-    def get(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
-
-        if name := request.GET.get("htmx"):
-            return getattr(self, f"htmx_{name.replace("-", "_")}")(request)
-
-        if course_id:
-             return self.get_course_detail(request, course_id=course_id)
-
-        return self.get_courses_list(request)
+class ClassScheduleMixin:
 
     def get_class_schedule(self, course_class: CourseClass) -> list[dict]:
 
@@ -58,19 +46,6 @@ class CourseView(ClassScheduleMixin, View):
             data[item.class_date].append(item)
 
         return dict(data)
-
-    def get_course_detail(self, request: HttpRequest, course_id: int) -> HttpResponse:
-        course: Course | None = Course.objects.filter(id=course_id).first()
-        return (
-            render(request, "taiping/course/detail.html", locals())
-            if course else
-            HttpResponse(f"Invalid course ID: {course_id}", status=400)
-        )
-
-    def get_courses_list(self, request: HttpRequest) -> HttpResponse:
-        show_create_course_button: bool = True
-        courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
-        return render(request, "taiping/course/list.html", locals())
 
     def get_dates(self, end_date: date, month: int, year: int) -> Generator[date, None, None]:
         if month > end_date.month: return

@@ -17,9 +17,10 @@ from taiping.models import (
     Facility,
     Instructor,
 )
+from .classschedulemixin import ClassScheduleMixin
 
 
-class CourseEditView(View):
+class CourseEditView(ClassScheduleMixin, View):
 
     COURSE_FIELDS: dict[str, list[str]] = {
         "text": [
