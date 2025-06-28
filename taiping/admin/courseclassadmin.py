@@ -1,7 +1,11 @@
-from typing import Any, Self, cast
+from typing import Any, cast
 from django.contrib import admin
 
-from .. import models
+from taiping import models
+
+class CourseClassScheduleInline(admin.TabularInline):
+    model = models.CourseClassSchedule
+    extra = 0
 
 
 @admin.register(models.CourseClass)
@@ -34,6 +38,9 @@ class CourseClassAdmin(admin.ModelAdmin):
         "start_date",
         "course__name",
         "end_date",
+    ]
+    inlines = [
+        CourseClassScheduleInline,
     ]
 
     def course_fee(self, obj: models.CourseClass) -> int:

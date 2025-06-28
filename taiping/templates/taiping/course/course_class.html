@@ -86,20 +86,34 @@
 
         </details>
 
-        <div class="display-grid mt-2" style="--columns: 3">
+
+        <details class="mt-2" open>
+
+            <summary>
+                <span class="course-info--label">Schedule</span>
+            </summary>
+
+            <div class="course-schedule-container mt-2">
+                <div id="calendar-container" hx-get="?htmx=class-schedule&id={{ course_class.id }}" hx-trigger="load">
+                </div>
+            </div>
+
+        </details>
+
+        <div class="display-grid mt-3" style="--columns: 3">
             <div>
                 <span class="course-info--label">Course fee</span>
-                <span class="course-info--data">${{ course_class.get_course_fee }}</span>
+                <span class="course-info--data ms-2">${{ course_class.get_course_fee }}</span>
             </div>
 
             <div>
                 <span class="course-info--label">Min students</span>
-                <span class="course-info--data">{{  course_class.get_min_students }}</span>
+                <span class="course-info--data ms-2">{{  course_class.get_min_students }}</span>
             </div>
 
             <div>
                 <span class="course-info--label">Max students</span>
-                <span class="course-info--data">{{ course_class.get_max_students }}</span>
+                <span class="course-info--data ms-2">{{ course_class.get_max_students }}</span>
             </div>
         </div>
 

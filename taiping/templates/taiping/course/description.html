@@ -25,9 +25,8 @@
         <div class="mt-3">{{ course.name }}</div>
         <div class="mt-3">{{ course.chinese_name }}</div>
     </h3>
-    <img class="course-image" src="{{course.image}}" alt="" />
 
-    <div class="course-description-text">
+    <div class="course-description-text mt-4">
         {{ course.description | from_markdown }}
     </div>
 </div>

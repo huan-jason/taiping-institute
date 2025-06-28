@@ -1,0 +1,74 @@
+<div hx-swap-oob="true" id="calendar-container">
+
+    <style>
+        #calendar-subcontainer {
+            --size: 5em;
+            display: grid;
+            grid-template-columns: repeat(7, var(--size));
+
+            margin-top: 0.5em;
+            margin-inline: auto;
+            width: max-content;
+
+            .calendar--day {
+                border: solid thin #efefef;
+                text-align: center;
+                height: var(--size);
+                padding-top: calc((var(--size) - 1.75em) / 2);
+                cursor: pointer;
+
+                &.has-data {
+                    background-color: var(--blue-0);
+                }
+
+                &.other-month {
+                    color: var(--stone-4);
+                    pointer-events: none;
+                }
+            }
+        }
+    </style>
+
+    <div class="d-flex">
+
+        <span class="">
+            {% if prev_month %}
+            <button class="btn btn-sm fs-4">&laquo;</button>
+            {% endif %}
+        </span>
+
+        <span class="ms-auto">{{ calendar_month | date:"F Y" }}</span>
+
+        <span class="ms-auto">
+            {% if next_month %}
+            <button class="btn btn-sm fs-4">&raquo;</button>
+            {% endif %}
+        </span>
+
+    </div>
+
+    <div id="calendar-subcontainer">
+
+        {% for item in class_schedule %}
+
+        <!-- noformat -->
+        <div class="calendar--day
+        {% if item.date < course_class.start_date or item.date > course_class.end_date %} other-month {% endif %}
+        {% if item.data %} has-data {% endif %}
+        " title="
+        {% for item in item.data %}{% spaceless %}
+        {{ item.class_time_start | date:'H:i' }} - {{ item.class_time_end | date:'H:i' }}{% endspaceless %}
+{% endfor %}
+        ">
+        <!-- noformat -->
+        {{ item.date.day }}
+    </div>
+
+    {% empty %}
+
+    <div>N/A</div>
+
+    {% endfor %}
+
+</div>
+</div>
