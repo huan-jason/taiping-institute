@@ -6,7 +6,7 @@ readonly PROJECT="$(basename ${SCRIPT_DIR%/bin})"
 
 readonly HOST=${1:?}
 
-echo -e HOST: "\e[33m" $HOST "\e[0m"
+echo -e HOST: "\e[31m" $HOST "\e[0m"
 
 ssh $HOST "
   cd $PROJECT;
