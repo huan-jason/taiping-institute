@@ -49,7 +49,7 @@
 
                 <div class="form-group">
                     <label class="form-label">Fee</label>
-                    <input type="number" class="form-control" name="course_fee" min="1" placeholder="Enter course fee"
+                    <input type="number" class="form-control" name="course_fee" min="0" placeholder="Enter course fee"
                         required value="{{ course_class.course_fee | default:course.course_fee }}">
                 </div>
 
