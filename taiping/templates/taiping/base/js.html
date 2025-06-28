@@ -12,7 +12,7 @@
     }
 
     function invalidInputs(form) {
-        form = form
+        form = form || document.forms[0]
         const items = [...form.elements]
         const invalids = items
             .filter(item => !item.validity.valid)
