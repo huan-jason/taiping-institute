@@ -45,7 +45,10 @@
             {% endif %}
         </span>
 
-        <span class=" fw-bold ms-auto">{{ calendar_month | date:"F Y" }}</span>
+        <span class="ms-auto">
+            <span class=" fw-bold">{{ calendar_month | date:"F Y" }}</span>
+            <a href="#" class="btn btn-link fs-5 ms-2" title="Download calender entries">&#x2b73;</a>
+        </span>
 
         <span class="ms-auto">
             {% if next_month %}
