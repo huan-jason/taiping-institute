@@ -31,6 +31,7 @@
 
 
 {% include "./modal_course_class/index.html" %}
+{% include "./modal_class_schedule/index.html" %}
 
 
 <form id="form--course-details" method="post" enctype="multipart/form-data" onchange="onChangeForm(this)">
@@ -157,18 +158,20 @@
 
     </div>
 
-
-    <script>
-        window.onload = () => {
-            const form = document.querySelector('#form--course-details')
-            onChangeForm(form)
-
-            resizeAllTextareas()
-            dateInputsInit()
-        }
-    </script>
+</form>
 
 
-    <script id="htmx-script"></script>
+<script>
+    window.onload = () => {
+        const form = document.querySelector('#form--course-details')
+        onChangeForm(form)
 
-    {% endblock content %}
+        resizeAllTextareas()
+        dateInputsInit()
+    }
+</script>
+
+
+<script id="htmx-script"></script>
+
+{% endblock content %}

@@ -90,7 +90,6 @@ class CourseEditView(ClassScheduleMixin, View):
         course_id: int = int(request.POST["course_id"])
         return redirect("course_edit", course_id=course_id)
 
-
     def get(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
         if (action := request.GET.get("htmx")):
             action = action.replace("-", "_")
@@ -128,6 +127,9 @@ class CourseEditView(ClassScheduleMixin, View):
         return render(request, "taiping/course/modal_course_class/modal_content.html", locals())
 
     def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
+        if (action := request.GET.get("htmx")):
+            action = action.replace("-", "_")
+            return getattr(self, f"htmx_{action}")(request)
 
         if "delete" in request.POST:
             return self.delete_course_class(request)

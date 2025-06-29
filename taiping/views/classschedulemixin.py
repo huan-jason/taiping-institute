@@ -1,7 +1,8 @@
 import calendar
 from collections import defaultdict
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from typing import Generator
+from uuid import uuid4
 from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
@@ -39,7 +40,7 @@ class ClassScheduleMixin:
     def get_course_class_schedule_data(self, course_class: CourseClass) -> dict[date, list[CourseClassSchedule]]:
         qs: QuerySet[CourseClassSchedule] = (course_class
             .courseclassschedule_set  # type: ignore
-            .all()
+            .order_by("class_time_start", "class_time_end")
         )
         data: defaultdict = defaultdict(list)
 
@@ -89,6 +90,10 @@ class ClassScheduleMixin:
             return None
         return cal_date - timedelta(days=1)
 
+    def htmx_add_schedule(self, request: HttpRequest) -> HttpResponse:
+        item_id: str = str(uuid4())
+        return render(request, "taiping/course/modal_class_schedule/add_schedule_item.html", locals())
+
     def htmx_class_schedule(self, request: HttpRequest) -> HttpResponse:
         course_class: CourseClass = CourseClass.objects.get(id=int(request.GET["id"]))
         class_schedule: list[dict] = self.get_class_schedule(course_class)
@@ -96,3 +101,23 @@ class ClassScheduleMixin:
         prev_month: date | None = self.get_month_prev(calendar_month, course_class)
         next_month: date | None = self.get_month_next(calendar_month, course_class)
         return render(request, "taiping/course/schedule.html", locals())
+
+    def htmx_delete_schedule(self, request: HttpRequest) -> HttpResponse:
+        item_id: str = request.GET["id"]
+        is_new_item: bool = len(item_id) > 10
+        return render(request, "taiping/course/modal_class_schedule/delete_schedule_item.html", locals())
+
+    def htmx_modal_class_schedule(self, request: HttpRequest) -> HttpResponse:
+        class_date: date = datetime.strptime(request.GET["date"], "%Y%m%d").date()
+        course_class_id: int = int(request.GET["course_class"])
+        course_class_schedules: QuerySet[CourseClassSchedule] = (CourseClassSchedule.objects
+            .filter(
+                course_class_id=course_class_id,
+                class_date=class_date,
+            )
+            .order_by(
+                "class_time_start",
+                "class_time_end",
+            )
+        )
+        return render(request, "taiping/course/modal_class_schedule/modal_content.html", locals())

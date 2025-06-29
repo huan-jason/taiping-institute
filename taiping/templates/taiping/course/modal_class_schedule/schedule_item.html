@@ -1,0 +1,14 @@
+<section id="modal--class-schedule__item-container--{{ item_id }}" class="modal--class-schedule__item-container">
+
+    <input type="time" class="form-control" name="class_time_start--{{ item_id }}"
+        value="{{ course_class_schedule.class_time_start | time:'H:i' }}" required onchange="checkTimes()" />
+
+    <input type="time" class="form-control" name="class_time_end--{{ item_id }}"
+        value="{{ course_class_schedule.class_time_end | time:'H:i' }}" required onchange="checkTimes()" />
+
+    <input type="text" class="form-control" name="notes--{{ item_id }}" value="{{ course_class_schedule.notes }}" />
+
+    <div class="text-center text-danger pt-2" role="button" title="Delete"
+        hx-post="?htmx=delete-schedule&id={{ item_id }}" hx-trigger="click">&#x1F7AE;</div>
+
+</section>

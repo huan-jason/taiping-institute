@@ -1,0 +1,12 @@
+<div hx-swap-oob="beforeend" id="modal--class-schedule__items-body-container">
+
+    {% include "./schedule_item.html" %}
+
+    <script>
+        onChangeForm(document.querySelector('#form--cours-class-schedule'), '#button--modal-submit')
+    </script>
+
+</div>
+
+
+<div hx-swap-oob="delete" id="modal--class-schedule__empty"></div>

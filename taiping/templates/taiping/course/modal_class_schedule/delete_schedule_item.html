@@ -1,0 +1,14 @@
+<div hx-swap-oob="delete" id="modal--class-schedule__item-container--{{ item_id }}">
+
+    <script>
+        onChangeForm(document.querySelector('#form--cours-class-schedule'), '#button--modal-submit')
+    </script>
+
+</div>
+
+
+{% if not is_new_item %}
+<div hx-swap-oob="beforeend" id="deleted-items">
+    <input type="hidden" name="deleted" value="{{ item_id}}" />
+</div>
+{% endif %}

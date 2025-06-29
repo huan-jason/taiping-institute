@@ -1,0 +1,12 @@
+<div class="modal fade" id="modal--class-schedule" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div id="modal--class-schedule__modal-content" class="modal-content"></div>
+    </div>
+</div>
+
+
+<script>
+    document.querySelector('#modal--class-schedule').addEventListener('shown.bs.modal', event => {
+        htmx.trigger(event.relatedTarget, 'open-modal-class-schedule')
+    })
+</script>

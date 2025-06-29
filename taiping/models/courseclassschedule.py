@@ -31,3 +31,7 @@ class CourseClassSchedule(BaseModel):
 
     def __str__(self) -> str:
         return f"{self.course_class} :: {self.class_date} :: {self.class_time_start} :: {self.class_time_end}"
+
+    @property
+    def time(self) -> str:
+        return f"{self.class_time_start:%H:%M} - {self.class_time_end:%H:%M}"
