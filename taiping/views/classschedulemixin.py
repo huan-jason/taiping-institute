@@ -100,7 +100,7 @@ class ClassScheduleMixin:
         calendar_month: date = course_class.start_date
         prev_month: date | None = self.get_month_prev(calendar_month, course_class)
         next_month: date | None = self.get_month_next(calendar_month, course_class)
-        return render(request, "taiping/course/schedule.html", locals())
+        return render(request, "taiping/course/calendar.html", locals())
 
     def htmx_delete_schedule(self, request: HttpRequest) -> HttpResponse:
         item_id: str = request.GET["id"]

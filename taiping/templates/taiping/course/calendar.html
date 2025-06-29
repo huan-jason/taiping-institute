@@ -44,7 +44,7 @@
             {% endif %}
         </span>
 
-        <span class="ms-auto">{{ calendar_month | date:"F Y" }}</span>
+        <span class=" fw-bold ms-auto">{{ calendar_month | date:"F Y" }}</span>
 
         <span class="ms-auto">
             {% if next_month %}
@@ -84,6 +84,7 @@
             title="{% for item in item.data %}{{ item.time }}
 {% endfor %}">
         <!-- noformat -->
+
         {{ item.date.day }}
     </div>
 
