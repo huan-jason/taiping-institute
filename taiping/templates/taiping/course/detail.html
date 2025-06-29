@@ -13,7 +13,7 @@
 
         <section class="d-flex pt-3">
 
-            <a href="/?tab=courses" class="text-dark" title="Back">&xlarr;</a>
+            <a href="/?tab=courses" class="text-dark" title="Back" tabindex="-1">&xlarr;</a>
 
             {% if user.instructor.id == course.instructor_id or user.is_superuser%}
             <a href="edit/" type="button" class="btn btn-outline-primary btn-sm rounded-pill px-3 ms-auto">
