@@ -1,4 +1,5 @@
-<div hx-swap-oob="true" id="calendar-container">
+<div hx-swap-oob="outerHTML" id="calendar-container" hx-get="?htmx=load-calendar&id={{ course_class.id }}"
+    hx-trigger="load-calendar from:body">
 
     <style>
         #calendar-subcontainer {
@@ -81,7 +82,7 @@
                 {% if user.instructor == course_class.get_instructor or user.is_superuser %} can-edit {% endif %}
             "
 
-            title="{% for item in item.data %}{{ item.time }}
+            title="{% for item in item.data %}{{ item.time }} {{ item.data.notes }}
 {% endfor %}">
         <!-- noformat -->
 

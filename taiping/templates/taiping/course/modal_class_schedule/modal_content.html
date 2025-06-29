@@ -1,48 +1,51 @@
 <div hx-swap-oob="true" id="modal--class-schedule__modal-content" class="modal-content">
 
-    <style>
-        #modal--class-schedule__items-container {
-            display: grid;
-            grid-template-columns: 10em 10em auto 3em;
-            gap: 0.5em 1em;
-            margin-top: 1em;
+    <form id="form--cours-class-schedule" method="post" onchange="onChangeForm(this, '#button--modal-submit')">
+        {% csrf_token %}
+        <input type="hidden" name="course_class_id" value="{{ course_class_id }}" />
+        <input type="hidden" name="class_date" value="{{ class_date | date:'Y-m-d' }}" />
 
-            .modal--class-schedule__item-header {
-                font-weight: 500;
-            }
+        <div id="deleted-ids-container"></div>
 
-            #modal--class-schedule__items-body-container {
+        <style>
+            #modal--class-schedule__items-container {
                 display: grid;
-                grid-column: 1 / -1;
-                grid-template-columns: subgrid;
-                row-gap: 0.5em;
+                grid-template-columns: 10em 10em auto 3em;
+                gap: 0.5em 1em;
+                margin-top: 1em;
 
-                .modal--class-schedule__item-container {
+                .modal--class-schedule__item-header {
+                    font-weight: 500;
+                }
+
+                #modal--class-schedule__items-body-container {
                     display: grid;
                     grid-column: 1 / -1;
                     grid-template-columns: subgrid;
+                    row-gap: 0.5em;
+
+                    .modal--class-schedule__item-container {
+                        display: grid;
+                        grid-column: 1 / -1;
+                        grid-template-columns: subgrid;
+                    }
                 }
             }
-        }
-    </style>
+        </style>
 
 
-    <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">{{ action }} Class Schedule</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ action }} Class Schedule</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
 
 
-    <div class="modal-body px-4">
-        <form id="form--cours-class-schedule" method="post" onchange="onChangeForm(this, '#button--modal-submit')">
-            {% csrf_token %}
-            <input type="hidden" name="course_class_id" value="{{ course_class_id }}" />
-            <div id="deleted-items"></div>
+        <div class="modal-body px-4">
 
             <div class="d-flex">
                 <div class="fw-bold fs-5">{{ class_date | date:'d M Y' }}</div>
                 <button type="button" class="btn btn-outline-primary btn-sm ms-auto" hx-post="?htmx=add-schedule"
-                    title="Add schedule">&#x1F7A7;</button>
+                    title="Add entry">&#x1F7A7;</button>
             </div>
 
             <div id="modal--class-schedule__items-container">
@@ -71,28 +74,35 @@
                 {% endif %}
 
             </div>
-        </form>
-    </div>
+
+        </div>
 
 
-    <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="button--modal-submit" disabled>Save changes</button>
-    </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="button--modal-submit" disabled hx-post="?htmx=save"
+                hx-indicator>
+                <span>Save changes</span>
+                <span class="spinner-border spinner-border-sm ms-2 htmx-indicator"></span>
+            </button>
+        </div>
 
 
-    <script>
-        function checkTimes() {
-            const start = document.querySelector('[name=class_time_start]')
-            const end = document.querySelector('[name=class_time_end]')
-            const error = end?.value > start?.value ? '' : 'Invalid end time'
-            end?.setCustomValidity(error)
-            end?.reportValidity()
-        }
+        <script>
+            function checkTimes() {
+                const start = document.querySelector('[name=class_time_start]')
+                const end = document.querySelector('[name=class_time_end]')
+                const error = end?.value > start?.value ? '' : 'Invalid end time'
+                end?.setCustomValidity(error)
+                end?.reportValidity()
+            }
 
-        onChangeForm(document.querySelector('#form--cours-class-schedule'), '#button--modal-submit')
-        dateInputsInit()
-        checkTimes()
-    </script>
+            onChangeForm(document.querySelector('#form--cours-class-schedule'), '#button--modal-submit')
+            dateInputsInit()
+            checkTimes()
+        </script>
 
+        <script id="hx-swap-script"></script>
+
+    </form>
 </div>

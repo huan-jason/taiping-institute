@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views import View
 
 from taiping.models import Course
-from .classschedulemixin import ClassScheduleMixin, CourseClassSchedule
+from .classschedulemixin import ClassScheduleMixin
 
 
 class CourseView(ClassScheduleMixin, View):
@@ -34,7 +34,6 @@ class CourseView(ClassScheduleMixin, View):
 
 
     def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
-
         if name := request.GET.get("htmx"):
             return getattr(self, f"htmx_{name.replace("-", "_")}")(request)
 
