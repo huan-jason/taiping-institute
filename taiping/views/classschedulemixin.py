@@ -52,7 +52,8 @@ class ClassScheduleMixin:
         if month > end_date.month: return
 
         start_date: date = date(year, month, 1)
-        calendar_date: date = start_date - timedelta(days=start_date.isoweekday())
+        weekday: int = start_date.isoweekday()
+        calendar_date: date = start_date - timedelta(days=weekday % 7)
         columns: int = 7
         max_count: int = 35
         count: int = 0
