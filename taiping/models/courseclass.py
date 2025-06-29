@@ -61,5 +61,17 @@ class CourseClass(BaseModel):
         return self.facility or self.course.facility
 
     @property
+    def calender_entries(self) -> QuerySet['CourseClassSchedule']:
+        return (CourseClassSchedule.objects
+            .filter(
+                course_class_id=cast(Any, self).id,
+                class_date__range=(self.start_date, self.end_date),
+            )
+        )
+
+    @property
     def students(self) -> QuerySet[Self]:
         return cast(Any, self).registration_set.all()
+
+
+from .courseclassschedule import CourseClassSchedule

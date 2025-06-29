@@ -34,7 +34,7 @@ class Course(BaseModel):
     def image_name(self) -> str:
         return self.image.name.rsplit("/", 1)[-1]
 
-    def upcoming_classes(self) -> QuerySet:
+    def upcoming_classes(self) -> QuerySet['CourseClass']:
         return (self.courseclass_set  # type: ignore
             .filter(
                 end_date__gte=timezone.now().date(),
@@ -42,3 +42,5 @@ class Course(BaseModel):
             )
             .order_by("start_date", "end_date")
         )
+
+from .courseclass import CourseClass

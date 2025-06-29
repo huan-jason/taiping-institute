@@ -87,6 +87,7 @@
         </details>
 
 
+        {% if course_class.calender_entries.exists %}
         <details class="mt-2">
 
             <summary>
@@ -99,6 +100,8 @@
             </div>
 
         </details>
+        {% endif %}
+
 
         <div class="display-grid mt-3" style="--columns: 3">
             <div>

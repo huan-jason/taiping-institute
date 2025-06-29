@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.views import View
 
 from taiping.models import Course
-from .classschedulemixin import ClassScheduleMixin
+from .classschedulemixin import ClassScheduleMixin, CourseClassSchedule
 
 
 class CourseView(ClassScheduleMixin, View):
