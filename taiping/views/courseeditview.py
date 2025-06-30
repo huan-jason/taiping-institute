@@ -168,8 +168,9 @@ class CourseEditView(ClassScheduleMixin, View):
 
             course.save()
             return (
-                redirect("course_list") if course_id else
-                redirect("course_edit", course_id=(cast(Any, course).id))
+                redirect("course", course_id=(cast(Any, course).id))
+                if course_id else
+                redirect("course_list")
             )
 
     def save_course_class(self, request: HttpRequest) -> HttpResponse:
