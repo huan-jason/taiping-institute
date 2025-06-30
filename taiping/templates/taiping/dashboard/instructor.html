@@ -34,6 +34,12 @@
         <div class="cell--body">{{ item.status | title }}</div>
         <div class="cell--body">{{ item.started | yesno:"&check;,&nbsp;" | safe }}</div>
 
+        {% empty %}
+
+        <div class="span-all fs-5">
+            You do not have any classes to teach yet.
+        </div>
+
         {% endfor %}
 
     </div>
