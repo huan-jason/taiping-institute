@@ -87,7 +87,7 @@
         </details>
 
 
-        {% if course_class.calender_entries.exists %}
+        {% if course_class.calender_entries.exists or user.instructor %}
         <details class="mt-2">
 
             <summary>
