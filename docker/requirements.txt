@@ -4,6 +4,7 @@ channels-redis
 coloredlogs
 django<6
 django-stubs
+ical
 inotify
 ipython
 lxml

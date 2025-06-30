@@ -24,6 +24,8 @@ urlpatterns = [
 
     path('class/<int:course_class_id>/', views.CourseClassView.as_view(), name="course_class"),
 
+    path('ics/<int:course_class_id>/', login_required(views.IcsView.as_view()), name="ics"),
+
     re_path(r'(?P<info_type>terms-and-conditions)/', views.InfoView.as_view(), name="terms_and_conditions"),
     re_path(r'(?P<info_type>indemnity-waiver)/', views.InfoView.as_view(), name="indemnity_waiver"),
 

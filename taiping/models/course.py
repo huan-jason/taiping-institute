@@ -31,6 +31,10 @@ class Course(BaseModel):
         return self.name
 
     @property
+    def full_name(self) -> str:
+        return f"{self.name} {self.chinese_name}"
+
+    @property
     def image_name(self) -> str:
         return self.image.name.rsplit("/", 1)[-1]
 
