@@ -87,7 +87,7 @@
         </details>
 
 
-        {% if course_class.calender_entries.exists or user.instructor %}
+        {% if course_class.calender_entries.exists or user.instructor == course_class.get_instructor or user.is_superuser %}
         <details class="mt-2">
 
             <summary>

@@ -1,7 +1,7 @@
 import calendar
 from collections import defaultdict
 from datetime import date, datetime, timedelta, time
-from typing import Generator
+from typing import Any, Generator, cast
 from uuid import uuid4
 
 from django.db import transaction
@@ -9,7 +9,11 @@ from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
-from taiping.models import CourseClass, CourseClassSchedule
+from taiping.models import (
+    CourseClass,
+    CourseClassSchedule,
+    Registration,
+)
 
 
 class ClassScheduleMixin:
@@ -112,7 +116,8 @@ class ClassScheduleMixin:
         return render(request, "taiping/course/modal_class_schedule/delete_schedule_item.html", locals())
 
     def htmx_load_calendar(self, request: HttpRequest) -> HttpResponse:
-        course_class: CourseClass = CourseClass.objects.get(id=int(request.GET["id"]))
+        course_class_id: int = int(request.GET["id"])
+        course_class: CourseClass = CourseClass.objects.get(id=course_class_id)
         month: str | None = request.GET.get("month")
         calendar_month: date = (
             datetime.strptime(month, "%Y%m%d").date() if month else
@@ -121,6 +126,13 @@ class ClassScheduleMixin:
         calendar: list[dict] = self.get_calendar(calendar_month, course_class)
         prev_month: date | None = self.get_month_prev(calendar_month, course_class)
         next_month: date | None = self.get_month_next(calendar_month, course_class)
+        is_student: bool = (Registration.objects
+            .filter(
+                course_class_id=course_class_id,
+                student=cast(Any, request.user).student,
+            )
+            .exists()
+        )
         return render(request, "taiping/course/calendar.html", locals())
 
     def htmx_modal_class_schedule(self, request: HttpRequest) -> HttpResponse:

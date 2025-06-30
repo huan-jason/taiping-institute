@@ -49,7 +49,7 @@
         <span class="ms-auto">
             <span class=" fw-bold">{{ calendar_month | date:"F Y" }}</span>
 
-            {% if user.student %}
+            {% if is_student %}
             <a href="/ics/{{ course_class.id }}/" class="btn btn-link fs-5 ms-2"
                 title="Download calender entries">&#x2b73;</a>
             {% endif %}
