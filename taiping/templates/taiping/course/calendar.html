@@ -41,7 +41,8 @@
 
         <span class="">
             {% if prev_month %}
-            <button class="btn btn-sm fs-4">&laquo;</button>
+            <button class="btn btn-sm fs-4" type="button" title="Previous month"
+                hx-get="?htmx=load-calendar&id={{ course_class.id }}&month={{ prev_month | date:'Ymd' }}">&laquo;</button>
             {% endif %}
         </span>
 
@@ -52,7 +53,8 @@
 
         <span class="ms-auto">
             {% if next_month %}
-            <button class="btn btn-sm fs-4">&raquo;</button>
+            <button class="btn btn-sm fs-4" type="button" title="Next month"
+                hx-get="?htmx=load-calendar&id={{ course_class.id }}&month={{ next_month | date:'Ymd' }}">&raquo;</button>
             {% endif %}
         </span>
 
@@ -68,7 +70,7 @@
         <div class="calendar--header">Fri</div>
         <div class="calendar--header">Sat</div>
 
-        {% for item in class_schedule %}
+        {% for item in calendar %}
 
         <!-- noformat -->
         <div

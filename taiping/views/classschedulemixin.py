@@ -14,7 +14,7 @@ from taiping.models import CourseClass, CourseClassSchedule
 
 class ClassScheduleMixin:
 
-    def get_class_schedule(self, course_class: CourseClass) -> list[dict]:
+    def get_calendar(self, calendar_month: date, course_class: CourseClass) -> list[dict]:
 
         if not course_class.start_date or not course_class.end_date:
             return []
@@ -22,8 +22,8 @@ class ClassScheduleMixin:
         course_class_schedule_data: dict[date, list[CourseClassSchedule]] = (
             self.get_course_class_schedule_data(course_class)
         )
-        month: int = course_class.start_date.month
-        year: int = course_class.start_date.year
+        month: int = calendar_month.month
+        year: int = calendar_month.year
         dates: Generator[date, None, None] = self.get_dates(
             month=month,
             year=year,
@@ -61,8 +61,8 @@ class ClassScheduleMixin:
         max_count: int = 35
         count: int = 0
 
-        last_day: int = calendar.monthrange(end_date.year, end_date.month)[1]
-        cal_end: date = date(end_date.year, end_date.month, last_day)
+        last_day: int = calendar.monthrange(year, month)[1]
+        cal_end: date = date(year, month, last_day)
 
         while True:
             yield calendar_date
@@ -79,16 +79,16 @@ class ClassScheduleMixin:
     def get_month_next(self, calendar_month: date, course_class: CourseClass) -> date | None:
         if not course_class.end_date:
             return None
-        cal_date: date = course_class.end_date.replace(day=1)
-        if cal_date == calendar_month.replace(day=1):
+        cal_date: date = calendar_month.replace(day=1)
+        if cal_date >= course_class.end_date.replace(day=1):
             return None
         return cal_date + timedelta(days=31)
 
     def get_month_prev(self, calendar_month: date, course_class: CourseClass) -> date | None:
         if not course_class.start_date:
             return None
-        cal_date: date = course_class.start_date.replace(day=1)
-        if cal_date == calendar_month.replace(day=1):
+        cal_date: date = calendar_month.replace(day=1)
+        if cal_date <= course_class.start_date.replace(day=1):
             return None
         return cal_date - timedelta(days=1)
 
@@ -113,8 +113,12 @@ class ClassScheduleMixin:
 
     def htmx_load_calendar(self, request: HttpRequest) -> HttpResponse:
         course_class: CourseClass = CourseClass.objects.get(id=int(request.GET["id"]))
-        class_schedule: list[dict] = self.get_class_schedule(course_class)
-        calendar_month: date = course_class.start_date
+        month: str | None = request.GET.get("month")
+        calendar_month: date = (
+            datetime.strptime(month, "%Y%m%d").date() if month else
+            course_class.start_date
+        )
+        calendar: list[dict] = self.get_calendar(calendar_month, course_class)
         prev_month: date | None = self.get_month_prev(calendar_month, course_class)
         next_month: date | None = self.get_month_next(calendar_month, course_class)
         return render(request, "taiping/course/calendar.html", locals())
