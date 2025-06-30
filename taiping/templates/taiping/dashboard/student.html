@@ -20,12 +20,13 @@
 
     <div id="enrolled-courses-container">
 
-        {% for item in registrations %}
         <div class="cell--header">Course</div>
         <div class="cell--header">Start Date</div>
         <div class="cell--header">End Date</div>
         <div class="cell--header">Started</div>
         <div class="cell--header">Completed</div>
+
+        {% for item in registrations %}
 
         <div class="cell--body">{{ item.course_class.course.name }}</div>
         <div class="cell--body">{{ item.course_class.start_date }}</div>
@@ -36,7 +37,7 @@
         {% empty %}
 
         <div class="span-all fs-5">
-            You havenot enrolled in any classes yet.
+            You have not enrolled in any classes yet.
         </div>
 
         {% endfor %}
