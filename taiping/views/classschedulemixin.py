@@ -116,6 +116,7 @@ class ClassScheduleMixin:
         return render(request, "taiping/course/modal_class_schedule/delete_schedule_item.html", locals())
 
     def htmx_load_calendar(self, request: HttpRequest) -> HttpResponse:
+        user = cast(Any, request.user)
         course_class_id: int = int(request.GET["id"])
         course_class: CourseClass = CourseClass.objects.get(id=course_class_id)
         month: str | None = request.GET.get("month")
@@ -126,10 +127,10 @@ class ClassScheduleMixin:
         calendar: list[dict] = self.get_calendar(calendar_month, course_class)
         prev_month: date | None = self.get_month_prev(calendar_month, course_class)
         next_month: date | None = self.get_month_next(calendar_month, course_class)
-        is_student: bool = (Registration.objects
+        is_student: bool = hasattr(user, "student") and (Registration.objects
             .filter(
                 course_class_id=course_class_id,
-                student=cast(Any, request.user).student,
+                student=user.student,
             )
             .exists()
         )

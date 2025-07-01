@@ -37,4 +37,10 @@
         textareas.map(resizeTextarea)
         textareas.map(item => item.addEventListener('input', e => resizeTextarea(e.target)))
     }
+
+    function tooltipsInit() {
+        [...document.querySelectorAll('[data-bs-toggle]')].map(item => {
+            new bootstrap.Tooltip(item)
+        })
+    }
 </script>

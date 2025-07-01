@@ -79,9 +79,16 @@
         <!-- noformat -->
         <div
             {% if user.instructor == course_class.get_instructor or user.is_superuser %}
-            data-bs-toggle="modal" data-bs-target="#modal--class-schedule"
-            hx-get="?htmx=modal-class-schedule&course_class={{ course_class.id }}&date={{ item.date | date:'Ymd' }}"
-            hx-trigger="open-modal-class-schedule"
+                data-bs-toggle="modal" data-bs-target="#modal--class-schedule"
+
+                hx-get="?htmx=modal-class-schedule&course_class={{ course_class.id }}&date={{ item.date | date:'Ymd' }}"
+                hx-trigger="click, open-modal-class-schedule"
+            {% endif %}
+
+            {% if item.data %}
+                data-bs-toggle="tooltipx"
+                data-bs-title="{% for item in item.data %}{{ item.time }} {{ item.data.notes }}<br>{% endfor %}"
+                data-bs-html="true"
             {% endif %}
 
             class="
@@ -89,10 +96,7 @@
                 {% if item.date < course_class.start_date or item.date > course_class.end_date %} other-month {% endif %}
                 {% if item.data %} has-data {% endif %}
                 {% if user.instructor == course_class.get_instructor or user.is_superuser %} can-edit {% endif %}
-            "
-
-            title="{% for item in item.data %}{{ item.time }} {{ item.data.notes }}
-{% endfor %}">
+            ">
         <!-- noformat -->
 
         {{ item.date.day }}
@@ -105,4 +109,9 @@
     {% endfor %}
 
 </div>
+
+<script>
+    tooltipsInit()
+</script>
+
 </div>
