@@ -16,11 +16,6 @@ RUN \
     apt-get update \
     && apt-get install -y --no-install-recommends $(cat /packages.txt)
 
-# install pnpm
-RUN wget -qO- https://get.pnpm.io/install.sh | ENV="/home/user/.bashrc" SHELL="$(which bash)" bash - \
-&& mkdir -p /home/user/.local/share \
-&& cp -r /root/.local/share/pnpm /home/user/.local/share/
-
 # pip install packages
 RUN pip3 install --upgrade pip setuptools \
     && pip3 install -r /requirements.txt
