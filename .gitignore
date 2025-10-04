@@ -5,6 +5,7 @@ __pycache__/
 .pnpm-store/
 .mypy_cache/
 
+/.db/
 /.data/
 /.home/
 /media/
