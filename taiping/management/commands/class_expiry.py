@@ -1,5 +1,4 @@
 from datetime import date, timedelta
-import logging
 from typing import Any, cast
 
 from django.core.mail import EmailMultiAlternatives

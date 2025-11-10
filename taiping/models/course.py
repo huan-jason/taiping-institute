@@ -26,6 +26,7 @@ class Course(BaseModel):
     facility = ForeignKey("taiping.Facility", on_delete=PROTECT, null=True, blank=True)
     sort_order = IntegerField(default=999)
     image = FileField(upload_to="course/", null=True, blank=True)
+    small_image = FileField(upload_to="course/", null=True, blank=True)
 
     def __str__(self) -> str:
         return self.name
