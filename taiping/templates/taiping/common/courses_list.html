@@ -88,7 +88,7 @@
                 {% if item.small_image %}
                 <div><img class="image--course w-100" src="{{ item.small_image.url }}" alt="{{ item.name }}" /></div>
                 {% elif item.image %}
-                <div><img class="image--course w-100" src="{{ default:item.image.url }}" alt="{{ item.name }}" /></div>
+                <div><img class="image--course w-100" src="{{ item.image.url }}" alt="{{ item.name }}" /></div>
                 {% endif %}
 
                 <div class="course-card-text mt-3">
