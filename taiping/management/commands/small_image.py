@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import Any
 
 from django.core.files import File
@@ -18,11 +19,14 @@ class Command(BaseCommand):
 
     def small_image(self, course: Course) -> None:
         image_name: str = course.image.file.name
-        small_image_name: str = image_name.replace("/course/", "/course/small/")
+        small_image_name: str = image_name.replace("/course/", "/course/resized/")
 
         try: small_image = open(small_image_name, "rb")
         except FileNotFoundError: return None
 
         file_name: str = small_image_name.rsplit("/", 1)[-1]
-        course.small_image.save(file_name, File(small_image))
-        course.save()
+
+        if not course.small_image:
+            course.small_image.save(file_name, File(small_image))
+            Path(small_image_name).unlink()
+            self.stderr.write(small_image_name)
