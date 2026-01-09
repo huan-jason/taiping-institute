@@ -85,9 +85,10 @@
                     <div class="mt-2 mb-4">{{ item.chinese_name }}</div>
                 </h4>
 
-                {% if item.image and item.small_image %}
-                <div><img class="image--course w-100" src="{{ item.small_image.url | default:item.image.url }}"
-                        alt="{{ item.name }}" /></div>
+                {% if item.small_image %}
+                <div><img class="image--course w-100" src="{{ item.small_image.url }}" alt="{{ item.name }}" /></div>
+                {% elif item.image %}
+                <div><img class="image--course w-100" src="{{ default:item.image.url }}" alt="{{ item.name }}" /></div>
                 {% endif %}
 
                 <div class="course-card-text mt-3">
