@@ -15,7 +15,7 @@ class Registration(BaseModel):
     completed = BooleanField(default=False, db_index=False)
     comments = TextField(null=True, blank=True)
 
-    class Meta: # type: ignore
+    class Meta:  # type: ignore
         constraints = [
             UniqueConstraint(
                 name="registration__unique",

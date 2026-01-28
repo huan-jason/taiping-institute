@@ -12,15 +12,14 @@ class Facility(BaseModel):
     name = CharField(max_length=128, unique=True)
     description = TextField(null=True, blank=True)
     address = TextField(null=True, blank=True)
-    coordinates = CharField(max_length=32, blank=True, null=True)
+    google_map_embed = TextField(null=True, blank=True)
     contact_name = CharField(max_length=128)
     contact_phone = CharField(max_length=128)
     contact_email = EmailField()
     approved = BooleanField(default=False)
 
-    class Meta: # type: ignore
+    class Meta:  # type: ignore
         verbose_name_plural = "facilities"
-
 
     def __str__(self) -> str:
         return self.name

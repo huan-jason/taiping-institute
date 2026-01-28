@@ -115,4 +115,4 @@ class Command(BaseCommand):
                 self.stdout.write(f"Refunded {item.student.user.email}")
 
     def refund_student(self, registration: Registration) -> None:
-        print(f"Refunding {registration.student.user.email} (TO DO)") # zzz
+        print(f"Refunding {registration.student.user.email} (TO DO)")  # zzz

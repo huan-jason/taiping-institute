@@ -16,7 +16,7 @@ class CourseClassSchedule(BaseModel):
     class_time_end = TimeField(db_index=True)
     notes = TextField(null=True, blank=True)
 
-    class Meta: # type: ignore
+    class Meta:  # type: ignore
         constraints = [
             UniqueConstraint(
                 name="course_class_schedule__unique",

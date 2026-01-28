@@ -23,6 +23,6 @@ for item in admins:
 
 for name in models.__all__:
     model = getattr(models, name)
-    try:admin.site.register(model)
+    try: admin.site.register(model)
     except AlreadyRegistered as exc:
         logging.debug(exc)

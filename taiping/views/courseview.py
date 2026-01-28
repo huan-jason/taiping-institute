@@ -15,7 +15,7 @@ class CourseView(ClassScheduleMixin, View):
             return getattr(self, f"htmx_{name.replace("-", "_")}")(request)
 
         if course_id:
-             return self.get_course_detail(request, course_id=course_id)
+            return self.get_course_detail(request, course_id=course_id)
 
         return self.get_courses_list(request)
 
@@ -31,7 +31,6 @@ class CourseView(ClassScheduleMixin, View):
         show_create_course_button: bool = True
         courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
         return render(request, "taiping/course/list.html", locals())
-
 
     def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
         if name := request.GET.get("htmx"):

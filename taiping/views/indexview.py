@@ -44,8 +44,8 @@ class IndexView(View):
             return self.htmx(request)
 
         user: Any = request.user
-        is_instructor: bool = hasattr(user,"instructor")
-        is_student: bool = hasattr(user,"student")
+        is_instructor: bool = hasattr(user, "instructor")
+        is_student: bool = hasattr(user, "student")
         tabs: dict[str, dict] = self.TABS
         active_tab: str = ""
         show_create_course_button: bool = True
@@ -100,8 +100,8 @@ class IndexView(View):
             year: int = filter_datetime.year
             month: int = filter_datetime.month
 
-            q_start_date: Q = Q(start_date__year=year, start_date__month= month)
-            q_end_date: Q = Q(end_date__year=year, end_date__month= month)
+            q_start_date: Q = Q(start_date__year=year, start_date__month=month)
+            q_end_date: Q = Q(end_date__year=year, end_date__month=month)
 
             subquery_date: QuerySet[CourseClass] = CourseClass.objects.filter(
                 q_start_date | q_end_date,

@@ -10,7 +10,7 @@ class CourseDependency(BaseModel):
     course = ForeignKey('taiping.Course', on_delete=PROTECT)
     dependent_course = ForeignKey('taiping.Course', on_delete=PROTECT, related_name="+")
 
-    class Meta: # type: ignore
+    class Meta:  # type: ignore
         verbose_name_plural = "Course dependencies"
         constraints = [
             UniqueConstraint(

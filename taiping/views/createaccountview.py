@@ -162,7 +162,7 @@ class CreateAccountView(View):
             email=email,
         )
 
-    def get(self, request: HttpRequest, user_type: UserType="student", created: bool = False) -> HttpResponse:
+    def get(self, request: HttpRequest, user_type: UserType = "student", created: bool = False) -> HttpResponse:
         if created:
             return self.account_created(request)
 
@@ -183,7 +183,7 @@ class CreateAccountView(View):
         terms_and_conditions: str = app_data[terms_and_conditions_key].data
 
         gender_options: list[tuple[str, str]] = list(cast(Any, GenderChoices.choices))
-        return render(request, f"taiping/create_account/{ user_type }.html", locals())
+        return render(request, f"taiping/create_account/{user_type}.html", locals())
 
     def get_app_data(self) -> dict:
         names: list[str] = [item.lower() for item in ComplianceTypeChoices._member_names_]
@@ -208,7 +208,7 @@ class CreateAccountView(View):
         verification_code: str = EmailVerification.gen_code()
         EmailVerification.objects.update_or_create(
             email=email,
-            defaults={ "code": verification_code },
+            defaults={"code": verification_code},
         )
         send_mail(
             subject="Agojin Email Verification",
@@ -219,7 +219,7 @@ class CreateAccountView(View):
         )
         return render(request, "taiping/create_account/verification_code.html", locals())
 
-    def post(self, request: HttpRequest, user_type: UserType="student") -> HttpResponse:
+    def post(self, request: HttpRequest, user_type: UserType = "student") -> HttpResponse:
         htmx: str = request.GET.get("htmx", "")
 
         if htmx == "get-verification-code":
@@ -228,7 +228,7 @@ class CreateAccountView(View):
             return self.verify_code(request)
 
         if not hasattr(request.user, "instructor") and not self.check_code(request):
-                return HttpResponse("", status=403)
+            return HttpResponse("", status=403)
 
         with transaction.atomic():
             return (
@@ -238,7 +238,6 @@ class CreateAccountView(View):
             )
 
     def send_email(self, request: HttpRequest, user: User) -> None:
-        today: str = date.today().strftime("%d-%b-%Y")
         send_mail(
             subject="Welcome to Agojin",
             from_email=None,

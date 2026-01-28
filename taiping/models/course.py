@@ -1,3 +1,5 @@
+from typing import TYPE_CHECKING
+
 from django.db.models import (
     CharField,
     FileField,
@@ -11,6 +13,9 @@ from django.utils import timezone
 
 from taiping.constants import CourseStatusChoices
 from .basemodel import BaseModel
+
+if TYPE_CHECKING:
+    from .courseclass import CourseClass
 
 
 class Course(BaseModel):
@@ -47,5 +52,3 @@ class Course(BaseModel):
             )
             .order_by("start_date", "end_date")
         )
-
-from .courseclass import CourseClass

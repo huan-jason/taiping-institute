@@ -3,6 +3,7 @@ from django.contrib import admin
 
 from taiping import models
 
+
 class CourseClassScheduleInline(admin.TabularInline):
     model = models.CourseClassSchedule
     extra = 0
@@ -57,4 +58,3 @@ class CourseClassAdmin(admin.ModelAdmin):
 
     def facility(self, obj: models.CourseClass) -> str:
         return cast(Any, obj.facility or obj.course.facility).name
-

@@ -64,13 +64,12 @@ class EnrollView(View):
         show_back_button: bool = True
         return render(request, "taiping/enrollment/index.html", locals())
 
-    def enrolled(self, request: HttpRequest, course_class_id: int)-> HttpResponse:
+    def enrolled(self, request: HttpRequest, course_class_id: int) -> HttpResponse:
         course_class: CourseClass = (CourseClass.objects
             .select_related("course")
             .get(id=course_class_id)
         )
         return render(request, "taiping/enrollment/enrolled.html", locals())
-
 
     def get_dependent_courses(self, request: HttpRequest, course: Course) -> list[dict]:
         student_course_ids: set[int] = {
@@ -78,7 +77,7 @@ class EnrollView(View):
             Registration.objects.filter(student=cast(Any, request).user.student, completed=True)
         }
         dependent_courses: list[dict] = list(course
-            .coursedependency_set # type: ignore
+            .coursedependency_set  # type: ignore
             .annotate(dependency_course=F("dependent_course__name"))
             .values()
         )

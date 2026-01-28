@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from .settings_local import *
+from .settings_local import *  # noqa
 
 from pathlib import Path
 
@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
-        'USER': POSTGRES_USER,
-        'PASSWORD': POSTGRES_PASSWORD,
+        'USER': POSTGRES_USER,  # noqa
+        'PASSWORD': POSTGRES_PASSWORD,  # noqa
         'HOST': 'db',
     },
 }
@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE     = 'Asia/Singapore'
+TIME_ZONE = 'Asia/Singapore'
 
 USE_I18N = True
 
@@ -123,8 +123,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
-MEDIA_URL   = '/media/'
-MEDIA_ROOT  = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -135,8 +135,8 @@ USE_THOUSAND_SEPARATOR = True
 
 LOGIN_REDIRECT_URL = "/"
 
-try: from .settings_test import *  # type: ignore
+try: from .settings_test import *  # type: ignore  # noqa
 except ModuleNotFoundError: pass
 
-try: from .settings_dev import *  # type: ignore
+try: from .settings_dev import *  # type: ignore  # noqa
 except ModuleNotFoundError: pass

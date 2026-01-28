@@ -12,7 +12,7 @@ class CourseClassView(View):
         show_back_button: bool = True
         course_class: CourseClass = CourseClass.objects.get(id=course_class_id)
         registrations: QuerySet[Registration] = (course_class
-            .registration_set # type: ignore
+            .registration_set  # type: ignore
             .order_by(
                 "student__user__first_name",
                 "student__user__last_name",

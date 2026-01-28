@@ -98,7 +98,7 @@ class CourseEditView(ClassScheduleMixin, View):
         today: date = timezone.now().date()
         course: Course | None = Course.objects.filter(id=course_id or 0).first()
         course_classes: QuerySet[CourseClass] | list = (course
-            .courseclass_set # type: ignore
+            .courseclass_set  # type: ignore
             .order_by("start_date", "end_date")
         ) if course else []
 
@@ -113,7 +113,7 @@ class CourseEditView(ClassScheduleMixin, View):
         return getattr(self, f"check_field_{field}")(request)
 
     def htmx_modal_course_class(self, request: HttpRequest) -> HttpResponse:
-        course_class_id : str = request.GET.get("id", "")
+        course_class_id: str = request.GET.get("id", "")
         action: str = "Edit" if course_class_id else "Add"
         course: Course = Course.objects.get(id=request.GET["course"])
         course_class: CourseClass = (

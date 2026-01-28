@@ -1,8 +1,8 @@
 from typing import Any
-from markdown import markdown # type: ignore
+from markdown import markdown  # type: ignore
 
 from django import template
-from django.utils.html import mark_safe # type: ignore
+from django.utils.html import mark_safe  # type: ignore
 
 register = template.Library()
 
