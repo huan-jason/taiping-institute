@@ -23,7 +23,7 @@ commit: collectstatic migrate git-commit git-push-origin
 dev: django
 
 git-commit:
-	@echo "\033[32m" Git commit "\033[0m"
+	@echo "\033[32m" Git commit "\033[0m"; true
 	gcd
 
 git-push-origin:
