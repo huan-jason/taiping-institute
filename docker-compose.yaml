@@ -2,7 +2,7 @@ services:
 
   app:
     image: agojin
-    build: ./docker
+    build: ./docker/app
     pull_policy: build
     restart: always
     volumes:
@@ -12,6 +12,11 @@ services:
       - db
     depends_on:
       - db
+    entrypoint: ["daphne"]
+    command: ["--bind", "0.0.0.0", "project.asgi:application"]
+    secrets:
+      - django_secret_key
+      - email_host_password
 
 
   db:
@@ -28,5 +33,9 @@ services:
 
 
 secrets:
+  django_secret_key:
+    file: ./secrets/django_secret_key.txt
+  email_host_password:
+    file: ./secrets/email_host_password.txt
   postgres_password:
     file: ./secrets/postgres_password.txt
