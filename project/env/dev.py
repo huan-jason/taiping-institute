@@ -1,3 +1,3 @@
-ADMINS: list[tuple[str, str]] = []
+ADMINS: list[str] = []
 DEBUG = True
 DEV = True

@@ -1,4 +1,4 @@
-FROM unit:python3.13
+FROM unit:python3.14-slim
 
 COPY packages.txt requirements.txt bashrc /
 

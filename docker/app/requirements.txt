@@ -2,7 +2,7 @@ aiohttp
 channels[daphne]
 channels-redis
 coloredlogs
-django<6
+django<7
 django-stubs
 ical
 inotify

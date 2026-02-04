@@ -11,7 +11,7 @@ def get_secret(name: str) -> str:
 
 
 ADMINS = [
-    ('admin', 'huan.jason@gmail.com'),
+    'huan.jason@gmail.com',
 ]
 
 ALLOWED_HOSTS = ['*']
@@ -47,6 +47,8 @@ DATABASES = {
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10_000_000_000
 
 DEBUG = False
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEFAULT_FROM_EMAIL = 'Agojin Admin<agojin917@gmail.com>'
 
