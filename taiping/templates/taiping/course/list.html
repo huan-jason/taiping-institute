@@ -3,6 +3,17 @@
 
 {% block content %}
 
+<style>
+    body {
+        background-color: var(--stone-11);
+
+        &>* {
+            background-color: var(--stone-1);
+        }
+    }
+</style>
+
+
 {% include "taiping/common/courses_list.html" %}
 
 {% endblock content %}
