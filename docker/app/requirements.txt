@@ -4,7 +4,6 @@ channels-redis
 coloredlogs
 django<7
 django-stubs
-ical
 inotify
 ipython
 lxml
@@ -14,15 +13,14 @@ mypy
 openpyxl
 psutil
 psycopg2-binary
-pycryptodome
-pyTelegramBotAPI
-pytz
 pyyaml
 redis
 requests
 tqdm
-types-pytz
 types-requests
 ujson
 watchdog
 xlrd
+
+###
+ical
