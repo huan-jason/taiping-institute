@@ -18,5 +18,5 @@ ssh $HOST "
   docker compose restart app;
 
   echo -e \"\e[32m\"Applying DB migrations...\"\e[0m\"
-  docker compose exec -t app ./manage.py migrate;
+  docker compose exec -t app python ./manage.py migrate;
 "
