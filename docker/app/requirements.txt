@@ -1,4 +1,3 @@
-aiohttp
 channels[daphne]
 channels-redis
 coloredlogs

@@ -1,25 +1,31 @@
-FROM python:3.14-slim
+# syntax=docker/dockerfile:1
 
-COPY packages.txt requirements.txt bashrc /
+## -----------------------------------------------------
+FROM dhi.io/python:3-alpine3.23-dev AS build-stage
 
-# create user
-RUN mkdir -p /app \
-    && useradd user \
-    && mkdir -p /home/user/bin \
-    && chown -R user:user /home/user \
-    && chmod -R 755 /home/user /app \
-    && cat /bashrc >> /home/user/.bashrc \
-    && cat /bashrc >> /root/.bashrc
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PATH="/venv/bin:$PATH"
 
-# apt install packages
-RUN \
-    apt-get update \
-    && apt-get install -y --no-install-recommends $(cat /packages.txt)
+WORKDIR /
 
-# pip install packages
-RUN pip3 install --upgrade pip setuptools \
-    && pip3 install -r /requirements.txt
+COPY requirements.txt .
 
-RUN chown -R user:user /home/user
+RUN python -m venv /venv \
+    && source /venv/bin/activate \
+    && pip install --no-cache-dir --requirement requirements.txt
+
+## -----------------------------------------------------
+FROM dhi.io/python:3-alpine3.23 AS runtime-stage
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PATH="/venv/bin:$PATH"
 
 WORKDIR /app
+
+COPY --from=build-stage /venv /venv
+COPY --from=build-stage /bin/sleep /bin/
+
+ENTRYPOINT ["/venv/bin/daphne"]
+cmd ["--bind", "0.0.0.0", "project.asgi:application"]
