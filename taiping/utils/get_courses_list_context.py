@@ -1,0 +1,73 @@
+from datetime import datetime
+from typing import Any
+
+from django.db.models import Q, QuerySet, OuterRef, Exists
+from django.http import HttpRequest
+
+from taiping.constants import CourseStatusChoices
+from taiping.models import Course, CourseClass, Facility, Instructor
+
+
+def _get_courses_queryset(request: HttpRequest, filters: dict[str, str]) -> QuerySet[Course]:
+    queryset: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
+
+    if (instructor := filters.get("filter_instructor")):
+        subquery_instructor: QuerySet[CourseClass] = CourseClass.objects.filter(
+            course_id=OuterRef('id'),
+            instructor_id=int(instructor),
+            status=CourseStatusChoices.PUBLISHED,
+        )
+        queryset = queryset.filter(
+            Q(instructor_id=int(instructor))
+            | Q(Exists(subquery_instructor))
+        )
+
+    if (facility := filters.get("filter_facility")):
+        queryset = queryset.filter(facility_id=int(facility))
+
+    if (course_group := filters.get("filter_course_group")):
+        queryset = queryset.filter(course_group_id=int(course_group))
+
+    if (filter_month := filters.get("filter_month")):
+        filter_datetime: datetime = datetime.strptime(filter_month, "%Y-%m")
+        year: int = filter_datetime.year
+        month: int = filter_datetime.month
+
+        q_start_date: Q = Q(start_date__year=year, start_date__month=month)
+        q_end_date: Q = Q(end_date__year=year, end_date__month=month)
+
+        subquery_date: QuerySet[CourseClass] = CourseClass.objects.filter(
+            q_start_date | q_end_date,
+            course_id=OuterRef('id'),
+            status=CourseStatusChoices.PUBLISHED,
+        )
+        queryset = queryset.filter(Exists(subquery_date))
+
+    return queryset
+
+
+def get_courses_list_context(request: HttpRequest) -> dict[str, Any]:
+    filters: dict = {
+        key: int(val) if val and key != "filter_month" else val
+        for key, val in (request.session.get("course_filters") or {}).items()
+    }
+    has_filters: bool = any(filters.values())
+    courses: QuerySet[Course] = _get_courses_queryset(request, filters)
+    course_groups: QuerySet[Course] = (Course.objects
+        .select_related("course_group")
+        .distinct("course_group__name")
+        .order_by("course_group__name")
+    )
+    facilities: QuerySet[Facility] = Facility.objects.order_by("name")
+    instructors: QuerySet[Instructor] = Instructor.objects.order_by(
+        "user__first_name",
+        "user__last_name",
+    )
+    return {
+        "filters": filters,
+        "has_filters": has_filters,
+        "courses": courses,
+        "course_groups": course_groups,
+        "facilities": facilities,
+        "instructors": instructors,
+    }

@@ -1,9 +1,10 @@
-from django.db.models import QuerySet
+from typing import Any
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views import View
 
-from taiping.models import Course, Facility, Instructor
+from taiping.models import Course
+from taiping.utils import get_courses_list_context
 from .classschedulemixin import ClassScheduleMixin
 
 
@@ -28,24 +29,12 @@ class CourseView(ClassScheduleMixin, View):
         )
 
     def get_courses_list(self, request: HttpRequest) -> HttpResponse:
-        show_create_course_button: bool = (request.user.groups
+        context: dict[str, Any] = get_courses_list_context(request)
+        context["show_create_course_button"] = (request.user.groups
             .filter(name="data_admin")
             .exists()
         )
-        filters: dict = {
-            key: int(val) if val and key != "filter_month" else val
-            for key, val in (request.session.get("course_filters") or {}).items()
-        }
-        has_filters: bool = any(filters.values())
-        courses: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
-        course_groups: QuerySet[Course] = (Course.objects
-            .select_related("course_group")
-            .distinct("course_group__name")
-            .order_by("course_group__name")
-        )
-        facilities: QuerySet[Facility] = Facility.objects.order_by("name")
-        instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
-        return render(request, "taiping/course/list.html", locals())
+        return render(request, "taiping/course/list.html", context)
 
     def post(self, request: HttpRequest, course_id: int | None = None) -> HttpResponse:
         if name := request.GET.get("htmx"):

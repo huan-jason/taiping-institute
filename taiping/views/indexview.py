@@ -1,19 +1,15 @@
-from datetime import datetime
 from typing import Any
 
-from django.db.models import QuerySet, Q, OuterRef, Exists
+from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 
-from taiping.constants import CourseStatusChoices
 from taiping.models import (
-    Course,
     CourseClass,
-    Facility,
-    Instructor,
     Registration,
 )
+from taiping.utils import get_courses_list_context
 
 
 class IndexView(View):
@@ -77,58 +73,9 @@ class IndexView(View):
 
         return render(request, "taiping/dashboard/index.html", locals())
 
-    def get_courses_queryset(self, request: HttpRequest, filters: dict[str, str]) -> QuerySet[Course]:
-        queryset: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
-
-        if (instructor := filters.get("filter_instructor")):
-            subquery_instructor: QuerySet[CourseClass] = CourseClass.objects.filter(
-                course_id=OuterRef('id'),
-                instructor_id=int(instructor),
-                status=CourseStatusChoices.PUBLISHED,
-            )
-            queryset = queryset.filter(
-                Q(instructor_id=int(instructor))
-                | Q(Exists(subquery_instructor))
-            )
-
-        if (facility := filters.get("filter_facility")):
-            queryset = queryset.filter(facility_id=int(facility))
-
-        if (course_group := filters.get("filter_course_group")):
-            queryset = queryset.filter(course_group_id=int(course_group))
-
-        if (filter_month := filters.get("filter_month")):
-            filter_datetime: datetime = datetime.strptime(filter_month, "%Y-%m")
-            year: int = filter_datetime.year
-            month: int = filter_datetime.month
-
-            q_start_date: Q = Q(start_date__year=year, start_date__month=month)
-            q_end_date: Q = Q(end_date__year=year, end_date__month=month)
-
-            subquery_date: QuerySet[CourseClass] = CourseClass.objects.filter(
-                q_start_date | q_end_date,
-                course_id=OuterRef('id'),
-                status=CourseStatusChoices.PUBLISHED,
-            )
-            queryset = queryset.filter(Exists(subquery_date))
-
-        return queryset
-
     def htmx_courses(self, request: HttpRequest) -> HttpResponse:
-        filters: dict = {
-            key: int(val) if val and key != "filter_month" else val
-            for key, val in (request.session.get("course_filters") or {}).items()
-        }
-        has_filters: bool = any(filters.values())
-        courses: QuerySet[Course] = self.get_courses_queryset(request, filters)
-        course_groups: QuerySet[Course] = (Course.objects
-            .select_related("course_group")
-            .distinct("course_group__name")
-            .order_by("course_group__name")
-        )
-        facilities: QuerySet[Facility] = Facility.objects.order_by("name")
-        instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
-        return render(request, "taiping/dashboard/courses.html", locals())
+        context: dict[str, Any] = get_courses_list_context(request)
+        return render(request, "taiping/dashboard/courses.html", context)
 
     def htmx_instructor(self, request: HttpRequest) -> HttpResponse:
         user: Any = request.user
