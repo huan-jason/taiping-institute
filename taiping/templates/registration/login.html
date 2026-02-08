@@ -69,6 +69,11 @@
 
         label {
           margin-right: 0.5em;
+          color: var(--stone-9);
+
+          &:after {
+            content: '';
+          }
         }
 
         .submit-row {
@@ -81,6 +86,8 @@
         max-width: var(--max-width);
       }
     </style>
+
+    <h4 class="text-center">Agojin Login</h4>
 
     {% if user.is_authenticated %}
     <p class="errornote">

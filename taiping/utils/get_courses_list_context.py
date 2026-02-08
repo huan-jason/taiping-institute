@@ -46,10 +46,19 @@ def _get_courses_queryset(request: HttpRequest, filters: dict[str, str]) -> Quer
     return queryset
 
 
-def get_courses_list_context(request: HttpRequest) -> dict[str, Any]:
+def get_courses_list_context(request: HttpRequest, use_session_filters: bool = False) -> dict[str, Any]:
+    query_filters: dict[str, Any] = (
+        request.session.get("course_filters") or {}
+        if use_session_filters else
+        {
+            key: request.GET[key]
+            for key in request.GET
+            if key.startswith("filter_")
+        }
+    )
     filters: dict = {
         key: int(val) if val and key != "filter_month" else val
-        for key, val in (request.session.get("course_filters") or {}).items()
+        for key, val in query_filters.items()
     }
     has_filters: bool = any(filters.values())
     courses: QuerySet[Course] = _get_courses_queryset(request, filters)

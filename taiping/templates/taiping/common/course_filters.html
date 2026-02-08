@@ -21,7 +21,7 @@
         }
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
         #container--filter-items {
             grid-template-columns: repeat(2, auto) !important;
         }
@@ -29,7 +29,7 @@
 </style>
 
 
-<div id="course-filters-container">
+<div id="course-filters-container" class="{% if has_filters %} pe-3 {% endif %}">
     <form id="form--course-filters" onchange="this.submit()">
         <input type="hidden" name="tab" value="courses" />
 
@@ -71,7 +71,7 @@
             <div class="text-nowrap {% if filters.filter_month %} has-filter {% endif %}">
                 <input type="month" name="filter_month" value="{{ filters.filter_month }}" />
                 {% if has_filters %}
-                <a class="ms-4" href="?tab=courses" role="button">Clear&nbsp;filters</a>
+                <a class="ms-4" href="?tab=courses" role="button">Clear filters</a>
                 {% endif %}
             </div>
 

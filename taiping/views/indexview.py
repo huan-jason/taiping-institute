@@ -65,7 +65,7 @@ class IndexView(View):
         if tab := request.GET.get("tab"):
             active_tab = tab
 
-        request.session["course_filters"] = {
+        request.session["course_filters"] = {  # for htmx calls
             key: request.GET[key]
             for key in request.GET
             if key.startswith("filter_")
@@ -74,7 +74,7 @@ class IndexView(View):
         return render(request, "taiping/dashboard/index.html", locals())
 
     def htmx_courses(self, request: HttpRequest) -> HttpResponse:
-        context: dict[str, Any] = get_courses_list_context(request)
+        context: dict[str, Any] = get_courses_list_context(request, use_session_filters=True)
         return render(request, "taiping/dashboard/courses.html", context)
 
     def htmx_instructor(self, request: HttpRequest) -> HttpResponse:

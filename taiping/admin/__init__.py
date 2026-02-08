@@ -20,7 +20,6 @@ for item in admins:
     module: str = f"{module_prefix}.{name}"
     import_module(module)
 
-
 for name in models.__all__:
     model = getattr(models, name)
     try: admin.site.register(model)
