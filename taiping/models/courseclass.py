@@ -16,6 +16,8 @@ from .basemodel import BaseModel
 
 class CourseClass(BaseModel):
     course = ForeignKey('taiping.Course', on_delete=PROTECT)
+    class_type = CharField(max_length=128, default="Seminar", db_index=True)
+    class_duration = CharField(max_length=128, default="", db_index=True)
     notes = TextField(null=True, blank=True)
     course_fee = IntegerField()
     min_students = IntegerField()

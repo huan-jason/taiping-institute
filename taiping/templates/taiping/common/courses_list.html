@@ -26,14 +26,36 @@
                 color: white;
             }
 
-            .course-card-title {
-                font-weight: 600;
+            .container--course-card-title {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 2em;
+
+                .course-card-title {
+                    font-weight: 600;
+                }
+
+                .course--fee {
+                    text-align: end;
+                    font-size: 1.5em;
+                }
             }
 
             .course-card-text * {
                 font-size: 1.15em;
                 line-height: 1.5em;
                 color: var(--stone-10);
+            }
+
+            .container--footer__class-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                font-size: 1.1em;
+
+                .container--footer__class-info--course_type {
+                    text-align: end;
+                }
             }
 
             .button--footer {
@@ -81,10 +103,18 @@
         <div class="course-card" _="on click go to url '/course/{{ item.id }}/'">
 
             <div class="course-card-body">
-                <h4 class="course-card-title">
-                    <div>{{ item.name }}</div>
-                    <div class="mt-2 mb-4">{{ item.chinese_name }}</div>
-                </h4>
+                <div class="container--course-card-title">
+
+                    <h4 class="course-card-title">
+                        <div>{{ item.name }}</div>
+                        <div class="mt-2 mb-4">{{ item.chinese_name }}</div>
+                    </h4>
+
+                    <div>
+                        <div class="course--fee">${{ item.next_class.course_fee | default:' N/A' }}</div>
+                        <div class="course--start-date">{{ item.next_class.start_date | date:'d M Y' }}</div>
+                    </div>
+                </div>
 
                 {% if item.small_image %}
                 <div><img class="image--course w-100" src="{{ item.small_image.url }}" alt="{{ item.name }}" /></div>
@@ -103,16 +133,34 @@
                 </div>
             </div>
 
-            <div class="d-flex justify-content-around align-items-center py-3">
-                <a href="/course/{{ item.id }}/" id="button--details"
-                    class="btn btn-outline-secondary button--footer">Details</a>
+            <div class="container--footer">
 
-                {% if item.upcoming_classes.count %}
-                <a href="/course/{{ item.id }}/enroll/" class="btn btn-primary button--footer">Enroll</a>
-                {% else %}
-                <a href="/course/{{ item.id }}/enroll/" title="No classes available"
-                    class="btn btn-outline-primary disabled button--footer">Enroll</a>
-                {% endif %}
+                <div class="container--footer__class-info">
+
+                    <div class="container--footer__class-info--location">
+                        <div>{{ item.next_class.facility.name | default:'Location TBD'}}</div>
+                        <div>{{ item.next_class.facility.country }}</div>
+                    </div>
+
+                    <div class="container--footer__class-info--course_type">
+                        <div>{{ item.next_class.class_type }}</div>
+                        <div>{{ item.next_class.class_duration | default:'Duration TBD' }}</div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex justify-content-around align-items-center py-3">
+                    <a href="/course/{{ item.id }}/" id="button--details"
+                        class="btn btn-outline-secondary button--footer">Details</a>
+
+                    {% if item.upcoming_classes.count %}
+                    <a href="/course/{{ item.id }}/enroll/" class="btn btn-primary button--footer">Enroll</a>
+                    {% else %}
+                    <a href="/course/{{ item.id }}/enroll/" title="No classes available"
+                        class="btn btn-outline-primary disabled button--footer">Enroll</a>
+                    {% endif %}
+                </div>
+
             </div>
 
         </div>

@@ -12,6 +12,7 @@ class Facility(BaseModel):
     name = CharField(max_length=128, unique=True)
     description = TextField(null=True, blank=True)
     address = TextField(null=True, blank=True)
+    country = TextField(default="Singapore", db_index=True)
     google_map_embed = TextField(null=True, blank=True)
     contact_name = CharField(max_length=128)
     contact_phone = CharField(max_length=128)
