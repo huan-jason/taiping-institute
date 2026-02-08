@@ -40,15 +40,18 @@ class IndexView(View):
         if not request.user.is_authenticated:
             return redirect("course_list")
 
-        if "htmx" in request.GET:
-            return self.htmx(request)
+        if htmx := request.GET.get("htmx"):
+            return getattr(self, f"htmx_{request.GET["htmx"]}")(request)
 
         user: Any = request.user
         is_instructor: bool = hasattr(user, "instructor")
         is_student: bool = hasattr(user, "student")
         tabs: dict[str, dict] = self.TABS
         active_tab: str = ""
-        show_create_course_button: bool = True
+        show_create_course_button: bool = (request.user.groups
+            .filter(name="data_admin")
+            .exists()
+        )
 
         if is_instructor:
             active_tab = "instructor"
@@ -74,9 +77,8 @@ class IndexView(View):
 
         return render(request, "taiping/dashboard/index.html", locals())
 
-    def get_courses_queryset(self, request: HttpRequest) -> QuerySet[Course]:
+    def get_courses_queryset(self, request: HttpRequest, filters: dict[str, str]) -> QuerySet[Course]:
         queryset: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
-        filters: dict = request.session.get("course_filters") or {}
 
         if (instructor := filters.get("filter_instructor")):
             subquery_instructor: QuerySet[CourseClass] = CourseClass.objects.filter(
@@ -112,19 +114,18 @@ class IndexView(View):
 
         return queryset
 
-    def htmx(self, request: HttpRequest) -> HttpResponse:
-        htmx: str = f"htmx_{request.GET["htmx"]}"
-        return getattr(self, htmx)(request)
-
     def htmx_courses(self, request: HttpRequest) -> HttpResponse:
-        show_filters: bool = True
         filters: dict = {
             key: int(val) if val and key != "filter_month" else val
             for key, val in (request.session.get("course_filters") or {}).items()
         }
         has_filters: bool = any(filters.values())
-        courses: QuerySet[Course] = self.get_courses_queryset(request)
-        course_groups: QuerySet[Course] = Course.objects.select_related("course_group").distinct("course_group")
+        courses: QuerySet[Course] = self.get_courses_queryset(request, filters)
+        course_groups: QuerySet[Course] = (Course.objects
+            .select_related("course_group")
+            .distinct("course_group__name")
+            .order_by("course_group__name")
+        )
         facilities: QuerySet[Facility] = Facility.objects.order_by("name")
         instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
         return render(request, "taiping/dashboard/courses.html", locals())

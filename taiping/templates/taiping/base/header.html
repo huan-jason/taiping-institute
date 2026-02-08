@@ -1,4 +1,4 @@
-<section class="container--header container d-flex border-bottom pt-3 pb-2">
+<section class="container--header container d-flex border-bottom pt-3">
 
     {% if active_tab %}
     {% include "./tabs.html" %}
@@ -13,11 +13,9 @@
         {% if user.is_authenticated %}
 
             {% if show_create_course_button %}
-                {% if user.instructor or user.is_superuser %}
-                    <a href="/course/new/" class="btn btn-outline-primary btn-sm rounded-pill px-3 me-3">
-                        New Course
-                    </a>
-                {% endif %}
+                <a href="/course/new/" class="btn btn-outline-primary btn-sm px-3 me-3">
+                    New Course
+                </a>
             {% endif %}
 
 

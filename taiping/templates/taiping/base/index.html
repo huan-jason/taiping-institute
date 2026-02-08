@@ -37,6 +37,8 @@
 
 <body hx-swap="none" hx-encoding="multipart/form-data">
 
+    {% include "taiping/base/js.html" %}
+
     {% block header %}
     {% include "taiping/base/header.html" %}
     {% endblock header %}
@@ -46,9 +48,6 @@
 
     {% block footer %}
     {% endblock footer %}
-
-
-    {% include "taiping/base/js.html" %}
 
 </body>
 

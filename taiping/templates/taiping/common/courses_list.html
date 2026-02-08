@@ -7,8 +7,8 @@
         gap: 2em;
         justify-content: center;
 
-        margin-block: 1.5em 3em;
-        padding-bottom: 3em;
+        margin-bottom: 3em;
+        padding-block: 1.5em 3em;
 
         .course-card {
             display: grid;
@@ -75,28 +75,14 @@
 <div class="container">
 
     <div class="position-relative pt-3">
-
-        <h4 class="text-center">Agojin Martial Art Courses</h4>
-
-        {% if show_filters %}
-        <div style="position: absolute; top: 0.5em; right: 0;">
-
-            <span class="d-inline-block float-end btn btn-outline-secondary" data-bs-toggle="collapse"
-                data-bs-target="#course-filters-container">
-                Filters
-            </span>
-        </div>
-        {% endif %}
-
+        <h4 class="text-center">Agojin Martial Arts Courses</h4>
     </div>
 
 
-    {% if show_filters %}
     {% include "./course_filters.html" %}
-    {% endif %}
 
 
-    <div id="courses-container">
+    <div id="courses-container" class="container">
 
         {% for item in courses %}
 
