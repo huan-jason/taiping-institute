@@ -42,6 +42,8 @@ class CourseAdmin(admin.ModelAdmin):
     ]
     list_filter = [
         "course_group",
+        "instructor",
+        "facility",
     ]
     search_fields = [
         "name",

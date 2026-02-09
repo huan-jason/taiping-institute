@@ -23,7 +23,15 @@ def _get_courses_queryset(request: HttpRequest, filters: dict[str, str]) -> Quer
         )
 
     if (facility := filters.get("filter_facility")):
-        queryset = queryset.filter(facility_id=int(facility))
+        subquery_facility: QuerySet[CourseClass] = CourseClass.objects.filter(
+            course_id=OuterRef('id'),
+            facility_id=int(facility),
+            status=CourseStatusChoices.PUBLISHED,
+        )
+        queryset = queryset.filter(
+            Q(facility_id=int(facility))
+            | Q(Exists(subquery_facility))
+        )
 
     if (course_group := filters.get("filter_course_group")):
         queryset = queryset.filter(course_group_id=int(course_group))
