@@ -37,17 +37,21 @@
 
 <body hx-swap="none" hx-encoding="multipart/form-data">
 
-    {% include "taiping/base/js.html" %}
+    <div id="container--body" class="container">
 
-    {% block header %}
-    {% include "taiping/base/header.html" %}
-    {% endblock header %}
+        {% include "taiping/base/js.html" %}
 
-    {% block content %}
-    {% endblock content %}
+        {% block header %}
+        {% include "taiping/base/header.html" %}
+        {% endblock header %}
 
-    {% block footer %}
-    {% endblock footer %}
+        {% block content %}
+        {% endblock content %}
+
+        {% block footer %}
+        {% endblock footer %}
+
+    </div>
 
 </body>
 
