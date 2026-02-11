@@ -28,6 +28,12 @@
         margin-left: 1em;
     }
 
+    @media (max-width: 1000px) {
+        #header--title {
+            display: none;
+        }
+    }
+
     a {
         text-decoration: none;
     }
@@ -44,6 +50,15 @@
         background-position: 0.25em top;
         padding-left: 15em;
     }
+
+    @media (max-width: 500px) {
+        .container--header {
+            background-image: unset;
+            padding-left: 1em;
+        }
+    }
+
+
 
     .display-grid {
         display: grid;
