@@ -1,12 +1,13 @@
 <section class="container--header d-flex border-bottom align-items-center pt-3 pb-2">
 
+    <h4 id="header--title" class="mx-4">Agojin.com</h4>
+
     {% if active_tab %}
     {% include "./tabs.html" %}
     {% elif show_back_button %}
     <span role="button" onclick="history.back()" title="Back" tabindex="-1">&xlarr;</span>
     {% endif %}
 
-    <h5 id="header--title" class="ms-4">Agojin.com</h5>
 
     <span class="ms-auto me-3 pb-2">
         <!-- noformat -->
