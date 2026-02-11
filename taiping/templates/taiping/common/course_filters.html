@@ -2,16 +2,23 @@
     #course-filters-container {
         margin-top: 1.5em;
         padding-left: 2em;
+        container-type: inline-size;
 
         select {
             width: max-content;
         }
 
         #container--filter-items {
-            display: grid;
-            grid-template-columns: repeat(4, auto);
+            display: flex;
+            flex-flow: row wrap;
             gap: 1em;
-            justify-content: space-around;
+            justify-content: center;
+        }
+
+        @container (max-width: 899px) {
+            #container--filter-items {
+                justify-content: start;
+            }
         }
 
         .has-filter {
