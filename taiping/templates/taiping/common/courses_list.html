@@ -3,12 +3,14 @@
 <style>
     #courses-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, 60ch);
+        grid-template-columns: repeat(auto-fit, 375px);
         gap: 2em;
         justify-content: center;
 
+        box-sizing: border-box;
         margin-bottom: 3em;
         padding-block: 1.5em 3em;
+        container-type: inline-size;
 
         .course-card {
             display: grid;
@@ -67,6 +69,13 @@
         .image--course {
             object-fit: fill;
             height: 200px;
+        }
+    }
+
+    @container (max-width: 345px) {
+        .course-card {
+            box-shadow: none !important;
+            border-radius: 0 !important;
         }
     }
 </style>
