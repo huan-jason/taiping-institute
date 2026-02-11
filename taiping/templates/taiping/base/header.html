@@ -1,14 +1,13 @@
 <section class="container--header d-flex border-bottom align-items-center pt-3 pb-2">
 
-
     {% if active_tab %}
+    <!-- noformat -->
 
-    {% include "./tabs.html" %}
+        {% include "./tabs.html" %}
 
     {% elif show_back_button %}
 
-    <span class="ms-2" role="button" onclick="history.back()" title="Back" tabindex="-1">&xlarr;</span>
-    <h4 id="header--title" class="mx-4">Agojin.com</h4>
+        <span class="ms-2" role="button" onclick="history.back()" title="Back" tabindex="-1">&xlarr;</span>
 
     {% endif %}
 
@@ -16,41 +15,41 @@
     <span class="ms-auto me-3 pb-2">
         <!-- noformat -->
 
-        {% if user.is_authenticated %}
+    {% if user.is_authenticated %}
 
-            {% if show_create_course_button %}
-                <a href="/course/new/" class="btn btn-outline-primary btn-sm px-3 me-3">
-                    New Course
-                </a>
-            {% endif %}
+    {% if show_create_course_button %}
+    <a href="/course/new/" class="btn btn-outline-primary btn-sm px-3 me-3">
+        New Course
+    </a>
+    {% endif %}
 
 
-            <form id="form--logout" class="d-inline-block" method="post" action="/accounts/logout/?next=/accounts/login/">
-                {% csrf_token %}
+    <form id="form--logout" class="d-inline-block" method="post" action="/accounts/logout/?next=/accounts/login/">
+        {% csrf_token %}
 
-                <div class="dropdown">
-                    <span class="dropdown-toggle d-inline-block" role="button" data-bs-toggle="dropdown"
-                        title="{{ user.email }}">
-                        {{ user.get_full_name | default:user.username }}
-                    </span>
+        <div class="dropdown">
+            <span class="dropdown-toggle d-inline-block" role="button" data-bs-toggle="dropdown"
+                title="{{ user.email }}">
+                {{ user.get_full_name | default:user.username }}
+            </span>
 
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><button type="submit" class="dropdown-item" href="#">Sign out</button></li>
-                    </ul>
-                </div>
-            </form>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><button type="submit" class="dropdown-item" href="#">Sign out</button></li>
+            </ul>
+        </div>
+    </form>
 
-        {% else %}
+    {% else %}
 
-            <a href="/create-account/" type="button" class="btn btn-outline-primary">
-                Create account
-            </a>
+    <a href="/create-account/" type="button" class="btn btn-outline-primary">
+        Create account
+    </a>
 
-            <a href="/accounts/login/?next=/" type="button" class="btn btn-outline-primary ms-2">
-                Sign in
-            </a>
+    <a href="/accounts/login/?next=/" type="button" class="btn btn-outline-primary ms-2">
+        Sign in
+    </a>
 
-        {% endif %}
+    {% endif %}
 
     <!-- noformat -->
     </span>
