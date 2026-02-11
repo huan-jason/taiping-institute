@@ -1,5 +1,6 @@
-from typing import Any
+from typing import Any, cast
 
+from django.contrib.auth.models import User
 from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect
@@ -39,7 +40,7 @@ class IndexView(View):
         if htmx := request.GET.get("htmx"):
             return getattr(self, f"htmx_{request.GET["htmx"]}")(request)
 
-        user: Any = request.user
+        user: Any = self.get_user(request)
         is_instructor: bool = hasattr(user, "instructor")
         is_student: bool = hasattr(user, "student")
         tabs: dict[str, dict] = self.TABS
@@ -73,12 +74,20 @@ class IndexView(View):
 
         return render(request, "taiping/dashboard/index.html", locals())
 
+    def get_user(self, request: HttpRequest) -> User:
+        user: User = cast(User, request.user)
+        if not user.is_superuser: return user
+        if not (username := request.GET.get("u")): return user
+        if not (user_ := User.objects.filter(username=username).first()):
+            raise Exception(f"Invalid username: {username}")
+        return user_
+
     def htmx_courses(self, request: HttpRequest) -> HttpResponse:
         context: dict[str, Any] = get_courses_list_context(request, use_session_filters=True)
         return render(request, "taiping/dashboard/courses.html", context)
 
     def htmx_instructor(self, request: HttpRequest) -> HttpResponse:
-        user: Any = request.user
+        user: Any = self.get_user(request)
         course_classes: QuerySet[CourseClass] = (CourseClass.objects
             .filter(instructor=user.instructor)
             .order_by("start_date", "end_date")
@@ -86,7 +95,7 @@ class IndexView(View):
         return render(request, "taiping/dashboard/instructor.html", locals())
 
     def htmx_student(self, request: HttpRequest) -> HttpResponse:
-        user: Any = request.user
+        user: Any = self.get_user(request)
         registrations: QuerySet[Registration] = (Registration.objects
             .filter(student=user.student)
             .order_by("course_class__start_date", "course_class__end_date")
