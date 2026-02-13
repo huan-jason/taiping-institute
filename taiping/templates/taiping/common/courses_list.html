@@ -69,6 +69,15 @@
             object-fit: fill;
             height: 200px;
         }
+
+        .btn.no-classes {
+            color: var(--stone-6);
+            border-color: var(--stone-6);
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
     }
 
     @container (max-width: 345px) {
@@ -150,8 +159,7 @@
                     {% if item.upcoming_classes.count %}
                     <a href="/course/{{ item.id }}/enroll/" class="btn btn-primary button--footer">Enroll</a>
                     {% else %}
-                    <a href="/course/{{ item.id }}/enroll/" title="No classes available"
-                        class="btn btn-outline-primary disabled button--footer">Enroll</a>
+                    <a title="No classes available" class="btn btn-outline-primary button--footer no-classes">Enroll</a>
                     {% endif %}
                 </div>
 
