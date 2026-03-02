@@ -1,0 +1,54 @@
+<script>
+
+  function init() {
+    // ── Tab navigation ──────────────────────────────────
+    const navTabs = document.querySelectorAll('.nav-tab');
+    const views = document.querySelectorAll('.view');
+
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', e => {
+        e.preventDefault();
+        const target = tab.dataset.view;
+        navTabs.forEach(t => t.classList.remove('active'));
+        views.forEach(v => v.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('view-' + target).classList.add('active');
+      });
+    });
+
+    // ── Course filters ──────────────────────────────────
+    const pills = document.querySelectorAll('.pill');
+    const facilitySelect = document.getElementById('facilityFilter');
+    const cards = document.querySelectorAll('.card');
+    const countLabel = document.getElementById('countLabel');
+    let activeCat = 'all', activeLoc = '';
+
+    function applyFilters() {
+      let count = 0;
+      cards.forEach(card => {
+        const catOk = activeCat === 'all' || card.dataset.cat === activeCat;
+        const locOk = !activeLoc || card.dataset.loc === activeLoc;
+        card.classList.toggle('hidden', !(catOk && locOk));
+        if (catOk && locOk) count++;
+      });
+      countLabel.textContent = count + ' course' + (count !== 1 ? 's' : '');
+    }
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        activeCat = pill.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    facilitySelect.addEventListener('change', () => {
+      activeLoc = facilitySelect.value;
+      applyFilters();
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', init)
+
+</script>

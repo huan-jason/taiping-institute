@@ -1,0 +1,46 @@
+<nav>
+
+  <a href="#" class="nav-logo">
+    <!-- <div class="nav-logo-mark">A</div> -->
+    <img src="/static/img/favicon.png" alt="Agojin" style="height: 2em;" />
+    <span class="nav-brand">Agojin</span>
+  </a>
+  <ul class="nav-links">
+
+    {% if is_instructor %}
+    <li><a href="#" class="nav-tab" data-view="instructor">Instructor Dashboard</a></li>
+    {% endif %}
+
+    {% if is_student %}
+    <li><a href="#" class="nav-tab" data-view="student">Student Dashboard</a></li>
+    {% endif %}
+
+    {% if is_instructor or is_student %}
+    <li><a href="#" class="nav-tab active" data-view="courses">Courses</a></li>
+    {% endif %}
+
+  </ul>
+
+
+  <div class="nav-right">
+
+    {% if show_create_course_button %}
+    <a href="#" class="btn-nav">New Course</a>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+
+    <form id="form--logout" method="POST" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <span class="nav-user" ondblclick="document.querySelector('#form--logout').submit()">
+        {{ user.get_full_name }}
+      </span>
+    </form>
+
+    {% else %}
+    <a class="nav-user" href="/accounts/login/">Sign In</a>
+    {% endif %}
+
+  </div>
+
+</nav>
