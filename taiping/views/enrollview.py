@@ -62,6 +62,7 @@ class EnrollView(View):
         dependent_courses: list[dict] = self.get_dependent_courses(request, course)
         met_prerequisites: bool = all(item["met_dependency"] for item in dependent_courses)
         show_back_button: bool = True
+        use_bootstrap: bool = True
         return render(request, "taiping/enrollment/index.html", locals())
 
     def enrolled(self, request: HttpRequest, course_class_id: int) -> HttpResponse:

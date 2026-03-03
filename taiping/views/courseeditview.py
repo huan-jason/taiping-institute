@@ -106,6 +106,7 @@ class CourseEditView(ClassScheduleMixin, View):
         course_groups: QuerySet[CourseGroup] = CourseGroup.objects.order_by("name")
         facilities: QuerySet[Facility] = Facility.objects.order_by("name")
         instructors: QuerySet[Instructor] = Instructor.objects.order_by("user__first_name", "user__last_name")
+        use_bootstrap: bool = True
         return render(request, "taiping/course/edit.html", locals())
 
     def htmx_check_field(self, request: HttpRequest) -> HttpResponse:

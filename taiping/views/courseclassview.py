@@ -18,4 +18,5 @@ class CourseClassView(View):
                 "student__user__last_name",
             )
         )
+        use_bootstrap: bool = True
         return render(request, "taiping/class/index.html", locals())

@@ -1,8 +1,17 @@
-{% extends "taiping/base.html" %}
+{% extends "agojin/base/index.html" %}
+
+
+{% block style %}
+{% include "taiping/base/css.html" %}
+{% endblock style %}
 
 
 {% block content %}
 <style>
+    body {
+        background-color: unset;
+    }
+
     #page--course-registration {
         max-width: 800px;
         font-size: 1.25em;

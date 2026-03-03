@@ -1,13 +1,18 @@
-{% extends "taiping/base.html" %}
+{% extends "agojin/base/index.html" %}
 
 
 {% block content %}
 
 
+{% include "taiping/base/css.html" %}
 {% include "../create_account/css.html" %}
 
 
 <style>
+    body {
+        background-color: #efefef;
+    }
+
     .course-class-row {
         margin-top: 0.5em;
         margin-left: 1.5em;
