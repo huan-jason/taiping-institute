@@ -1,21 +1,6 @@
 <script>
 
   function init() {
-    // ── Tab navigation ──────────────────────────────────
-    const navTabs = document.querySelectorAll('.nav-tab');
-    const views = document.querySelectorAll('.view');
-
-    navTabs.forEach(tab => {
-      tab.addEventListener('click', e => {
-        e.preventDefault();
-        const target = tab.dataset.view;
-        navTabs.forEach(t => t.classList.remove('active'));
-        views.forEach(v => v.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById('view-' + target).classList.add('active');
-      });
-    });
-
     // ── Course filters ──────────────────────────────────
     const pills = document.querySelectorAll('.pill');
     const facilitySelect = document.getElementById('facilityFilter');
@@ -43,7 +28,7 @@
       });
     });
 
-    facilitySelect.addEventListener('change', () => {
+    facilitySelect?.addEventListener('change', () => {
       activeLoc = facilitySelect.value;
       applyFilters();
     });

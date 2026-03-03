@@ -1,0 +1,27 @@
+<div class="filter-section">
+
+  <span class="filter-label">Category</span>
+
+  <div class="filter-pills">
+    <button class="pill active" data-filter="all">All</button>
+
+    {% for item in course_groups %}
+    <button class="pill" data-filter="{{ item.id }}">{{ item.course_group.name }}</button>
+    {% endfor %}
+
+  </div>
+
+  <div class="filter-divider"></div>
+
+  <select class="filter-select" id="facilityFilter">
+    <option value="">All Locations</option>
+
+    {% for item in facilities %}
+    <option value="{{ item.id }}">{{ item.name }}</option>
+    {% endfor %}
+
+  </select>
+
+  <span class="filter-count" id="countLabel">{{ courses | length }} courses</span>
+
+</div>

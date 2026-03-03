@@ -1,22 +1,30 @@
 <nav>
 
   <a href="#" class="nav-logo">
-    <!-- <div class="nav-logo-mark">A</div> -->
     <img src="/static/img/favicon.png" alt="Agojin" style="height: 2em;" />
     <span class="nav-brand">Agojin</span>
   </a>
+
   <ul class="nav-links">
 
     {% if is_instructor %}
-    <li><a href="#" class="nav-tab" data-view="instructor">Instructor Dashboard</a></li>
+    <li>
+      <a href="/instructor/" class="nav-tab {% if current_tab == 'instructor' %} active {% endif %}"
+        data-view="instructor">Instructor Dashboard</a>
+    </li>
     {% endif %}
 
     {% if is_student %}
-    <li><a href="#" class="nav-tab" data-view="student">Student Dashboard</a></li>
+    <li>
+      <a href="/student/" class="nav-tab {% if current_tab == 'student' %} active {% endif %}"
+        data-view="student">Student Dashboard</a>
+    </li>
     {% endif %}
 
     {% if is_instructor or is_student %}
-    <li><a href="#" class="nav-tab active" data-view="courses">Courses</a></li>
+    <li>
+      <a href="/" class="nav-tab {% if current_tab == 'courses' %} active {% endif %}" data-view="courses">Courses</a>
+    </li>
     {% endif %}
 
   </ul>
@@ -44,3 +52,10 @@
   </div>
 
 </nav>
+
+
+<div class="page-header" data-char="武">
+  <p class="header-eyebrow">Taiping Institute</p>
+  <h1 class="header-title"><em>Martial Arts</em> Courses</h1>
+  <p class="header-sub">Movement · Healing · Creation &nbsp;/&nbsp; 武学 · 养生 · 创造</p>
+</div>

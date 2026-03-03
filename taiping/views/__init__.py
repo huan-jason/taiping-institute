@@ -1,3 +1,4 @@
+# flake8: noqa
 from .courseclassview import CourseClassView
 from .courseeditview import CourseEditView
 from .courseview import CourseView
@@ -6,15 +7,5 @@ from .enrollview import EnrollView
 from .icsview import IcsView
 from .indexview import IndexView
 from .infoview import InfoView
-
-
-__all__ = [
-    "CourseClassView",
-    "CourseEditView",
-    "CourseView",
-    "CreateAccountView",
-    "EnrollView",
-    "IcsView",
-    "IndexView",
-    "InfoView",
-]
+from .instructorview import InstructorView
+from .studentview import StudentView
