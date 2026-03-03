@@ -13,8 +13,6 @@ class StudentView(View):
             return getattr(self, f"htmx_{htmx}")(request)
 
         user: User | None = self.get_user(request)
-        is_instructor: bool = hasattr(user, "instructor")
-        is_student: bool = hasattr(user, "student")
         current_tab: str = "student"
 
         return render(request, "agojin/student/index.html", locals())

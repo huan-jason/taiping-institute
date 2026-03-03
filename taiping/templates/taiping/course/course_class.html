@@ -28,19 +28,18 @@
         {% endif %}
 
         {% if show_enroll_button %}
-        <a href="enroll/{{ course_class.id }}/"
-            class="btn btn-sm btn-outline-primary rounded-pill px-3 py-1 ms-4">Enroll</a>
+        <a href="enroll/{{ course_class.id }}/" class="btn btn-sm btn-outline-primary px-3 py-1 ms-4">Enroll</a>
         {% endif %}
 
         {% if user.instructor == instructor or user.is_superuser %}
-        <a href="/class/{{ course_class.id }}/" class="btn btn-outline-primary btn-sm rounded-pill px-3 ms-2">
+        <a href="/class/{{ course_class.id }}/" class="btn btn-outline-primary btn-sm px-3 ms-2">
             Students
         </a>
         {% endif %}
 
         {% if show_edit_button %}
-        <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 ms-4"
-            data-bs-toggle="modal" data-bs-target="#modal--course-class"
+        <button type="button" class="btn btn-sm btn-outline-secondary px-3 py-1 ms-4" data-bs-toggle="modal"
+            data-bs-target="#modal--course-class"
             hx-get="?htmx=modal-course-class&course={{ course.id }}&id={{ course_class.id }}"
             hx-trigger="open-modal-course-class">
             Edit

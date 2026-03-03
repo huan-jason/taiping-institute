@@ -1,3 +1,5 @@
+{% load extra_tags %}
+
 <nav>
 
   <a href="#" class="nav-logo">
@@ -7,21 +9,21 @@
 
   <ul class="nav-links">
 
-    {% if is_instructor %}
+    {% if user|is_instructor %}
     <li>
       <a href="/instructor/" class="nav-tab {% if current_tab == 'instructor' %} active {% endif %}"
         data-view="instructor">Instructor Dashboard</a>
     </li>
     {% endif %}
 
-    {% if is_student %}
+    {% if user|is_student %}
     <li>
       <a href="/student/" class="nav-tab {% if current_tab == 'student' %} active {% endif %}"
         data-view="student">Student Dashboard</a>
     </li>
     {% endif %}
 
-    {% if is_instructor or is_student %}
+    {% if user|is_instructor or user|is_student %}
     <li>
       <a href="/" class="nav-tab {% if current_tab == 'courses' %} active {% endif %}" data-view="courses">Courses</a>
     </li>

@@ -19,17 +19,10 @@ class IndexView(View):
         if htmx := request.GET.get("htmx"):
             return getattr(self, f"htmx_{htmx}")(request)
 
-        user: User | None = self.get_user(request)
-        is_instructor: bool = hasattr(user, "instructor")
-        is_student: bool = hasattr(user, "student")
-        current_tab: str = "courses"
-
         context: dict[str, Any] = (
             get_courses_list_context(request, use_session_filters=True)
             | dict(
-                is_instructor=is_instructor,
-                is_student=is_student,
-                current_tab=current_tab,
+                current_tab="courses",
             )
         )
         return render(request, "agojin/courses/index.html", context)

@@ -11,6 +11,7 @@
 
     .course-image {
         width: 100%;
+        margin-top: 1em;
     }
 </style>
 
@@ -19,10 +20,10 @@
     <h3 class="text-center fw-bold">
 
         {% if course.image %}
-        <div><img class="w-100 mt-3" src="{{ course.image.url }}" alt="{{ course.name }}" /></div>
+        <div><img class="course-image" src="{{ course.image.url }}" alt="{{ course.name }}" /></div>
         {% endif %}
 
-        <div class="mt-3">{{ course.name }}</div>
+        <div class="mt-4">{{ course.name }}</div>
         <div class="mt-3">{{ course.chinese_name }}</div>
     </h3>
 

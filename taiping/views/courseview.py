@@ -22,6 +22,7 @@ class CourseView(ClassScheduleMixin, View):
 
     def get_course_detail(self, request: HttpRequest, course_id: int) -> HttpResponse:
         course: Course | None = Course.objects.filter(id=course_id).first()
+        use_bootstrap: bool = True
         return (
             render(request, "taiping/course/detail.html", locals())
             if course else

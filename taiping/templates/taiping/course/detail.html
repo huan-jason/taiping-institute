@@ -1,4 +1,4 @@
-{% extends "taiping/base.html" %}
+{% extends "agojin/base/index.html" %}
 
 
 {% block content %}
@@ -16,7 +16,7 @@
             <a href="/?tab=courses" class="text-dark" title="Back" tabindex="-1">&xlarr;</a>
 
             {% if user.instructor.id == course.instructor_id or user.is_superuser%}
-            <a href="edit/" type="button" class="btn btn-outline-primary btn-sm rounded-pill px-3 ms-auto">
+            <a href="edit/" type="button" class="btn btn-outline-primary btn-sm px-3 ms-auto">
                 Edit
             </a>
             {% endif %}
@@ -40,9 +40,7 @@
 
             {% empty %}
 
-            <div>No classes available yet.</div>
-
-            <div class="mt-5">Coming soon (when the sun rises from the west).</div>
+            <div>No classes available yet. Coming soon</div>
 
             {% endfor %}
 

@@ -111,7 +111,12 @@
 </div>
 
 <script>
-    tooltipsInit()
+    function tooltipsInit() {
+        [...document.querySelectorAll('[data-bs-toggle]')].map(item => {
+            new bootstrap.Tooltip(item)
+        })
+    }
+    document.addEventListener('DOMContentLoaded', tooltipsInit)
 </script>
 
 </div>
