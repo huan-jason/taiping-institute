@@ -32,10 +32,6 @@ class CourseView(ClassScheduleMixin, View):
     def get_courses_list(self, request: HttpRequest) -> HttpResponse:
         context: dict[str, Any] = get_courses_list_context(request)
         context |= {
-            "show_create_course_button": (request.user.groups
-                .filter(name="data_admin")
-                .exists()
-            ),
             "header_title": "The art of living throught movement, healing, and creation",
         }
         return render(request, "taiping/course/list.html", context)

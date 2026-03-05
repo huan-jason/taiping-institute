@@ -34,10 +34,6 @@
 
   <div class="nav-right">
 
-    {% if show_create_course_button %}
-    <a href="#" class="btn-nav">New Course</a>
-    {% endif %}
-
     {% if user.is_authenticated %}
 
     <form id="form--logout" method="POST" action="{% url 'logout' %}">

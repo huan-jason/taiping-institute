@@ -21,27 +21,18 @@ class StudentView(View):
         if htmx := request.GET.get("htmx"):
             return getattr(self, f"htmx_{htmx.replace('-', '_')}")(request)
 
-        user: User | None = self.get_user(request)
+        user: User = cast(Any, request.user)
         student: Student | None = getattr(request.user, "student", None)
-        name: str = user.get_full_name() if user else ""
+        name: str = user.get_full_name()
         name_alt: str = student.alternative_name if student else ""  # type: ignore
         background_char: str = "学"
         current_tab: str = "student"
         title: str = "<em>Student</em> Dashboard"
         subtitle: str = (
             f"{name}" +
-            f"&nbsp;/&nbsp; {name_alt}" if name_alt else ""
+            (f"&nbsp;/&nbsp; {name_alt}" if name_alt else "")
         )
         return render(request, "agojin/student/index.html", locals())
-
-    def get_user(self, request: HttpRequest) -> User | None:
-        if not request.user.is_authenticated: return None
-        user: User = cast(User, request.user)
-        if not user.is_superuser: return user
-        if not (username := request.GET.get("u")): return user
-        if not (user_ := User.objects.filter(username=username).first()):
-            raise Exception(f"Invalid username: {username}")
-        return user_
 
     def htmx_enrolled_courses(self, request: HttpRequest) -> HttpResponse:
         user: Any = request.user
