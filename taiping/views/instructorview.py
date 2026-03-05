@@ -27,3 +27,21 @@ class InstructorView(View):
             (f"&nbsp;/&nbsp; {name_alt}" if name_alt else "")
         )
         return render(request, "agojin/instructor/index.html", locals())
+
+    def htmx_overview(self, request: HttpRequest) -> HttpResponse:
+        return render(request, "agojin/instructor/overview.html", locals())
+
+    def htmx_enrolled_students(self, request: HttpRequest) -> HttpResponse:
+        return HttpResponse("htmx_enrolled_students")
+
+    def htmx_manage_courses(self, request: HttpRequest) -> HttpResponse:
+        return HttpResponse("htmx_manage_courses")
+
+    def htmx_revenue(self, request: HttpRequest) -> HttpResponse:
+        return HttpResponse("htmx_revenue")
+
+    def htmx_schedule(self, request: HttpRequest) -> HttpResponse:
+        return HttpResponse("htmx_schedule")
+
+    def htmx_stats(self, request: HttpRequest) -> HttpResponse:
+        return HttpResponse("htmx_stats")
