@@ -39,7 +39,8 @@
                 <polyline points="12 6 12 12 16 14" />
               </svg>{{ course_class.class_duration }}</span>
             <span>
-              <span class="badge {{ course_class.status | slugify }}">{{ course_class.status }}</span>
+              <span
+                class="badge progress--{{ course_class.progress_status | lower | slugify }}">{{ course_class.progress_status }}</span>
             </span>
 
           </div>

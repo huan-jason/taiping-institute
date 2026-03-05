@@ -79,6 +79,15 @@ class CourseClass(BaseModel):
         return cast(Any, self.min_students or self.course.min_students)
 
     @property
+    def progress_status(self) -> str:
+        today: date = timezone.now().date()
+        return (
+            "Completed" if self.start_date < today else
+            "Upcoming" if self.start_date > today else
+            "In Progress"
+        )
+
+    @property
     def students(self) -> QuerySet[Self]:
         return cast(Any, self).registration_set.all()
 
