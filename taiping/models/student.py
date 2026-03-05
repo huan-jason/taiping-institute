@@ -1,3 +1,4 @@
+from typing import TYPE_CHECKING
 from django.db.models import (
     CharField,
     DateField,
@@ -9,6 +10,10 @@ from django.db.models import (
 )
 from taiping.constants import GenderChoices
 from .basemodel import BaseModel
+
+if TYPE_CHECKING:
+    from .course import Course
+    from .courseclass import CourseClass
 
 
 class Student(BaseModel):
@@ -28,3 +33,24 @@ class Student(BaseModel):
 
     def __str__(self) -> str:
         return self.user.username
+
+    def attendance(self) -> str:
+        return "0%"
+
+    def completed_classes(self) -> int:
+        return 0
+
+    def courses(self) -> list[Course]:
+        return (self
+            .coursestudent_set  # type: ignore
+            .order_by("-created")
+        )
+
+    def enroll_classes(self) -> int:
+        return 0
+
+    def sessions(self) -> int:
+        return 0
+
+    def upcoming_classes(self) -> list[CourseClass]:
+        return []

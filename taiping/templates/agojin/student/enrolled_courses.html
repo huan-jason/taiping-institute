@@ -1,0 +1,74 @@
+<div class="dash-section">
+
+  <div class="section-header">
+    <span class="section-title">My Courses</span>
+    {% if show_action %}
+    <a class="section-action" hx-get="?htmx=enrolled-courses" hx-target=".dash-main"
+      _="on click remove .active from .snav-item add .active to #snav--enrolled">
+      Browse More
+    </a>
+    {% endif %}
+  </div>
+
+
+  <div class="enrolled-list">
+
+    {% for item in courses %}
+    {% with course=item.course_class.course %}
+
+    <div class="enrolled-card">
+      <img class="enrolled-img" src="{{ course.small_image.url }}" alt="{{ course.name }}">
+
+      <div class="enrolled-body">
+
+        <div>
+          <div class="enrolled-title">{{ course.name }}</div>
+          <div class="enrolled-zh">{{ course.chinese_name | default:'' }}</div>
+
+          <div class="enrolled-meta">
+
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>Started {{ item.course_class.start_date | date:'d b Y' }}</span>
+
+            <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>{{ item.course_class.class_duration }}</span>
+            <span>
+              <span class="badge {{ item.course_class.status | slugify }}">{{ item.course_class.status }}</span>
+            </span>
+
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress-label"><span>Progress</span><span>
+              {{ item.course_class.completed_sessions }}
+              /
+              {{ item.course_class.total_sessions }}
+              sessions
+            </span></div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width:20%"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {% endwith %}
+
+    {% empty %}
+
+    <div class="enrolled-card">
+      <div class="enrolled-body">Nil</div>
+    </div>
+
+    {% endfor %}
+
+  </div>
+</div>

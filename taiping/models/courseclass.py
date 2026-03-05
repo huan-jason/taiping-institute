@@ -1,4 +1,4 @@
-from typing import Any, Self, cast
+from typing import Any, Self, cast, TYPE_CHECKING
 from django.db.models import (
     BooleanField,
     CharField,
@@ -12,6 +12,9 @@ from django.db.models import (
 )
 from taiping.constants import CourseStatusChoices
 from .basemodel import BaseModel
+
+if TYPE_CHECKING:
+    from .courseclassschedule import CourseClassSchedule
 
 
 class CourseClass(BaseModel):
@@ -74,6 +77,3 @@ class CourseClass(BaseModel):
     @property
     def students(self) -> QuerySet[Self]:
         return cast(Any, self).registration_set.all()
-
-
-from .courseclassschedule import CourseClassSchedule  # noqa

@@ -5,6 +5,7 @@ from .courseclass import CourseClass
 from .courseclassschedule import CourseClassSchedule
 from .coursedependency import CourseDependency
 from .coursegroup import CourseGroup
+from .courseclassstudent import CourseClassStudent
 from .emailverification import EmailVerification
 from .instructor import Instructor
 from .facility import Facility
@@ -20,6 +21,7 @@ __all__ = [
     "CourseClassSchedule",
     "CourseDependency",
     "CourseGroup",
+    "CourseClassStudent",
     "EmailVerification",
     "Facility",
     "Instructor",

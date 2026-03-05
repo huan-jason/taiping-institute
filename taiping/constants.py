@@ -18,6 +18,13 @@ class CourseStatusChoices(TextChoices):
     CANCELLED = "CANCELLED"
 
 
+class CourseStudentStatusChoices(TextChoices):
+    ENROLLED = "enrolled"
+    IN_PROGRESS = "in_progress"
+    COMPLETED = "completed"
+    DROPPED_OUT = "dropped_out"
+
+
 class UserTypeChoices(TextChoices):
     STUDENT = "student"
     INSTRUCTOR = "instructor"

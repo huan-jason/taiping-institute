@@ -1,0 +1,48 @@
+<div class="dash-section">
+
+  <div class="section-header">
+    <span class="section-title">Upcoming Classes</span>
+    {% if show_action %}
+    <a class="section-action" hx-get="?htmx=upcoming-classes" hx-target=".dash-main"
+      _="on click remove .active from .snav-item add .active to #snav--upcoming">
+      View Full Schedule
+    </a>
+    {% endif %}
+  </div>
+
+
+  <div style="background:var(--card-bg);border:1px solid var(--border);">
+
+    <div class="upcoming-list" style="padding:0 20px;">
+
+      {% for item in upcoming_classes %}
+
+      <div class="upcoming-item">
+        <div class="upcoming-date-box">
+          <div class="upcoming-month">{{ item.class_date | date:'b' }}</div>
+          <div class="upcoming-day">{{ item.class_date | date:'d' }}</div>
+        </div>
+        <div class="upcoming-info">
+          <div class="upcoming-course">{{ item.course_class.course.name }}</div>
+          <div class="upcoming-detail">
+            {{ item.course_class.get_facility }}
+            &nbsp;·&nbsp;
+            {{ item.course_class.get_instructor }}
+          </div>
+        </div>
+        <div class="upcoming-time">
+          {{ item.class_time_start | date:'H:M' }}
+          –
+          {{ item.class_time_end | date:'H:M A' }}
+        </div>
+      </div>
+
+      {% empty %}
+
+      <div class="upcoming-item">Nil</div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

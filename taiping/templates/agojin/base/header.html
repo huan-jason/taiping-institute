@@ -56,8 +56,8 @@
 </nav>
 
 
-<div class="page-header" data-char="武">
+<div class="page-header" data-char="{{ background_char | default:'武' }} ">
   <p class="header-eyebrow">Taiping Institute</p>
-  <h1 class="header-title"><em>Martial Arts</em> Courses</h1>
-  <p class="header-sub">Movement · Healing · Creation &nbsp;/&nbsp; 武学 · 养生 · 创造</p>
+  <h1 class="header-title">{{ title | default:'<em>Martial Arts</em> Courses' | safe }}</h1>
+  <p class="header-sub">{{ subtitle | default:'Movement · Healing · Creation &nbsp;/&nbsp; 武学 · 养生 · 创造' | safe}}</p>
 </div>
