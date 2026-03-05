@@ -1,11 +1,18 @@
-from typing import cast
+import operator
+from typing import Any, Iterable, cast
 
 from django.contrib.auth.models import User
+from django.db.models import QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views import View
 
-from taiping.models import Student
+from taiping.models import (
+    CourseClass,
+    CourseClassSchedule,
+    CourseClassStudent,
+    Student,
+)
 
 
 class StudentView(View):
@@ -37,7 +44,12 @@ class StudentView(View):
         return user_
 
     def htmx_enrolled_courses(self, request: HttpRequest) -> HttpResponse:
+        user: Any = request.user
         show_action: bool = request.GET.get("a") == "1"
+        student_courses: QuerySet[CourseClassStudent] = (CourseClassStudent.objects
+            .filter(student__user=user)
+            .order_by("-course_class__start_date")
+        )
         return render(request, "agojin/student/enrolled_courses.html", locals())
 
     def htmx_overview(self, request: HttpRequest) -> HttpResponse:
@@ -47,5 +59,20 @@ class StudentView(View):
         return render(request, "agojin/student/progress.html", locals())
 
     def htmx_upcoming_classes(self, request: HttpRequest) -> HttpResponse:
+        user: Any = request.user
         show_action: bool = request.GET.get("a") == "1"
+        course_class_ids: list[int] = list(CourseClassStudent.objects
+            .filter(student__user=user)
+            .values_list("course_class_id", flat=True)
+        )
+        upcoming_classes_unsorted: Iterable[CourseClassSchedule] = (
+            upcoming_class
+            for item in CourseClass.objects.filter(id__in=course_class_ids)
+            if (upcoming_class := item.upcoming_class)
+        )
+        upcoming_classes: list[CourseClassSchedule] = sorted(
+            upcoming_classes_unsorted,
+            key=operator.attrgetter("class_date")
+        )
+
         return render(request, "agojin/student/upcoming_classes.html", locals())

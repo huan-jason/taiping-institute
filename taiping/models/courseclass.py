@@ -1,4 +1,6 @@
+from datetime import date
 from typing import Any, Self, cast, TYPE_CHECKING
+
 from django.db.models import (
     BooleanField,
     CharField,
@@ -10,6 +12,8 @@ from django.db.models import (
     TextField,
     UniqueConstraint,
 )
+from django.utils import timezone
+
 from taiping.constants import CourseStatusChoices
 from .basemodel import BaseModel
 
@@ -77,3 +81,37 @@ class CourseClass(BaseModel):
     @property
     def students(self) -> QuerySet[Self]:
         return cast(Any, self).registration_set.all()
+
+    @property
+    def sessions_completed(self) -> int:
+        today: date = timezone.now().date()
+        return (self
+            .courseclassschedule_set  # type: ignore
+            .filter(class_date__lte=today)
+            .count()
+        )
+
+    @property
+    def sessions_completed_pct(self) -> int:
+        if not self.sessions_total: return 0
+        return round(
+            100 * self.sessions_completed
+            / self.sessions_total
+        )
+
+    @property
+    def sessions_total(self) -> int:
+        return (self
+            .courseclassschedule_set  # type: ignore
+            .count()
+        )
+
+    @property
+    def upcoming_class(self) -> CourseClassSchedule | None:
+        today: date = timezone.now().date()
+        return (self
+            .courseclassschedule_set  # type: ignore
+            .filter(class_date__gt=today)
+            .order_by("class_date")
+            .first()
+        )

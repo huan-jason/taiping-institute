@@ -13,8 +13,8 @@
 
   <div class="enrolled-list">
 
-    {% for item in courses %}
-    {% with course=item.course_class.course %}
+    {% for item in student_courses %}
+    {% with course_class=item.course_class course=item.course_class.course %}
 
     <div class="enrolled-card">
       <img class="enrolled-img" src="{{ course.small_image.url }}" alt="{{ course.name }}">
@@ -32,14 +32,14 @@
                 <line x1="16" y1="2" x2="16" y2="6" />
                 <line x1="8" y1="2" x2="8" y2="6" />
                 <line x1="3" y1="10" x2="21" y2="10" />
-              </svg>Started {{ item.course_class.start_date | date:'d b Y' }}</span>
+              </svg>Start&nbsp; {{ course_class.start_date | date:'d b Y' }}</span>
 
             <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="12" cy="12" r="10" />
                 <polyline points="12 6 12 12 16 14" />
-              </svg>{{ item.course_class.class_duration }}</span>
+              </svg>{{ course_class.class_duration }}</span>
             <span>
-              <span class="badge {{ item.course_class.status | slugify }}">{{ item.course_class.status }}</span>
+              <span class="badge {{ course_class.status | slugify }}">{{ course_class.status }}</span>
             </span>
 
           </div>
@@ -47,13 +47,13 @@
 
         <div class="progress-wrap">
           <div class="progress-label"><span>Progress</span><span>
-              {{ item.course_class.completed_sessions }}
+              {{ course_class.sessions_completed }}
               /
-              {{ item.course_class.total_sessions }}
-              sessions
+              {{ course_class.sessions_total }}
+              &nbsp; sessions
             </span></div>
           <div class="progress-track">
-            <div class="progress-fill" style="width:20%"></div>
+            <div class="progress-fill" style="width: {{ course_class.sessions_completed_pct }}%"></div>
           </div>
         </div>
 

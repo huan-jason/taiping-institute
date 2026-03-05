@@ -27,13 +27,13 @@
           <div class="upcoming-detail">
             {{ item.course_class.get_facility }}
             &nbsp;·&nbsp;
-            {{ item.course_class.get_instructor }}
+            {{ item.course_class.get_instructor.user.get_full_name }}
           </div>
         </div>
         <div class="upcoming-time">
-          {{ item.class_time_start | date:'H:M' }}
+          {{ item.class_time_start | date:'H:i A' }}
           –
-          {{ item.class_time_end | date:'H:M A' }}
+          {{ item.class_time_end | date:'H:i A' }}
         </div>
       </div>
 
