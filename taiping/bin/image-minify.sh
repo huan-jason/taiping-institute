@@ -13,7 +13,7 @@ for item in *; do
     convert "$item" -resize x${IMAGE_HEIGHT} "resized/$item"
 done
 
-docker compose exec app ./manage.py small_image
+docker compose exec app python ./manage.py small_image
 
 for item in resized/*; do
     echo >$item
