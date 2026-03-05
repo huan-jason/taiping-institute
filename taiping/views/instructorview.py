@@ -32,16 +32,16 @@ class InstructorView(View):
         return render(request, "agojin/instructor/overview.html", locals())
 
     def htmx_enrolled_students(self, request: HttpRequest) -> HttpResponse:
-        return HttpResponse("htmx_enrolled_students")
+        return render(request, "agojin/instructor/enrolled_students.html", locals())
 
     def htmx_manage_courses(self, request: HttpRequest) -> HttpResponse:
-        return HttpResponse("htmx_manage_courses")
+        return render(request, "agojin/instructor/manage_courses.html", locals())
 
     def htmx_revenue(self, request: HttpRequest) -> HttpResponse:
-        return HttpResponse("htmx_revenue")
+        return render(request, "agojin/instructor/revenue.html", locals())
 
     def htmx_schedule(self, request: HttpRequest) -> HttpResponse:
-        return HttpResponse("htmx_schedule")
+        return render(request, "agojin/instructor/schedule.html", locals())
 
     def htmx_stats(self, request: HttpRequest) -> HttpResponse:
-        return HttpResponse("htmx_stats")
+        return render(request, "agojin/instructor/stats.html", locals())
