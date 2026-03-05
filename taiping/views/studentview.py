@@ -41,6 +41,9 @@ class StudentView(View):
             .filter(student__user=user)
             .order_by("-course_class__start_date")
         )
+        if (count := request.GET.get("c")):
+            student_courses = student_courses[:int(count)]
+
         return render(request, "agojin/student/enrolled_courses.html", locals())
 
     def htmx_overview(self, request: HttpRequest) -> HttpResponse:
@@ -65,5 +68,7 @@ class StudentView(View):
             upcoming_classes_unsorted,
             key=operator.attrgetter("class_date")
         )
+        if (count := request.GET.get("c")):
+            upcoming_classes = upcoming_classes[:int(count)]
 
         return render(request, "agojin/student/upcoming_classes.html", locals())
