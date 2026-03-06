@@ -23,6 +23,7 @@ class CourseStudentStatusChoices(TextChoices):
     IN_PROGRESS = "in_progress"
     COMPLETED = "completed"
     DROPPED_OUT = "dropped_out"
+    CANCELLED = "cancelled"
 
 
 class UserTypeChoices(TextChoices):

@@ -1,11 +1,15 @@
 from typing import Any, cast
 
+from django.db.models import QuerySet
 from django.contrib.auth.models import User
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views import View
 
-from taiping.models import Instructor
+from taiping.models import (
+    CourseClassStudent,
+    Instructor,
+)
 
 
 class InstructorView(View):
@@ -29,19 +33,28 @@ class InstructorView(View):
         return render(request, "agojin/instructor/index.html", locals())
 
     def htmx_overview(self, request: HttpRequest) -> HttpResponse:
+        instructor: Instructor | None = getattr(request.user, "instructor", None)
         return render(request, "agojin/instructor/overview.html", locals())
 
     def htmx_enrolled_students(self, request: HttpRequest) -> HttpResponse:
+        instructor: Instructor | None = getattr(request.user, "instructor", None)
+        course_class_students: QuerySet[CourseClassStudent] = (CourseClassStudent.objects
+            .filter(course_class__instructor=instructor)
+        )
         return render(request, "agojin/instructor/enrolled_students.html", locals())
 
     def htmx_manage_courses(self, request: HttpRequest) -> HttpResponse:
+        instructor: Instructor | None = getattr(request.user, "instructor", None)
         return render(request, "agojin/instructor/manage_courses.html", locals())
 
     def htmx_revenue(self, request: HttpRequest) -> HttpResponse:
+        instructor: Instructor | None = getattr(request.user, "instructor", None)
         return render(request, "agojin/instructor/revenue.html", locals())
 
     def htmx_schedule(self, request: HttpRequest) -> HttpResponse:
+        instructor: Instructor | None = getattr(request.user, "instructor", None)
         return render(request, "agojin/instructor/schedule.html", locals())
 
     def htmx_stats(self, request: HttpRequest) -> HttpResponse:
+        instructor: Instructor | None = getattr(request.user, "instructor", None)
         return render(request, "agojin/instructor/stats.html", locals())

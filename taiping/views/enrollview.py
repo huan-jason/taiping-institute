@@ -107,7 +107,7 @@ class EnrollView(View):
 
     def send_email(self, request: HttpRequest, course_class: CourseClass, email_type: UserTypeChoices) -> None:
         student: Student = cast(Any, request.user).student
-        instructor: Instructor = course_class.get_instructor
+        instructor: Instructor = course_class.get_instructor()
         message: str = render_to_string(
             request=request,
             template_name=f"taiping/enrollment/enrolled_email_{email_type}.txt",

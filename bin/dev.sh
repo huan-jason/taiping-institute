@@ -3,7 +3,7 @@
 set -u
 
 port=8000
-sleep=2
+sleep=1
 
 while getopts 'p:' opt; do
   case $opt in

@@ -73,7 +73,7 @@ class Command(BaseCommand):
             subject=subject,
             from_email=None,
             to=students,
-            cc=[course_class.get_instructor.user.email],
+            cc=[course_class.get_instructor().user.email],
             body=msg_text,
         )
         email.attach_alternative(msg_html, "text/html")
@@ -97,7 +97,7 @@ class Command(BaseCommand):
             subject=subject,
             from_email=None,
             to=[registration.student.user.email],
-            cc=[registration.course_class.get_instructor.user.email],
+            cc=[registration.course_class.get_instructor().user.email],
             body=msg_text,
         )
         email.attach_alternative(msg_html, "text/html")

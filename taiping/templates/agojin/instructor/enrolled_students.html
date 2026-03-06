@@ -14,48 +14,25 @@
             </tr>
         </thead>
         <tbody>
+
+            {% for item in course_class_students %}
+
             <tr>
-                <td class="td-name">Wei Liang<span>wei.liang@email.com</span></td>
-                <td>Bajiquan – Introduction</td>
-                <td>20 Mar 2026</td>
-                <td><span class="badge badge-green">Confirmed</span></td>
-                <td>$200</td>
+                <td class="td-name">{{ item.student.user.get_full_name }}<span>{{ item.student.user.email }}</span></td>
+                <td>{{ item.course_class.course.name }}</td>
+                <td>{{ item.created | date:'d b Y' }}</td>
+                <td><span class="badge badge-green">{{ item.status | title }}</span></td>
+                <td>${{ item.course_class.get_course_fee }}</td>
             </tr>
+
+            {% empty %}
+
             <tr>
-                <td class="td-name">Sarah Tan<span>sarah.t@email.com</span></td>
-                <td>Yi Jing Primer</td>
-                <td>18 Mar 2026</td>
-                <td><span class="badge badge-green">Confirmed</span></td>
-                <td>$120</td>
+                <td>Nil</td>
             </tr>
-            <tr>
-                <td class="td-name">Ahmad Razif<span>a.razif@email.com</span></td>
-                <td>Xingyi Quan – Five Elements</td>
-                <td>15 Mar 2026</td>
-                <td><span class="badge badge-gold">Pending</span></td>
-                <td>$500</td>
-            </tr>
-            <tr>
-                <td class="td-name">Liu Jianming<span>ljianming@email.com</span></td>
-                <td>Qingping Sword – Foundations</td>
-                <td>12 Mar 2026</td>
-                <td><span class="badge badge-green">Confirmed</span></td>
-                <td>$300</td>
-            </tr>
-            <tr>
-                <td class="td-name">Priya Nair<span>priya.n@email.com</span></td>
-                <td>Taiyi Bagua Yangsheng Gong</td>
-                <td>10 Mar 2026</td>
-                <td><span class="badge badge-green">Confirmed</span></td>
-                <td>$150</td>
-            </tr>
-            <tr>
-                <td class="td-name">Marcus Chen<span>m.chen@email.com</span></td>
-                <td>Zimenquan – Introduction</td>
-                <td>08 Mar 2026</td>
-                <td><span class="badge badge-red">Cancelled</span></td>
-                <td>$500</td>
-            </tr>
+
+            {% endfor %}
+
         </tbody>
     </table>
 </div>
