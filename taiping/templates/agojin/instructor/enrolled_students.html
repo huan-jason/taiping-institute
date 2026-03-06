@@ -21,7 +21,7 @@
                 <td class="td-name">{{ item.student.user.get_full_name }}<span>{{ item.student.user.email }}</span></td>
                 <td>{{ item.course_class.course.name }}</td>
                 <td>{{ item.created | date:'d b Y' }}</td>
-                <td><span class="badge badge-green">{{ item.status | title }}</span></td>
+                <td><span class="badge badge-green">{{ item.status }}</span></td>
                 <td>${{ item.course_class.get_course_fee }}</td>
             </tr>
 

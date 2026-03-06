@@ -7,6 +7,7 @@ from django.shortcuts import render
 from django.views import View
 
 from taiping.models import (
+    CourseClass,
     CourseClassStudent,
     Instructor,
 )
@@ -40,11 +41,16 @@ class InstructorView(View):
         instructor: Instructor | None = getattr(request.user, "instructor", None)
         course_class_students: QuerySet[CourseClassStudent] = (CourseClassStudent.objects
             .filter(course_class__instructor=instructor)
+            .order_by("-created")
         )
         return render(request, "agojin/instructor/enrolled_students.html", locals())
 
     def htmx_manage_courses(self, request: HttpRequest) -> HttpResponse:
         instructor: Instructor | None = getattr(request.user, "instructor", None)
+        course_classes: QuerySet[CourseClass] = (CourseClass.objects
+            .filter(instructor=instructor)
+            .order_by("-start_date")
+        )
         return render(request, "agojin/instructor/manage_courses.html", locals())
 
     def htmx_revenue(self, request: HttpRequest) -> HttpResponse:
