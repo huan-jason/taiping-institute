@@ -1,7 +1,7 @@
 <div class="dash-section">
     <div class="section-header">
         <span class="section-title">Manage Courses</span>
-        <a href="#" class="section-action">+ New Course</a>
+        <a href="/course/new/" class="section-action">+ New Course</a>
     </div>
     <table class="data-table">
         <thead>
@@ -29,8 +29,8 @@
                 <td>{{ item.students.count }} / {{ item.max_students }}</td>
                 <td><span class="badge badge-green">{{ item.status }}</span></td>
                 <td>
-                    <a class="link--course__edit">Edit</a>
-                    <a class="link--course__view">View</a>
+                    <a href="/course/{{ item.course_id }}/edit/" class="link--course__edit">Edit</a>
+                    <a href="/course/{{ item.course_id }}/" class="link--course__view">View</a>
                 </td>
             </tr>
 
