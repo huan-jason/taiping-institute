@@ -1,5 +1,5 @@
 {% extends "agojin/base/index.html" %}
-
+{% load extra_tags %}
 
 {% block style %}
 {% include "taiping/base/css.html" %}
@@ -19,7 +19,7 @@
 
     #unmet-prerequisites {
         color: var(--bs-danger);
-        margin: 3em auto;
+        margin: 3em auto 0;
         font-weight: bold;
         text-wrap: balanced;
         text-wrap: pretty;
@@ -27,6 +27,7 @@
     }
 </style>
 
+{% with meets_prerequisites=course|meets_prerequisites:user %}
 
 <div id="page--course-registration" class="container pb-4">
     <form id="form--payment" method="POST" onchange="onChangeForm(this)">
@@ -37,26 +38,22 @@
             <div class="mt-3 mb-5">{{ course.chinese_name }}</div>
         </h4>
 
-        {% if met_prerequisites %}
-
-
         <div id="course-class-details" hx-get="?htmx=course-class-details" hx-trigger="load"></div>
 
+
+
+        <!-- noformat -->
+        {% if meets_prerequisites %}
+            {% include "./payment.html" %}
         {% else %}
-
-        {% include "./prerequisites.html" %}
-
+            {% include "./prerequisites.html" %}
         {% endif %}
-
-
-        {% if met_prerequisites %}
-
-        {% include "./payment.html" %}
-
-        {% endif %}
+        <!-- noformat -->
 
     </form>
 </div>
+
+{% endwith %}
 
 
 <script>

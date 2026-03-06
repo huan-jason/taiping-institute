@@ -1,5 +1,3 @@
-{% if dependent_courses %}
-
 <style>
     #prerequisites-container {
         max-width: max-content;
@@ -29,6 +27,10 @@
         {% endif %}
 
     </div>
+    {% empty %}
+    <div class="mt-2">
+        Nil
+    </div>
     {% endfor %}
 
     <div id="unmet-prerequisites">
@@ -39,4 +41,3 @@
     </div>
 
 </section>
-{% endif %}

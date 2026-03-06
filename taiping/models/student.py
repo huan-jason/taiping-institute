@@ -16,6 +16,7 @@ from taiping.constants import CourseStudentStatusChoices
 
 if TYPE_CHECKING:
     from .courseclassstudent import CourseClassStudent
+    from .courseclassstudentsession import CourseClassStudentSession
 
 
 class Student(BaseModel):
@@ -37,7 +38,17 @@ class Student(BaseModel):
         return self.user.username
 
     def attendance_pct(self) -> float:
-        return 0  # zzz
+        from .courseclassstudent import CourseClassStudent
+        from .courseclassschedule import CourseClassSchedule
+
+        course_class_ids: list[int] = list(CourseClassStudent.objects
+            .filter(student=self)
+            .values_list("course_class_id", flat=True)
+        )
+        course_class_schedules: QuerySet[CourseClassSchedule] = (CourseClassSchedule.objects
+            .filter(course_class_id__in=course_class_ids)
+        )
+        return self.sessions().count() / course_class_schedules.count()
 
     def courses_completed(self) -> QuerySet[CourseClassStudent]:
         return (self
@@ -52,5 +63,9 @@ class Student(BaseModel):
             .order_by("-created")
         )
 
-    def sessions(self) -> int:
-        return 0  # zzz
+    def sessions(self) -> QuerySet[CourseClassStudentSession]:
+        from .courseclassstudentsession import CourseClassStudentSession
+
+        return CourseClassStudentSession.objects.filter(
+            course_class_student__student=self,
+        )

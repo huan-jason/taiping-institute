@@ -3,7 +3,7 @@ from typing import Any, cast
 
 from django.core.mail import send_mail
 from django.db import transaction
-from django.db.models import F
+from django.db.models import F, QuerySet
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.template.loader import render_to_string
@@ -13,6 +13,7 @@ from taiping.constants import UserTypeChoices
 from taiping.models import (
     Course,
     CourseClass,
+    CourseDependency,
     Instructor,
     Registration,
     Student,
@@ -59,8 +60,7 @@ class EnrollView(View):
             return self.enrolled(request, course_class_id)
 
         course: Course = get_object_or_404(Course.objects.filter(id=course_id))
-        dependent_courses: list[dict] = self.get_dependent_courses(request, course)
-        met_prerequisites: bool = all(item["met_dependency"] for item in dependent_courses)
+        dependent_courses: QuerySet[CourseDependency] = self.get_dependent_courses(course)
         show_back_button: bool = True
         use_bootstrap: bool = True
         return render(request, "taiping/enrollment/index.html", locals())
@@ -72,21 +72,11 @@ class EnrollView(View):
         )
         return render(request, "taiping/enrollment/enrolled.html", locals())
 
-    def get_dependent_courses(self, request: HttpRequest, course: Course) -> list[dict]:
-        student_course_ids: set[int] = {
-            item.course_class.course_id for item in
-            Registration.objects.filter(student=cast(Any, request).user.student, completed=True)
-        }
-        dependent_courses: list[dict] = list(course
+    def get_dependent_courses(self,  course: Course) -> QuerySet[CourseDependency]:
+        return (course
             .coursedependency_set  # type: ignore
             .annotate(dependency_course=F("dependent_course__name"))
-            .values()
         )
-
-        for item in dependent_courses:
-            item["met_dependency"] = item["dependent_course_id"] in student_course_ids
-
-        return dependent_courses
 
     def post(self, request: HttpRequest, course_id: int | None = None, **kwargs: Any) -> HttpResponse:
         course_class: CourseClass = (CourseClass.objects

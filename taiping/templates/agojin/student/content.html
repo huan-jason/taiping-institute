@@ -30,12 +30,12 @@
           </div>
 
           <div class="pstat">
-            <div class="pstat-val">{{ student.sessions }}</div>
+            <div class="pstat-val">{{ student.sessions.count|floatformat:'0g' }}</div>
             <div class="pstat-label">Sessions</div>
           </div>
 
           <div class="pstat">
-            <div class="pstat-val">{{ student.attendance_pct | floatformat:'0' }}%</div>
+            <div class="pstat-val">{{ student.attendance_pct | floatformat:'0' }} %</div>
             <div class="pstat-label">Attendance</div>
           </div>
 
