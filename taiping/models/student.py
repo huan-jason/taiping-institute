@@ -45,10 +45,14 @@ class Student(BaseModel):
             .filter(student=self)
             .values_list("course_class_id", flat=True)
         )
-        course_class_schedules: QuerySet[CourseClassSchedule] = (CourseClassSchedule.objects
+        course_class_schedule_count: int = (CourseClassSchedule.objects
             .filter(course_class_id__in=course_class_ids)
+            .count()
         )
-        return self.sessions().count() / course_class_schedules.count()
+        return (
+            self.sessions().count() / course_class_schedule_count
+            if course_class_schedule_count else 0
+        )
 
     def courses_completed(self) -> QuerySet[CourseClassStudent]:
         return (self
