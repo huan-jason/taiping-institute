@@ -20,12 +20,12 @@
         <div class="profile-stats">
 
           <div class="pstat">
-            <div class="pstat-val">{{ student.enroll_classes }}</div>
+            <div class="pstat-val">{{ student.courses_enrolled.count }}</div>
             <div class="pstat-label">Enrolled</div>
           </div>
 
           <div class="pstat">
-            <div class="pstat-val">{{ student.completed_classes }}</div>
+            <div class="pstat-val">{{ student.courses_completed.count }}</div>
             <div class="pstat-label">Completed</div>
           </div>
 
@@ -35,7 +35,7 @@
           </div>
 
           <div class="pstat">
-            <div class="pstat-val">{{ student.attendance }}</div>
+            <div class="pstat-val">{{ student.attendance_pct | floatformat:'0' }}%</div>
             <div class="pstat-label">Attendance</div>
           </div>
 

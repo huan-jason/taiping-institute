@@ -6,14 +6,16 @@ from django.db.models import (
     IntegerField,
     OneToOneField,
     PROTECT,
+    QuerySet,
     TextField,
 )
 from taiping.constants import GenderChoices
 from .basemodel import BaseModel
 
+from taiping.constants import CourseStudentStatusChoices
+
 if TYPE_CHECKING:
-    from .course import Course
-    from .courseclass import CourseClass
+    from .courseclassstudent import CourseClassStudent
 
 
 class Student(BaseModel):
@@ -34,23 +36,21 @@ class Student(BaseModel):
     def __str__(self) -> str:
         return self.user.username
 
-    def attendance(self) -> str:
-        return "0%"
+    def attendance_pct(self) -> float:
+        return 0  # zzz
 
-    def completed_classes(self) -> int:
-        return 0
-
-    def courses(self) -> list[Course]:
+    def courses_completed(self) -> QuerySet[CourseClassStudent]:
         return (self
-            .coursestudent_set  # type: ignore
+            .courseclassstudent_set  # type: ignore
+            .filter(status=CourseStudentStatusChoices.COMPLETED)
             .order_by("-created")
         )
 
-    def enroll_classes(self) -> int:
-        return 0
+    def courses_enrolled(self) -> QuerySet[CourseClassStudent]:
+        return (self
+            .courseclassstudent_set  # type: ignore
+            .order_by("-created")
+        )
 
     def sessions(self) -> int:
-        return 0
-
-    def upcoming_classes(self) -> list[CourseClass]:
-        return []
+        return 0  # zzz
