@@ -166,14 +166,17 @@
 </form>
 
 
+{% include "taiping/base/js.html" %}
+
+
 <script>
-    window.onload = () => {
+    document.addEventListener('DOMContentLoaded', () => {
         const form = document.querySelector('#form--course-details')
         onChangeForm(form)
 
         resizeAllTextareas()
         dateInputsInit()
-    }
+    })
 </script>
 
 

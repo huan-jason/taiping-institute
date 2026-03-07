@@ -95,8 +95,8 @@ class CourseEditView(ClassScheduleMixin, View):
             action = action.replace("-", "_")
             return getattr(self, f"htmx_{action}")(request)
 
-        today: date = timezone.now().date()
         course: Course | None = Course.objects.filter(id=course_id or 0).first()
+        today: date = timezone.now().date()
         course_classes: QuerySet[CourseClass] | list = (course
             .courseclass_set  # type: ignore
             .order_by("start_date", "end_date")

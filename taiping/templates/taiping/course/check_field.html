@@ -1,7 +1,17 @@
 {% if error %}
+
 <script hx-swap-oob="true" id="htmx-script">
-    const input = document.querySelector('[name={{ field }}]')
+    var input = document.querySelector('[name={{ field }}]')
     input.setCustomValidity('{{ error_message }}')
     input.reportValidity()
 </script>
+
+{% else %}
+
+<script hx-swap-oob="true" id="htmx-script">
+    var input = document.querySelector('[name={{ field }}]')
+    input.setCustomValidity('')
+    input.reportValidity()
+</script>
+
 {% endif %}
