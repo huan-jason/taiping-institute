@@ -6,6 +6,7 @@ from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 from django.views import View
 
+from taiping.constants import CourseStatusChoices
 from taiping.models import (
     CourseClass,
     Registration,
@@ -20,7 +21,11 @@ class IndexView(View):
             return getattr(self, f"htmx_{htmx}")(request)
 
         context: dict[str, Any] = (
-            get_courses_list_context(request, use_session_filters=True)
+            get_courses_list_context(
+                request,
+                use_session_filters=True,
+                status=CourseStatusChoices.PUBLISHED,
+            )
             | dict(
                 current_tab="courses",
             )

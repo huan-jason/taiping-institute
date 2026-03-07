@@ -8,8 +8,17 @@ from taiping.constants import CourseStatusChoices
 from taiping.models import Course, CourseClass, Facility, Instructor
 
 
-def _get_courses_queryset(request: HttpRequest, filters: dict[str, str]) -> QuerySet[Course]:
-    queryset: QuerySet[Course] = Course.objects.order_by("sort_order", "name")
+def _get_courses_queryset(
+    request: HttpRequest,
+    filters: dict[str, str],
+    status: CourseStatusChoices | None = None,
+) -> QuerySet[Course]:
+
+    queryset: QuerySet[Course] = (Course.objects
+        .order_by("sort_order", "name")
+    )
+    if status:
+        queryset = queryset.filter(status=CourseStatusChoices.PUBLISHED)
 
     if (instructor := filters.get("filter_instructor")):
         subquery_instructor: QuerySet[CourseClass] = CourseClass.objects.filter(
@@ -54,7 +63,12 @@ def _get_courses_queryset(request: HttpRequest, filters: dict[str, str]) -> Quer
     return queryset
 
 
-def get_courses_list_context(request: HttpRequest, use_session_filters: bool = False) -> dict[str, Any]:
+def get_courses_list_context(
+    request: HttpRequest,
+    use_session_filters: bool = False,
+    status: CourseStatusChoices | None = None,
+) -> dict[str, Any]:
+
     query_filters: dict[str, Any] = (
         request.session.get("course_filters") or {}
         if use_session_filters else
@@ -69,7 +83,11 @@ def get_courses_list_context(request: HttpRequest, use_session_filters: bool = F
         for key, val in query_filters.items()
     }
     has_filters: bool = any(filters.values())
-    courses: QuerySet[Course] = _get_courses_queryset(request, filters)
+    courses: QuerySet[Course] = _get_courses_queryset(
+        request=request,
+        filters=filters,
+        status=status,
+    )
     course_groups: QuerySet[Course] = (Course.objects
         .select_related("course_group")
         .distinct("course_group__name")

@@ -32,6 +32,7 @@ class Course(BaseModel):
     sort_order = IntegerField(default=999)
     image = FileField(upload_to="course/", null=True, blank=True)
     small_image = FileField(upload_to="course/small/", null=True, blank=True)
+    status = CharField(max_length=32, db_index=True, choices=CourseStatusChoices, default=CourseStatusChoices.DRAFT)
 
     def __str__(self) -> str:
         return self.name
