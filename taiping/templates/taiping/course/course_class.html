@@ -28,7 +28,12 @@
         {% endif %}
 
         {% if show_enroll_button %}
+        {% if course_class.status|upper == 'PUBLISHED' %}
         <a href="enroll/{{ course_class.id }}/" class="btn btn-sm btn-outline-primary px-3 py-1 ms-4">Enroll</a>
+
+        {% else %}
+        <span class="text-danger mx-3">{{ course_class.status | upper }}</span>
+        {% endif %}
         {% endif %}
 
         {% if user.instructor == instructor or user.is_superuser %}
