@@ -39,7 +39,7 @@ class InstructorView(View):
         min_amount, max_amount = self.get_chart_min_max_amounts(data)
         total: float = (max_amount - min_amount) or max_amount
         low: float = 0 if min_amount == max_amount else (min_amount - total * 0.1)
-        unit_val: float = (100 / total)
+        unit_val: float = (100 / total) if total else 0
 
         for item in data:
             amount: float = item["amount"]
