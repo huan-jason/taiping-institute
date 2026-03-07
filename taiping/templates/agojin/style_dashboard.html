@@ -406,6 +406,15 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    height: 100%;
+  }
+
+  .rev-bar-height-wrap {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 
   .rev-bar {
@@ -414,12 +423,14 @@
     border-radius: 1px;
     transition: background 0.2s;
     cursor: default;
+    height: attr(data-height %);
   }
 
   .rev-bar:hover {
     background: var(--gold-lt);
   }
 
+  .rev-chart .rev-bar-wrap:last-child .rev-bar,
   .rev-bar.current {
     background: var(--gold);
   }

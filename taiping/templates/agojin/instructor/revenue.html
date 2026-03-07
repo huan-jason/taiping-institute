@@ -3,43 +3,36 @@
         <span class="section-title">Revenue Overview</span>
         <a href="#" class="section-action">View Full Report</a>
     </div>
-    <!--
+
     <div class="rev-chart">
+
+        {% for item in revenues %}
+
         <div class="rev-bar-wrap">
-            <div class="rev-bar" style="height:48px" title="$1,920"></div>
-            <div class="rev-label">Oct</div>
+            <div class="rev-bar-height-wrap">
+                <div class="rev-bar" data-height="{{ item.height }}" title="${{ item.amount | floatformat:'0g' }}">
+                </div>
+            </div>
+            <div class="rev-label">{{ item.month | date:'M' }}</div>
         </div>
-        <div class="rev-bar-wrap">
-            <div class="rev-bar" style="height:62px" title="$2,480"></div>
-            <div class="rev-label">Nov</div>
-        </div>
-        <div class="rev-bar-wrap">
-            <div class="rev-bar" style="height:38px" title="$1,520"></div>
-            <div class="rev-label">Dec</div>
-        </div>
-        <div class="rev-bar-wrap">
-            <div class="rev-bar" style="height:70px" title="$2,800"></div>
-            <div class="rev-label">Jan</div>
-        </div>
-        <div class="rev-bar-wrap">
-            <div class="rev-bar" style="height:55px" title="$2,200"></div>
-            <div class="rev-label">Feb</div>
-        </div>
-        <div class="rev-bar current"
-            style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;align-self:flex-end">
-            <div style="height:96px;width:100%;background:var(--gold);border-radius:1px;"></div>
-            <div class="rev-label" style="color:var(--gold);font-weight:700;">Mar</div>
-        </div>
+
+        {% endfor %}
+
     </div>
+
+    {% with item=revenues|last %}
+
     <div class="rev-footer">
         <div>
-            <div class="rev-period">March 2026 (in progress)</div>
-            <div class="rev-total">$3,840</div>
+            <div class="rev-period">{{ item.month | date:'F Y' }}</div>
+            <div class="rev-total">${{ item.amount | floatformat:'0g' }}</div>
         </div>
         <div style="text-align:right">
             <div class="rev-period">Year to date</div>
-            <div class="rev-total">$14,760</div>
+            <div class="rev-total">${{ ytd_amount | default:0 | floatformat:'0g' }}</div>
         </div>
     </div>
-     -->
+
+    {% endwith %}
+
 </div>
