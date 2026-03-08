@@ -1,7 +1,14 @@
 <div class="dash-section">
     <div class="section-header">
         <span class="section-title">Revenue Overview</span>
-        <a href="#" class="section-action">View Full Report</a>
+
+        {% if show_action %}
+        <a class="section-action" hx-get="?htmx=revenue" hx-target=".dash-main"
+            _="on click remove .active from .snav-item add .active to #snav--revenue">
+            View Full Report
+        </a>
+        {% endif %}
+
     </div>
 
     <div class="rev-chart">

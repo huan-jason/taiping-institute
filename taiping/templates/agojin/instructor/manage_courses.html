@@ -1,7 +1,21 @@
 <div class="dash-section">
     <div class="section-header">
         <span class="section-title">Manage Courses</span>
+
+
+        {% if show_action %}
+
+        <a class="section-action" hx-get="?htmx=manage-courses" hx-target=".dash-main"
+            _="on click remove .active from .snav-item add .active to #snav--courses">
+            View All Courses
+        </a>
+
+        {% else %}
+
         <a href="/course/new/" class="section-action">+ New Course</a>
+
+        {% endif %}
+
     </div>
     <table class="data-table">
         <thead>

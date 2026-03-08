@@ -1,7 +1,14 @@
 <div class="dash-section">
     <div class="section-header">
         <span class="section-title">{{ today | date:'F Y' }} Schedule</span>
-        <a href="#" class="section-action">Full Calendar</a>
+
+        {% if show_action %}
+        <a class="section-action" hx-get="?htmx=schedule" hx-target=".dash-main"
+            _="on click remove .active from .snav-item add .active to #snav--schedule">
+            Full Calendar
+        </a>
+        {% endif %}
+
     </div>
 
     <div style="background:var(--card-bg);border:1px solid var(--border);padding:16px 20px;">

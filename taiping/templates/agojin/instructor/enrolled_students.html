@@ -1,7 +1,20 @@
 <div class="dash-section">
     <div class="section-header">
         <span class="section-title">Enrolled Students</span>
-        <a href="#" class="section-action">Export List</a>
+
+        {% if show_action %}
+
+        <a class="section-action" hx-get="?htmx=enrolled_students" hx-target=".dash-main"
+            _="on click remove .active from .snav-item add .active to #snav--students">
+            View All Students
+        </a>
+
+        {% else %}
+
+        <a href="?export-students" download class="section-action">Export List</a>
+
+        {% endif %}
+
     </div>
     <table class="data-table">
         <thead>

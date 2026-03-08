@@ -42,6 +42,8 @@ class InstructorView(View, RevenueMixin, ScheduleMixin):
 
     def htmx_enrolled_students(self, request: HttpRequest) -> HttpResponse:
         instructor: Instructor | None = getattr(request.user, "instructor", None)
+        show_action: bool = request.GET.get("a") == "1"
+
         course_class_students: QuerySet[CourseClassStudent] = (CourseClassStudent.objects
             .filter(course_class__instructor=instructor)
             .order_by("-created")
@@ -53,6 +55,8 @@ class InstructorView(View, RevenueMixin, ScheduleMixin):
 
     def htmx_manage_courses(self, request: HttpRequest) -> HttpResponse:
         instructor: Instructor | None = getattr(request.user, "instructor", None)
+        show_action: bool = request.GET.get("a") == "1"
+
         course_classes: QuerySet[CourseClass] = (CourseClass.objects
             .filter(instructor=instructor)
             .order_by("-start_date")
@@ -64,8 +68,9 @@ class InstructorView(View, RevenueMixin, ScheduleMixin):
 
     def htmx_revenue(self, request: HttpRequest) -> HttpResponse:
         instructor: Instructor | None = getattr(request.user, "instructor", None)
-        revenues: list[dict[str, Any]] = []
+        show_action: bool = request.GET.get("a") == "1"
 
+        revenues: list[dict[str, Any]] = []
         if instructor:
             revenues = self.revenue__get_revenues(instructor)
             ytd_amount: float = self.revenue__get_ytd_amount(instructor)
@@ -74,9 +79,10 @@ class InstructorView(View, RevenueMixin, ScheduleMixin):
 
     def htmx_schedule(self, request: HttpRequest) -> HttpResponse:
         instructor: Instructor | None = getattr(request.user, "instructor", None)
+        show_action: bool = request.GET.get("a") == "1"
         today: date = timezone.now().date()
-        dates: list[dict[str, Any]] = []
 
+        dates: list[dict[str, Any]] = []
         if instructor:
             dates = self.schedule__get_calendar_dates(instructor)
 
