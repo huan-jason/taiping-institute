@@ -46,6 +46,9 @@ class InstructorView(View, RevenueMixin, ScheduleMixin):
             .filter(course_class__instructor=instructor)
             .order_by("-created")
         )
+        if count := request.GET.get("c"):
+            course_class_students = course_class_students[:int(count)]
+
         return render(request, "agojin/instructor/enrolled_students.html", locals())
 
     def htmx_manage_courses(self, request: HttpRequest) -> HttpResponse:
@@ -54,6 +57,9 @@ class InstructorView(View, RevenueMixin, ScheduleMixin):
             .filter(instructor=instructor)
             .order_by("-start_date")
         )
+        if count := request.GET.get("c"):
+            course_classes = course_classes[:int(count)]
+
         return render(request, "agojin/instructor/manage_courses.html", locals())
 
     def htmx_revenue(self, request: HttpRequest) -> HttpResponse:
