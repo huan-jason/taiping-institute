@@ -36,8 +36,8 @@
 
                 {% for event_item in item.events %}
 
-                <div class="cal-event event--{{ event_item.seq_id }}">
-                    {{ event_item.course.name }} xxx
+                <div class="cal-event {{ event_item.css_class }}">
+                    {{ event_item.course_class.course.name }}
                 </div>
 
                 {% endfor %}

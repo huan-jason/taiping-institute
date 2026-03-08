@@ -347,7 +347,7 @@
 
   .cal-day.today {
     border-color: var(--gold);
-    background: #fdf9f0;
+    background: #fdf9f0 !important;
   }
 
   .cal-day.has-event {
@@ -364,6 +364,7 @@
     color: var(--gold);
   }
 
+  .cal-event.event--1,
   .cal-event {
     font-size: 10px;
     background: var(--ink);
@@ -376,11 +377,13 @@
     text-overflow: ellipsis;
   }
 
+  .cal-event.event--2,
   .cal-event.gold {
     background: var(--gold);
     color: var(--ink);
   }
 
+  .cal-event.event--3,
   .cal-event.green {
     background: var(--green);
     color: #fff;

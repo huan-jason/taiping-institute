@@ -13,6 +13,7 @@ __pycache__/
 /secrets/
 /tmp/
 /venv/
+/.venv/
 
 /docker-compose.override.yaml
 /version.txt

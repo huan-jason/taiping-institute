@@ -13,12 +13,19 @@ from taiping.models import (
     CourseClassStudent,
     Instructor,
 )
-from .instructor import RevenueMixin, ScheduleMixin
+from .instructor import (
+    RevenueMixin,
+    ScheduleMixin,
+    StudentMixin,
+)
 
 
-class InstructorView(View, RevenueMixin, ScheduleMixin):
+class InstructorView(View, RevenueMixin, ScheduleMixin, StudentMixin):
 
     def get(self, request: HttpRequest) -> HttpResponse:
+
+        if "export-students" in request.GET:
+            return self.student__export(request)
 
         if htmx := request.GET.get("htmx"):
             return getattr(self, f"htmx_{htmx.replace('-', '_')}")(request)
@@ -85,6 +92,7 @@ class InstructorView(View, RevenueMixin, ScheduleMixin):
         dates: list[dict[str, Any]] = []
         if instructor:
             dates = self.schedule__get_calendar_dates(instructor)
+            dates = self.schedule__add_date_events(dates, instructor)
 
         return render(request, "agojin/instructor/schedule.html", locals())
 

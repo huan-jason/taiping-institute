@@ -1,0 +1,2 @@
+STUDENT,EMAIL,COURSE,ENROLLED,STATUS,AMOUNT{% for item in data %}
+"{{ item.student.user.get_full_name }}","{{ item.student.user.email }}","{{ item.course_class.course.name }}","{{ item.created | date:'d-M-Y' }}","{{ item.status | upper }}","${{ item.course_class.get_course_fee }}"{% endfor %}
