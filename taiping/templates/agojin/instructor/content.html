@@ -9,7 +9,7 @@
 
         <div class="avatar">吴</div>
         <div class="profile-name">{{ instructor.user.get_full_name }}</div>
-        <div class="profile-role">{{ instructor.position }}</div>
+        <div class="profile-role">{{ instructor.position | default: '' }}</div>
 
         <div class="profile-stats">
 
