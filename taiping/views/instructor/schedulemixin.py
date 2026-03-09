@@ -4,7 +4,6 @@ import operator
 from typing import Any
 
 from django.db.models import QuerySet
-from django.utils import timezone
 
 from taiping.models import Instructor, CourseClassSchedule
 
@@ -33,10 +32,9 @@ class ScheduleMixin:
 
         return dates
 
-    def schedule__get_calendar_dates(self, instructor: Instructor) -> list[dict[str, Any]]:
-        today: date = timezone.now().date()
-        first_of_the_month: date = today.replace(day=1)
-        next_month: date = self.schedule__get_first_of_next_month(today)
+    def schedule__get_calendar_dates(self, instructor: Instructor, month: date) -> list[dict[str, Any]]:
+        first_of_the_month: date = month.replace(day=1)
+        next_month: date = self.schedule__get_first_of_next_month(month)
         first_date: date = first_of_the_month - timedelta(days=first_of_the_month.weekday())
 
         dates: list[dict[str, Any]] = []

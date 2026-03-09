@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 from typing import Any, cast
 
 from django.db.models import QuerySet
@@ -88,13 +88,20 @@ class InstructorView(View, RevenueMixin, ScheduleMixin, StudentMixin):
         instructor: Instructor | None = getattr(request.user, "instructor", None)
         show_action: bool = request.GET.get("a") == "1"
         today: date = timezone.now().date()
+        month: date = (datetime.strptime(mth, "%Y-%m-%d").date()
+            if (mth := request.GET.get("m", "")) else timezone.now().date()
+        )
 
         dates: list[dict[str, Any]] = []
         if instructor:
-            dates = self.schedule__get_calendar_dates(instructor)
+            dates = self.schedule__get_calendar_dates(instructor, month)
             dates = self.schedule__add_date_events(dates, instructor)
+            next_month: date = self.schedule__get_first_of_next_month(month)
 
-        return render(request, "agojin/instructor/schedule.html", locals())
+        scroll_to_top: bool = request.GET.get("st") == "1"
+        template: str = "schedule" if show_action else "calendar"
+
+        return render(request, f"agojin/instructor/{template}.html", locals())
 
     def htmx_stats(self, request: HttpRequest) -> HttpResponse:
         instructor: Instructor | None = getattr(request.user, "instructor", None)

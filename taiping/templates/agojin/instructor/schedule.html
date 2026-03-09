@@ -1,51 +1,25 @@
 <div class="dash-section">
     <div class="section-header">
-        <span class="section-title">{{ today | date:'F Y' }} Schedule</span>
+
+        <span class="section-title">
+            {% if show_action %}
+            {{ today | date:'F Y' }}
+            {% endif %}
+            Schedule
+        </span>
 
         {% if show_action %}
-        <a class="section-action" hx-get="?htmx=schedule" hx-target=".dash-main"
+        <a class="section-action" hx-get="?htmx=schedule&st=1" hx-target=".dash-main"
             _="on click remove .active from .snav-item add .active to #snav--schedule">
             Full Calendar
         </a>
+
         {% endif %}
 
     </div>
 
-    <div style="background:var(--card-bg);border:1px solid var(--border);padding:16px 20px;">
-
-        <div class="cal-grid" style="margin-bottom:4px;">
-            <div class="cal-header-day">Mon</div>
-            <div class="cal-header-day">Tue</div>
-            <div class="cal-header-day">Wed</div>
-            <div class="cal-header-day">Thu</div>
-            <div class="cal-header-day">Fri</div>
-            <div class="cal-header-day">Sat</div>
-            <div class="cal-header-day">Sun</div>
-        </div>
-
-        <div class="cal-grid">
-
-            {% for item in dates %}
-
-            <div class="cal-day
-                {% if item.events %} has-event {% endif %}
-                {% if item.date.month != today.month %} other-month {% endif %}
-                {% if item.date == today %} today {% endif %}
-            ">
-                <div class="cal-date">{{ item.date.day }}</div>
-
-                {% for event_item in item.events %}
-
-                <div class="cal-event {{ event_item.css_class }}">
-                    {{ event_item.course_class.course.name }}
-                </div>
-
-                {% endfor %}
-
-            </div>
-
-            {% endfor %}
-
-        </div>
+    <div id="container--calendar">
+        {% include "./calendar.html" %}
     </div>
+
 </div>

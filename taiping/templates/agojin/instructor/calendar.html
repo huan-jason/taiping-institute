@@ -1,0 +1,65 @@
+<div style="background:var(--card-bg);border:1px solid var(--border);padding:16px 20px;">
+
+    <div class="cal-month">
+        {% if not show_action %}
+        {{ month | date:'F Y' }}
+        {% endif %}
+    </div>
+
+
+    <div class="cal-grid" style="margin-bottom:4px;">
+        <div class="cal-header-day">Mon</div>
+        <div class="cal-header-day">Tue</div>
+        <div class="cal-header-day">Wed</div>
+        <div class="cal-header-day">Thu</div>
+        <div class="cal-header-day">Fri</div>
+        <div class="cal-header-day">Sat</div>
+        <div class="cal-header-day">Sun</div>
+    </div>
+
+    <div class="cal-grid">
+
+        {% for item in dates %}
+
+        <!-- noformat -->
+        <div class="cal-day
+                {% if item.events %} has-event {% endif %}
+                {% if item.date.month != month.month %}
+                    {% if show_action %} other-month
+                    {% else %} visibility-hidden {% endif %}
+                {% endif %}
+                {% if item.date == today %} today {% endif %}
+            ">
+            <!-- noformat -->
+        <div class="cal-date">{{ item.date.day }}</div>
+
+        {% for event_item in item.events %}
+
+        <div class="cal-event {{ event_item.css_class }}">
+            {{ event_item.course_class.course.name }}
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% endfor %}
+
+</div>
+</div>
+
+{% if not show_action %}
+<div id="container--calendar-next-month" hx-get="?htmx=schedule&m={{ next_month | date:'Y-m-d' }}" hx-trigger="revealed"
+    hx-swap="outerHTML" hx-indicator>
+    <div class="loader mx-auto mt-3"></div>
+</div>
+{% endif %}
+
+
+{% if scroll_to_top %}
+<script>
+    setTimeout(() => {
+        window.scrollTo(0, 0)
+    }, 100)
+</script>
+{% endif %}
