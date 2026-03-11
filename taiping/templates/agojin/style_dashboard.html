@@ -89,6 +89,7 @@
     display: flex;
     flex-direction: column;
     background: unset;
+    height: max-content;
   }
 
   .snav-item {
@@ -638,5 +639,12 @@
 
   .link--course__view {
     color: var(--warm-mid);
+  }
+
+
+  @media (max-width: 650px) {
+    .profile-stats {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
