@@ -1,19 +1,32 @@
 <div class="filter-section">
 
-  <span class="filter-label">Category</span>
+  <span class="filter-label filter-label--category">Category</span>
 
   <div class="filter-pills">
     <button class="pill active" data-filter="all">All</button>
 
     {% for item in course_groups %}
-    <button class="pill" data-filter="{{ item.id }}">{{ item.course_group.name }}</button>
+    <button class="pill" data-filter="{{ item.course_group.id }}">{{ item.course_group.name }}</button>
     {% endfor %}
 
   </div>
 
+
+  <select class="filter-select filter-select--categories" id="categoryFilter" onchange="onChangeCategory(this)">
+    <option value="all">All Categories</option>
+
+    {% for item in course_groups %}
+    <option value="{{ item.course_group.id }}">{{ item.name }}</option>
+    {% endfor %}
+
+  </select>
+
+
+
   <div class="filter-divider"></div>
 
-  <select class="filter-select" id="facilityFilter">
+
+  <select class="filter-select filter-select--locations" id="facilityFilter">
     <option value="">All Locations</option>
 
     {% for item in facilities %}
@@ -22,6 +35,8 @@
 
   </select>
 
+
   <span class="filter-count" id="countLabel">{{ courses | length }} courses</span>
+
 
 </div>

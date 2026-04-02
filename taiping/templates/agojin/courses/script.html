@@ -1,24 +1,28 @@
 <script>
 
-  function init() {
-    // ── Course filters ──────────────────────────────────
-    const pills = document.querySelectorAll('.pill');
-    const facilitySelect = document.getElementById('facilityFilter');
+  function applyFilters() {
+    let count = 0;
+
     const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      const catOk = activeCat === 'all' || card.dataset.cat === activeCat;
+      const locOk = !activeLoc || card.dataset.loc === activeLoc;
+      card.classList.toggle('hidden', !(catOk && locOk));
+      if (catOk && locOk) count++;
+    });
+
     const countLabel = document.getElementById('countLabel');
-    let activeCat = 'all', activeLoc = '';
+    countLabel.textContent = count + ' course' + (count !== 1 ? 's' : '');
+  }
 
-    function applyFilters() {
-      let count = 0;
-      cards.forEach(card => {
-        const catOk = activeCat === 'all' || card.dataset.cat === activeCat;
-        const locOk = !activeLoc || card.dataset.loc === activeLoc;
-        card.classList.toggle('hidden', !(catOk && locOk));
-        if (catOk && locOk) count++;
-      });
-      countLabel.textContent = count + ' course' + (count !== 1 ? 's' : '');
-    }
+  function onChangeCategory(input) {
+    activeCat = input.value;
+    applyFilters();
+  }
 
+  function init() {
+
+    const pills = document.querySelectorAll('.pill');
     pills.forEach(pill => {
       pill.addEventListener('click', () => {
         pills.forEach(p => p.classList.remove('active'));
@@ -28,12 +32,14 @@
       });
     });
 
+    const facilitySelect = document.getElementById('facilityFilter');
     facilitySelect?.addEventListener('change', () => {
       activeLoc = facilitySelect.value;
       applyFilters();
     });
   }
 
+  var activeCat = 'all', activeLoc = '';
   document.addEventListener('DOMContentLoaded', init)
 
 </script>
