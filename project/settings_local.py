@@ -54,7 +54,7 @@ DEFAULT_FROM_EMAIL = 'Agojin Admin<agojin917@gmail.com>'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'dgchart.hrd@gmail.com'
+EMAIL_HOST_USER = 'agojin917@gmail.com'
 EMAIL_HOST_PASSWORD = get_secret("email_host_password")
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
