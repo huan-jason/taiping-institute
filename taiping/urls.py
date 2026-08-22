@@ -40,10 +40,13 @@ urlpatterns = [
 
     re_path(r'(?P<info_type>terms-and-conditions)/', views.InfoView.as_view(), name="terms_and_conditions"),
     re_path(r'(?P<info_type>indemnity-waiver)/', views.InfoView.as_view(), name="indemnity_waiver"),
-
-    path('', views.IndexView.as_view(), name="index"),
 ]
 
 if settings.DEBUG:
     from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+urlpatterns += [
+    path('', views.IndexView.as_view(), name="index"),
+]

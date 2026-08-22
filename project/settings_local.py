@@ -75,7 +75,7 @@ INSTALLED_APPS = [
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 SECRET_KEY = get_secret("django_secret_key")
@@ -86,7 +86,7 @@ SECURE_HSTS_SECONDS = 3600
 
 SESSION_COOKIE_SECURE = True
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
 
 TIME_ZONE = 'Asia/Singapore'
