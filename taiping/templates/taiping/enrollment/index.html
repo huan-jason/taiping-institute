@@ -44,7 +44,7 @@
 
         <!-- noformat -->
         {% if meets_prerequisites %}
-            {% include "./payment.html" %}
+            {% include "./enroll.html" %}
         {% else %}
             {% include "./prerequisites.html" %}
         {% endif %}
@@ -56,7 +56,18 @@
 {% endwith %}
 
 
+{% include "agojin/base/js.html" %}
+
+
 <script>
+    function onChangeForm(form, buttonId = '#button--submit') {
+        const items = [...form.elements]
+        const isValid = items.every(item => item.validity.valid)
+        document.querySelector(buttonId).disabled = !isValid
+        if (window.DEBUG) { invalidInputs(form) }
+    }
+
+
     function init() {
         setTimeout(() => {
             onChangeForm(document.querySelector('#form--payment'))

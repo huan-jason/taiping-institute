@@ -1,0 +1,51 @@
+<script>
+    function dateInputsInit() {
+        inputTypes = ['date', 'month', 'time']
+        inputTypes.map(inputType => {
+            const inputs = [...document.querySelectorAll(`input[type=${inputType}]`)]
+
+            const showPicker = e => {
+                try { e.target.showPicker() }
+                catch (e) { }
+            }
+
+            inputs.map(item => {
+                item.addEventListener('click', showPicker)
+                item.addEventListener('focus', showPicker)
+            })
+        })
+    }
+
+    function invalidInputs(form) {
+        form = form || document.forms[0]
+        const items = [...form.elements]
+        const invalids = items
+            .filter(item => !item.validity.valid)
+            .map(item => item.name)
+        console.log(invalids)
+    }
+
+    function onChangeForm(form, buttonId = '#button--submit') {
+        const items = [...form.elements]
+        const isValid = items.every(item => item.validity.valid)
+        document.querySelector(buttonId).disabled = !isValid
+        if (window.DEBUG) { invalidInputs(form) }
+    }
+
+
+    function resizeTextarea(textarea) {
+        textarea.style.height = `${textarea.scrollHeight + 2}px`
+    }
+
+    function resizeAllTextareas() {
+        const textareas = [...document.querySelectorAll('textarea')]
+        textareas.map(resizeTextarea)
+        textareas.map(item => item.addEventListener('input', e => resizeTextarea(e.target)))
+    }
+
+    function tooltipsInit() {
+        [...document.querySelectorAll('[data-bs-toggle]')].map(item => {
+            new bootstrap.Tooltip(item)
+        })
+    }
+</script>

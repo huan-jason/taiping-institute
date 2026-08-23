@@ -43,7 +43,7 @@ class Course(BaseModel):
 
     @property
     def image_name(self) -> str:
-        return self.image.name.rsplit("/", 1)[-1]
+        return self.image.name.rsplit("/", 1)[-1] if self.image and self.image.name else ""
 
     def next_class(self) -> CourseClass | None:
         return self.upcoming_classes().first()
