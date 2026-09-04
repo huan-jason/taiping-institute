@@ -21,15 +21,21 @@ def _get_courses_queryset(
         queryset = queryset.filter(status=CourseStatusChoices.PUBLISHED)
 
     if (instructor := filters.get("filter_instructor")):
-        subquery_instructor: QuerySet[CourseClass] = CourseClass.objects.filter(
-            course_id=OuterRef('id'),
-            instructor_id=int(instructor),
-            status=CourseStatusChoices.PUBLISHED,
-        )
-        queryset = queryset.filter(
-            Q(instructor_id=int(instructor))
-            | Q(Exists(subquery_instructor))
-        )
+        try:
+            instructor_id: int = int(instructor)
+
+            subquery_instructor: QuerySet[CourseClass] = CourseClass.objects.filter(
+                course_id=OuterRef('id'),
+                instructor_id=instructor_id,
+                status=CourseStatusChoices.PUBLISHED,
+            )
+            queryset = queryset.filter(
+                Q(instructor_id=instructor_id)
+                | Q(Exists(subquery_instructor))
+            )
+
+        except ValueError:
+            pass
 
     if (facility := filters.get("filter_facility")):
         subquery_facility: QuerySet[CourseClass] = CourseClass.objects.filter(
