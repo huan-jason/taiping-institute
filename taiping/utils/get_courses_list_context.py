@@ -45,20 +45,20 @@ def _get_courses_queryset(
     if (course_group := filters.get("filter_course_group")):
         queryset = queryset.filter(course_group_id=int(course_group))
 
-    if (filter_month := filters.get("filter_month")):
-        filter_datetime: datetime = datetime.strptime(filter_month, "%Y-%m")
-        year: int = filter_datetime.year
-        month: int = filter_datetime.month
+    # if (filter_month := filters.get("filter_month")):
+    #     filter_datetime: datetime = datetime.strptime(filter_month, "%Y-%m")
+    #     year: int = filter_datetime.year
+    #     month: int = filter_datetime.month
 
-        q_start_date: Q = Q(start_date__year=year, start_date__month=month)
-        q_end_date: Q = Q(end_date__year=year, end_date__month=month)
+    #     q_start_date: Q = Q(start_date__year=year, start_date__month=month)
+    #     q_end_date: Q = Q(end_date__year=year, end_date__month=month)
 
-        subquery_date: QuerySet[CourseClass] = CourseClass.objects.filter(
-            q_start_date | q_end_date,
-            course_id=OuterRef('id'),
-            status=CourseStatusChoices.PUBLISHED,
-        )
-        queryset = queryset.filter(Exists(subquery_date))
+    #     subquery_date: QuerySet[CourseClass] = CourseClass.objects.filter(
+    #         q_start_date | q_end_date,
+    #         course_id=OuterRef('id'),
+    #         status=CourseStatusChoices.PUBLISHED,
+    #     )
+    #     queryset = queryset.filter(Exists(subquery_date))
 
     return queryset
 
