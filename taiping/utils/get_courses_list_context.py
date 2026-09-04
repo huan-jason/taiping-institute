@@ -43,7 +43,11 @@ def _get_courses_queryset(
         )
 
     if (course_group := filters.get("filter_course_group")):
-        queryset = queryset.filter(course_group_id=int(course_group))
+        try:
+            course_group_id: int = int(course_group)
+            queryset = queryset.filter(course_group_id=course_group_id)
+        except ValueError:
+            pass
 
     # if (filter_month := filters.get("filter_month")):
     #     filter_datetime: datetime = datetime.strptime(filter_month, "%Y-%m")
