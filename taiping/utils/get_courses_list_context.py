@@ -79,7 +79,8 @@ def get_courses_list_context(
         }
     )
     filters: dict = {
-        key: int(val) if val and key != "filter_month" else val
+        key: int(val)
+        if key != "filter_month" and val and val.isdigit() else val
         for key, val in query_filters.items()
     }
     has_filters: bool = any(filters.values())
